@@ -1,5 +1,10 @@
 {
   "cda_index": {
+    "version": "v2025.3",
+    "updated": "2025-10-25",
+    "notes": "Optimeret specialistpanel med forbedrede toneprofiler og keywords"
+  },
+  "cda_index": {
     "version": "3.0",
     "description": "Functional index and operational guide for CDA-GPT specialist system.",
     "core_principles": [
