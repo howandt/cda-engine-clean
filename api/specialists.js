@@ -15,6 +15,7 @@ export default function handler(req, res) {
     const { keyword } = req.query;
 
 if (keyword) {
+  console.log("Keyword modtaget:", keyword);  
   const searchTerms = keyword.toLowerCase().split(/\s+/);
 
   const scored = data.specialists.map(spec => {
