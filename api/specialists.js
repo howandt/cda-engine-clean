@@ -13,46 +13,56 @@ export default function handler(req, res) {
     // Læs og parse JSON-indholdet
     const fileData = fs.readFileSync(filePath, "utf8");
     const data = JSON.parse(fileData);
-    const { keyword } = req.query;
 
-if (keyword) {
-  if (keyword) {
-  // Midlertidig test-output
-  if (req.query.debug === "true") {
-    return res
-      .status(200)
-      .send(`DEBUG: keyword = ${keyword}\n\nData indeholder ${data.specialists.length} specialister`);
-  }
-  
-  const searchTerms = keyword.toLowerCase().split(/\s+/);
+    // Hent evt. søgeord
+    const { keyword, debug } = req.query;
 
-  const scored = data.specialists.map(spec => {
-    const allKeywords = (spec.keywords || []).map(k => k.toLowerCase());
-    const matches = searchTerms.filter(term => allKeywords.includes(term));
-    let score = matches.length;
+    // Hvis debug=true, vis hurtig info
+    if (debug === "true") {
+      res.setHeader("Content-Type", "text/plain");
+      return res
+        .status(200)
+        .send(`DEBUG: keyword = ${keyword}\nData indeholder ${data.specialists.length} specialister`);
+    }
 
-    // Straf meget brede profiler
-    if (allKeywords.length > 40) score = score / 2;
-    if (allKeywords.length > 60) score = score / 3;
+    // Hvis der er et keyword, filtrer specialister
+    if (keyword) {
+      const searchTerms = keyword.toLowerCase().split(/\s+/);
 
-    return { ...spec, matchScore: score };
-  });
+      const scored = data.specialists.map(spec => {
+        const allKeywords = (spec.keywords || []).map(k => k.toLowerCase());
+        const matches = searchTerms.filter(term => allKeywords.includes(term));
+        let score = matches.length;
 
-  const topMatches = scored
-    .filter(s => s.matchScore > 0)
-    .sort((a, b) => b.matchScore - a.matchScore)
-    .slice(0, 3);
+        // Straf meget brede profiler
+        if (allKeywords.length > 40) score = score / 2;
+        if (allKeywords.length > 60) score = score / 3;
 
-  return res
-    .status(200)
-    .send(JSON.stringify({ topMatches }, null, 2));
-}
+        return { ...spec, matchScore: score };
+      });
 
-    // Send dataen som API-svar
+      const topMatches = scored
+        .filter(s => s.matchScore > 0)
+        .sort((a, b) => b.matchScore - a.matchScore)
+        .slice(0, 3);
+
+      res.setHeader("Content-Type", "text/plain");
+      return res.status(200).send(JSON.stringify({ topMatches }, null, 2));
+    }
+
+    // Hvis ingen keyword - returnér hele JSON som tekst
     res.setHeader("Content-Type", "text/plain");
-res.status(200).send(JSON.stringify(data, null, 2));
+    res.status(200).send(JSON.stringify(data, null, 2));
+
   } catch (error) {
-    console.error("Fejl i API:", error);
-    res.status(500).json({ error: "Der opstod en fejl i API'en" });
+    // 👇 Udvidet fejlrapport direkte i browser
+    const message = [
+      "FEJL I API:",
+      error.message || error.toString(),
+      error.stack || ""
+    ].join("\n");
+
+    res.setHeader("Content-Type", "text/plain");
+    res.status(500).send(message);
   }
 }
