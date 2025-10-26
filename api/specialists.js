@@ -15,19 +15,28 @@ export default function handler(req, res) {
     const { keyword } = req.query;
 
 if (keyword) {
-  const lower = keyword.toLowerCase();
-  const filtered = data.specialists.filter(spec => {
-  const fields = [
-    spec.function || "",
-    spec.focus || "",
-    (spec.keywords || []).join(" ")
-  ].join(" ").toLowerCase();
-  return fields.includes(lower);
-});
+  const searchTerms = keyword.toLowerCase().split(/\s+/);
+
+  const scored = data.specialists.map(spec => {
+    const allKeywords = (spec.keywords || []).map(k => k.toLowerCase());
+    const matches = searchTerms.filter(term => allKeywords.includes(term));
+    let score = matches.length;
+
+    // Straf meget brede profiler
+    if (allKeywords.length > 40) score = score / 2;
+    if (allKeywords.length > 60) score = score / 3;
+
+    return { ...spec, matchScore: score };
+  });
+
+  const topMatches = scored
+    .filter(s => s.matchScore > 0)
+    .sort((a, b) => b.matchScore - a.matchScore)
+    .slice(0, 3);
 
   return res
     .status(200)
-    .send(JSON.stringify({ filtered }, null, 2));
+    .send(JSON.stringify({ topMatches }, null, 2));
 }
 
     // Send dataen som API-svar
