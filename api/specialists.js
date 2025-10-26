@@ -27,31 +27,49 @@ export default function handler(req, res) {
 
     // Hvis der er et keyword, filtrer specialister
     if (keyword) {
-      // Udvid søgeord med semantiske variationer
-const rawTerms = keyword.toLowerCase().split(/\s+/);
+      // --- SEMANTISK UDVIKLING ---
+      const rawTerms = keyword.toLowerCase().split(/\s+/);
 
-const synonymMap = {
-  "søvn": ["sover", "søvnritual", "søvnmønster", "søvnforstyrrelse", "søvnrytme", "søvnbesvær", "træthed", "insomni"],
-  "autisme": ["asd", "autistisk", "neurodiversitet", "rigiditet", "sensorisk", "masking", "overstimulering"],
-  "uro": ["rastløs", "motorisk", "urolig", "impulsiv"],
-  "angst": ["bekymring", "frygt", "nervøsitet", "stress"],
-  "struktur": ["rutine", "forudsigelighed", "skema", "plan"],
-  "sensorik": ["sansning", "overstimulering", "følsomhed"]
-};
+      const synonymMap = {
+        "søvn": [
+          "sover", "søvnritual", "søvnmønster", "søvnforstyrrelse",
+          "søvnrytme", "søvnbesvær", "træthed", "insomni"
+        ],
+        "autisme": [
+          "asd", "autist", "autistisk", "neurodiversitet", "rigiditet",
+          "sensorisk", "masking", "overstimulering"
+        ],
+        "adhd": [
+          "opmærksomhed", "impulsivitet", "hyperaktiv", "rastløs", "fokus", "koncentration"
+        ],
+        "uro": ["rastløs", "motorisk", "urolig", "impulsiv"],
+        "angst": ["bekymring", "frygt", "nervøsitet", "stress"],
+        "struktur": ["rutine", "forudsigelighed", "skema", "plan"],
+        "sensorik": ["sansning", "overstimulering", "følsomhed"]
+      };
 
-// Udvid brugers søgeord med synonym-grupper
-let searchTerms = [];
-for (const term of rawTerms) {
-  searchTerms.push(term);
-  if (synonymMap[term]) {
-    searchTerms = searchTerms.concat(synonymMap[term]);
-  }
-}
+      // Udvid brugers søgeord med synonym-grupper
+      let searchTerms = [];
+      for (const term of rawTerms) {
+        searchTerms.push(term);
+        if (synonymMap[term]) {
+          searchTerms = searchTerms.concat(synonymMap[term]);
+        }
+      }
 
+      // --- SCORING AF MATCHES ---
       const scored = data.specialists.map(spec => {
         const allKeywords = (spec.keywords || []).map(k => k.toLowerCase());
-        const matches = searchTerms.filter(term => allKeywords.includes(term));
-        let score = matches.length;
+        let score = 0;
+
+        // Tildel point for hver delvist eller eksakt match
+        for (const term of searchTerms) {
+          for (const k of allKeywords) {
+            const kw = k.toLowerCase();
+            if (kw === term) score += 1; // eksakt
+            else if (kw.includes(term) || term.includes(kw)) score += 0.75; // delvist
+          }
+        }
 
         // Straf meget brede profiler
         if (allKeywords.length > 40) score = score / 2;
@@ -60,10 +78,11 @@ for (const term of rawTerms) {
         return { ...spec, matchScore: score };
       });
 
+      // --- SORTERING & UDVALG ---
       const topMatches = scored
         .filter(s => s.matchScore > 0)
         .sort((a, b) => b.matchScore - a.matchScore)
-        .slice(0, 3);
+        .slice(0, 4);
 
       res.setHeader("Content-Type", "text/plain");
       return res.status(200).send(JSON.stringify({ topMatches }, null, 2));
