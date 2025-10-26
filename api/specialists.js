@@ -14,7 +14,8 @@ export default function handler(req, res) {
     const data = JSON.parse(fileData);
 
     // Send dataen som API-svar
-    res.status(200).json(data);
+    res.setHeader("Content-Type", "text/plain");
+res.status(200).send(JSON.stringify(data, null, 2));
   } catch (error) {
     console.error("Fejl i API:", error);
     res.status(500).json({ error: "Der opstod en fejl i API'en" });
