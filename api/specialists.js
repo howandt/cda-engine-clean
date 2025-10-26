@@ -27,7 +27,26 @@ export default function handler(req, res) {
 
     // Hvis der er et keyword, filtrer specialister
     if (keyword) {
-      const searchTerms = keyword.toLowerCase().split(/\s+/);
+      // Udvid søgeord med semantiske variationer
+const rawTerms = keyword.toLowerCase().split(/\s+/);
+
+const synonymMap = {
+  "søvn": ["sover", "søvnritual", "søvnmønster", "søvnforstyrrelse", "søvnrytme", "søvnbesvær", "træthed", "insomni"],
+  "autisme": ["asd", "autistisk", "neurodiversitet", "rigiditet", "sensorisk", "masking", "overstimulering"],
+  "uro": ["rastløs", "motorisk", "urolig", "impulsiv"],
+  "angst": ["bekymring", "frygt", "nervøsitet", "stress"],
+  "struktur": ["rutine", "forudsigelighed", "skema", "plan"],
+  "sensorik": ["sansning", "overstimulering", "følsomhed"]
+};
+
+// Udvid brugers søgeord med synonym-grupper
+let searchTerms = [];
+for (const term of rawTerms) {
+  searchTerms.push(term);
+  if (synonymMap[term]) {
+    searchTerms = searchTerms.concat(synonymMap[term]);
+  }
+}
 
       const scored = data.specialists.map(spec => {
         const allKeywords = (spec.keywords || []).map(k => k.toLowerCase());
