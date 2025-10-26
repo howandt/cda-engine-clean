@@ -78,3 +78,5 @@ Udvikler af CDA, CDT og Ann – *Children Diagnosis AI Systems*
 ---
 
 © 2025 CDA Systems – *All rights reserved*
+
+# Auto-deploy test – 26. oktober 2025
