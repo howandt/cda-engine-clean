@@ -1,3 +1,4 @@
+export const config = { runtime: "nodejs" };
 import fs from "fs";
 import path from "path";
 
