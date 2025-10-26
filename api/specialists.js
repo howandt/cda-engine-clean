@@ -16,9 +16,15 @@ export default function handler(req, res) {
 
 if (keyword) {
   const lower = keyword.toLowerCase();
-  const filtered = data.specialists.filter(spec =>
-    JSON.stringify(spec).toLowerCase().includes(lower)
-  );
+  const filtered = data.specialists.filter(spec => {
+  const fields = [
+    spec.function || "",
+    spec.focus || "",
+    (spec.keywords || []).join(" ")
+  ].join(" ").toLowerCase();
+  return fields.includes(lower);
+});
+
   return res
     .status(200)
     .send(JSON.stringify({ filtered }, null, 2));
