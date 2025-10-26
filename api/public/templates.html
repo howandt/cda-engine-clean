@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CDA Template Bibliotek</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f8fafc;
+      color: #111;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #2563eb;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .search-box {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    input[type="text"] {
+      flex: 1;
+      padding: 0.6rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      border: none;
+      background: #2563eb;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover { background: #1d4ed8; }
+    .category {
+      margin-top: 2rem;
+    }
+    .category h2 {
+      color: #2563eb;
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 0.3rem;
+    }
+    .template {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .template h3 {
+      margin: 0 0 0.5rem 0;
+    }
+    .purpose {
+      color: #555;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <header>CDA Template Bibliotek</header>
+  <main>
+    <div class="search-box">
+      <input id="searchInput" type="text" placeholder="Søg efter keyword eller kategori..." />
+      <button onclick="searchTemplates()">Søg</button>
+      <button onclick="loadAll()">Vis alle</button>
+    </div>
+    <div id="output">Indlæser...</div>
+  </main>
+
+  <script>
+    const API_BASE = '/api/templates';
+
+    async function loadAll() {
+      const res = await fetch(API_BASE);
+      const data = await res.json();
+      renderData(data);
+    }
+
+    async function searchTemplates() {
+      const q = document.getElementById('searchInput').value.trim();
+      if (!q) return loadAll();
+
+      const res = await fetch(`${API_BASE}?keyword=${encodeURIComponent(q)}`);
+      const data = await res.json();
+
+      if (data.results?.length) renderSearchResults(data.results);
+      else document.getElementById('output').innerHTML = `<p>Ingen resultater for "${q}"</p>`;
+    }
+
+    function renderData(data) {
+      const container = document.getElementById('output');
+      container.innerHTML = '';
+
+      data.categories.forEach(cat => {
+        const catDiv = document.createElement('div');
+        catDiv.className = 'category';
+        catDiv.innerHTML = `<h2>${cat.category}</h2>`;
+        cat.templates.forEach(t => {
+          catDiv.innerHTML += `
+            <div class="template">
+              <h3>${t.title}</h3>
+              <div class="purpose">${t.purpose}</div>
+              <small>ID: ${t.id}</small>
+            </div>
+          `;
+        });
+        container.appendChild(catDiv);
+      });
+    }
+
+    function renderSearchResults(results) {
+      const container = document.getElementById('output');
+      container.innerHTML = '<h2>Søgeresultater</h2>';
+      results.forEach(t => {
+        container.innerHTML += `
+          <div class="template">
+            <h3>${t.title}</h3>
+            <div class="purpose">${t.purpose}</div>
+            <small>Kategori: ${t.category}</small>
+          </div>
+        `;
+      });
+    }
+
+    loadAll();
+  </script>
+</body>
+</html>
