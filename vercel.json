@@ -1,9 +1,11 @@
 {
   "version": 2,
   "builds": [
+    { "src": "api/**/*.js", "use": "@vercel/node" },
     { "src": "CDA_SpecialistPanel.json", "use": "@vercel/static" }
   ],
   "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" },
     { "src": "/(.*)", "dest": "/CDA_SpecialistPanel.json" }
   ]
 }
