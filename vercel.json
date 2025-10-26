@@ -5,7 +5,7 @@
     { "src": "CDA_SpecialistPanel.json", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "^/api/(.*)", "dest": "/api/$1.js" },
     { "src": "/(.*)", "dest": "/CDA_SpecialistPanel.json" }
   ]
 }
