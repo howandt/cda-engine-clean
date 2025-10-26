@@ -12,6 +12,17 @@ export default function handler(req, res) {
     // Læs og parse JSON-indholdet
     const fileData = fs.readFileSync(filePath, "utf8");
     const data = JSON.parse(fileData);
+    const { keyword } = req.query;
+
+if (keyword) {
+  const lower = keyword.toLowerCase();
+  const filtered = data.specialists.filter(spec =>
+    JSON.stringify(spec).toLowerCase().includes(lower)
+  );
+  return res
+    .status(200)
+    .send(JSON.stringify({ filtered }, null, 2));
+}
 
     // Send dataen som API-svar
     res.setHeader("Content-Type", "text/plain");
