@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "gray-matter": "^4.0.3"
+  },
+  "scripts": {
+    "dev": "vercel dev --listen $PORT"
   }
 }
