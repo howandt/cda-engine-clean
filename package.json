@@ -3,6 +3,8 @@
     "gray-matter": "^4.0.3"
   },
   "scripts": {
-    "dev": "vercel dev --listen $PORT"
+    "dev": "vercel dev --listen $PORT",
+    "build": "cp -r public/* ."
   }
 }
+
