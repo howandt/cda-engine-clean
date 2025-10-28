@@ -86,21 +86,32 @@
     const API_BASE = 'https://howandt.github.io/cda-engine-clean/cda_templates.json';
 
     async function loadAll() {
-      const res = await fetch(API_BASE);
-      const data = await res.json();
-      renderData(data);
-    }
+  try {
+    const res = await fetch('https://howandt.github.io/cda-engine-clean/cda_templates.json');
+    if (!res.ok) throw new Error(`Kunne ikke hente data (${res.status})`);
+    const data = await res.json();
+    renderData(data);
+    window.allTemplates = data; // gem data i hukommelsen til søgning
+  } catch (err) {
+    console.error('Fejl under hentning af templates:', err);
+    document.getElementById('output').innerHTML = '<p>Kunne ikke indlæse templates.</p>';
+  }
+}
 
-    async function searchTemplates() {
-      const q = document.getElementById('searchInput').value.trim();
-      if (!q) return loadAll();
+async function searchTemplates() {
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  if (!q) return renderData(window.allTemplates);
 
-      const res = await fetch(`${API_BASE}?keyword=${encodeURIComponent(q)}`);
-      const data = await res.json();
+  // filtrér direkte i browseren
+  const filtered = window.allTemplates.filter(t =>
+    t.title.toLowerCase().includes(q) ||
+    (t.description && t.description.toLowerCase().includes(q)) ||
+    (t.keywords && t.keywords.some(k => k.toLowerCase().includes(q)))
+  );
 
-      if (data.results?.length) renderSearchResults(data.results);
-      else document.getElementById('output').innerHTML = `<p>Ingen resultater for "${q}"</p>`;
-    }
+  if (filtered.length) renderData(filtered);
+  else document.getElementById('output').innerHTML = `<p>Ingen resultater for "${q}"</p>`;
+}
 
     function renderData(data) {
       const container = document.getElementById('output');
