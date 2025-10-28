@@ -4,7 +4,6 @@
   },
   "scripts": {
     "dev": "vercel dev --listen $PORT",
-    "build": "cp -r public/* ."
+    "build": "mkdir -p dist && cp -r public/* dist/"
   }
 }
-
