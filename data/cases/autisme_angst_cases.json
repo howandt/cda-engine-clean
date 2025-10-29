@@ -1,4 +1,5 @@
-{
+[
+  {
     "id": "autisme_angst_01",
     "titel": "Overstimulering i frikvarteret",
     "rolle": "Lærer",
@@ -23,7 +24,7 @@
       "delvis": "‘Vi tager det bare roligt.’ – God ro, men uden visuel støtte.",
       "problematisk": "‘Du bestemmer ikke alting.’ – Utryghed forværres."
     }
-  },
+  }
   {
     "id": "autisme_angst_03",
     "titel": "Skift af lærer i timen",
@@ -778,3 +779,4 @@
       "problematisk": "‘Jeg gider ikke høre mere larm.’ – Eskalerer situationen."
     }
   }
+  ]
