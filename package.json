@@ -1,14 +1,12 @@
 {
-  "name": "cda-engine-clean",
+  "name": "cda-server",
   "version": "1.0.0",
   "type": "module",
-  "description": "CDA Engine testmiljø",
-  "main": "index.js",
   "scripts": {
-    "dev": "node api/rollespil.js"
+    "start": "node cda-server.js"
   },
   "dependencies": {
-    "express": "^5.1.0",
-    "gray-matter": "^4.0.3"
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
   }
 }
