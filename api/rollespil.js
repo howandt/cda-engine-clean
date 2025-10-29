@@ -1,69 +1,56 @@
-import express from "express";
 import fs from "fs";
 import path from "path";
-import { analyseEmotion } from "../lib/emotionEngine.js";
 
-const app = express();
-const PORT = 3000;
-
-app.get("/api/rollespil", (req, res) => {
+export default function handler(req, res) {
   try {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Content-Type", "application/json");
 
     const { id } = req.query;
     if (!id) {
-      res.status(400).json({ error: "Der skal angives et case-id." });
-      return;
+      return res.status(400).json({ error: "Der skal angives et case-id." });
     }
 
-    const casePath = path.join(process.cwd(), "data", "CDA_Casebank.json");
-    const rollespilPath = path.join(process.cwd(), "data", "rollespil_scenarier.json");
-    const templatePath = path.join(process.cwd(), "data", "CDA_Templates.json");
-    const specialistPath = path.join(process.cwd(), "data", "CDA_SpecialistPanel.json");
+    // 🔹 Find case-mappen
+    const caseDir = path.join(process.cwd(), "data", "cases");
+    const files = fs.readdirSync(caseDir).filter(f => f.endsWith(".json"));
 
-    const cases = JSON.parse(fs.readFileSync(casePath, "utf8"));
-    const rollespil = JSON.parse(fs.readFileSync(rollespilPath, "utf8"));
-    const templates = JSON.parse(fs.readFileSync(templatePath, "utf8"));
-    const specialists = JSON.parse(fs.readFileSync(specialistPath, "utf8"));
+    let foundCase = null;
+    let sourceFile = "";
 
-    const valgtCase = cases.find((c) => c.id === id);
-    const valgtRollespil = rollespil.find((r) => r.id === id);
-    const valgtTemplate = templates.find((t) => t.case_id === id);
-    const relevanteSpecialister = specialists.filter((s) =>
-      valgtCase && s.fokusområder
-        ? s.fokusområder.some((f) =>
-            valgtCase.temaer?.includes(f) || valgtRollespil?.titel?.includes(f)
-          )
-        : false
-    );
+    // 🔹 Gennemgå alle case-filer (adhd_angst, autisme_angst, osv.)
+    for (const file of files) {
+      const filePath = path.join(caseDir, file);
+      const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
-    if (!valgtCase) {
-      res.status(404).json({ error: "Case ikke fundet." });
-      return;
+      const match = data.find(c => c.id === id);
+      if (match) {
+        foundCase = match;
+        sourceFile = file;
+        break;
+      }
     }
 
-    let emotion = null;
-    if (valgtRollespil && valgtRollespil.titel) {
-      emotion = analyseEmotion(valgtRollespil.titel);
+    if (!foundCase) {
+      return res.status(404).json({ error: `Case med ID '${id}' ikke fundet i nogen case-fil.` });
     }
 
-    const samlet = {
-      case: valgtCase,
-      rollespil: valgtRollespil || "Ingen rollespil fundet for denne case.",
-      template: valgtTemplate || "Ingen skabelon knyttet endnu.",
-      specialister:
-        relevanteSpecialister.length > 0 ? relevanteSpecialister : "Ingen relevante specialister fundet.",
-      emotion,
+    // 🔹 Tilføj metadata (så du kan se hvor casen kom fra)
+    const output = {
+      metadata: {
+        source_file: sourceFile,
+        hentet_fra: "data/cases/",
+        tidspunkt: new Date().toISOString(),
+      },
+      case: foundCase,
     };
 
-    res.status(200).json(samlet);
+    res.status(200).json(output);
+
   } catch (err) {
-    res.status(500).json({ error: "Fejl i rollespil API", details: err.message });
+    res.status(500).json({
+      error: "Fejl i rollespil API",
+      details: err.message,
+    });
   }
-});
-
-app.listen(PORT, () => {
-  console.log(`✅ CDA rollespil-server kører på http://localhost:${PORT}`);
-});
-
+}
