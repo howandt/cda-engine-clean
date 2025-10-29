@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "cda-server.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "cda-server.js" }
+  ]
+}
