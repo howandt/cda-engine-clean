@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/cases",
+      "dest": "/api/cases.js"
+    },
+    {
+      "src": "/api/komorbiditet",
+      "dest": "/api/komorbiditet.js"
+    },
+    {
+      "src": "/api/specialister",
+      "dest": "/api/specialister.js"
+    },
+    {
+      "src": "/api/templates",
+      "dest": "/api/templates.js"
+    },
+    {
+      "src": "/api/rollespil",
+      "dest": "/api/rollespil.js"
+    }
+  ]
+}
