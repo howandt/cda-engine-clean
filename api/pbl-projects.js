@@ -18,7 +18,7 @@ export default async function handler(req, res) {
   try {
     // Fetch from GitHub raw URL
     const response = await fetch(
-      'https://raw.githubusercontent.com/hansforum/cda-engine-clean/main/data/CDA_PBL_Projects.json',
+      'https://raw.githubusercontent.com/howandt/cda-engine-clean/refs/heads/main/data/CDA_PBL_Projects.json',
       {
         headers: {
           'Accept': 'application/json',
