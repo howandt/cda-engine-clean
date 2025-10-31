@@ -26,6 +26,10 @@
     {
       "src": "/api/rollespil",
       "dest": "/api/rollespil.js"
+    },
+    {
+      "src": "/api/pbl-projects",
+      "dest": "/api/pbl-projects.js"
     }
   ]
 }
