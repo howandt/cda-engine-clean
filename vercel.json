@@ -38,6 +38,10 @@
     {
       "src": "/api/quiz",
       "dest": "/api/quiz.js"
+    },
+    {
+      "src": "/api/emotion-engine",
+      "dest": "/api/emotion-engine.js"
     }
   ]
 }
