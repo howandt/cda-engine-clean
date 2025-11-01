@@ -14,7 +14,7 @@ export default async function handler(req, res) {
   try {
     // Fetch emotion engine data from GitHub
     const response = await fetch(
-      'https://raw.githubusercontent.com/howandt/cda-engine-clean/refs/heads/main/data/CDA_EmotionEngine.json',
+      'https://raw.githubusercontent.com/howandt/cda-engine-clean/refs/heads/main/data/CDA_Emotionengine.json',
       {
         headers: {
           'Accept': 'application/json',
