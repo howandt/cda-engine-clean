@@ -4,13 +4,13 @@
     {
       "src": "api/**/*.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/public/$1"
-    },
     {
       "src": "/api/cases",
       "dest": "/api/cases.js"
@@ -36,16 +36,16 @@
       "dest": "/api/pbl-projects.js"
     },
     {
-      "src": "/api/pbl-projects",
-      "dest": "/api/pbl-projects.js"
-    },
-    {
       "src": "/api/quiz",
       "dest": "/api/quiz.js"
     },
     {
       "src": "/api/emotion-engine",
       "dest": "/api/emotion-engine.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
     }
   ]
 }
