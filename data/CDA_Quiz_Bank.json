@@ -1,9 +1,10 @@
 {
-  "version": "2025-10-31",
-  "description": "CDT Quiz Bank - Multiple choice quizzer til case-baseret læring",
+  "version": "2025-10-31-v2",
+  "description": "CDT Quiz Bank - Multiple choice quizzer med 5 svarmuligheder",
   "quiz_system": {
     "question_count": 5,
     "adjustable": true,
+    "options_per_question": 5,
     "point_system": {
       "correct": 10,
       "partial": 5,
@@ -48,6 +49,16 @@
               "text": "Flere gruppeprojekter uden struktur",
               "points": 5,
               "feedback": "Delvist rigtigt - social læring kan hjælpe, men struktur er essentiel."
+            },
+            {
+              "text": "Fjerne alle pauser og maksimere arbejdstid",
+              "points": -5,
+              "feedback": "Dette ville være kontraproduktivt. ADHD-børn har brug for hyppige pauser."
+            },
+            {
+              "text": "Lade Emil selv bestemme hvornår han vil arbejde",
+              "points": 5,
+              "feedback": "Autonomi er godt, men Emil har brug for ekstern struktur til at regulere."
             }
           ]
         },
@@ -69,6 +80,16 @@
               "text": "Irettesætte Emil foran klassen",
               "points": -5,
               "feedback": "Dette kan skabe skam og forværre selvværdet uden at løse problemet."
+            },
+            {
+              "text": "Sende Emil ud af klassen",
+              "points": -5,
+              "feedback": "Dette løser ikke problemet og kan skabe eksklusion."
+            },
+            {
+              "text": "Give Emil en mere udfordrende opgave",
+              "points": 5,
+              "feedback": "Kan virke hvis uroen skyldes kedsomhed, men adresserer ikke det motoriske behov."
             }
           ]
         },
@@ -90,6 +111,16 @@
               "text": "Fysiske handicaps",
               "points": -5,
               "feedback": "ADHD er neurologisk, ikke fysisk - selv om DCD kan forekomme."
+            },
+            {
+              "text": "Perfektionisme",
+              "points": 5,
+              "feedback": "Kan forekomme, især ved overcompensation, men angst er mere almindelig."
+            },
+            {
+              "text": "Social overlegenhed",
+              "points": -5,
+              "feedback": "ADHD medfører typisk sociale udfordringer, ikke overlegenhed."
             }
           ]
         },
@@ -111,6 +142,16 @@
               "text": "Kun verbal instruktion",
               "points": 5,
               "feedback": "Verbal instruktion alene er ofte ikke nok - visuel støtte er vigtig."
+            },
+            {
+              "text": "Straffe ham når han glemmer ting",
+              "points": -5,
+              "feedback": "Straf forværrer selvværd uden at forbedre eksekutive funktioner."
+            },
+            {
+              "text": "Lade ham bruge smartphone til alt",
+              "points": 5,
+              "feedback": "Teknologi kan hjælpe, men skal introduceres gradvist med støtte."
             }
           ]
         },
@@ -132,6 +173,16 @@
               "text": "Frit kreativt projekt uden ramme",
               "points": 5,
               "feedback": "Kreativitet er godt, men Emil har brug for mere struktur."
+            },
+            {
+              "text": "Langt skriftligt projekt alene",
+              "points": -5,
+              "feedback": "Langvarig skrivning uden bevægelse passer ikke til Emil's behov."
+            },
+            {
+              "text": "Computerspil udvikling",
+              "points": 5,
+              "feedback": "Kan engagere hvis der er struktur, men mangler motorisk element."
             }
           ]
         }
@@ -171,6 +222,16 @@
               "text": "Distrahere barnet med noget andet",
               "points": 5,
               "feedback": "Kan virke kortvarigt, men adresserer ikke behovet for forudsigelighed."
+            },
+            {
+              "text": "Lade barnet gå hjem hvis de er kede af det",
+              "points": -5,
+              "feedback": "Dette lærer ikke coping-strategier og skaber undgåelse."
+            },
+            {
+              "text": "Ignorere barnets bekymring",
+              "points": -5,
+              "feedback": "Bekymringen er reel og skal anerkendes, ikke ignoreres."
             }
           ]
         },
@@ -192,6 +253,16 @@
               "text": "Lade det være en overraskelse",
               "points": -5,
               "feedback": "Overraskelser kan være overvældende og skabe angst."
+            },
+            {
+              "text": "Kun fortælle mundtligt uden visuel støtte",
+              "points": 5,
+              "feedback": "Verbal kommunikation hjælper, men visuel støtte er vigtigere."
+            },
+            {
+              "text": "Vente til barnet selv opdager det",
+              "points": -5,
+              "feedback": "Dette kan føre til krise når barnet opdager ændringen."
             }
           ]
         },
@@ -213,6 +284,16 @@
               "text": "Lade barnet bestemme alle overgange selv",
               "points": 5,
               "feedback": "Fleksibilitet er godt, men barnet har også brug for støtte til struktur."
+            },
+            {
+              "text": "True med konsekvenser hvis de ikke skifter",
+              "points": -5,
+              "feedback": "Trusler skaber angst uden at hjælpe med overgangen."
+            },
+            {
+              "text": "Fysisk flytte barnet til næste aktivitet",
+              "points": -5,
+              "feedback": "Kan opleves som overgreb og skabe større modstand."
             }
           ]
         },
@@ -234,6 +315,16 @@
               "text": "De keder sig hurtigt",
               "points": 5,
               "feedback": "Delvist - interesse kan være intens, men det handler mere om social forståelse."
+            },
+            {
+              "text": "De vil dominere samtalen",
+              "points": -5,
+              "feedback": "Det er ikke et ønske om dominans, men vanskelighed med social timing."
+            },
+            {
+              "text": "De mangler intelligens",
+              "points": -5,
+              "feedback": "Intelligens er ikke problemet - det er social kommunikation."
             }
           ]
         },
@@ -255,6 +346,16 @@
               "text": "Symbolspillet - visuel og struktureret",
               "points": 10,
               "feedback": "Også godt! Visuel læring med klar struktur."
+            },
+            {
+              "text": "Kaotisk kunstprojekt uden retning",
+              "points": -5,
+              "feedback": "Mangel på struktur kan være stressende."
+            },
+            {
+              "text": "Store gruppepræsentationer",
+              "points": -5,
+              "feedback": "For høj social eksponering for de fleste autistiske børn."
             }
           ]
         }
@@ -294,6 +395,16 @@
               "text": "Lade barnet sidde alene udenfor gruppen",
               "points": -5,
               "feedback": "Dette forstærker isolation og angst på lang sigt."
+            },
+            {
+              "text": "Tvinge barnet til at være leder af gruppen",
+              "points": -5,
+              "feedback": "For stor eksponering kan være traumatiserende."
+            },
+            {
+              "text": "Give barnet en skriftlig opgave i stedet",
+              "points": 5,
+              "feedback": "Kan være første skridt, men målet er gradvis social deltagelse."
             }
           ]
         },
@@ -315,6 +426,16 @@
               "text": "Sige 'du kan godt' uden konkret hjælp",
               "points": 5,
               "feedback": "Opmuntring er godt, men barnet har brug for konkret støttestruktur."
+            },
+            {
+              "text": "Sammenligne med andre børn der kan det",
+              "points": -5,
+              "feedback": "Sammenligning øger præstationsangst."
+            },
+            {
+              "text": "Sætte en stram deadline",
+              "points": -5,
+              "feedback": "Tidspres forværrer angst."
             }
           ]
         },
@@ -336,6 +457,16 @@
               "text": "Aggressiv adfærd mod andre",
               "points": -5,
               "feedback": "Angst viser sig typisk som undgåelse, ikke aggression (selvom det kan ske)."
+            },
+            {
+              "text": "Perfekt adfærd hele tiden",
+              "points": 5,
+              "feedback": "Kan være masking af angst, men ikke det eneste tegn."
+            },
+            {
+              "text": "Manglende interesse for alt",
+              "points": 5,
+              "feedback": "Kan være tegn, men er ikke specifikt for social angst."
             }
           ]
         },
@@ -357,6 +488,16 @@
               "text": "Presse barnet til at tage ansvar",
               "points": -5,
               "feedback": "Pres forværrer angst - gradvis progression er nøglen."
+            },
+            {
+              "text": "Lave grupper tilfældigt",
+              "points": -5,
+              "feedback": "Strategisk gruppeinddeling med trygge kammerater er bedre."
+            },
+            {
+              "text": "Skifte grupper konstant",
+              "points": -5,
+              "feedback": "Stabilitet og tryghed er vigtigere for angste børn."
             }
           ]
         },
@@ -378,6 +519,16 @@
               "text": "Emotion Lab - starte med følelsesforståelse",
               "points": 10,
               "feedback": "Også godt! At forstå følelser er fundamentalt for at håndtere angst."
+            },
+            {
+              "text": "Konkurrence med andre klasser",
+              "points": -5,
+              "feedback": "Præstationspres ville forværre angsten."
+            },
+            {
+              "text": "Individuelt projekt helt alene",
+              "points": 5,
+              "feedback": "Sikkert, men målet er gradvis at bygge social kapacitet."
             }
           ]
         }
