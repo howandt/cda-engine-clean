@@ -12,8 +12,9 @@ export default function handler(req, res) {
   }
 
   try {
-    // Find filsti – både JSON og MD understøttes
+    // ✅ Brug absolut sti til CDF-moduler
     const basePath = path.join(process.cwd(), "CDF", "modules");
+
     const name = module.charAt(0).toUpperCase() + module.slice(1).toLowerCase();
     const jsonPath = path.join(basePath, `${name}.json`);
     const mdPath = path.join(basePath, `${name}.md`);
