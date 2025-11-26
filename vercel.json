@@ -23,11 +23,5 @@
         }
       ]
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/api/cdf/(.*)",
-      "destination": "/api/cdf/$1"
-    }
   ]
-}
+    }
