@@ -13,33 +13,37 @@ export default function handler(req, res) {
 
   try {
     const baseDir = path.join(process.cwd(), "CDF/modules");
-    const jsonPath = path.join(baseDir, `${module.charAt(0).toUpperCase() + module.slice(1)}.json`);
-    const mdPath = path.join(baseDir, `${module.charAt(0).toUpperCase() + module.slice(1)}.md`);
+    const name = module.charAt(0).toUpperCase() + module.slice(1);
+    const jsonPath = path.join(baseDir, `${name}.json`);
+    const mdPath = path.join(baseDir, `${name}.md`);
+
+    console.log("🔍 Læser modul:", name);
+    console.log("📁 BaseDir:", baseDir);
 
     let data;
 
     if (fs.existsSync(jsonPath)) {
-      // JSON-format
+      // Hvis JSON findes
       data = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
     } else if (fs.existsSync(mdPath)) {
-      // Markdown-format
+      // Hvis Markdown findes
       const content = fs.readFileSync(mdPath, "utf-8");
       data = {
-        module: module,
+        module: name,
         format: "markdown",
         content: content
       };
     } else {
-      throw new Error(`Modulet '${module}' blev ikke fundet som .json eller .md`);
+      throw new Error(`Ingen modulfil fundet for '${name}' (.json eller .md)`);
     }
 
-    res.status(200).json({
+    return res.status(200).json({
       success: true,
-      module,
+      module: name,
       data
     });
   } catch (error) {
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       message: `Kunne ikke hente data for ${module}`,
       error: error.message
