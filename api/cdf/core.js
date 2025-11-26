@@ -5,27 +5,38 @@ export default function handler(req, res) {
   const { module } = req.query;
 
   if (!module) {
-    return res.status(400).json({ success: false, message: "Angiv et modul: ?module=food eller ?module=health" });
+    return res.status(400).json({
+      success: false,
+      message: "Angiv et modul: ?module=food eller ?module=health"
+    });
   }
-
-  const basePath = path.join(process.cwd(), "CDF", "modules");
-  const fileName = module === "food" ? "FoodLab.json" :
-                   module === "health" ? "HealthLab.json" : null;
-
-  if (!fileName) {
-    return res.status(400).json({ success: false, message: "Ugyldigt modulnavn" });
-  }
-
-  const filePath = path.join(basePath, fileName);
 
   try {
-    const data = fs.readFileSync(filePath, "utf8");
-    const jsonData = JSON.parse(data);
+    const baseDir = path.join(process.cwd(), "CDF/modules");
+    const jsonPath = path.join(baseDir, `${module.charAt(0).toUpperCase() + module.slice(1)}.json`);
+    const mdPath = path.join(baseDir, `${module.charAt(0).toUpperCase() + module.slice(1)}.md`);
+
+    let data;
+
+    if (fs.existsSync(jsonPath)) {
+      // JSON-format
+      data = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
+    } else if (fs.existsSync(mdPath)) {
+      // Markdown-format
+      const content = fs.readFileSync(mdPath, "utf-8");
+      data = {
+        module: module,
+        format: "markdown",
+        content: content
+      };
+    } else {
+      throw new Error(`Modulet '${module}' blev ikke fundet som .json eller .md`);
+    }
 
     res.status(200).json({
       success: true,
       module,
-      data: jsonData
+      data
     });
   } catch (error) {
     res.status(500).json({
