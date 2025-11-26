@@ -1,0 +1,22 @@
+{
+  "module": "HealthLab",
+  "version": "1.0",
+  "description": "Modul for sundhed, energi og balance. Hjælper brugeren med søvn, bevægelse og ro.",
+  "sections": {
+    "energi_tips": [
+      "Drik et glas vand og bevæg dig lidt, når du føler dig træt.",
+      "Lyt til musik med roligt tempo, hvis du føler dig overstimuleret.",
+      "Lav tre dybe vejrtrækninger før du fortsætter med næste opgave."
+    ],
+    "søvn_vaner": [
+      "Gå i seng på samme tidspunkt hver dag.",
+      "Undgå skærmlys 30 minutter før sengetid.",
+      "Lav en kort refleksion over dagen, før du lægger dig."
+    ],
+    "bevægelse": [
+      "5 minutters strækøvelser om morgenen.",
+      "Gå en kort tur i frisk luft efter måltider.",
+      "Lav let motion – fx at bære indkøb eller støvsuge som bevægelse."
+    ]
+  }
+}
