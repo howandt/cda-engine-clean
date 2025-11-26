@@ -9,16 +9,8 @@ export default function handler(req, res) {
       success: false,
       message: "Angiv et modul: ?module=food eller ?module=health"
     });
-  }
 
-  try {
-    const baseDir = path.join(process.cwd(), "CDF/modules");
-    const name = module.charAt(0).toUpperCase() + module.slice(1);
-    const jsonPath = path.join(baseDir, `${name}.json`);
-    const mdPath = path.join(baseDir, `${name}.md`);
-
-    console.log("🔍 Læser modul:", name);
-    console.log("📁 BaseDir:", baseDir);
+  {"success":false,"message":"Kunne ikke hente data for food","error":"Ingen modulfil fundet for 'Food' (.json eller .md)"
 
     let data;
 
