@@ -9,33 +9,41 @@ export default async function handler(req, res) {
   }
 
   try {
-    // 🔹 Base URL til public-mappen på Vercel
     const baseURL = "https://cda-engine-clean.vercel.app";
 
-    // 🔹 Definer mulige filnavne for moduler (du kan udvide listen frit)
+    // 🔹 Mapping af moduler (kan udvides)
     const moduleMap = {
       food: "FoodLab",
       health: "HealthLab",
       recipes: "recipes_and_health",
-      core: "CDF_Core"
+      core: "CDF_Core",
     };
 
-    // 🔹 Find filnavn ud fra module-parameter
+    // 🧭 Hvis brugeren beder om ?module=list → returnér oversigt
+    if (module.toLowerCase() === "list") {
+      const available = Object.values(moduleMap);
+      return res.status(200).json({
+        success: true,
+        message: "Tilgængelige moduler",
+        modules: available,
+      });
+    }
+
+    // 🔹 Find filnavn
     const key = module.toLowerCase();
-    const fileName = moduleMap[key] || module.charAt(0).toUpperCase() + module.slice(1);
+    const fileName =
+      moduleMap[key] || module.charAt(0).toUpperCase() + module.slice(1);
 
-    // 🔹 Byg URL'er
+    // 🔹 Core ligger i /CDF/, resten i /CDF/modules/
     const isCore = fileName.toLowerCase().includes("core");
-const folder = isCore ? "CDF" : "CDF/modules";
+    const folder = isCore ? "CDF" : "CDF/modules";
 
-const jsonURL = `${baseURL}/${folder}/${fileName}.json`;
-const mdURL = `${baseURL}/${folder}/${fileName}.md`;
+    const jsonURL = `${baseURL}/${folder}/${fileName}.json`;
+    const mdURL = `${baseURL}/${folder}/${fileName}.md`;
 
     console.log(`🔍 Prøver at hente: ${jsonURL}`);
 
     let data;
-
-    // 🔹 Hent JSON eller Markdown
     const jsonResp = await fetch(jsonURL);
     const mdResp = await fetch(mdURL);
 
@@ -48,7 +56,6 @@ const mdURL = `${baseURL}/${folder}/${fileName}.md`;
       throw new Error(`Ingen modulfil fundet for '${fileName}' (.json eller .md)`);
     }
 
-    // ✅ Succes!
     return res.status(200).json({
       success: true,
       module: fileName,
