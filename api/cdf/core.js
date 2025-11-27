@@ -18,12 +18,7 @@ export default function handler(req, res) {
     console.log("📁 Indhold af cwd:", fs.readdirSync(cwd));
 
     // 🔍 Mulige basePaths afhængigt af hvor Vercel pakker projektet
-    const possiblePaths = [
-      path.join(cwd, "CDF", "modules"),
-      path.join(cwd, "../CDF/modules"),
-      path.join(cwd, "api", "cdf", "CDF", "modules"),
-      path.join("/var/task", "CDF", "modules"),
-    ];
+    const basePath = path.join(process.cwd(), "api", "cdf", "modules");
 
     // Find første eksisterende sti
     let basePath = possiblePaths.find((p) => fs.existsSync(p));
