@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     const moduleMap = {
       food: "FoodLab",
       health: "HealthLab",
-      recipes: "recipes_and_health",
+      recipes: "RecipesAndHealth",
       core: "CDF_Core",
     };
 
