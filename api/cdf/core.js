@@ -7,48 +7,43 @@ export default function handler(req, res) {
   if (!module) {
     return res.status(400).json({
       success: false,
-      message: "Angiv et modul: ?module=food eller ?module=health"
+      message: "Angiv et modul: ?module=food eller ?module=health",
     });
   }
 
   try {
-    // ✅ Brug absolut sti til CDF-moduler
-    const basePath = path.join(process.cwd(), "CDF", "modules");
+    const cwd = process.cwd();
+    console.log("📍 VERCEL DEBUG START");
+    console.log("🗂️ process.cwd():", cwd);
+    console.log("📁 Indhold af cwd:", fs.readdirSync(cwd));
 
-    const name = module.charAt(0).toUpperCase() + module.slice(1).toLowerCase();
+    // 🔍 Mulige basePaths afhængigt af hvor Vercel pakker projektet
+    const possiblePaths = [
+      path.join(cwd, "CDF", "modules"),
+      path.join(cwd, "../CDF/modules"),
+      path.join(cwd, "api", "cdf", "CDF", "modules"),
+      path.join("/var/task", "CDF", "modules"),
+    ];
+
+    // Find første eksisterende sti
+    let basePath = possiblePaths.find((p) => fs.existsSync(p));
+    if (!basePath) {
+      console.error("❌ Ingen gyldig basePath fundet. Testede:", possiblePaths);
+      throw new Error("Ingen CDF/modules-mappe fundet i runtime.");
+    }
+
+    console.log("✅ Valgt basePath:", basePath);
+
+    const name =
+      module.charAt(0).toUpperCase() + module.slice(1).toLowerCase();
     const jsonPath = path.join(basePath, `${name}.json`);
     const mdPath = path.join(basePath, `${name}.md`);
 
-    console.log("DEBUG: Søger efter modul:", name);
-    console.log("DEBUG: JSON:", jsonPath);
-    console.log("DEBUG: MD:", mdPath);
+    console.log("🔍 Søger efter modul:", name);
+    console.log("📄 JSON:", jsonPath);
+    console.log("📄 MD:", mdPath);
 
     let data;
-
-    import fs from "fs";
-import path from "path";
-
-console.log("📍 VERCEL DEBUG - START");
-
-try {
-  const cwd = process.cwd();
-  console.log("🗂️ process.cwd():", cwd);
-
-  const dir = fs.readdirSync(cwd);
-  console.log("📁 cwd-indhold:", dir);
-
-  // Test om CDF findes her
-  if (fs.existsSync(path.join(cwd, "CDF"))) {
-    console.log("✅ Fundet /CDF i:", cwd);
-    console.log("📦 Modules:", fs.readdirSync(path.join(cwd, "CDF/modules")));
-  } else {
-    console.log("❌ Ingen CDF-mappe i cwd");
-  }
-} catch (err) {
-  console.error("🚨 Fejl i debug:", err);
-}
-
-console.log("📍 VERCEL DEBUG - SLUT");
 
     if (fs.existsSync(jsonPath)) {
       data = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
@@ -57,23 +52,25 @@ console.log("📍 VERCEL DEBUG - SLUT");
       data = {
         module: name,
         format: "markdown",
-        content: content
+        content,
       };
     } else {
       throw new Error(`Ingen modulfil fundet for '${name}' (.json eller .md)`);
     }
 
+    console.log("📍 VERCEL DEBUG SLUT");
+
     return res.status(200).json({
       success: true,
       module: name,
-      data
+      data,
     });
   } catch (error) {
-    console.error("❌ FEJL I CORE.JS:", error.message);
+    console.error("❌ FEJL I CORE.JS:", error);
     return res.status(500).json({
       success: false,
-      message: `Kunne ikke hente data for ${module}`,
-      error: error.message
+      message: `Kunne ikke hente data for ${req.query.module}`,
+      error: error.message,
     });
   }
 }
