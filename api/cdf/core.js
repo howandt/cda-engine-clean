@@ -25,6 +25,31 @@ export default function handler(req, res) {
 
     let data;
 
+    import fs from "fs";
+import path from "path";
+
+console.log("📍 VERCEL DEBUG - START");
+
+try {
+  const cwd = process.cwd();
+  console.log("🗂️ process.cwd():", cwd);
+
+  const dir = fs.readdirSync(cwd);
+  console.log("📁 cwd-indhold:", dir);
+
+  // Test om CDF findes her
+  if (fs.existsSync(path.join(cwd, "CDF"))) {
+    console.log("✅ Fundet /CDF i:", cwd);
+    console.log("📦 Modules:", fs.readdirSync(path.join(cwd, "CDF/modules")));
+  } else {
+    console.log("❌ Ingen CDF-mappe i cwd");
+  }
+} catch (err) {
+  console.error("🚨 Fejl i debug:", err);
+}
+
+console.log("📍 VERCEL DEBUG - SLUT");
+
     if (fs.existsSync(jsonPath)) {
       data = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
     } else if (fs.existsSync(mdPath)) {
