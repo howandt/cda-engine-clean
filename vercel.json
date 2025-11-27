@@ -13,8 +13,8 @@
     }
   ],
   "functions": {
-    "api/cdf/core.js": {
-      "includeFiles": "api/cdf/modules/**"
+  "api/cdf/core.js": {
+    "includeFiles": "CDF/modules/**"
     }
   }
 }
