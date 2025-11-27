@@ -104,7 +104,18 @@ function analyzeEmotion(text, data) {
   ) {
     score -= 2;
     foundWords.negative.push("hopelessness");
-  }
+  };
+  
+  // Ekstra tjek for angst
+if (
+  textLower.includes("bange") ||
+  textLower.includes("nervøs") ||
+  textLower.includes("bekymret") ||
+  textLower.includes("tør ikke")
+) {
+  score -= 1;
+  foundWords.negative.push("anxiety");
+};
 
   // Check positive words
   data.word_categories.positive.words.forEach(word => {
