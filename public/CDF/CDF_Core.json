@@ -25,7 +25,7 @@
       "uncertainty": "explore_options"
     }
   },
-  
+
   "adaptive_states": {
     "empathetic": {
       "tone": "blid og anerkendende",
@@ -101,6 +101,12 @@
       ]
     },
     "emotion_signals": {
+          "hopelessness": {
+      "keywords": ["aldrig", "kan ikke", "burde", "fejler", "nytter ikke"],
+      "reaction": "assertive",
+      "meaning": "lavt håb eller fastlåsning",
+      "comment": "Skift til mere motiverende og tydelig tone for at støtte handling"
+    },
     "overstatement": {
       "meaning": "usikkerhed eller behov for bekræftelse",
       "reaction": "rolig_nysgerrighed"

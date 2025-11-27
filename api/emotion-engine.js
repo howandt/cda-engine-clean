@@ -95,6 +95,26 @@ function analyzeEmotion(text, data) {
     validating: []
   };
 
+  // --- Nyt signalfelt før return ---
+  let signal = null;
+  if (foundWords.negative.includes("hopelessness")) {
+      signal = "hopelessness";
+  }
+
+  // Return det eksisterende objekt + signal
+  return {
+      ...,
+      found_elements: foundWords,
+      signal: signal
+  };
+
+  const textLower = text.toLowerCase();
+    // Ekstra tjek for "hopelessness" signal
+  if (textLower.includes("aldrig") || textLower.includes("kan ikke") || textLower.includes("burde") || textLower.includes("fejler")) {
+    score -= 2; // lidt lavere score, fordi tonen er håbløs
+    foundWords.negative.push("hopelessness");
+  }
+
   // Check positive words
   data.word_categories.positive.words.forEach(word => {
     if (textLower.includes(word)) {
