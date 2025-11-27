@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
-import "./modules/FoodLab.md";
-import "./modules/HealthLab.json";
-import "./modules/recipes_and_health.json";
+// @vercel/include api/cdf/modules/FoodLab.md
+// @vercel/include api/cdf/modules/HealthLab.json
+// @vercel/include api/cdf/modules/recipes_and_health.json
 
 export default function handler(req, res) {
   const { module } = req.query;
