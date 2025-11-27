@@ -25,8 +25,11 @@ export default async function handler(req, res) {
     const fileName = moduleMap[key] || module.charAt(0).toUpperCase() + module.slice(1);
 
     // 🔹 Byg URL'er
-    const jsonURL = `${baseURL}/CDF/modules/${fileName}.json`;
-    const mdURL = `${baseURL}/CDF/modules/${fileName}.md`;
+    const isCore = fileName.toLowerCase().includes("core");
+const folder = isCore ? "CDF" : "CDF/modules";
+
+const jsonURL = `${baseURL}/${folder}/${fileName}.json`;
+const mdURL = `${baseURL}/${folder}/${fileName}.md`;
 
     console.log(`🔍 Prøver at hente: ${jsonURL}`);
 
