@@ -12,6 +12,18 @@ export default function handler(req, res) {
   }
 
   try {
+    console.log("📁 Debug list of modules dir");
+try {
+  const testDir = path.join(process.cwd(), "api", "cdf", "modules");
+  console.log("👉 Path I'm checking:", testDir);
+  console.log("👉 Exists?", fs.existsSync(testDir));
+  if (fs.existsSync(testDir)) {
+    console.log("👉 Contents:", fs.readdirSync(testDir));
+  }
+} catch (err) {
+  console.error("🛑 Could not read modules dir:", err);
+}
+
     const cwd = process.cwd();
     const basePath = path.join(cwd, "api", "cdf", "modules");
     console.log("📍 process.cwd():", cwd);
