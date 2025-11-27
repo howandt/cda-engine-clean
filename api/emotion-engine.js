@@ -48,8 +48,8 @@ export default async function handler(req, res) {
       const { text, context } = req.body;
 
       if (!text) {
-        return res.status(400).json({ 
-          error: 'Missing required field: text' 
+        return res.status(400).json({
+          error: 'Missing required field: text'
         });
       }
 
@@ -76,9 +76,9 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Emotion Engine API Error:', error);
-    res.status(500).json({ 
+    res.status(500).json({
       error: 'Failed to process emotion analysis',
-      details: error.message 
+      details: error.message
     });
   }
 }
@@ -95,23 +95,14 @@ function analyzeEmotion(text, data) {
     validating: []
   };
 
-  // --- Nyt signalfelt før return ---
-  let signal = null;
-  if (foundWords.negative.includes("hopelessness")) {
-      signal = "hopelessness";
-  }
-
-  // Return det eksisterende objekt + signal
-  return {
-      ...,
-      found_elements: foundWords,
-      signal: signal
-  };
-
-  const textLower = text.toLowerCase();
-    // Ekstra tjek for "hopelessness" signal
-  if (textLower.includes("aldrig") || textLower.includes("kan ikke") || textLower.includes("burde") || textLower.includes("fejler")) {
-    score -= 2; // lidt lavere score, fordi tonen er håbløs
+  // Ekstra tjek for hopelessness
+  if (
+    textLower.includes("aldrig") ||
+    textLower.includes("kan ikke") ||
+    textLower.includes("burde") ||
+    textLower.includes("fejler")
+  ) {
+    score -= 2;
     foundWords.negative.push("hopelessness");
   }
 
@@ -173,6 +164,13 @@ function analyzeEmotion(text, data) {
     moodData = data.mood_levels.spændt;
   }
 
+  // Opret signal-felt
+  let signal = null;
+  if (foundWords.negative.includes("hopelessness")) {
+    signal = "hopelessness";
+  }
+
+  // Return resultatet med signal
   return {
     score: score,
     mood: mood,
@@ -187,7 +185,8 @@ function analyzeEmotion(text, data) {
       empathy: foundWords.empathy.length,
       commands: foundWords.commands.length,
       validating: foundWords.validating.length
-    }
+    },
+    signal: signal
   };
 }
 
@@ -199,7 +198,7 @@ function findSimilarExamples(text, examples) {
   examples.forEach(example => {
     const badWords = example.bad_communication.toLowerCase().split(' ');
     const matchCount = badWords.filter(word => textLower.includes(word)).length;
-    
+
     if (matchCount > 2) {
       matches.push({
         situation: example.situation,
