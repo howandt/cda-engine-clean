@@ -1,8 +1,5 @@
 import fs from "fs";
 import path from "path";
-// @vercel/include api/cdf/modules/FoodLab.md
-// @vercel/include api/cdf/modules/HealthLab.json
-// @vercel/include api/cdf/modules/recipes_and_health.json
 
 export default function handler(req, res) {
   const { module } = req.query;
@@ -28,7 +25,7 @@ try {
 }
 
     const cwd = process.cwd();
-    const basePath = path.join(cwd, "api", "cdf", "modules");
+    const basePath = path.join(process.cwd(), "CDF", "modules");
     console.log("📍 process.cwd():", cwd);
     console.log("✅ Base path:", basePath);
 
