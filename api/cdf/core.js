@@ -15,10 +15,7 @@ export default async function handler(req, res) {
     const name = module.charAt(0).toUpperCase() + module.slice(1).toLowerCase();
 
     // 🔹 Base URL (virker både lokalt og på Vercel)
-    const baseURL =
-      process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : "http://localhost:3000";
+    const baseURL = "https://cda-engine-clean.vercel.app";
 
     // 🔹 Prøv først .json, derefter .md
     const jsonURL = `${baseURL}/CDF/modules/${name}.json`;
