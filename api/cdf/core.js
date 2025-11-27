@@ -13,47 +13,29 @@ export default function handler(req, res) {
 
   try {
     const cwd = process.cwd();
-    console.log("📍 VERCEL DEBUG START");
-    console.log("🗂️ process.cwd():", cwd);
-    console.log("📁 Indhold af cwd:", fs.readdirSync(cwd));
-
-    // 🔍 Mulige basePaths afhængigt af hvor Vercel pakker projektet
-    const basePath = path.join(process.cwd(), "api", "cdf", "modules");
-
-    // Find første eksisterende sti
-    let basePath = possiblePaths.find((p) => fs.existsSync(p));
-    if (!basePath) {
-      console.error("❌ Ingen gyldig basePath fundet. Testede:", possiblePaths);
-      throw new Error("Ingen CDF/modules-mappe fundet i runtime.");
-    }
-
-    console.log("✅ Valgt basePath:", basePath);
+    const basePath = path.join(cwd, "api", "cdf", "modules");
+    console.log("📍 process.cwd():", cwd);
+    console.log("✅ Base path:", basePath);
 
     const name =
       module.charAt(0).toUpperCase() + module.slice(1).toLowerCase();
     const jsonPath = path.join(basePath, `${name}.json`);
     const mdPath = path.join(basePath, `${name}.md`);
 
-    console.log("🔍 Søger efter modul:", name);
-    console.log("📄 JSON:", jsonPath);
-    console.log("📄 MD:", mdPath);
+    console.log("🔍 Søger efter:", jsonPath, mdPath);
 
     let data;
-
     if (fs.existsSync(jsonPath)) {
       data = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
     } else if (fs.existsSync(mdPath)) {
-      const content = fs.readFileSync(mdPath, "utf-8");
       data = {
         module: name,
         format: "markdown",
-        content,
+        content: fs.readFileSync(mdPath, "utf-8"),
       };
     } else {
       throw new Error(`Ingen modulfil fundet for '${name}' (.json eller .md)`);
     }
-
-    console.log("📍 VERCEL DEBUG SLUT");
 
     return res.status(200).json({
       success: true,
