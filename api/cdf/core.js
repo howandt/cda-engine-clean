@@ -14,8 +14,19 @@ export default async function handler(req, res) {
     // 🔹 Modulnavn
     const name = module.charAt(0).toUpperCase() + module.slice(1).toLowerCase();
 
-    // 🔹 Base URL (virker både lokalt og på Vercel)
-    const baseURL = "https://cda-engine-clean.vercel.app";
+    // 🔹 Fast URL til public-mappen på Vercel
+const baseURL = "https://cda-engine-clean.vercel.app";
+
+// 🔹 Brug det rigtige filnavn (FoodLab, ikke Food)
+const fileName =
+  name.toLowerCase() === "food" ? "FoodLab" :
+  name.toLowerCase() === "health" ? "HealthLab" :
+  name;
+
+const jsonURL = `${baseURL}/CDF/modules/${fileName}.json`;
+const mdURL = `${baseURL}/CDF/modules/${fileName}.md`;
+
+console.log("🔍 Prøver at hente:", jsonURL);
 
     // 🔹 Prøv først .json, derefter .md
     const jsonURL = `${baseURL}/CDF/modules/${name}.json`;
