@@ -105,7 +105,7 @@ function analyzeEmotion(text, data) {
     score -= 2;
     foundWords.negative.push("hopelessness");
   };
-  
+
   // Ekstra tjek for angst
 if (
   textLower.includes("bange") ||
@@ -176,10 +176,13 @@ if (
   }
 
   // Opret signal-felt
-  let signal = null;
-  if (foundWords.negative.includes("hopelessness")) {
-    signal = "hopelessness";
-  }
+let signal = null;
+if (foundWords.negative.includes("hopelessness")) {
+  signal = "hopelessness";
+}
+if (foundWords.negative.includes("anxiety")) {
+  signal = "anxiety";
+}
 
   // Return resultatet med signal
   return {
