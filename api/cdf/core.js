@@ -1,7 +1,6 @@
-import fs from "fs";
 import path from "path";
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   const { module } = req.query;
 
   if (!module) {
@@ -12,27 +11,31 @@ export default function handler(req, res) {
   }
 
   try {
-    const cwd = process.cwd();
-    const basePath = path.join(process.cwd(), "CDF", "modules");
-    console.log("📍 process.cwd():", cwd);
-    console.log("✅ Base path:", basePath);
+    // 🔹 Modulnavn
+    const name = module.charAt(0).toUpperCase() + module.slice(1).toLowerCase();
 
-    const name =
-      module.charAt(0).toUpperCase() + module.slice(1).toLowerCase();
-    const jsonPath = path.join(basePath, `${name}.json`);
-    const mdPath = path.join(basePath, `${name}.md`);
+    // 🔹 Base URL (virker både lokalt og på Vercel)
+    const baseURL =
+      process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : "http://localhost:3000";
 
-    console.log("🔍 Søger efter:", jsonPath, mdPath);
+    // 🔹 Prøv først .json, derefter .md
+    const jsonURL = `${baseURL}/CDF/modules/${name}.json`;
+    const mdURL = `${baseURL}/CDF/modules/${name}.md`;
+
+    console.log("🔍 Prøver at hente:", jsonURL);
 
     let data;
-    if (fs.existsSync(jsonPath)) {
-      data = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
-    } else if (fs.existsSync(mdPath)) {
-      data = {
-        module: name,
-        format: "markdown",
-        content: fs.readFileSync(mdPath, "utf-8"),
-      };
+
+    const jsonResp = await fetch(jsonURL);
+    const mdResp = await fetch(mdURL);
+
+    if (jsonResp.ok) {
+      data = await jsonResp.json();
+    } else if (mdResp.ok) {
+      const content = await mdResp.text();
+      data = { module: name, format: "markdown", content };
     } else {
       throw new Error(`Ingen modulfil fundet for '${name}' (.json eller .md)`);
     }
@@ -43,7 +46,7 @@ export default function handler(req, res) {
       data,
     });
   } catch (error) {
-    console.error("❌ FEJL I CORE.JS:", error);
+    console.error("❌ FEJL I CORE.JS:", error.message);
     return res.status(500).json({
       success: false,
       message: `Kunne ikke hente data for ${req.query.module}`,
