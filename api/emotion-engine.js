@@ -107,15 +107,15 @@ function analyzeEmotion(text, data) {
   };
 
   // Ekstra tjek for angst
-if (
-  textLower.includes("bange") ||
-  textLower.includes("nervøs") ||
-  textLower.includes("bekymret") ||
-  textLower.includes("tør ikke")
-) {
-  score -= 1;
-  foundWords.negative.push("anxiety");
-};
+  if (
+    textLower.includes("bange") ||
+    textLower.includes("nervøs") ||
+    textLower.includes("bekymret") ||
+    textLower.includes("tør ikke")
+  ) {
+    score -= 1;
+    foundWords.negative.push("anxiety");
+  };
 
   // Check positive words
   data.word_categories.positive.words.forEach(word => {
@@ -175,8 +175,8 @@ if (
     moodData = data.mood_levels.spændt;
   }
 
-  // NEW: Determine communication mode (basic setup)
-  let mode = "Empathic"; // standard tone
+  // Determine communication mode
+  let mode = "Empathic"; // default tone
 
   if (textLower.includes("du skal") || textLower.includes("nu skal vi")) {
     mode = "Directive";
@@ -187,15 +187,41 @@ if (
   }
 
   // Opret signal-felt
-let signal = null;
-if (foundWords.negative.includes("hopelessness")) {
-  signal = "hopelessness";
-}
-if (foundWords.negative.includes("anxiety")) {
-  signal = "anxiety";
-}
+  let signal = null;
+  if (foundWords.negative.includes("hopelessness")) {
+    signal = "hopelessness";
+  }
+  if (foundWords.negative.includes("anxiety")) {
+    signal = "anxiety";
+  }
 
-  // Return resultatet med signal
+  // NEW: Response strategy – handling baseret på signal
+  let response_strategy = {
+    allow_push: false,
+    push_type: null,
+    suggested_tone: "empathetic",
+    action_hint: null
+  };
+
+  if (signal === "hopelessness") {
+    response_strategy = {
+      allow_push: true,
+      push_type: "first_step",
+      suggested_tone: "empathetic_direct",
+      action_hint: "Help user take one small action, even if motivation is low."
+    };
+  }
+
+  if (signal === "anxiety") {
+    response_strategy = {
+      allow_push: false,
+      push_type: null,
+      suggested_tone: "calming",
+      action_hint: "Focus on grounding and reducing pressure."
+    };
+  }
+
+  // Return hele analysen inkl. strategi
   return {
     score: score,
     mood: mood,
@@ -212,7 +238,8 @@ if (foundWords.negative.includes("anxiety")) {
       commands: foundWords.commands.length,
       validating: foundWords.validating.length
     },
-    signal: signal
+    signal: signal,
+    response_strategy: response_strategy
   };
 }
 
