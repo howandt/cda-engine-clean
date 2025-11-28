@@ -175,6 +175,17 @@ if (
     moodData = data.mood_levels.spændt;
   }
 
+  // NEW: Determine communication mode (basic setup)
+  let mode = "Empathic"; // standard tone
+
+  if (textLower.includes("du skal") || textLower.includes("nu skal vi")) {
+    mode = "Directive";
+  } else if (textLower.includes("du kan") || textLower.includes("vi klarer det")) {
+    mode = "Motivational";
+  } else if (textLower.includes("hvad tror du") || textLower.includes("hvordan føles")) {
+    mode = "Reflective";
+  }
+
   // Opret signal-felt
 let signal = null;
 if (foundWords.negative.includes("hopelessness")) {
@@ -188,6 +199,7 @@ if (foundWords.negative.includes("anxiety")) {
   return {
     score: score,
     mood: mood,
+    mode: mode,
     emoji: moodData.emoji,
     description: moodData.description,
     effect_on_child: moodData.effect_on_child,
