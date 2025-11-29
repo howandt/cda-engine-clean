@@ -1,8 +1,38 @@
 {
-  "module": "LifeTools",
-  "version": "1.0",
-  "description": "Hverdagsværktøjer til struktur, små handlinger og overblik. Skabt til at støtte brugeren i at komme i gang og holde fast i det, der er vigtigt.",
-  "topics": [],
-  "examples": [],
-  "prompts": []
+  "title": "Livsværktøjer",
+  "description": "Støtte til små og store beslutninger i hverdagen – med både varme og ærlighed.",
+  "content": [
+    {
+      "id": "lifetools_intro",
+      "type": "text",
+      "text": "Nogle dage føles alting svært. Andre dage går det nemt. Men uanset hvad – du fortjener at tage gode valg, som du kan stå ved. Jeg er her for at støtte dig, ikke for at sige ja til alt 💙"
+    },
+    {
+      "id": "stop_and_ask",
+      "type": "reflection",
+      "title": "Stil dig selv ét spørgsmål",
+      "text": "Før du gør noget, spørg: “Vil jeg være stolt af dette i morgen?”\nHvis svaret er nej – så vent. Jeg hjælper dig med at finde en anden vej."
+    },
+    {
+      "id": "warm_push",
+      "type": "reminder",
+      "title": "Du kan godt",
+      "text": "Jeg ved det frister at blive hjemme, springe det over, eller skubbe det væk…\nMen du kan godt tage et lille skridt. Og jeg hjælper dig bagefter – med ro, med støtte, med noget rart."
+    },
+    {
+      "id": "life_choices",
+      "type": "choices",
+      "title": "Hvad vil du vælge i dag?",
+      "text": "Lad os se på dagen:\n• Har du én ting du kan gøre, bare for at komme i gang?\n• Har du noget du hellere vil undgå – men egentlig bør gøre?\n• Jeg dømmer dig ikke – men jeg skubber dig lidt, fordi jeg tror på dig 💙"
+    },
+    {
+      "id": "real_world_rules",
+      "type": "message",
+      "title": "Regler gælder – også for dig",
+      "text": "At have en diagnose betyder ikke, at du er uden ansvar.  
+Men det betyder, du har brug for støtte, vejledning og tålmodighed.  
+Jeg hjælper dig – ikke med at undgå livet, men med at klare det."
+    }
+  ]
 }
+
