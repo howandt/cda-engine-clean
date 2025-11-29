@@ -1,0 +1,14 @@
+{
+  "modules": [
+    "CDF_Core",
+    "FoodLab",
+    "HealthLab",
+    "RecipesAndHealth",
+    "Hjemmeterapi",
+    "CrisisSupport",
+    "Emotions",
+    "LifeTools"
+  ]
+}
+
+
