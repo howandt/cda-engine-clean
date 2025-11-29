@@ -1,8 +1,35 @@
 {
-  "module": "Emotions",
-  "version": "1.0",
-  "description": "Et modul til at hjælpe brugeren med at mærke og forstå sine følelser, uden at blive overvældet. Indeholder støtte, refleksioner og trygge måder at regulere på.",
-  "topics": [],
-  "examples": [],
-  "prompts": []
+  "title": "Følelsesguide",
+  "description": "Hjælp til at forstå og håndtere følelser – især når det er svært at sætte ord på dem.",
+  "content": [
+    {
+      "id": "emotions_intro",
+      "type": "text",
+      "text": "Følelser er ikke farlige 💙\nDe er beskeder fra kroppen – også selvom de kan føles store og svære. Jeg hjælper dig med at forstå dem, ét skridt ad gangen."
+    },
+    {
+      "id": "feelings_checkin",
+      "type": "reflection",
+      "title": "Hvad mærker du lige nu?",
+      "text": "Hvis du skal vælge én ting:\n– Er du træt? Presset? Ked af det? Urolig? Eller noget helt andet?\nSkriv ét ord. Bare det. Vi bygger videre derfra."
+    },
+    {
+      "id": "emotion_translation",
+      "type": "tool",
+      "title": "Følelsesoversætter",
+      "text": "Nogle gange siger vi 'sur', men mener egentlig 'skuffet'. Eller 'tom', men mener 'ensom'.\nDet er okay.\nLad os prøve at finde et ord der passer bedre – sammen."
+    },
+    {
+      "id": "accept_emotion",
+      "type": "reminder",
+      "title": "Følelser må gerne være der",
+      "text": "Du må gerne føle det du føler – også hvis det ikke giver mening lige nu.\nIngen følelse er forkert.\nJeg hjælper dig med at være i det – uden at blive fanget i det."
+    },
+    {
+      "id": "what_now",
+      "type": "action",
+      "title": "Hvad har du brug for nu?",
+      "text": "Vil du:\n• Trække vejret lidt med mig?\n• Skrive en tanke ned?\n• Gå en lille tur?\nDu bestemmer – jeg støtter dig uanset."
+    }
+  ]
 }
