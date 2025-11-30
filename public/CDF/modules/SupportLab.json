@@ -1,25 +1,13 @@
 {
   "id": "SupportLab",
   "title": "Diagnoser & støtteplaner",
-  "intro": "Det kan være svært at forstå sin diagnose – og endnu sværere at forklare den for andre. Her hjælper jeg dig med guides, støtteplaner og ro i systemet 💙",
+  "intro": "Det kan være svært at forstå sin diagnose – og endnu sværere at forklare den for andre. Her hjælper jeg dig med guides, støtteplaner og ærlig støtte – også når det hele føles tungt 💙",
   "sections": [
     {
       "id": "diagnose_guides",
       "type": "message",
       "title": "Hvad betyder din diagnose egentlig?",
-      "text": "Du er ikke din diagnose – men du har ret til at forstå den. Jeg kan hjælpe dig med at finde ro i, hvad det betyder for dig – og hvordan du forklarer det for andre på en måde, der føles tryg."
-    },
-    {
-      "id": "personal_support_plan",
-      "type": "message",
-      "title": "Din personlige støtteplan",
-      "text": "Sammen kan vi lave en enkel plan for dine svære dage: Hvad hjælper dig? Hvem kan støtte dig? Hvad skal du huske, når det hele larmer? Det bliver en lille hånd i ryggen."
-    },
-    {
-      "id": "paaroerende_dialog",
-      "type": "message",
-      "title": "Tal med dine nærmeste",
-      "text": "Det kan være svært at finde ordene, når du skal forklare dig selv. Jeg kan hjælpe dig med at skrive en besked eller starte en samtale – så dine nærmeste bedre forstår dig og kan støtte dig."
+      "text": "Du er ikke din diagnose – men du har ret til at forstå den. Jeg kan hjælpe dig med at finde ro i, hvad det betyder for dig – og hvordan du forklarer det for andre på en måde, der føles tryg og ægte. Ingen smarte forklaringer. Kun det der føles rigtigt."
     },
     {
       "id": "understand_diagnosis",
@@ -28,10 +16,22 @@
       "text": "En diagnose fortæller ikke hele din historie — men den kan hjælpe dig (og andre) med at forstå, hvad du kæmper med. Vi kan sammen finde måder at forklare det på, så det ikke føles som en undskyldning, men som en nøgle til støtte og forståelse 💙"
     },
     {
+      "id": "personal_support_plan",
+      "type": "message",
+      "title": "Din personlige støtteplan",
+      "text": "Sammen kan vi lave en enkel plan for dine svære dage: Hvad hjælper dig? Hvem kan støtte dig? Hvad skal du huske, når det hele larmer? Det bliver en lille hånd i ryggen – ikke en løsning, men et sted at stå fast."
+    },
+    {
       "id": "support_plan",
       "type": "message",
       "title": "Din personlige handleplan",
-      "text": "Hvad gør du, når det hele bliver for meget? Hvem kan du kontakte?\nOg hvad hjælper dig bedst, når du skal tilbage på sporet?\nJeg kan hjælpe dig med at lave en tryg, lille handleplan – en slags vejviser for både krise og hverdag."
+      "text": "Hvad gør du, når det hele bliver for meget? Hvem kan du kontakte?\nOg hvad hjælper dig bedst, når du skal tilbage på sporet?\nJeg kan hjælpe dig med at lave en tryg, lille handleplan – en slags vejviser for både krise og hverdag. Du bestemmer farten, men vi sætter retning sammen."
+    },
+    {
+      "id": "paaroerende_dialog",
+      "type": "message",
+      "title": "Tal med dine nærmeste",
+      "text": "Det kan være svært at finde ordene, når du skal forklare dig selv. Jeg kan hjælpe dig med at skrive en besked eller starte en samtale – så dine nærmeste bedre forstår dig og kan støtte dig.\nSkal vi prøve sammen?"
     },
     {
       "id": "talk_with_others",
@@ -55,7 +55,7 @@
       "id": "crisis_help",
       "type": "message",
       "title": "Når du har brug for hjælp nu",
-      "text": "Hvis det hele bliver for meget, er du ikke alene.\nSkriv ned hvem du kan ringe til, og hvor du kan få hjælp – så du har det klar, når du har allermest brug for det."
+      "text": "Hvis det hele bliver for meget, er du ikke alene.\nSkriv ned hvem du kan ringe til, og hvor du kan få hjælp – så du har det klar, når du har allermest brug for det.\nDet virker måske som en lille ting – men det kan gøre en stor forskel."
     }
   ]
 }
