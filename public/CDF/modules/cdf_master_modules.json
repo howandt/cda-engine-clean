@@ -172,7 +172,19 @@
           "id": "AdaptCore",
           "title": "Personlig AI-tilpasning",
           "tags": ["tilpasning", "kommunikation", "feedback", "energiniveau"]
-        }
+        },
+        {
+  "id": "expression",
+  "title": "Skaberglæde & hobbyer",
+  "description": "Her kan brugeren udforske kreative sider, finde glæde i hobbyer og mærke sig selv i små pauser.",
+  "modules": [
+    {
+      "id": "HobbyLab",
+      "title": "Hobbyer & kreative pauser",
+      "tags": ["hobby", "skrive", "male", "bygge", "flow", "egen tid", "kreativitet"]
+    }
+  ]
+}
       ]
     }
   ]
