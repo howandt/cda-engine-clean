@@ -62,17 +62,10 @@
           "tags": ["opskrifter", "hurtig mad", "kost", "selvomsorg"]
         },
         {
-  "id": "green",
-  "title": "Grøn rytme & ansvar",
-  "description": "Små grønne valg, ro i naturen og ansvar uden stress. Her hjælper Sarah med grønne rytmer, cykling og miljøvaner – i dit tempo.",
-  "modules": [
-    {
-      "id": "GreenLab",
-      "title": "Grøn hverdag & naturkontakt",
-      "tags": ["planter", "cykling", "klima", "sortering", "ro", "grønne vaner"]
-    }
-  ]
-}
+          "id": "GreenLab",
+          "title": "Grøn hverdag & naturkontakt",
+          "tags": ["planter", "cykling", "klima", "sortering", "ro", "grønne vaner"]
+        }
       ]
     },
     {
@@ -96,10 +89,10 @@
           "tags": ["overblik", "valg", "beslutning", "energi", "små skridt"]
         },
         {
-  "id": "LifeFlow",
-  "title": "Hverdagsflow & påmindelser",
-  "tags": ["struktur", "aftaler", "regninger", "huske", "små ting", "overblik"]
-}
+          "id": "LifeFlow",
+          "title": "Hverdagsflow & påmindelser",
+          "tags": ["struktur", "aftaler", "regninger", "huske", "små ting", "overblik"]
+        }
       ]
     },
     {
@@ -172,29 +165,31 @@
           "id": "AdaptCore",
           "title": "Personlig AI-tilpasning",
           "tags": ["tilpasning", "kommunikation", "feedback", "energiniveau"]
-        },
-        {
-  "id": "expression",
-  "title": "Skaberglæde & hobbyer",
-  "description": "Her kan brugeren udforske kreative sider, finde glæde i hobbyer og mærke sig selv i små pauser.",
-  "modules": [
-    {
-      "id": "HobbyLab",
-      "title": "Hobbyer & kreative pauser",
-      "tags": ["hobby", "skrive", "male", "bygge", "flow", "egen tid", "kreativitet"]
+        }
+      ]
     },
     {
-  "id": "faglig_stoette",
-  "title": "Faglig støtte i baggrunden",
-  "description": "Sarah trækker roligt på fagpersoner, når det giver mening – uden at brugeren møder et panel.",
-  "modules": [
+      "id": "expression",
+      "title": "Skaberglæde & hobbyer",
+      "description": "Her kan brugeren udforske kreative sider, finde glæde i hobbyer og mærke sig selv i små pauser.",
+      "modules": [
+        {
+          "id": "HobbyLab",
+          "title": "Hobbyer & kreative pauser",
+          "tags": ["hobby", "skrive", "male", "bygge", "flow", "egen tid", "kreativitet"]
+        }
+      ]
+    },
     {
-      "id": "SpecialistSupport",
-      "title": "Specialiststøtte i baggrunden",
-      "tags": ["psykolog", "socialrådgiver", "sansestøtte", "struktur", "kost", "bevægelse"]
-    }
-  ]
-}
+      "id": "faglig_stoette",
+      "title": "Faglig støtte i baggrunden",
+      "description": "Sarah trækker roligt på fagpersoner, når det giver mening – uden at brugeren møder et panel.",
+      "modules": [
+        {
+          "id": "SpecialistSupport",
+          "title": "Specialiststøtte i baggrunden",
+          "tags": ["psykolog", "socialrådgiver", "sansestøtte", "struktur", "kost", "bevægelse"]
+        }
       ]
     }
   ]
