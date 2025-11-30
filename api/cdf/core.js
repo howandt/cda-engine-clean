@@ -12,22 +12,23 @@ export default async function handler(req, res) {
     const baseURL = "https://cda-engine-clean.vercel.app";
 
     // 🔹 Mapping af moduler (kan udvides)
-    const moduleMap = {
-      food: "FoodLab",
-      health: "HealthLab",
-      recipes: "RecipesAndHealth",
-      core: "CDF_Core",
-    };
-
-    // 🧭 Hvis brugeren beder om ?module=list → returnér oversigt
     if (module.toLowerCase() === "list") {
-      const available = Object.values(moduleMap);
-      return res.status(200).json({
-        success: true,
-        message: "Tilgængelige moduler",
-        modules: available,
-      });
-    }
+  const masterURL = `${baseURL}/CDF/modules/cdf_master_modules.json`;
+  const masterResp = await fetch(masterURL);
+  if (!masterResp.ok) throw new Error("Kunne ikke hente master modul-fil");
+  const masterData = await masterResp.json();
+
+  // Træk alle module-id'er ud fra alle labs
+  const allModules = masterData.labs
+    .flatMap(lab => lab.modules)
+    .map(mod => mod.id);
+
+  return res.status(200).json({
+    success: true,
+    message: "Tilgængelige moduler",
+    modules: allModules,
+  });
+}
 
     // 🔹 Find filnavn
     const key = module.toLowerCase();
