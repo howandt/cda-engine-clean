@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2025-11-29",
+  "last_updated": "2025-11-30",
   "labs": [
     {
       "id": "core",
@@ -38,6 +38,11 @@
           "id": "Emotions",
           "title": "Følelsesguide",
           "tags": ["følelser", "reaktioner", "tolkning", "emotionel støtte", "ADHD"]
+        },
+        {
+          "id": "MoveLab",
+          "title": "Bevægelse & kropslighed",
+          "tags": ["træning", "bevægelse", "krop", "yoga", "fitness", "rutine", "egenomsorg"]
         }
       ]
     },
@@ -111,6 +116,11 @@
           "id": "SupportLab",
           "title": "Diagnoser & støtteplaner",
           "tags": ["rettigheder", "psykiatri", "samtaler", "handleplan", "pårørende"]
+        },
+        {
+          "id": "PushSupport",
+          "title": "Skub & støtte",
+          "tags": ["hverdagsmod", "rutine", "opstart", "skole", "arbejde", "struktur"]
         }
       ]
     },
@@ -136,7 +146,6 @@
         }
       ]
     },
-
     {
       "id": "adaptation",
       "title": "Teknisk & tilpasning",
