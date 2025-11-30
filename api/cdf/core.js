@@ -11,29 +11,32 @@ export default async function handler(req, res) {
   try {
     const baseURL = "https://cda-engine-clean.vercel.app";
 
-    // 🔹 Mapping af moduler (kan udvides)
-    if (module.toLowerCase() === "list") {
-  const masterURL = `${baseURL}/CDF/modules/cdf_master_modules.json`;
-  const masterResp = await fetch(masterURL);
-  if (!masterResp.ok) throw new Error("Kunne ikke hente master modul-fil");
-  const masterData = await masterResp.json();
-
-  // Træk alle module-id'er ud fra alle labs
-  const allModules = masterData.labs
-    .flatMap(lab => lab.modules)
-    .map(mod => mod.id);
-
-  return res.status(200).json({
-    success: true,
-    message: "Tilgængelige moduler",
-    modules: allModules,
-  });
-}
+    // 🔹 Mapping af brugerens input til faktiske filnavne
+    const moduleMap = {
+      core: "CDF_Core",
+      food: "FoodLab",
+      health: "HealthLab",
+      recipes: "RecipesAndHealth",
+      support: "SupportLab",
+      care: "CareLab",
+      calm: "CalmSpace",
+      adapt: "AdaptCore",
+      move: "MoveLab",
+      push: "PushSupport",
+      grow: "GrowLab",
+      hjemmeterapi: "Hjemmeterapi",
+      crisis: "CrisisSupport",
+      emotions: "Emotions",
+      lifetools: "LifeTools",
+      green: "GreenLab",
+      lifeflow: "LifeFlow",
+      hobby: "HobbyLab",
+      specialist: "SpecialistSupport"
+    };
 
     // 🔹 Find filnavn
     const key = module.toLowerCase();
-    const fileName =
-      moduleMap[key] || module.charAt(0).toUpperCase() + module.slice(1);
+    const fileName = moduleMap[key] || module.charAt(0).toUpperCase() + module.slice(1);
 
     // 🔹 Core ligger i /CDF/, resten i /CDF/modules/
     const isCore = fileName.toLowerCase().includes("core");
