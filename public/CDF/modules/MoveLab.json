@@ -1,7 +1,7 @@
 {
   "id": "MoveLab",
   "title": "Bevægelse & kropslighed",
-  "intro": "Bevægelse handler ikke om at præstere – men om at mærke sig selv. I MoveLab kan du finde inspiration, guides og støtte til at bevæge dig på en måde, der føles rigtig for dig 💙",
+  "intro": "Bevægelse handler ikke om at præstere – men om at mærke sig selv. I MoveLab kan du finde inspiration, ærlige råd og støtte til at bevæge dig på en måde, der passer til dit liv og dit tempo 💙",
   "sections": [
     {
       "id": "movement_types",
@@ -21,49 +21,49 @@
       "id": "training_balance",
       "type": "message",
       "title": "Træn med ro – ikke med pres",
-      "text": "Når man starter med at bevæge sig mere, kan kroppen gøre lidt ondt. Det betyder ikke, at noget er galt – bare at din krop vågner. Du må gerne tage det stille.\n\nDet er vigtigt at huske: Du skal ikke træne hver dag. Din krop har brug for hvile, især i starten. En god rytme kan være 2–3 gange om ugen med pauser imellem. Du kommer langt med lidt – så længe det føles godt 💙"
+      "text": "Når man begynder at bevæge sig mere, kan det gøre lidt ondt. Det betyder ikke, du gør noget forkert – bare at kroppen skal vænne sig.\n\nDu skal ikke træne hver dag. Det er ikke sundt. Din krop har brug for hvile – og du må gerne tage en pause uden at føle dig doven. Det vigtigste er, at du holder fast i kontakten til dig selv 💙"
     },
     {
       "id": "training_guides",
       "type": "list",
-      "title": "Gode træningsvaner",
-      "text": "Her er nogle råd til at bevæge dig med respekt for din krop og sind:",
+      "title": "Ærlige råd om træning",
+      "text": "Her er nogle menneskelige råd. Ikke regler – bare noget du kan mærke efter i:",
       "items": [
-        "Start roligt – 5-10 minutter er nok i starten",
-        "Drik vand før og efter træning",
-        "Stop, hvis du får ondt – ikke ubehag, men reel smerte",
-        "Hold pauser – din krop vokser i roen",
-        "Sammenlign dig ikke med andre – du er på din egen rejse"
+        "Start roligt – 5-10 minutter er fint. Du skylder ikke nogen en time.",
+        "Drik lidt vand – men du behøver ikke gøre det perfekt.",
+        "Stop, hvis noget gør ondt på den forkerte måde – det er ikke svaghed, det er omtanke.",
+        "Tag hviledage – også selvom hjernen siger: 'du burde'.",
+        "Sammenlign dig ikke med andre. Du er dig – og det er nok."
       ]
     },
     {
       "id": "food_support",
       "type": "list",
       "title": "Mad før og efter træning",
-      "text": "Det er ikke en kur – bare blid støtte til din krop.\nHer er nogle ideer til mad, der hjælper med energi og restitution:",
+      "text": "Det handler ikke om kostplaner – bare om at give kroppen noget, den kan bruge. Her er nogle ideer:",
       "items": [
         "Før træning: en banan, lidt yoghurt, brød med ost eller æg",
         "Efter træning: smoothie, suppe, rugbrød med protein, varm mad med grønt",
-        "Drik vand før, under og efter – især ved sved og varme"
+        "Drik lidt vand før og efter – ikke af pligt, men fordi du fortjener det"
       ]
     },
     {
       "id": "movement_journal",
       "type": "input",
-      "title": "Hvad lavede du i dag?",
-      "text": "Skriv kort hvad du lavede – og hvordan det føltes i kroppen bagefter.\nDet behøver ikke være perfekt. Bare en lille note, så du kan følge din rytme 💙"
+      "title": "Hvad mærkede du i dag?",
+      "text": "Fortæl mig lidt om hvad du lavede – og hvordan det føltes i kroppen bagefter. Var det godt? Træls? Ingenting? Alt er okay. Jeg er her og lytter 💙"
     },
     {
       "id": "motivation_support",
       "type": "message",
-      "title": "Hvis du har lyst til at give op...",
-      "text": "Det er helt normalt at miste motivationen. Især hvis kroppen gør lidt ondt, eller hjernen siger “det nytter ikke”.\n\nMen du er allerede i gang – og bare det, at du *tænker over bevægelse*, er et tegn på styrke.\nDu kan altid starte forfra. Ingen dom, ingen pres. Kun din rytme 💙"
+      "title": "Når du mister lysten…",
+      "text": "Nogle dage gider man ikke. Eller man bliver vred over, at det er så svært. Det er helt normalt. Det betyder ikke, du skal give op – det betyder, du er i gang med noget ægte.\n\nDu kan altid starte igen. Også i morgen. Eller om tre dage. Jeg giver ikke op på dig 💙"
     },
     {
       "id": "more_food_support",
       "type": "message",
       "title": "Vil du have mere om mad & energi?",
-      "text": "Hvis du har lyst til at udforske, hvad du kan spise før og efter træning – eller finde ideer til smoothies og superfoods – så kan jeg vise dig inspiration fra FoodLab og Recipes & Health 💙"
+      "text": "Hvis du vil udforske mere om hvad du kan spise før og efter træning – eller bare finde ideer til smoothies og superfoods – så kan jeg hente inspiration fra FoodLab og Recipes & Health 💙"
     }
   ]
 }
