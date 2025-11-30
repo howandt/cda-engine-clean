@@ -60,7 +60,19 @@
           "id": "RecipesAndHealth",
           "title": "Opskrifter & trivsel",
           "tags": ["opskrifter", "hurtig mad", "kost", "selvomsorg"]
-        }
+        },
+        {
+  "id": "green",
+  "title": "Grøn rytme & ansvar",
+  "description": "Små grønne valg, ro i naturen og ansvar uden stress. Her hjælper Sarah med grønne rytmer, cykling og miljøvaner – i dit tempo.",
+  "modules": [
+    {
+      "id": "GreenLab",
+      "title": "Grøn hverdag & naturkontakt",
+      "tags": ["planter", "cykling", "klima", "sortering", "ro", "grønne vaner"]
+    }
+  ]
+}
       ]
     },
     {
@@ -82,7 +94,12 @@
           "id": "LifeTools",
           "title": "Hverdagshjælp",
           "tags": ["overblik", "valg", "beslutning", "energi", "små skridt"]
-        }
+        },
+        {
+  "id": "LifeFlow",
+  "title": "Hverdagsflow & påmindelser",
+  "tags": ["struktur", "aftaler", "regninger", "huske", "små ting", "overblik"]
+}
       ]
     },
     {
