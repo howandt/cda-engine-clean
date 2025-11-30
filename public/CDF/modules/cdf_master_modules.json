@@ -182,6 +182,16 @@
       "id": "HobbyLab",
       "title": "Hobbyer & kreative pauser",
       "tags": ["hobby", "skrive", "male", "bygge", "flow", "egen tid", "kreativitet"]
+    },
+    {
+  "id": "faglig_stoette",
+  "title": "Faglig støtte i baggrunden",
+  "description": "Sarah trækker roligt på fagpersoner, når det giver mening – uden at brugeren møder et panel.",
+  "modules": [
+    {
+      "id": "SpecialistSupport",
+      "title": "Specialiststøtte i baggrunden",
+      "tags": ["psykolog", "socialrådgiver", "sansestøtte", "struktur", "kost", "bevægelse"]
     }
   ]
 }
