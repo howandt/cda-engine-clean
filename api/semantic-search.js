@@ -13,8 +13,8 @@ export default async function handler(req, res) {
       });
     }
 
-    // 🔹 Rigtige stier til dit setup
-    const casesPath = path.join(process.cwd(), "CDA", "data", "CDA_Cases_Index_clean.json");
+    // 🔹 Korrekte stier i dit setup
+    const casesPath = path.join(process.cwd(), "CDA", "data", "CDA_Case_Index.json");
     const semanticPath = path.join(process.cwd(), "CDA", "data", "semantic_engine.json");
 
     if (!fs.existsSync(casesPath) || !fs.existsSync(semanticPath)) {
@@ -59,4 +59,3 @@ export default async function handler(req, res) {
     });
   }
 }
-
