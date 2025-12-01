@@ -16,6 +16,10 @@ export default async function handler(req, res) {
     // 🔹 Korrekte stier i dit setup
     const casesPath = path.join(process.cwd(), "CDA", "data", "CDA_Case_Index.json");
     const semanticPath = path.join(process.cwd(), "CDA", "data", "semantic_engine.json");
+    
+    console.log("📂 process.cwd():", process.cwd());
+console.log("🔍 looking for:", casesPath);
+console.log("🔍 semantic file:", semanticPath);
 
     if (!fs.existsSync(casesPath) || !fs.existsSync(semanticPath)) {
       return res.status(404).json({
