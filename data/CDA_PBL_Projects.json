@@ -682,7 +682,55 @@
         "next_projects": ["pbl_023", "pbl_013"],
         "progression_note": "K-PBL - eksekutiv funktion gennem billeder"
       }
-    }
+    },
+    {
+  "id": "pbl_030",
+  "title": "App Maker",
+  "subtitle": "Byg en digital hjælper til din hverdag",
+  "description": "Design og byg en simpel app eller interaktiv løsning, der hjælper med at huske, forstå eller handle i hverdagen. Eleven vælger selv formål – fx 'hvad kan jeg gøre når jeg bliver stresset?' eller 'min dag i billeder'.",
+  "activities": [
+    "Vælg problem og målgruppe (dig selv, en ven, hele klassen)",
+    "Skitsér app'ens funktioner (papir eller digitalt)",
+    "Byg app’en i fx GlideApps, Scratch eller PowerPoint med links",
+    "Test og præsentér"
+  ],
+  "competencies": ["Problemløsning", "Planlægning", "Digital tænkning", "Empati"],
+  "diagnosis_match": ["ASF", "ADHD", "Angst", "Højt begavede"],
+  "stimuli_type": ["Visuel", "Logisk", "Emotionel"],
+  "social_exposure": "Lav",
+  "structure_need": "Høj",
+  "level": "Intermediate",
+  "duration_suggestion": "4-6 uger",
+  "progression": {
+    "develops": ["Brugerfokus", "Systematisk tænkning", "Selvstændighed"],
+    "next_projects": ["pbl_014", "pbl_022"],
+    "progression_note": "Godt for elever, der vil bygge noget meningsfuldt og lære basal UX"
+  }
+},
+{
+  "id": "pbl_031",
+  "title": "Spilværksted",
+  "subtitle": "Byg Dit Eget Scratch-Spil",
+  "description": "Lav dit eget spil fra bunden i Scratch. Du vælger tema, karakterer og mål – og lærer at bruge logiske blokke, variabler og loops. Projektet styrker både tekniske færdigheder og kreativ historiefortælling.",
+  "activities": [
+    "Lav spil-idé og skitser med papir eller digitalt storyboard",
+    "Byg karakterer og baggrunde i Scratch",
+    "Kod regler, point og game over",
+    "Test med makker og præsenter spillet"
+  ],
+  "competencies": ["Logik", "Programmering", "Kreativitet", "Feedback"],
+  "diagnosis_match": ["ADHD", "ASF", "Højt begavede", "Ordblindhed"],
+  "stimuli_type": ["Visuel", "Kinæstetisk", "Logisk"],
+  "social_exposure": "Lav",
+  "structure_need": "Høj",
+  "level": "Intermediate",
+  "duration_suggestion": "4-6 uger",
+  "progression": {
+    "develops": ["Sekventiel tænkning", "Historieopbygning", "Fejltolerance"],
+    "next_projects": ["pbl_008", "pbl_014"],
+    "progression_note": "Bygger videre på teknologiinteresse og tillader høj grad af selvudtryk"
+  }
+}
   ],
   "filter_categories": {
     "diagnosis_match": [
