@@ -14,8 +14,8 @@ export default async function handler(req, res) {
     }
 
     // 🔹 Korrekte stier i dit setup
-    const casesPath = path.join(process.cwd(), "public", "CDA", "data", "CDA_Case_Index.json");
-    const semanticPath = path.join(process.cwd(), "public", "CDA", "data", "semantic_engine.json");
+    const casesPath = path.join(process.cwd(), "public", "CDA", "data", "CDA_Cases_Index_clean.json");
+const semanticPath = path.join(process.cwd(), "public", "CDA", "data", "semantic_engine.json");
 
     console.log("📂 process.cwd():", process.cwd());
 console.log("🔍 looking for:", casesPath);
