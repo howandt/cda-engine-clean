@@ -13,9 +13,9 @@ export default async function handler(req, res) {
       });
     }
 
-    // 🔹 Hent datafiler
-    const casesPath = path.join(process.cwd(), "public", "data", "CDA_Cases_Index_clean.json");
-    const semanticPath = path.join(process.cwd(), "public", "data", "semantic_engine.json");
+    // 🔹 Rigtige stier til dit setup
+    const casesPath = path.join(process.cwd(), "CDA", "data", "CDA_Cases_Index_clean.json");
+    const semanticPath = path.join(process.cwd(), "CDA", "data", "semantic_engine.json");
 
     if (!fs.existsSync(casesPath) || !fs.existsSync(semanticPath)) {
       return res.status(404).json({
@@ -26,7 +26,6 @@ export default async function handler(req, res) {
 
     const cases = JSON.parse(fs.readFileSync(casesPath, "utf8"));
     const semantic = JSON.parse(fs.readFileSync(semanticPath, "utf8"));
-
     const caseList = cases.cases || cases;
 
     // 🔍 Trin 1: Omsæt søgetekst via semantiske synonymer
@@ -48,7 +47,7 @@ export default async function handler(req, res) {
       success: true,
       query: searchText,
       matches: matchedCases.length,
-      results: matchedCases.slice(0, 20), // begræns til 20 for hurtighed
+      results: matchedCases.slice(0, 20),
       terms_used: searchTerms
     });
 
@@ -60,3 +59,4 @@ export default async function handler(req, res) {
     });
   }
 }
+
