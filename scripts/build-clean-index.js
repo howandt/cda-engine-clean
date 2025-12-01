@@ -1,8 +1,9 @@
 import fs from "fs";
+import path from "path";
 
 // Input- og output-stier
-const inputPath = "./public/data/CDA_Cases_Index.json";
-const outputPath = "./public/data/CDA_Cases_Index_clean.json";
+const inputPath = path.join("public", "CDA", "data", "CDA_Cases_Index_clean.json");
+const outputPath = path.join("public", "CDA", "data", "CDA_Cases_Index_clean.json");
 
 // Indlæs JSON-data
 const data = JSON.parse(fs.readFileSync(inputPath, "utf8"));
