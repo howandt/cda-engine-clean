@@ -1,4 +1,4 @@
-{
+    {
   "version": "1.0",
   "last_updated": "2025-11-30",
   "labs": [
@@ -181,16 +181,29 @@
       ]
     },
     {
-      "id": "faglig_stoette",
-      "title": "Faglig støtte i baggrunden",
-      "description": "Sarah trækker roligt på fagpersoner, når det giver mening – uden at brugeren møder et panel.",
-      "modules": [
-        {
-          "id": "SpecialistSupport",
-          "title": "Specialiststøtte i baggrunden",
-          "tags": ["psykolog", "socialrådgiver", "sansestøtte", "struktur", "kost", "bevægelse"]
-        }
-      ]
+  "id": "faglig_stoette",
+  "title": "Faglig støtte i baggrunden",
+  "description": "Sarah trækker roligt på fagpersoner, når det giver mening – uden at brugeren møder et panel.",
+  "modules": [
+    {
+      "id": "SpecialistSupport",
+      "title": "Specialiststøtte i baggrunden",
+      "tags": ["psykolog", "socialrådgiver", "sansestøtte", "struktur", "kost", "bevægelse"]
+    }
+  ]
+},
+{
+  "id": "learning_projects",
+  "title": "Læring & PBL-forløb",
+  "description": "Her kan brugeren gå på opdagelse i små læringsforløb og skabende opgaver – baseret på 'learn by doing'. Særligt velegnet til børn og unge med nysgerrighed, diagnose eller brug for praksisnær læring.",
+  "modules": [
+    {
+      "id": "PBLProjects",
+      "title": "Projektbaseret læring",
+      "tags": ["PBL", "læring", "skole", "projekter", "udvikling", "forløb", "børn", "praktisk"]
     }
   ]
 }
+  ]
+}
+
