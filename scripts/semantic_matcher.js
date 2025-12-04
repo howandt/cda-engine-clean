@@ -14,7 +14,7 @@ export function semanticSearch(query) {
     const related = new Set();
 
     for (const term of terms) {
-      for (const [key, value] of Object.entries(semantic)) {
+      for (const [key, value] of Object.entries({ ...semantic.synonyms, ...semantic.themes, ...semantic.emotions })) {
         if (term.includes(key.toLowerCase()) || key.toLowerCase().includes(term)) {
           value.forEach(v => related.add(v.toLowerCase()));
         }
