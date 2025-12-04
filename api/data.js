@@ -19,6 +19,7 @@ export default async function handler(req, res) {
     const raw = fs.readFileSync(dataPath, "utf8");
     const data = JSON.parse(raw);
     const cases = data.cases || data;
+    let filtered = cases;
 
     // 🔍 Hvis der søges på specifikt ID
     if (id) {
@@ -37,7 +38,6 @@ export default async function handler(req, res) {
     }
 
     // 🔍 Ellers filtrer på kategori, diagnose, miljø, alder
-    let filtered = cases;
     
     // 🔹 Semantisk søgning via q parameter
     const { q } = req.query;
