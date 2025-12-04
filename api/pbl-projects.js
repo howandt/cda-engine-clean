@@ -25,9 +25,11 @@ export default async function handler(req, res) {
         return res.status(404).json({ error: 'Project not found' });
       }
       return res.status(200).json({
-        version: data.version,
-        project
-      });
+  success: true,
+  total: projects.length,
+  results: projects,     // ← nyt felt som GPT læser bedre
+  source: projects       // ← behold dit gamle felt for kompatibilitet
+});
     }
 
     // Filter by diagnosis
