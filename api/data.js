@@ -32,7 +32,7 @@ export default async function handler(req, res) {
       return res.status(200).json({
         success: true,
         total: 1,
-        source: JSON.stringify(match, null, 2)
+        source: JSON.stringify(filtered.slice(0, 5), null, 2)
       });
     }
 
