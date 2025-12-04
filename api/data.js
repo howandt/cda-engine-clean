@@ -40,7 +40,7 @@ export default async function handler(req, res) {
     // 🔍 Ellers filtrer på kategori, diagnose, miljø, alder
     
     // 🔹 Semantisk søgning via q parameter
-    const { q } = req.query;
+    const q = req.query.q || req.query.search || "";
     if (q) {
       const { terms, related } = semanticSearch(q);
       filtered = cases.filter(c => {
