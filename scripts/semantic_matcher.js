@@ -9,28 +9,41 @@ export function semanticSearch(query) {
 
     const raw = fs.readFileSync(semanticPath, "utf8");
     const semantic = JSON.parse(raw);
-    const terms = query.toLowerCase().split(/\s+/);
-    const related = new Set();
-    const expanded = [];
-for (const t of terms) {
-  if (t.includes("og")) {
-    expanded.push(...t.split("og").map(x => x.trim()));
-  } else {
-    expanded.push(t.trim());
+    
+    // Tilføj basis-split af søgning (så "adhd autisme" bliver til ["adhd","autisme"])
+query = query.replace(/,/g, " ");
+const terms = query
+  .toLowerCase()
+  .split(/\s+/)
+  .filter(Boolean);
+
+// Saml alle synonymer, temaer og emotioner i ét objekt
+const combined = {
+  ...semantic.synonyms,
+  ...semantic.themes,
+  ...semantic.emotions,
+};
+
+const related = new Set();
+
+// Find relaterede ord fra semantic_engine.json
+for (const term of terms) {
+  for (const [key, value] of Object.entries(combined)) {
+    if (
+      term.includes(key.toLowerCase()) ||
+      key.toLowerCase().includes(term)
+    ) {
+      value.forEach((v) => related.add(v.toLowerCase()));
+    }
   }
 }
-
-    for (const term of expanded) {
-      for (const [key, value] of Object.entries({ ...semantic.synonyms, ...semantic.themes, ...semantic.emotions })) {
-        if (term.includes(key.toLowerCase()) || key.toLowerCase().includes(term)) {
-          value.forEach(v => related.add(v.toLowerCase()));
-        }
-      }
-    }
-
-    return { terms, related: Array.from(related) };
-  } catch (err) {
-    console.error("❌ Semantic matcher fejl:", err);
-    return { terms: [], related: [] };
-  }
+// Returnér resultater
+  return {
+    terms,
+    related: Array.from(related),
+  };
+} catch (err) {
+  console.error("❌ Semantic matcher fejl:", err);
+  return { terms: [], related: [] };
+}
 }
