@@ -77,15 +77,21 @@ if (q) {
 
     // 🔎 NY: Fritekst-søgning
     if (search) {
-      const q = search.toLowerCase();
-      filtered = filtered.filter(c =>
-        (c.title && c.title.toLowerCase().includes(q)) ||
-        (c.theme && c.theme.toLowerCase().includes(q)) ||
-        (c.problem && c.problem.toLowerCase().includes(q)) ||
-        (c.solution && c.solution.toLowerCase().includes(q)) ||
-        (c.category && c.category.toLowerCase().includes(q))
-      );
-    }
+  const { terms, related } = semanticSearch(search);
+  filtered = filtered.filter(c => {
+    const content = JSON.stringify(c).toLowerCase();
+    const q = search.toLowerCase();
+    return (
+      terms.some(t => content.includes(t)) ||
+      related.some(r => content.includes(r)) ||
+      (c.title && c.title.toLowerCase().includes(q)) ||
+      (c.theme && c.theme.toLowerCase().includes(q)) ||
+      (c.problem && c.problem.toLowerCase().includes(q)) ||
+      (c.solution && c.solution.toLowerCase().includes(q)) ||
+      (c.category && c.category.toLowerCase().includes(q))
+    );
+  });
+}
 
     // 🧭 NY: Sortering
     if (sort) {
