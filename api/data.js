@@ -38,18 +38,19 @@ export default async function handler(req, res) {
 
     // 🔍 Ellers filtrer på kategori, diagnose, miljø, alder
     let filtered = cases;
-    // 🔹 Ny semantisk søgning
-const { q } = req.query;
-if (q) {
-  const { terms, related } = semanticSearch(q);
-  filtered = cases.filter(c => {
-    const content = JSON.stringify(c).toLowerCase();
-    return (
-      terms.some(t => content.includes(t)) ||
-      related.some(r => content.includes(r))
-    );
-  });
-}
+    
+    // 🔹 Semantisk søgning via q parameter
+    const { q } = req.query;
+    if (q) {
+      const { terms, related } = semanticSearch(q);
+      filtered = cases.filter(c => {
+        const content = JSON.stringify(c).toLowerCase();
+        return (
+          terms.some(t => content.includes(t)) ||
+          related.some(r => content.includes(r))
+        );
+      });
+    }
 
     if (category) {
       filtered = filtered.filter(c =>
@@ -58,12 +59,12 @@ if (q) {
     }
 
     if (diagnose) {
-  filtered = filtered.filter(c =>
-    c.diagnoser?.some(d =>
-      d.toLowerCase().includes(diagnose.toLowerCase())
-    )
-  );
-}
+      filtered = filtered.filter(c =>
+        c.diagnoser?.some(d =>
+          d.toLowerCase().includes(diagnose.toLowerCase())
+        )
+      );
+    }
 
     if (miljø) {
       filtered = filtered.filter(c =>
@@ -75,25 +76,25 @@ if (q) {
       filtered = filtered.filter(c => c.age === Number(age));
     }
 
-    // 🔎 NY: Fritekst-søgning
+    // 🔎 Fritekst-søgning med semantik
     if (search) {
-  const { terms, related } = semanticSearch(search);
-  filtered = filtered.filter(c => {
-    const content = JSON.stringify(c).toLowerCase();
-    const q = search.toLowerCase();
-    return (
-      terms.some(t => content.includes(t)) ||
-      related.some(r => content.includes(r)) ||
-      (c.title && c.title.toLowerCase().includes(q)) ||
-      (c.theme && c.theme.toLowerCase().includes(q)) ||
-      (c.problem && c.problem.toLowerCase().includes(q)) ||
-      (c.solution && c.solution.toLowerCase().includes(q)) ||
-      (c.category && c.category.toLowerCase().includes(q))
-    );
-  });
-}
+      const { terms, related } = semanticSearch(search);
+      filtered = filtered.filter(c => {
+        const content = JSON.stringify(c).toLowerCase();
+        const q = search.toLowerCase();
+        return (
+          terms.some(t => content.includes(t)) ||
+          related.some(r => content.includes(r)) ||
+          (c.title && c.title.toLowerCase().includes(q)) ||
+          (c.theme && c.theme.toLowerCase().includes(q)) ||
+          (c.problem && c.problem.toLowerCase().includes(q)) ||
+          (c.solution && c.solution.toLowerCase().includes(q)) ||
+          (c.category && c.category.toLowerCase().includes(q))
+        );
+      });
+    }
 
-    // 🧭 NY: Sortering
+    // 🧭 Sortering
     if (sort) {
       const dir = sort.toLowerCase();
       if (dir === "age-asc") filtered.sort((a, b) => a.age - b.age);
@@ -101,24 +102,15 @@ if (q) {
       if (dir === "title") filtered.sort((a, b) => a.title.localeCompare(b.title));
     }
 
-    // ✅ Returnér resultatet
-    if (filtered.length > 0) {
-      return res.status(200).json({
-        success: true,
-        total: filtered.length,
-        showing: 1,
-        source: JSON.stringify([filtered[0]], null, 2)
-      });
-    }
-
+    // ✅ Returnér resultatet - ALLE matches
     return res.status(200).json({
       success: true,
-      total: 0,
-      source: '[]'
+      total: filtered.length,
+      source: JSON.stringify(filtered, null, 2)
     });
 
   } catch (error) {
-    console.error("❌ FEJL i /api/cases:", error);
+    console.error("❌ FEJL i /api/data:", error);
     return res.status(500).json({
       success: false,
       error: error.message
