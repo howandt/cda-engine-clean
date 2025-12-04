@@ -7,16 +7,17 @@ export default async function handler(req, res) {
 
     const dataPath = path.join(process.cwd(), "public", "CDA", "data", "CDA_PBL_Projects.json");
 
-    if (!fs.existsSync(dataPath)) {
-      return res.status(404).json({
-        success: false,
-        error: `PBL Projects fil ikke fundet: ${dataPath}`
-      });
-    }
+if (!fs.existsSync(dataPath)) {
+  return res.status(404).json({
+    success: false,
+    error: `PBL Projects fil ikke fundet: ${dataPath}`
+  });
+}
 
-    const raw = fs.readFileSync(dataPath, "utf8");
-    const data = JSON.parse(raw);
-    let projects = data.projects;
+// 🔹 Indlæs og parse PBL-data
+const raw = fs.readFileSync(dataPath, "utf8");
+const json = JSON.parse(raw);
+const projects = json.projects || [];
 
     // Filter by ID if requested
     if (id) {
