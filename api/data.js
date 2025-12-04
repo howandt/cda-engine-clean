@@ -107,7 +107,7 @@ export default async function handler(req, res) {
   const fallbackUrl = `https://cda-engine-clean.vercel.app/api/semantic-search?search=${encodeURIComponent(search)}`;
   const fallbackRes = await fetch(fallbackUrl);
 const fallbackData = await fallbackRes.json();
-filtered = fallbackData.slice(0, 2);
+filtered = JSON.parse(fallbackData.source).slice(0, 2);
 }
     return res.status(200).json({
       success: true,
