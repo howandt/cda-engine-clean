@@ -102,10 +102,19 @@ if (q) {
     }
 
     // ✅ Returnér resultatet
+    if (filtered.length > 0) {
+      return res.status(200).json({
+        success: true,
+        total: filtered.length,
+        showing: 1,
+        source: JSON.stringify([filtered[0]], null, 2)
+      });
+    }
+
     return res.status(200).json({
       success: true,
-      total: filtered.length,
-      source: JSON.stringify(filtered, null, 2)
+      total: 0,
+      source: '[]'
     });
 
   } catch (error) {
