@@ -3,7 +3,7 @@ import path from "path";
 
 export default async function handler(req, res) {
   try {
-    const dataPath = path.join(process.cwd(), "public", "CDA", "data", "CDA_Templates_Index.json");
+    const dataPath = path.join(process.cwd(), "public", "CDA", "data", "CDA_Templates.json");
 
     if (!fs.existsSync(dataPath)) {
       return res.status(404).json({
