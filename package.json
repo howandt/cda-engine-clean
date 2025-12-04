@@ -4,12 +4,12 @@
   "version": "1.0.0",
   "description": "CDA/CDT API Server med caching til Vercel",
   "scripts": {
-  "start": "node api/data.js",
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "build:clean": "node scripts/build-clean-index.js",
-  "prebuild": "node syncData.js",
-  "build": "npm run build:clean"
-},
+    "start": "node api/data.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:clean": "node scripts/build-clean-index.js",
+    "prebuild": "node syncData.js",
+    "build": "npm run build:clean"
+  },
   "dependencies": {
     "node-fetch": "^2.6.7"
   },
@@ -17,4 +17,3 @@
     "node": "22.x"
   }
 }
-
