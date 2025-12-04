@@ -58,12 +58,12 @@ if (q) {
     }
 
     if (diagnose) {
-      filtered = filtered.filter(c =>
-        c.diagnoses?.some(d =>
-          d.toLowerCase().includes(diagnose.toLowerCase())
-        )
-      );
-    }
+  filtered = filtered.filter(c =>
+    c.diagnoser?.some(d =>
+      d.toLowerCase().includes(diagnose.toLowerCase())
+    )
+  );
+}
 
     if (miljø) {
       filtered = filtered.filter(c =>
