@@ -13,8 +13,10 @@
     }
   ],
   "functions": {
-  "api/cdf/core.js": {
-    "includeFiles": "CDF/modules/**"
+    "api/cdf/core.js": {
+      "includeFiles": "CDF/modules/**"
+    },
+    "api/cases.js": {
+      "includeFiles": "public/CDA/**"
     }
   }
-}
