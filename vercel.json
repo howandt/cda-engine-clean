@@ -18,9 +18,6 @@
   "functions": {
     "api/cdf/core.js": {
       "includeFiles": "CDF/modules/**"
-    },
-    "functions": {
-    "api/cdf/core.js": {
-      "includeFiles": "CDF/modules/**"
     }
   }
+}
