@@ -1,48 +1,21 @@
-// api/pbl-projects.js
-// CDA PBL Projects API with caching
+import fs from "fs";
+import path from "path";
 
 export default async function handler(req, res) {
-  // Enable CORS
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-
-  if (req.method === 'OPTIONS') {
-    return res.status(200).end();
-  }
-
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
   try {
-    // Fetch from GitHub raw URL
-    const response = await fetch(
-      'https://raw.githubusercontent.com/howandt/cda-engine-clean/refs/heads/main/data/CDA_PBL_Projects.json',
-      {
-        headers: {
-          'Accept': 'application/json',
-          'Cache-Control': 'public, max-age=3600' // Cache 1 hour
-        }
-      }
-    );
+    const { id, diagnosis, level, social, structure, stimuli } = req.query;
 
-    if (!response.ok) {
-      throw new Error(`GitHub fetch failed: ${response.status}`);
+    const dataPath = path.join(process.cwd(), "public", "CDA", "data", "CDA_PBL_Projects.json");
+
+    if (!fs.existsSync(dataPath)) {
+      return res.status(404).json({
+        success: false,
+        error: `PBL Projects fil ikke fundet: ${dataPath}`
+      });
     }
 
-    const data = await response.json();
-
-    // Query parameters for filtering
-    const {
-      diagnosis,
-      level,
-      social,
-      structure,
-      stimuli,
-      id
-    } = req.query;
-
+    const raw = fs.readFileSync(dataPath, "utf8");
+    const data = JSON.parse(raw);
     let projects = data.projects;
 
     // Filter by ID if requested
@@ -103,7 +76,7 @@ export default async function handler(req, res) {
     }
 
     // Return filtered results
-    res.status(200).json({
+    return res.status(200).json({
       version: data.version,
       total_projects: data.total_projects,
       filtered_count: projects.length,
@@ -121,8 +94,8 @@ export default async function handler(req, res) {
     });
 
   } catch (error) {
-    console.error('PBL API Error:', error);
-    res.status(500).json({ 
+    console.error('❌ FEJL i /api/pbl-projects:', error);
+    return res.status(500).json({ 
       error: 'Failed to fetch PBL projects',
       details: error.message 
     });
