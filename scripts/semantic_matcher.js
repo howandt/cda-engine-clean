@@ -4,7 +4,7 @@ import path from "path";
 // 🔹 Simpel semantisk matcher
 export function semanticSearch(query) {
   try {
-    const semanticPath = path.join(process.cwd(), "public", "data", "semantic_engine.json");
+    const semanticPath = path.join(process.cwd(), "public", "CDA", "data", "semantic_engine.json");
     if (!fs.existsSync(semanticPath)) return { terms: [], related: [] };
 
     const raw = fs.readFileSync(semanticPath, "utf8");
