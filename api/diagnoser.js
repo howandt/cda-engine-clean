@@ -1,6 +1,8 @@
 // Diagnoser API - Alle 15 diagnoser med fuld dokumentation
 // Hans' 9000+ timers arbejde samlet i ét API
 
+import fs from "fs";
+import path from "path";
 export default async function handler(req, res) {
   // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -29,20 +31,24 @@ export default async function handler(req, res) {
       komorbiditet  // Find diagnoser med specifik komorbiditet
     } = req.query;
 
-    // Fetch data fra GitHub
-    const dataUrl = 'https://raw.githubusercontent.com/howandt/cda-engine-clean/refs/heads/main/data/CDA_Diagnoser.json';
+    // Hent fra lokal fil
+    const dataPath = path.join(process.cwd(), "public", "CDA", "data", "CDA_Diagnoser.json");
     
-    const response = await fetch(dataUrl, {
-      headers: {
-        'Cache-Control': 'max-age=3600' // 1 times cache
-      }
-    });
+    if (!fs.existsSync(dataPath)) {
+      return res.status(404).json({
+        success: false,
+        error: `Diagnose fil ikke fundet: ${dataPath}`
+      });
+    }
+    
+    const raw = fs.readFileSync(dataPath, "utf8");
+    const response = { ok: true };
 
     if (!response.ok) {
-      throw new Error(`GitHub fetch failed: ${response.status}`);
+      throw new Error(`Kunne ikke læse fil`);
     }
 
-    const data = await response.json();
+    const diagnoser = JSON.parse(raw);
 
     // Hvis specifik ID er angivet
     if (id) {
