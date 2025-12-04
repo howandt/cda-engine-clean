@@ -1,6 +1,9 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" }
+  ],
   "headers": [
     {
       "source": "/api/(.*)",
@@ -20,3 +23,4 @@
       "includeFiles": "public/CDA/**"
     }
   }
+}
