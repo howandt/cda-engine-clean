@@ -28,8 +28,7 @@ export default async function handler(req, res) {
     const { id, search, title } = req.query;
 
     // 🔹 Indlæs PBL datafil
-  const dataPath = path.join(
-  const dataPath = path.join(
+const dataPath = path.join(
   process.cwd(),
   "public",
   "CDA",
