@@ -29,7 +29,9 @@ export default async function handler(req, res) {
 
     // 🔹 Indlæs PBL datafil
   const dataPath = path.join(
+  const dataPath = path.join(
   process.cwd(),
+  "public",
   "CDA",
   "data",
   "CDA_PBL_Projects.json"
