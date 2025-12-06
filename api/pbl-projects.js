@@ -87,12 +87,15 @@ const dataPath = path.join(
     }
 
     // 🔹 Returnér resultat
-    return res.status(200).json({
-      success: true,
-      total: filtered.length,
-      results: filtered,
-      source: filtered,
-    });
+    // Hent limit fra query — default = 3
+const limit = parseInt(req.query.limit || "3", 10);
+
+// Returnér maks. 'limit'
+return res.status(200).json({
+  success: true,
+  total: filtered.length,
+  results: filtered.slice(0, limit)
+});
   } catch (error) {
     console.error("❌ FEJL i /api/pbl-projects:", error);
     return res.status(500).json({
