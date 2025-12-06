@@ -22,14 +22,14 @@ export default async function handler(req, res) {
     
     const dataPath = path.join(process.cwd(), "public", "CDA", "data", "CDA_Quiz_Bank.json");
     
-    if (!fs.existsSync(quizDataPath)) {
+    if (!fs.existsSync(dataPath)) {
       return res.status(404).json({
         success: false,
-        error: `Quiz fil ikke fundet: ${quizDataPath}`
+        error: `Quiz fil ikke fundet: ${dataPath}`
       });
     }
     
-    const raw = fs.readFileSync(quizDataPath, "utf8");
+    const raw = fs.readFileSync(dataPath, "utf8");
     const quizData = JSON.parse(raw);
     const response = { ok: true };
 
