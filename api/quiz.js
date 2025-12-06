@@ -20,7 +20,7 @@ export default async function handler(req, res) {
   try {
     // Læs fra lokal fil
     
-    const quizDataPath = path.join(process.cwd(), "public", "CDA", "quizData", "CDA_Quiz_Bank.json");
+    const dataPath = path.join(process.cwd(), "public", "CDA", "data", "CDA_Quiz_Bank.json");
     
     if (!fs.existsSync(quizDataPath)) {
       return res.status(404).json({
