@@ -1,5 +1,7 @@
 // api/quiz.js
 // CDA Quiz Motor API with caching
+import fs from "fs";
+import path from "path";
 
 export default async function handler(req, res) {
   // Enable CORS
@@ -16,22 +18,20 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Fetch quiz bank from GitHub
-    const response = await fetch(
-      'https://raw.githubusercontent.com/howandt/cda-engine-clean/refs/heads/main/data/CDA_Quiz_Bank.json',
-      {
-        headers: {
-          'Accept': 'application/json',
-          'Cache-Control': 'public, max-age=3600' // Cache 1 hour
-        }
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error(`GitHub fetch failed: ${response.status}`);
+    // Læs fra lokal fil
+    
+    const quizDataPath = path.join(process.cwd(), "public", "CDA", "quizData", "CDA_Quiz_Bank.json");
+    
+    if (!fs.existsSync(quizDataPath)) {
+      return res.status(404).json({
+        success: false,
+        error: `Quiz fil ikke fundet: ${quizDataPath}`
+      });
     }
-
-    const data = await response.json();
+    
+    const raw = fs.readFileSync(quizDataPath, "utf8");
+    const quizData = JSON.parse(raw);
+    const response = { ok: true };
 
     // GET: Retrieve quizzes with filtering
     if (req.method === 'GET') {
@@ -44,7 +44,7 @@ export default async function handler(req, res) {
         public_only
       } = req.query;
 
-      let quizzes = data.quizzes;
+      let quizzes = quizData.quizzes;
 
       // Filter by quiz_id
       if (quiz_id) {
@@ -53,7 +53,7 @@ export default async function handler(req, res) {
           return res.status(404).json({ error: 'Quiz not found' });
         }
         return res.status(200).json({
-          version: data.version,
+          version: quizData.version,
           quiz
         });
       }
@@ -109,9 +109,9 @@ export default async function handler(req, res) {
       }));
 
       return res.status(200).json({
-        version: data.version,
-        quiz_system: data.quiz_system,
-        total_quizzes: data.metadata.total_quizzes,
+        version: quizData.version,
+        quiz_system: quizData.quiz_system,
+        total_quizzes: quizData.metadata.total_quizzes,
         filtered_count: quizOverview.length,
         filters_applied: {
           difficulty: difficulty || null,
@@ -121,7 +121,7 @@ export default async function handler(req, res) {
           public_only: public_only || null
         },
         quizzes: quizOverview,
-        api_filters: data.api_filters
+        api_filters: quizData.api_filters
       });
     }
 
@@ -137,7 +137,7 @@ export default async function handler(req, res) {
       }
 
       // Find the quiz
-      const quiz = data.quizzes.find(q => q.quiz_id === quiz_id);
+      const quiz = quizData.quizzes.find(q => q.quiz_id === quiz_id);
       if (!quiz) {
         return res.status(404).json({ error: 'Quiz not found' });
       }
