@@ -1,5 +1,5 @@
-// Vercel Serverless Function - Specialister API med caching
-const fetch = require('node-fetch');
+import fs from "fs";
+import path from "path";
 
 // In-memory cache
 let cache = {
@@ -8,7 +8,6 @@ let cache = {
 };
 
 const CACHE_DURATION = 1000 * 60 * 60; // 1 time
-const GITHUB_URL = 'https://raw.githubusercontent.com/howandt/cda-engine-clean/main/data/CDA_SpecialistPanel.json';
 
 function isCacheValid() {
   if (!cache.data) return false;
@@ -16,15 +15,18 @@ function isCacheValid() {
   return age < CACHE_DURATION;
 }
 
-async function fetchFromGitHub() {
-  const response = await fetch(GITHUB_URL);
-  if (!response.ok) {
-    throw new Error(`GitHub fetch failed: ${response.status}`);
+function readLocalFile() {
+  const dataPath = path.join(process.cwd(), "public", "CDA", "data", "CDA_SpecialistPanel.json");
+  
+  if (!fs.existsSync(dataPath)) {
+    throw new Error(`Fil ikke fundet: ${dataPath}`);
   }
-  return await response.json();
+  
+  const raw = fs.readFileSync(dataPath, "utf8");
+  return JSON.parse(raw);
 }
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -34,32 +36,36 @@ module.exports = async (req, res) => {
   }
 
   try {
+    // Check cache først
     if (isCacheValid()) {
-      console.log('[CACHE HIT] SpecialistPanel');
+      console.log('[CACHE HIT] Specialister');
       return res.status(200).json({
+        success: true,
         source: 'cache',
         data: cache.data,
         cached_at: new Date(cache.timestamp).toISOString()
       });
     }
 
-    console.log('[CACHE MISS] SpecialistPanel - fetching from GitHub');
-    const data = await fetchFromGitHub();
-
+    // Læs fra disk
+    console.log('[CACHE MISS] Specialister - læser fra disk');
+    const data = readLocalFile();
     cache.data = data;
     cache.timestamp = Date.now();
 
     return res.status(200).json({
-      source: 'github',
+      success: true,
+      source: 'disk',
       data: data,
       fetched_at: new Date().toISOString()
     });
 
   } catch (error) {
-    console.error('SpecialistPanel API error:', error);
+    console.error('Specialister API error:', error);
     return res.status(500).json({
-      error: 'Failed to fetch specialist panel data',
+      success: false,
+      error: 'Failed to fetch specialister data',
       message: error.message
     });
   }
-};
+}
