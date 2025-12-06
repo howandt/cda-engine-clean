@@ -113,7 +113,7 @@ filtered = fallbackData.results.slice(0, 2);
     return res.status(200).json({
       success: true,
       total: filtered.length,
-      source: JSON.stringify(filtered, null, 2)
+      source: JSON.stringify(filtered.slice(0, 5), null, 2)
     });
 
   } catch (error) {
