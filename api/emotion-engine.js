@@ -1,5 +1,7 @@
 // api/emotion-engine.js
 // CDA Emotion Engine API - Analyser voksnes sprog til børn
+import fs from "fs";
+import path from "path";
 
 export default async function handler(req, res) {
   // Enable CORS
@@ -12,22 +14,18 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Fetch emotion engine data from GitHub
-    const response = await fetch(
-      'https://raw.githubusercontent.com/howandt/cda-engine-clean/refs/heads/main/data/CDA_Emotionengine.json',
-      {
-        headers: {
-          'Accept': 'application/json',
-          'Cache-Control': 'public, max-age=3600' // Cache 1 hour
-        }
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error(`GitHub fetch failed: ${response.status}`);
+    // Læs fra lokal fil
+    const dataPath = path.join(process.cwd(), "public", "CDA", "data", "CDA_Emotionengine.json");
+    
+    if (!fs.existsSync(dataPath)) {
+      return res.status(404).json({
+        success: false,
+        error: `Emotion engine fil ikke fundet: ${dataPath}`
+      });
     }
-
-    const data = await response.json();
+    
+    const raw = fs.readFileSync(dataPath, "utf8");
+    const data = JSON.parse(raw);
 
     // GET: Return emotion engine data and examples
     if (req.method === 'GET') {
