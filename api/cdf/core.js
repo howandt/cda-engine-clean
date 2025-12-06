@@ -8,6 +8,29 @@ export default async function handler(req, res) {
     });
   }
 
+  // Hvis brugeren beder om en oversigt over modulerne (?module=list)
+  if (module === "list") {
+    const fs = require("fs");
+    const path = require("path");
+    const listPath = path.join(process.cwd(), "public", "CDF", "modules", "cdf_master_modules.json");
+
+    try {
+      const listData = fs.readFileSync(listPath, "utf-8");
+      const jsonData = JSON.parse(listData);
+      return res.status(200).json({
+        success: true,
+        message: "Tilgængelige CDF-moduler",
+        modules: jsonData.labs
+      });
+    } catch (error) {
+      return res.status(500).json({
+        success: false,
+        message: "Kunne ikke hente moduloversigt",
+        error: error.message
+      });
+    }
+  }
+
   try {
     const baseURL = "https://cda-engine-clean.vercel.app";
 
