@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 export default async function handler(req, res) {
   const { module } = req.query;
 
@@ -10,10 +12,8 @@ export default async function handler(req, res) {
 
   // Hvis brugeren beder om en oversigt over modulerne (?module=list)
   if (module === "list") {
-    const fs = require("fs");
-    const path = require("path");
     const listPath = path.join(process.cwd(), "public", "CDF", "modules", "cdf_master_modules.json");
-
+console.log("📁 Prøver at hente:", listPath);
     try {
       const listData = fs.readFileSync(listPath, "utf-8");
       const jsonData = JSON.parse(listData);
