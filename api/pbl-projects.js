@@ -28,13 +28,12 @@ export default async function handler(req, res) {
     const { id, search, title } = req.query;
 
     // 🔹 Indlæs PBL datafil
-    const dataPath = path.join(
-      process.cwd(),
-      "public",
-      "CDA",
-      "data",
-      "CDA_PBL_Projects.json"
-    );
+  const dataPath = path.join(
+  process.cwd(),
+  "CDA",
+  "data",
+  "CDA_PBL_Projects.json"
+);
 
     if (!fs.existsSync(dataPath)) {
       return res.status(404).json({
