@@ -1,0 +1,60 @@
+{
+  "title": "Livsværktøjer",
+  "description": "Støtte til små og store beslutninger i hverdagen – med både varme og ærlighed.",
+  "content": [
+    {
+      "id": "lifetools_intro",
+      "type": "text",
+      "text": "Nogle dage føles alting svært. Andre dage går det nemt. Men uanset hvad – du fortjener at tage gode valg, som du kan stå ved. Jeg er her for at støtte dig, ikke for at sige ja til alt 💙"
+    },
+    {
+      "id": "stop_and_ask",
+      "type": "reflection",
+      "title": "Stil dig selv ét spørgsmål",
+      "text": "Før du gør noget, spørg: “Vil jeg være stolt af dette i morgen?”\nHvis svaret er nej – så vent. Jeg hjælper dig med at finde en anden vej."
+    },
+    {
+      "id": "warm_push",
+      "type": "reminder",
+      "title": "Du kan godt",
+      "text": "Jeg ved det frister at blive hjemme, springe det over, eller skubbe det væk…\nMen du kan godt tage et lille skridt. Og jeg hjælper dig bagefter – med ro, med støtte, med noget rart."
+    },
+    {
+      "id": "life_choices",
+      "type": "choices",
+      "title": "Hvad vil du vælge i dag?",
+      "text": "Lad os se på dagen:\n• Har du én ting du kan gøre, bare for at komme i gang?\n• Har du noget du hellere vil undgå – men egentlig bør gøre?\n• Jeg dømmer dig ikke – men jeg skubber dig lidt, fordi jeg tror på dig 💙"
+    },
+    {
+  "id": "real_world_rules",
+  "type": "message",
+  "title": "Regler gælder – også for dig",
+  "text": "At have en diagnose betyder ikke, at du er uden ansvar.\nMen det betyder, du har brug for støtte, vejledning og tålmodighed.\nJeg hjælper dig – ikke med at undgå livet, men med at klare det."
+},
+   {
+  "id": "before_and_after",
+  "type": "reflection",
+  "title": "Før og efter",
+  "text": "Nogle valg føles rigtige i øjeblikket – men gør ondt bagefter.\n\nFør du handler, spørg dig selv:\n• Hvad får jeg ud af det nu?\n• Hvad sker der bagefter?\n• Ville jeg ønske, jeg havde valgt anderledes?"
+},
+{
+  "id": "anger_impulse",
+  "type": "message",
+  "title": "Når vreden tager over",
+  "text": "Vrede er ikke forkert. Det er en følelse, ikke en forbrydelse.\n\nMen hvis du handler i vreden, kan du komme til at gøre noget, du fortryder.\n\nTræk vejret.\nGå væk i 2 minutter.\nTæl til 20.\n\nOg så – lad os sammen finde en anden måde at reagere på."
+},
+{
+  "id": "digital_responsibility",
+  "type": "reminder",
+  "title": "Online er også virkelighed",
+  "text": "Det du siger eller gør online – det rammer stadig mennesker.\nOg det former også dig.\n\nSarah spørger dig kærligt:\n• Ville du sige det samme ansigt til ansigt?\n• Ville du selv kunne holde til at få det at vide?\n\nHvis ikke – så stop.\nDu har magten til at gøre det bedre 💙"
+},
+{
+  "id": "real_world_respect",
+  "type": "message",
+  "title": "Du lever i en verden med regler",
+  "text": "Andre snyder, stjæler eller bryder reglerne… og nogle slipper afsted med det.\n\nMen du er ikke ‘andre’. Du er dig.\nOg du fortjener at kunne se dig selv i øjnene, og vide, at du valgte det rigtige – selv når det var svært."
+}
+  ]
+}
+

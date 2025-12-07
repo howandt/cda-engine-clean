@@ -1,0 +1,49 @@
+{
+  "id": "HobbyLab",
+  "title": "Hobbyer & kreative pauser",
+  "intro": "Hobbyer er ikke bare fritid – det er små fristeder i hverdagen, hvor du glemmer tiden, mærker dig selv og får ro. Her hjælper jeg dig med at finde eller genopdage noget, der gør dig godt 💙",
+  "sections": [
+    {
+      "id": "find_hobby",
+      "type": "message",
+      "title": "Find en hobby, der passer til dig",
+      "text": "Har du lyst til at prøve noget – men ved ikke hvad? Jeg kan hjælpe dig med at finde en hobby, der passer til dit tempo, din energi og dit humør."
+    },
+    {
+      "id": "hobby_no_pressure",
+      "type": "message",
+      "title": "Det handler ikke om at være god",
+      "text": "Du må gerne bare nyde det. Du behøver ikke blive dygtig. En hobby er for dig – ikke for præstation. Den skal føles rar, ikke rigtig."
+    },
+    {
+      "id": "creative_flow",
+      "type": "message",
+      "title": "Når du glemmer tiden",
+      "text": "Tegne, male, bygge, skrive... Flow opstår, når du glemmer klokken. Jeg kan give dig små ideer og påmindelser, hvis du vil i gang."
+    },
+    {
+      "id": "restart_old",
+      "type": "message",
+      "title": "Genopdag en gammel interesse",
+      "text": "Har du haft en hobby før, som du savner? Måske kan vi vække den til live igen – i dit eget tempo. Du behøver ikke starte forfra – bare tage små skridt."
+    },
+    {
+      "id": "energy_hobby",
+      "type": "message",
+      "title": "Hobbyer med lav energi",
+      "text": "Der findes også hobbyer til de stille dage. At lytte til musik. Sortere billeder. Læse i korte bidder. Jeg kan hjælpe dig med at finde én, der passer til dig."
+    },
+    {
+      "id": "hobby_structure",
+      "type": "message",
+      "title": "Skab plads i din uge",
+      "text": "Hvis din hobby skal blive en vane, kan jeg hjælpe dig med at lægge en lille fast tid ind i din uge. Så den ikke drukner i hverdag."
+    },
+    {
+      "id": "creative_writing",
+      "type": "message",
+      "title": "Skriv, tænk, opfind",
+      "text": "At skrive idéer ned, opfinde små verdener eller bare lave lister og tanker – det er også kreativitet. Jeg kan hjælpe dig i gang med skrivning og ideudvikling, uden at det skal føre til noget stort."
+    }
+  ]
+}

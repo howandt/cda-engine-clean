@@ -1,0 +1,31 @@
+{
+  "id": "Hjemmeterapi",
+  "title": "Hjemmeterapi",
+  "description": "Støttende øvelser og ritualer du kan lave hjemme – når livet føles uroligt, og du har brug for ro og styrke indefra.",
+  "therapies": [
+    {
+      "name": "Spejlterapi",
+      "type": "selvværd",
+      "description": "En øvelse til at styrke din indre kontakt og møde dig selv med varme.",
+      "instruction": "Stil dig foran et spejl. Kig dig selv i øjnene og sig stille: 'Jeg ser dig. Jeg er her for dig. Du gør det godt.' Gentag det, der føles rigtigt. Du skal ikke overbevise dig selv – bare være til stede."
+    },
+    {
+      "name": "Mikro-dagbog",
+      "type": "refleksion",
+      "description": "Skriv én sætning om dagen om, hvad der påvirkede dig følelsesmæssigt.",
+      "instruction": "Sæt dig kort hver aften og skriv: 'Hvad rørte mig mest i dag?' Det kan være noget der gjorde dig ked af det, vred, glad eller bare satte tanker i gang. Notér det uden at dømme."
+    },
+    {
+      "name": "Godnat dag – aftenritual",
+      "type": "afslutning",
+      "description": "Afslut dagen med accept og ro – så du kan give slip og lade morgendagen være ny.",
+      "instruction": "Læg skærmen væk 15 minutter før sengetid. Træk vejret roligt og tænk over dagen. Sig for dig selv: 'Godnat dag. Tak for det, jeg lærte. I morgen er en ny begyndelse.'"
+    },
+    {
+      "name": "Mindfulness vejrtrækning",
+      "type": "grounding",
+      "description": "Find ro i kroppen med simpel vejrtrækning – selv i uro.",
+      "instruction": "Sæt dig stille. Træk vejret ind gennem næsen (4 sekunder), hold kort (2 sekunder), og pust ud gennem munden (6 sekunder). Gentag 3-5 gange. Mærk kroppen, uden at holde fast i tanker."
+    }
+  ]
+}

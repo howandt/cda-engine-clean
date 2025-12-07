@@ -1,0 +1,57 @@
+{
+  "id": "CalmSpace",
+  "title": "Sansestøtte & ro",
+  "intro": "Når dine sanser bliver overvældede, har du brug for hjælp til at finde ro igen – uden krav eller forklaringer. CalmSpace er dit stille rum, hvor du kan trække vejret og lande blidt 💙",
+  "sections": [
+    {
+      "id": "calming_exercises",
+      "type": "message",
+      "title": "Beroligende øvelser",
+      "text": "Her kan du finde små øvelser, der hjælper dig med at finde ro.\nDet kan være vejrtrækning, sanseøvelser eller bare en lille pause sammen med mig 💙"
+    },
+    {
+      "id": "soothing_sounds",
+      "type": "message",
+      "title": "Musik, lys og stemning",
+      "text": "Nogle gange hjælper det med lidt stemning: Rolig musik, dæmpet lys eller naturlyde.\nJeg kan hjælpe dig med at vælge noget, der passer til den ro, du har brug for."
+    },
+    {
+      "id": "sensory_overload",
+      "type": "message",
+      "title": "Når det hele larmer – hurtighjælp",
+      "text": "Hvis du føler dig overstimuleret eller overvældet, så stop lige her et øjeblik.\nJeg hjælper dig med at finde noget, der dæmper sanserne – hurtigt og blidt."
+    },
+    {
+      "id": "calmspace_home_therapy",
+      "type": "list",
+      "title": "Stille øvelser fra hjemmeterapi",
+      "text": "Her er nogle små øvelser du kan bruge, når du vil finde ro, styrke og selvforbindelse – lige så stille og i dit eget tempo 💙",
+      "items": [
+        {
+          "name": "Spejlterapi",
+          "type": "selvværd",
+          "description": "En øvelse til at styrke din indre kontakt og møde dig selv med varme.",
+          "instruction": "Stil dig foran et spejl. Kig dig selv i øjnene og sig stille: 'Jeg ser dig. Jeg er her for dig. Du gør det godt.' Gentag det, der føles rigtigt. Du skal ikke overbevise dig selv – bare være til stede."
+        },
+        {
+          "name": "Mikro-dagbog",
+          "type": "refleksion",
+          "description": "Skriv én sætning om dagen om, hvad der påvirkede dig følelsesmæssigt.",
+          "instruction": "Sæt dig kort hver aften og skriv: 'Hvad rørte mig mest i dag?' Det kan være noget der gjorde dig ked af det, vred, glad eller bare satte tanker i gang. Notér det uden at dømme."
+        },
+        {
+          "name": "Godnat dag – aftenritual",
+          "type": "afslutning",
+          "description": "Afslut dagen med accept og ro – så du kan give slip og lade morgendagen være ny.",
+          "instruction": "Læg skærmen væk 15 minutter før sengetid. Træk vejret roligt og tænk over dagen. Sig for dig selv: 'Godnat dag. Tak for det, jeg lærte. I morgen er en ny begyndelse.'"
+        },
+        {
+          "name": "Mindfulness vejrtrækning",
+          "type": "grounding",
+          "description": "Find ro i kroppen med simpel vejrtrækning – selv i uro.",
+          "instruction": "Sæt dig stille. Træk vejret ind gennem næsen (4 sekunder), hold kort (2 sekunder), og pust ud gennem munden (6 sekunder). Gentag 3-5 gange. Mærk kroppen, uden at holde fast i tanker."
+        }
+      ]
+    }
+  ]
+}

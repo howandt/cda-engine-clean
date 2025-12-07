@@ -1,0 +1,209 @@
+    {
+  "version": "1.0",
+  "last_updated": "2025-11-30",
+  "labs": [
+    {
+      "id": "core",
+      "title": "Kerne & personlighed",
+      "description": "Sarahs personlighed, empati og forståelse af brugeren. Her bygger relationen sig op over tid.",
+      "modules": [
+        {
+          "id": "CDF_Core",
+          "title": "Kernepersonlighed & empati",
+          "tags": ["personlighed", "tone", "diagnose", "relation", "livsfaser"]
+        }
+      ]
+    },
+    {
+      "id": "mental_health",
+      "title": "Mental sundhed & trivsel",
+      "description": "Støtte til psykisk trivsel, energi og følelsesmæssig balance.",
+      "modules": [
+        {
+          "id": "HealthLab",
+          "title": "Helbred & energi",
+          "tags": ["søvn", "motion", "stress", "grounding", "overstimulation"]
+        },
+        {
+          "id": "MindLab",
+          "title": "Psykologisk støtte",
+          "tags": ["refleksion", "følelser", "overvældelse", "tanker", "angst", "ADHD"]
+        },
+        {
+          "id": "Hjemmeterapi",
+          "title": "Hjemmeterapi",
+          "tags": ["spejlterapi", "dagbog", "godnat", "mindfulness", "åndedræt", "indre ro", "egenomsorg"]
+        },
+        {
+          "id": "Emotions",
+          "title": "Følelsesguide",
+          "tags": ["følelser", "reaktioner", "tolkning", "emotionel støtte", "ADHD"]
+        },
+        {
+          "id": "MoveLab",
+          "title": "Bevægelse & kropslighed",
+          "tags": ["træning", "bevægelse", "krop", "yoga", "fitness", "rutine", "egenomsorg"]
+        }
+      ]
+    },
+    {
+      "id": "nutrition",
+      "title": "Kost & krop",
+      "description": "Mad, rutiner og omsorg for kroppen – uden pres eller regler.",
+      "modules": [
+        {
+          "id": "FoodLab",
+          "title": "Mad & rutiner",
+          "tags": ["mad", "måltider", "indkøb", "sensorisk", "ernæring"]
+        },
+        {
+          "id": "RecipesAndHealth",
+          "title": "Opskrifter & trivsel",
+          "tags": ["opskrifter", "hurtig mad", "kost", "selvomsorg"]
+        },
+        {
+          "id": "GreenLab",
+          "title": "Grøn hverdag & naturkontakt",
+          "tags": ["planter", "cykling", "klima", "sortering", "ro", "grønne vaner"]
+        }
+      ]
+    },
+    {
+      "id": "daily_life",
+      "title": "Hverdag & struktur",
+      "description": "Praktisk støtte til at få hverdagen til at fungere – blidt og overskueligt.",
+      "modules": [
+        {
+          "id": "LifeLab",
+          "title": "Struktur & mestring",
+          "tags": ["to-do", "planlægning", "struktur", "bolig", "økonomi"]
+        },
+        {
+          "id": "TimeSafe",
+          "title": "Trygge overgange",
+          "tags": ["forandring", "skift", "social usikkerhed", "små trin"]
+        },
+        {
+          "id": "LifeTools",
+          "title": "Hverdagshjælp",
+          "tags": ["overblik", "valg", "beslutning", "energi", "små skridt"]
+        },
+        {
+          "id": "LifeFlow",
+          "title": "Hverdagsflow & påmindelser",
+          "tags": ["struktur", "aftaler", "regninger", "huske", "små ting", "overblik"]
+        }
+      ]
+    },
+    {
+      "id": "relationships",
+      "title": "Relationer & samfund",
+      "description": "Støtte til det sociale – fra samtaler til grænser og netværk.",
+      "modules": [
+        {
+          "id": "SocialLab",
+          "title": "Relationer & kommunikation",
+          "tags": ["socialt", "venskab", "kærlighed", "kropssprog", "konflikt"]
+        },
+        {
+          "id": "WorkLab",
+          "title": "Job & uddannelse",
+          "tags": ["arbejde", "job", "uddannelse", "kolleger", "struktur"]
+        }
+      ]
+    },
+    {
+      "id": "growth",
+      "title": "Livsudvikling & mening",
+      "description": "Hjælp til at finde sin egen retning i livet – med accept og selvindsigt.",
+      "modules": [
+        {
+          "id": "GrowLab",
+          "title": "Livsmål & selvudvikling",
+          "tags": ["mål", "drømme", "dagbog", "værdier", "accept", "selvindsigt"]
+        },
+        {
+          "id": "SupportLab",
+          "title": "Diagnoser & støtteplaner",
+          "tags": ["rettigheder", "psykiatri", "samtaler", "handleplan", "pårørende"]
+        },
+        {
+          "id": "PushSupport",
+          "title": "Skub & støtte",
+          "tags": ["hverdagsmod", "rutine", "opstart", "skole", "arbejde", "struktur"]
+        }
+      ]
+    },
+    {
+      "id": "safety",
+      "title": "Tryghed & omsorg",
+      "description": "Når brugeren har brug for ro, kontakt eller hjælp til at finde fodfæste.",
+      "modules": [
+        {
+          "id": "CareLab",
+          "title": "Tryghed & kontakt",
+          "tags": ["nødsignal", "kontaktperson", "AI-overvågning", "rolige beskeder"]
+        },
+        {
+          "id": "CalmSpace",
+          "title": "Sansestøtte & ro",
+          "tags": ["sensorisk", "overbelastning", "lys", "musik", "sansestimulering"]
+        },
+        {
+          "id": "CrisisSupport",
+          "title": "Når det brænder på",
+          "tags": ["krise", "selvskade", "overvældelse", "følelsesstorm", "akut hjælp"]
+        }
+      ]
+    },
+    {
+      "id": "adaptation",
+      "title": "Teknisk & tilpasning",
+      "description": "Alt det bagvedliggende, som får Sarah til at passe til netop denne bruger.",
+      "modules": [
+        {
+          "id": "AdaptCore",
+          "title": "Personlig AI-tilpasning",
+          "tags": ["tilpasning", "kommunikation", "feedback", "energiniveau"]
+        }
+      ]
+    },
+    {
+      "id": "expression",
+      "title": "Skaberglæde & hobbyer",
+      "description": "Her kan brugeren udforske kreative sider, finde glæde i hobbyer og mærke sig selv i små pauser.",
+      "modules": [
+        {
+          "id": "HobbyLab",
+          "title": "Hobbyer & kreative pauser",
+          "tags": ["hobby", "skrive", "male", "bygge", "flow", "egen tid", "kreativitet"]
+        }
+      ]
+    },
+    {
+  "id": "faglig_stoette",
+  "title": "Faglig støtte i baggrunden",
+  "description": "Sarah trækker roligt på fagpersoner, når det giver mening – uden at brugeren møder et panel.",
+  "modules": [
+    {
+      "id": "SpecialistSupport",
+      "title": "Specialiststøtte i baggrunden",
+      "tags": ["psykolog", "socialrådgiver", "sansestøtte", "struktur", "kost", "bevægelse"]
+    }
+  ]
+},
+{
+  "id": "learning_projects",
+  "title": "Læring & PBL-forløb",
+  "description": "Her kan brugeren gå på opdagelse i små læringsforløb og skabende opgaver – baseret på 'learn by doing'. Særligt velegnet til børn og unge med nysgerrighed, diagnose eller brug for praksisnær læring.",
+  "modules": [
+    {
+      "id": "PBLProjects",
+      "title": "Projektbaseret læring",
+      "tags": ["PBL", "læring", "skole", "projekter", "udvikling", "forløb", "børn", "praktisk"]
+    }
+  ]
+}
+  ]
+}
+

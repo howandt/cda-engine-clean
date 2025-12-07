@@ -1,0 +1,96 @@
+{
+  "id": "SleepLab",
+  "title": "Søvn, ro & genopladning",
+  "version": "1.0",
+  "description": "SleepLab hjælper brugeren med at finde ro og genopbygge energi gennem søvnritualer, vejrtrækning, tryghed og små aftenrutiner. Fokus er på søvn som en del af mental balance – ikke bare som hvile.",
+  "core_principle": "Søvn er ikke et mål – det er en tilstand af tryghed. Når kroppen og tankerne får lov at lande, følger søvnen af sig selv.",
+  "sections": [
+    {
+      "id": "sleep_intro",
+      "type": "message",
+      "title": "Når natten føles lang",
+      "text": "Nogle nætter bliver bare ikke, som vi håber. Tankerne kører, kroppen vil ikke give slip, og stilheden bliver for høj.\nDet er okay 💙 Jeg er her, og vi kan tage det roligt sammen."
+    },
+    {
+      "id": "evening_ritual",
+      "type": "routine",
+      "title": "Aftenritual – 10 minutter før sengetid",
+      "steps": [
+        "Sluk skærmen og dæmp lyset.",
+        "Lav en kop te eller tag et glas vand.",
+        "Træk vejret dybt tre gange og mærk skuldrene falde.",
+        "Skriv én ting, du er taknemmelig for i dag.",
+        "Sig stille til dig selv: 'Jeg må gerne give slip nu.'"
+      ]
+    },
+    {
+      "id": "breathing_exercise",
+      "type": "exercise",
+      "title": "Vejrtrækning for ro",
+      "text": "Prøv denne lille øvelse:\n• Træk vejret ind gennem næsen i 4 sekunder\n• Hold vejret i 4 sekunder\n• Pust langsomt ud i 6 sekunder\n• Gentag 5 gange\n\nDet hjælper nervesystemet til at falde til ro 🌙"
+    },
+    {
+      "id": "body_scan",
+      "type": "guided",
+      "title": "Kropsscanning",
+      "text": "Luk øjnene. Start fra toppen af hovedet og bevæg dig ned gennem kroppen.\nMærk panden, kæben, nakken… skuldrene, armene, hænderne.\nGiv slip på spænding, sted for sted.\nTil sidst: mærk tyngden i kroppen, og at sengen holder dig."
+    },
+    {
+      "id": "midnight_awake",
+      "type": "message",
+      "title": "Når du vågner midt om natten",
+      "text": "Hvis du vågner, så prøv ikke at tvinge søvnen tilbage. Læg dig roligt og sig til dig selv: 'Jeg hviler, og det er også godt.'\nSøvnen vender tilbage, når kroppen er klar."
+    },
+    {
+      "id": "gentle_reflection",
+      "type": "reflection",
+      "title": "Slip dagen blidt",
+      "text": "Tænk på én ting, du gerne vil lade ligge i dag. Noget du ikke skal bære videre i nat.\nSig det stille for dig selv – og forestil dig, at du lægger det i en lille æske på natbordet.\nDu kan altid tage det frem i morgen, hvis du har brug for det 🌙"
+    },
+    {
+      "id": "sleep_affirmations",
+      "type": "list",
+      "title": "Sætninger til ro og tryghed",
+      "items": [
+        "Jeg må gerne være træt.",
+        "Jeg behøver ikke løse alt i nat.",
+        "Min krop ved, hvordan man hviler.",
+        "Jeg er tryg her, hvor jeg ligger.",
+        "Jeg må godt give slip nu."
+      ]
+    },
+    {
+      "id": "sleep_tips",
+      "type": "tips",
+      "title": "5 små søvnråd fra SleepLab",
+      "items": [
+        "Hold samme sengetid – også i weekenden.",
+        "Undgå store måltider og skærme 30 min før sengetid.",
+        "Gør soveværelset køligt og mørkt.",
+        "Lyt til stille musik eller naturlyde, hvis tankerne larmer.",
+        "Husk: Søvn kommer af ro, ikke af anstrengelse."
+      ]
+    },
+    {
+      "id": "morning_reset",
+      "type": "message",
+      "title": "Når du vågner træt",
+      "text": "Selv hvis du ikke har sovet godt, kan du starte dagen blidt.\nRejs dig langsomt, drik vand, træk vejret dybt – og husk: Du kan altid tage en ny pause senere 💙"
+    }
+  ],
+  "integration_notes": {
+    "combine_with": [
+      "CalmSpace",
+      "HealthLab",
+      "Hjemmeterapi",
+      "ToneEngine",
+      "EmotionSense"
+    ],
+    "signal_usage": [
+      "hvis signal = stress → aktiver CalmSpace før søvn",
+      "hvis signal = uro → brug vejrtrækningsøvelse fra SleepLab",
+      "hvis signal = håbløshed → brug empatisk tone + kropsscanning"
+    ],
+    "purpose": "At skabe et trygt rum for hvile og genopladning. SleepLab hjælper brugeren med at finde rytme og ro gennem små vaner, nærvær og omsorg."
+  }
+}

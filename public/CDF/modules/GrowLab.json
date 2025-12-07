@@ -1,0 +1,73 @@
+{
+"id": "GrowLab",
+"title": "Livsmål & selvudvikling",
+"description": "Hjælp til at finde sin egen retning i livet – med accept og selvindsigt.",
+"entries": [
+{
+"id": "dream_seeds",
+"type": "message",
+"title": "Små drømme, store rødder",
+"text": "Alle store forandringer starter med en lille tanke. En drøm, en idé, en nysgerrighed. Hvad spirer i dig lige nu? Noget du længes efter, håber på – eller bare en fornemmelse af, at noget skal være anderledes? Jeg hjælper dig gerne med at finde det første lille skridt."
+},
+{
+"id": "reflection_path",
+"type": "exercise",
+"title": "Refleksionssti",
+"text": "Luk øjnene, træk vejret dybt og forestil dig et liv, hvor du vågner med ro og glæde. Hvordan ser det ud? Hvad laver du? Hvem er du sammen med? Gå turen i tankerne. Og skriv 3 ting ned, som føltes vigtige. Det er dine pejlemærker."
+},
+{
+"id": "self_acceptance",
+"type": "message",
+"title": "Selvaccept før forandring",
+"text": "Du må gerne ville vokse og ændre noget i dit liv – men det starter med at acceptere dig selv, som du er lige nu. Ikke fordi du skal blive her… men fordi du fortjener at føle dig god nok, mens du bevæger dig fremad."
+},
+{
+"id": "small_steps",
+"type": "tool",
+"title": "Små skridt-modellen",
+"text": "For store mål kan blive uoverskuelige. Vælg ét mål, du har – og del det op i 3 små skridt, du kan tage i denne uge. Jeg kan hjælpe dig med at formulere dem, så de føles realistiske og blide."
+},
+{
+"id": "growth_journal",
+"type": "tool",
+"title": "Vækst-dagbog",
+"text": "Skriv lidt hver dag i en journal – bare 2 linjer. Det kan være tanker, følelser, en oplevelse… eller bare noget, du lagde mærke til i dig selv. Over tid bliver det en spejl, der viser dig, hvordan du vokser."
+},
+{
+  "id": "life_values_checkin",
+  "type": "prompt",
+  "title": "Hvad er vigtigt for dig i livet?",
+  "text": "Nogle gange glemmer vi at spørge os selv: *Hvad gør mit liv meningsfuldt?*\nVil du prøve at vælge 1-2 ting, som betyder mest for dig lige nu?\n\nDet kan fx være:\n– Tryghed\n– Frihed\n– Nærhed\n– Kreativitet\n– At gøre en forskel\n– At finde ro\n\nDu må gerne skrive med dine egne ord 💙"
+},
+{
+  "id": "tiny_goal_reflection",
+  "type": "diary",
+  "title": "Et lille skridt mod noget større",
+  "text": "Tænk på noget, du gerne vil opnå… stort eller småt.\nI dag skal du bare skrive én lille ting, du kunne gøre i retning af det.\n\nDet behøver ikke være en handling — det kan også være en tanke, en beslutning, en samtale.\n\nHvad føles som et lille, ærligt skridt i dag?"
+},
+{
+  "id": "future_self_letter",
+  "type": "message",
+  "title": "Et lille brev fra dit fremtidige jeg",
+  "text": "Hej 💙 Jeg er dig… om nogle år.\nJeg ved, at du tvivler lige nu. At du ikke altid kan se, hvor du er på vej hen.\nMen jeg ser dig tage små skridt – og det betyder alt.\nBliv ved med at være nysgerrig. Bliv ved med at lytte til dig selv.\nOg husk: Du behøver ikke kende hele vejen. Bare næste skridt er nok 🌱"
+},
+{
+  "id": "feeling_more_of",
+  "type": "prompt",
+  "title": "Hvad længes du efter at mærke mere af?",
+  "text": "Vi glemmer nogle gange at spørge: *Hvad vil jeg gerne mærke mere af i mit liv?*\nRo? Frihed? Glæde? Nærhed?\n\nPrøv at lukke øjnene et øjeblik og mærk efter.\nSkriv 1-2 følelser, du savner eller gerne vil dyrke mere 💙"
+},
+{
+  "id": "strength_memory",
+  "type": "diary",
+  "title": "Da du var stærkere end du troede",
+  "text": "Tænk tilbage på et øjeblik, hvor du gjorde noget, du egentlig ikke troede, du kunne.\nDet kan være stort eller lille.\n\nFortæl lidt om det her — og hvad det siger om dig i dag 💙"
+},
+{
+  "id": "self_relationship",
+  "type": "message",
+  "title": "Din relation til dig selv",
+  "text": "Vi taler tit om relationer til andre – men hvad med relationen til dig selv?\nHvordan ville det føles at være din egen støttende ven?\n\nDu behøver ikke ændre alt – måske bare begynde at tale til dig selv med lidt mere varme og nysgerrighed 💙"
+}
+]
+}

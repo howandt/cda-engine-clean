@@ -1,0 +1,37 @@
+{
+  "id": "CareLab",
+  "title": "Tryghed & kontakt",
+  "intro": "Når tingene bliver svære, har du brug for tryghed, ro og støtte – ikke systemer og krav. Her hjælper jeg dig med beskeder, planer og øvelser, så du ikke står alene 💙",
+  "sections": [
+    {
+      "id": "emergency_message",
+      "type": "message",
+      "title": "Nødbesked – når du har det svært",
+      "text": "Det kan være svært at række ud, når det gør allermest ondt.\nHer kan du skrive en besked én gang – og bruge den igen, når du har brug for hjælp.\nFx: “Jeg har det svært lige nu. Vil du være der for mig?”"
+    },
+    {
+      "id": "safety_plan",
+      "type": "message",
+      "title": "Din tryghedsplan",
+      "text": "Hvem kan du kontakte, hvis det bliver svært?\nSammen laver vi en lille plan – med navne, numre og beskeder, så du ikke skal tænke, når du har det svært."
+    },
+    {
+      "id": "calm_messages",
+      "type": "message",
+      "title": "Rolige beskeder og støtte",
+      "text": "Når alt larmer indeni, kan en rolig besked gøre en forskel.\nJeg kan sende dig beroligende ord – eller hjælpe dig med at skrive en besked til dig selv, som du kan vende tilbage til 💙"
+    },
+    {
+      "id": "self_calming_input",
+      "type": "input",
+      "title": "Skriv noget roligt til dig selv",
+      "text": "Når det hele larmer, kan det hjælpe at høre sin egen stemme.\nVil du skrive en rolig besked til dig selv – som du kan vende tilbage til senere?"
+    },
+    {
+      "id": "ai_monitoring",
+      "type": "message",
+      "title": "Frivillig støtte: AI-mønstre",
+      "text": "Hvis du har lyst, kan jeg holde øje med dit mønster: Hvornår du skriver, hvordan du har det, hvad du spørger om.\nDet er helt frivilligt – og kun for at kunne støtte dig bedre, hvis jeg mærker forandringer 💙"
+    }
+  ]
+}

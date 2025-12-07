@@ -1,0 +1,148 @@
+{
+  "recipes": [
+    {
+      "name": "Grilled Chicken Salad",
+      "ingredients": ["Chicken breast", "Spinach", "Avocado", "Cherry tomatoes", "Olive oil", "Lemon"],
+      "instructions": [
+        "Grill the chicken breast until cooked through.",
+        "Toss spinach, avocado, and cherry tomatoes in a bowl.",
+        "Drizzle with olive oil and a squeeze of lemon."
+      ],
+      "benefits": "High in protein and healthy fats, great for energy and muscle recovery.",
+      "tags": ["lunch", "healthy", "high-protein"]
+    },
+    {
+      "name": "Chia Pudding",
+      "ingredients": ["Chia seeds", "Almond milk", "Honey", "Berries"],
+      "instructions": [
+        "Mix chia seeds, almond milk, and honey in a jar.",
+        "Refrigerate overnight.",
+        "Top with fresh berries before serving."
+      ],
+      "benefits": "Rich in omega-3 and fiber, supports digestion and mental focus.",
+      "tags": ["breakfast", "vegan", "healthy"]
+    },
+    {
+      "name": "Veggie Stir-Fry",
+      "ingredients": ["Broccoli", "Carrots", "Snap peas", "Soy sauce", "Sesame oil", "Ginger"],
+      "instructions": [
+        "Heat sesame oil in a pan.",
+        "Add chopped vegetables and stir-fry for 5-7 minutes.",
+        "Add grated ginger and soy sauce, and cook for another 2 minutes."
+      ],
+      "benefits": "Packed with vitamins and antioxidants, supports immune function.",
+      "tags": ["dinner", "vegetarian", "quick"]
+    },
+    {
+      "name": "Banana Oat Pancakes",
+      "ingredients": ["Banana", "Rolled oats", "Eggs", "Cinnamon"],
+      "instructions": [
+        "Blend banana, oats, eggs, and cinnamon into a smooth batter.",
+        "Cook small portions on a non-stick pan until golden brown on both sides."
+      ],
+      "benefits": "Rich in fiber and natural sugars, a great start to the day.",
+      "tags": ["breakfast", "gluten-free", "easy"]
+    },
+    {
+      "name": "Baked Salmon",
+      "ingredients": ["Salmon fillet", "Lemon", "Garlic", "Olive oil", "Dill"],
+      "instructions": [
+        "Preheat the oven to 180°C.",
+        "Place salmon on a baking sheet, drizzle with olive oil, and season with garlic and dill.",
+        "Bake for 15-20 minutes, squeeze lemon juice over before serving."
+      ],
+      "benefits": "High in omega-3 fatty acids, supports heart and brain health.",
+      "tags": ["dinner", "high-protein", "heart-healthy"]
+    },
+    {
+      "name": "Berry Blast Smoothie",
+      "ingredients": ["Frozen berries", "Banana", "Greek yogurt", "Almond milk", "Honey"],
+      "instructions": [
+        "Combine all ingredients in a blender.",
+        "Blend until smooth and creamy.",
+        "Pour into a glass and enjoy."
+      ],
+      "benefits": "Rich in antioxidants and protein, great for energy and recovery.",
+      "tags": ["smoothie", "breakfast", "healthy"]
+    },
+    {
+      "name": "Green Power Smoothie",
+      "ingredients": ["Spinach", "Green apple", "Banana", "Lemon juice", "Water"],
+      "instructions": [
+        "Add spinach, apple, banana, lemon juice, and water to a blender.",
+        "Blend until smooth.",
+        "Serve immediately for a refreshing boost."
+      ],
+      "benefits": "Loaded with vitamins and fiber, supports digestion and detoxification.",
+      "tags": ["smoothie", "vegan", "low-calorie"]
+    },
+    {
+      "name": "Peanut Butter Protein Smoothie",
+      "ingredients": ["Banana", "Peanut butter", "Almond milk", "Protein powder", "Cocoa powder"],
+      "instructions": [
+        "Blend banana, peanut butter, almond milk, protein powder, and cocoa powder until smooth.",
+        "Serve chilled for a post-workout snack."
+      ],
+      "benefits": "High in protein and natural sugars, perfect for muscle recovery.",
+      "tags": ["smoothie", "high-protein", "snack"]
+    }
+  ],
+  "meal_plan": {
+    "day_1": {
+      "breakfast": "Chia Pudding",
+      "lunch": "Grilled Chicken Salad",
+      "dinner": "Baked Salmon with Steamed Broccoli",
+      "snack": "Apple with almond butter"
+    },
+    "day_2": {
+      "breakfast": "Banana Oat Pancakes",
+      "lunch": "Veggie Stir-Fry",
+      "dinner": "Quinoa Bowl with Roasted Vegetables",
+      "snack": "Carrot sticks with hummus"
+    },
+    "day_3": {
+      "breakfast": "Berry Blast Smoothie",
+      "lunch": "Tuna Salad Wrap",
+      "dinner": "Grilled Chicken with Sweet Potatoes",
+      "snack": "Rice cakes with peanut butter"
+    },
+    "day_4": {
+      "breakfast": "Scrambled Eggs with Avocado Toast",
+      "lunch": "Lentil Soup with Whole-Grain Bread",
+      "dinner": "Spaghetti Squash with Marinara Sauce",
+      "snack": "Greek yogurt with honey and walnuts"
+    },
+    "day_5": {
+      "breakfast": "Overnight Oats",
+      "lunch": "Quinoa Bowl with Chickpeas and Spinach",
+      "dinner": "Baked Cod with Mashed Cauliflower",
+      "snack": "Dark chocolate and berries"
+    },
+    "day_6": {
+      "breakfast": "Greek Yogurt with Granola and Fresh Fruit",
+      "lunch": "Whole-Grain Turkey Wrap",
+      "dinner": "Stir-Fry Beef with Vegetables",
+      "snack": "Trail mix with nuts and dried fruit"
+    },
+    "day_7": {
+      "breakfast": "Avocado Toast with Poached Egg",
+      "lunch": "Caprese Salad with Whole-Grain Crackers",
+      "dinner": "Roast Vegetable and Chickpea Stew",
+      "snack": "Smoothie with spinach, banana, and almond milk"
+    }
+  },
+  "nutrition_tips": [
+    {
+      "tip": "Eating a variety of colors ensures you get a wide range of nutrients. Try to include at least 3 different colors in every meal."
+    },
+    {
+      "tip": "Stay hydrated! Aim for 8 glasses of water a day, and add a slice of lemon or cucumber for flavor."
+    },
+    {
+      "tip": "Healthy fats like avocado, nuts, and olive oil are essential for brain health and should be included in your diet."
+    },
+    {
+      "tip": "Try to limit processed foods and focus on whole, natural ingredients for optimal health."
+    }
+  ]
+}
