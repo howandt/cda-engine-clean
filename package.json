@@ -6,9 +6,8 @@
   "scripts": {
     "start": "node api/data.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:clean": "node scripts/build-clean-index.js",
     "prebuild": "node syncData.js",
-    "build": "npm run build:clean"
+    "build": "echo 'Build completed'"
   },
   "dependencies": {
     "node-fetch": "^2.7.0"
