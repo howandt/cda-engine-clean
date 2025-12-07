@@ -6,24 +6,36 @@ export default async function handler(req, res) {
   try {
     const { id, category, diagnose, miljø, age, search, sort } = req.query;
 
-    // 🔹 Hent den rensede index-fil
-    const dataPath = path.join(process.cwd(), "public", "CDA", "data", "CDA_Cases_Index_clean.json");
-
-    if (!fs.existsSync(dataPath)) {
+    // 🔹 Læs ALLE opdelte JSON filer fra cases mappen
+    const casesDir = path.join(process.cwd(), "public", "CDA", "cases");
+    
+    if (!fs.existsSync(casesDir)) {
       return res.status(404).json({
         success: false,
-        error: `Datafil ikke fundet: ${dataPath}`
+        error: `Cases mappe ikke fundet: ${casesDir}`
       });
     }
 
-    const raw = fs.readFileSync(dataPath, "utf8");
-    const data = JSON.parse(raw);
-    const cases = data.cases || data;
-    let filtered = cases;
+    // Læs alle JSON filer i cases mappen
+    const files = fs.readdirSync(casesDir).filter(f => f.endsWith('.json'));
+    let allCases = [];
+
+    for (const file of files) {
+      const filePath = path.join(casesDir, file);
+      const raw = fs.readFileSync(filePath, "utf8");
+      const data = JSON.parse(raw);
+      
+      // Tilføj cases fra denne fil
+      if (data.cases && Array.isArray(data.cases)) {
+        allCases = allCases.concat(data.cases);
+      }
+    }
+
+    let filtered = allCases;
 
     // 🔍 Hvis der søges på specifikt ID
     if (id) {
-      const match = cases.find(c => c.id?.toLowerCase() === id.toLowerCase());
+      const match = allCases.find(c => c.id?.toLowerCase() === id.toLowerCase());
       if (!match) {
         return res.status(404).json({
           success: false,
@@ -33,17 +45,15 @@ export default async function handler(req, res) {
       return res.status(200).json({
         success: true,
         total: 1,
-        source: JSON.stringify(filtered.slice(0, 5), null, 2)
+        source: JSON.stringify([match], null, 2)
       });
     }
 
-    // 🔍 Ellers filtrer på kategori, diagnose, miljø, alder
-    
     // 🔹 Semantisk søgning via q parameter
     const q = req.query.q || req.query.search || "";
     if (q) {
       const { terms, related } = semanticSearch(q);
-      filtered = cases.filter(c => {
+      filtered = allCases.filter(c => {
         const content = JSON.stringify(c).toLowerCase();
         return (
           terms.some(t => content.includes(t)) ||
@@ -52,28 +62,34 @@ export default async function handler(req, res) {
       });
     }
 
+    // 🔍 Filtrer på kategori
     if (category) {
       filtered = filtered.filter(c =>
+        c.kategori?.toLowerCase().includes(category.toLowerCase()) ||
         c.category?.toLowerCase().includes(category.toLowerCase())
       );
     }
 
+    // 🔍 Filtrer på diagnose (eller adfærd for børnehave)
     if (diagnose) {
-      filtered = filtered.filter(c =>
-        c.diagnoser?.some(d =>
-          d.toLowerCase().includes(diagnose.toLowerCase())
-        )
-      );
+      filtered = filtered.filter(c => {
+        const diagnoser = c.diagnoser || [];
+        const adfærd = c.adfærd || [];
+        return diagnoser.some(d => d.toLowerCase().includes(diagnose.toLowerCase())) ||
+               adfærd.some(a => a.toLowerCase().includes(diagnose.toLowerCase()));
+      });
     }
 
+    // 🔍 Filtrer på miljø
     if (miljø) {
       filtered = filtered.filter(c =>
-        c.miljø?.toLowerCase().includes(miljø.toLowerCase())
+        c.miljø?.some(m => m.toLowerCase().includes(miljø.toLowerCase()))
       );
     }
 
+    // 🔍 Filtrer på alder
     if (age) {
-      filtered = filtered.filter(c => c.age === Number(age));
+      filtered = filtered.filter(c => c.alder === Number(age));
     }
 
     // 🔎 Fritekst-søgning med semantik
@@ -81,15 +97,15 @@ export default async function handler(req, res) {
       const { terms, related } = semanticSearch(search);
       filtered = filtered.filter(c => {
         const content = JSON.stringify(c).toLowerCase();
-        const q = search.toLowerCase();
+        const searchLower = search.toLowerCase();
         return (
           terms.some(t => content.includes(t)) ||
           related.some(r => content.includes(r)) ||
-          (c.title && c.title.toLowerCase().includes(q)) ||
-          (c.theme && c.theme.toLowerCase().includes(q)) ||
-          (c.problem && c.problem.toLowerCase().includes(q)) ||
-          (c.solution && c.solution.toLowerCase().includes(q)) ||
-          (c.category && c.category.toLowerCase().includes(q))
+          (c.titel && c.titel.toLowerCase().includes(searchLower)) ||
+          (c.tema && c.tema.toLowerCase().includes(searchLower)) ||
+          (c.problem && c.problem.toLowerCase().includes(searchLower)) ||
+          (c.løsning && c.løsning.toLowerCase().includes(searchLower)) ||
+          (c.kategori && c.kategori.toLowerCase().includes(searchLower))
         );
       });
     }
@@ -97,19 +113,21 @@ export default async function handler(req, res) {
     // 🧭 Sortering
     if (sort) {
       const dir = sort.toLowerCase();
-      if (dir === "age-asc") filtered.sort((a, b) => a.age - b.age);
-      if (dir === "age-desc") filtered.sort((a, b) => b.age - a.age);
-      if (dir === "title") filtered.sort((a, b) => a.title.localeCompare(b.title));
+      if (dir === "age-asc") filtered.sort((a, b) => a.alder - b.alder);
+      if (dir === "age-desc") filtered.sort((a, b) => b.alder - a.alder);
+      if (dir === "title") filtered.sort((a, b) => (a.titel || "").localeCompare(b.titel || ""));
     }
 
-    // ✅ Returnér resultatet - ALLE matches
+    // ✅ Fallback til semantic-search hvis ingen matches
     if (filtered.length === 0 && search) {
-  const fallbackUrl = `https://cda-engine-clean.vercel.app/api/semantic-search?search=${encodeURIComponent(search)}`;
-  const fallbackRes = await fetch(fallbackUrl);
-const fallbackData = await fallbackRes.json();
-console.log("Fallback-data:", fallbackData);  // 🔍 Tilføj denne linje
-filtered = fallbackData.results.slice(0, 2);
-}
+      const fallbackUrl = `https://cda-engine-clean.vercel.app/api/semantic-search?search=${encodeURIComponent(search)}`;
+      const fallbackRes = await fetch(fallbackUrl);
+      const fallbackData = await fallbackRes.json();
+      console.log("Fallback-data:", fallbackData);
+      filtered = fallbackData.results?.slice(0, 2) || [];
+    }
+
+    // ✅ Returnér resultatet - max 5 cases
     return res.status(200).json({
       success: true,
       total: filtered.length,
