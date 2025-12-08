@@ -53,52 +53,6 @@
           }
         }
       }
-    },
-    "/api/emotion-engine": {
-      "post": {
-        "operationId": "analyzeEmotion",
-        "summary": "Analyser kommunikation",
-        "description": "Analyserer tekst for følelsesmæssig tone",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "text": {
-                    "type": "string",
-                    "description": "Teksten der skal analyseres"
-                  }
-                },
-                "required": ["text"]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Succes – følelsesanalyse returneret",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "success": { "type": "boolean" },
-                    "analysis": { "type": "object" }
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Fejl – manglende tekst parameter"
-          },
-          "500": {
-            "description": "Serverfejl"
-          }
-        }
-      }
     }
   }
 }
