@@ -3,7 +3,7 @@
   "info": {
     "title": "CDF Engine API",
     "version": "1.0.0",
-    "description": "API til CDF-systemet – henter data fra public/CDF/Core og public/CDF/modules via Vercel."
+    "description": "API til CDF-systemet – henter data fra public/CDF/Core og public/CDF/data via Vercel."
   },
   "servers": [
     {
@@ -16,7 +16,7 @@
       "get": {
         "operationId": "getCdfModule",
         "summary": "Hent et CDF-modul",
-        "description": "Henter CDF_Core eller et modul fra public/CDF/modules ved brug af ?module=<navn>.",
+        "description": "Henter CDF_Core eller et modul fra public/CDF/data ved brug af ?module=<navn>.",
         "parameters": [
           {
             "name": "module",
