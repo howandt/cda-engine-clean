@@ -37,7 +37,7 @@ export default async function handler(req, res) {
   // Almindelig modulhentning
   try {
     const baseURL = "https://cda-engine-clean.vercel.app";
-    const modulePath = `/CDF/data/${module}.json`;
+    const modulePath = `/CDF/data/${module.toLowerCase()}.json`;
     const response = await fetch(`${baseURL}${modulePath}`);
     const data = await response.text();
 
