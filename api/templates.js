@@ -17,7 +17,7 @@ function isCacheValid(cacheKey) {
 }
 
 function readLocalFile(filename) {
-  const dataPath = path.join(process.cwd(), "public", "CDA", "data", CDA_Templates.json);
+  const dataPath = path.join(process.cwd(), "public", "CDA", "data", "CDA_Templates.json");
   
   if (!fs.existsSync(dataPath)) {
     throw new Error(`Fil ikke fundet: ${dataPath}`);
