@@ -21,6 +21,9 @@
     },
     "api/emotion-engine.js": {
       "includeFiles": "public/CDA/data/**"
+    },
+    "api/pbl-projects.js": {
+      "includeFiles": "public/CDA/data/**"
     }
   }
 }
