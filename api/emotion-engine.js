@@ -27,8 +27,26 @@ export default async function handler(req, res) {
     const raw = fs.readFileSync(dataPath, "utf8");
     const data = JSON.parse(raw);
 
-    // GET: Return emotion engine data and examples
+    // GET: Analyze text OR return examples
     if (req.method === 'GET') {
+      const text = req.query.text;
+      
+      if (text) {
+        // Analyze the text
+        const analysis = analyzeEmotion(text, data);
+        const similarExamples = findSimilarExamples(text, data.examples);
+        const improvements = getImprovements(text, analysis, data);
+
+        return res.status(200).json({
+          input: { text: text },
+          analysis: analysis,
+          similar_examples: similarExamples,
+          improvements: improvements,
+          communication_tips: data.communication_tips
+        });
+      }
+      
+      // No text = return examples
       return res.status(200).json({
         version: data.version,
         description: data.description,
