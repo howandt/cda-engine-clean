@@ -17,7 +17,10 @@
   ],
   "functions": {
     "api/cdf/core.js": {
-      "includeFiles": "CDF/modules/**"
+      "includeFiles": "public/CDF/data/**"
+    },
+    "api/emotion-engine.js": {
+      "includeFiles": "public/CDA/data/**"
     }
   }
 }
