@@ -13,7 +13,7 @@ export default async function handler(req, res) {
 
   // Hvis brugeren beder om en oversigt over modulerne (?module=list)
   if (module === "list") {
-    const listPath = path.join(process.cwd(), "public", "CDF", "modules", "cdf_master_modules.json");
+    const listPath = path.join(process.cwd(), "public", "CDF", "data", "cdf_master_modules.json");
     console.log("📁 Prøver at hente moduloversigt fra:", listPath);
 
     try {
@@ -37,7 +37,7 @@ export default async function handler(req, res) {
   // Almindelig modulhentning
   try {
     const baseURL = "https://cda-engine-clean.vercel.app";
-    const modulePath = `/CDF/modules/${module}.json`;
+    const modulePath = `/CDF/data/${module}.json`;
     const response = await fetch(`${baseURL}${modulePath}`);
     const data = await response.text();
 
