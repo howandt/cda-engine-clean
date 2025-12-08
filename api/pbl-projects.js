@@ -64,7 +64,9 @@ const dataPath = path.join(
         (p) =>
           p.title.toLowerCase().includes(q) ||
           p.subtitle?.toLowerCase().includes(q) ||
-          p.description?.toLowerCase().includes(q)
+          p.description?.toLowerCase().includes(q) ||
+          p.diagnosis_match?.some(d => d.toLowerCase().includes(q)) ||
+          p.level?.toLowerCase().includes(q)
       );
     }
 
