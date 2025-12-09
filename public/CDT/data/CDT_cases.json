@@ -1,42 +1,146 @@
 {
   "cases": [
     {
-      "id": "case-1",
-      "titel": "Emil - 8 år med ADHD",
+      "id": "case-skole-1",
+      "titel": "Emil - 8 år med ADHD i skolen",
       "diagnose": "ADHD",
       "alder": 8,
       "setting": "Skole",
+      "rolle": "Lærer",
       "beskrivelse": "Emil har svært ved at sidde stille i timerne og afbryder ofte undervisningen. Han glemmer sine ting og har svært ved at følge instruktioner.",
+      "problem": "Emil rejser sig konstant fra sin plads, taler ud af timen og forstyrrer andre elever under stillearbejde.",
+      "barnetsOplevelse": "Jeg kan ikke holde mig i ro. Det føles som om mine ben bare SKAL bevæge sig. Og når læreren forklarer noget, glemmer jeg det med det samme.",
+      "typiskFejl": "Man beder Emil om at 'bare sidde stille' uden at give konkrete værktøjer eller struktur.",
       "udfordringer": [
         "Koncentrationsbesvær",
         "Impulsiv adfærd",
         "Glemmer opgaver"
       ],
-      "indsatser": [
+      "anbefalinger": [
         "Kortere arbejdsperioder med pauser",
-        "Visuel huskeliste",
-        "Fidget-tools ved pulten"
-      ],
-      "resultat": "Efter 3 måneder kunne Emil arbejde i længere perioder og selv bede om pauser når nødvendigt."
+        "Visuel huskeliste på pulten",
+        "Fidget-tools",
+        "Bevægelsespauser hver 15. minut"
+      ]
     },
     {
-      "id": "case-2",
-      "titel": "Sofia - 10 år med autisme",
+      "id": "case-skole-2",
+      "titel": "Sofia - 10 år med autisme i skolen",
       "diagnose": "Autisme",
       "alder": 10,
       "setting": "Skole",
+      "rolle": "Lærer",
       "beskrivelse": "Sofia bliver overstimuleret af støj i klassen og har svært ved gruppearbejde. Hun har brug for forudsigelighed.",
+      "problem": "Under gruppearbejde trækker Sofia sig tilbage, holder sig for ørerne og bliver ked af det når rutinen ændres.",
+      "barnetsOplevelse": "Alle snakker på én gang og det gør ondt i mine ører. Jeg ved ikke hvad vi skal lave, fordi ingen fortalte mig at planen var ændret.",
+      "typiskFejl": "Man forventer at Sofia 'bare tilpasser sig' gruppearbejdet uden forberedelse eller sensorisk støtte.",
       "udfordringer": [
         "Sensorisk overstimulering",
-        "Social interaktion",
-        "Behov for struktur"
+        "Social interaktion i grupper",
+        "Behov for forudsigelighed"
       ],
-      "indsatser": [
+      "anbefalinger": [
         "Støjdæmpende hovedtelefoner",
-        "Visuel dagsplan",
-        "Stille hjørne i klassen"
+        "Visuel dagsplan der opdateres ved ændringer",
+        "Stille hjørne i klassen",
+        "Forbered Sofia før gruppearbejde"
+      ]
+    },
+    {
+      "id": "case-boernehave-1",
+      "titel": "Lucas - 4 år med ADHD i børnehaven",
+      "diagnose": "ADHD",
+      "alder": 4,
+      "setting": "Børnehave",
+      "rolle": "Pædagog",
+      "beskrivelse": "Lucas har svært ved at vente på tur, slår andre børn når han bliver frustreret og kan ikke deltage i samlingsstund.",
+      "problem": "Ved samling springer Lucas op, løber rundt og forstyrrer de andre børn. Han slår til, når han ikke får legetøjet med det samme.",
+      "barnetsOplevelse": "Jeg kan ikke sidde så længe! Og når jeg skal vente på legetøjet, bliver jeg så vred at jeg bare slår.",
+      "typiskFejl": "Man forsøger at holde Lucas på plads fysisk eller straffer ham for adfærden uden at forstå årsagen.",
+      "udfordringer": [
+        "Impulskontrol",
+        "Vente på tur",
+        "Frustrationstolerancen",
+        "Kan ikke sidde stille"
       ],
-      "resultat": "Sofia kan nu selv identificere når hun har brug for en pause og bruger sine værktøjer aktivt."
+      "anbefalinger": [
+        "Kortere samlinger (5-10 min)",
+        "Fidget-bold under samling",
+        "Visuel timer så Lucas kan se 'hvor lang tid'",
+        "Lær Lucas at bede om pause",
+        "Ros når Lucas venter pænt"
+      ]
+    },
+    {
+      "id": "case-boernehave-2",
+      "titel": "Ida - 5 år med autisme i børnehaven",
+      "diagnose": "Autisme",
+      "alder": 5,
+      "setting": "Børnehave",
+      "rolle": "Pædagog",
+      "beskrivelse": "Ida leger ikke med andre børn, bliver meget ked af det når rutinen brydes og har behov for ensformighed.",
+      "problem": "Ida græder hver morgen når hun kommer, fordi hendes faste plads ved bordet er optaget. Hun leger alene i samme hjørne hver dag.",
+      "barnetsOplevelse": "Det er min plads! Hvorfor sidder Laura der? Alt er forkert nu. Jeg vil hjem.",
+      "typiskFejl": "Man forsøger at 'tvinge' Ida til social leg eller flytter hendes ting uden at forberede hende.",
+      "udfordringer": [
+        "Behov for forudsigelighed",
+        "Social interaktion",
+        "Overgange er svære",
+        "Sensorisk sensitivitet"
+      ],
+      "anbefalinger": [
+        "Fast plads med visuelt mærke (Idas billede)",
+        "Visuel dagsplan Ida kan tjekke",
+        "Forbered overgange 5 min før",
+        "Start social leg med én ven ad gangen",
+        "Respekter Idas behov for trygge rutiner"
+      ]
+    },
+    {
+      "id": "case-skole-3",
+      "titel": "Oliver - 9 år med angst i skolen",
+      "diagnose": "Angst",
+      "alder": 9,
+      "setting": "Skole",
+      "rolle": "Lærer",
+      "beskrivelse": "Oliver får ondt i maven hver morgen, vil ikke op til tavlen og melder sig aldrig.",
+      "problem": "Oliver sidder stille i timerne men deltager ikke. Ved præsentationer græder han og beder om at komme hjem.",
+      "barnetsOplevelse": "Hvad nu hvis jeg siger noget forkert? Alle vil grine af mig. Jeg kan ikke.",
+      "typiskFejl": "Man 'presser' Oliver ved at kalde ham op uden forberedelse eller bagatelliserer hans angst.",
+      "udfordringer": [
+        "Præstationsangst",
+        "Social angst",
+        "Undgåelsesadfærd"
+      ],
+      "anbefalinger": [
+        "Start med skriftlige svar før mundtlige",
+        "Giv Oliver besked dagen før hvis han skal præsentere",
+        "Lad ham øve med dig først",
+        "Fejring af små skridt"
+      ]
+    },
+    {
+      "id": "case-skole-4",
+      "titel": "Alex - 8 år ADHD og frisørstolen",
+      "diagnose": "ADHD",
+      "alder": 8,
+      "setting": "Skole",
+      "rolle": "Lærer",
+      "beskrivelse": "Alex har svært ved at sidde stille under aktiviteter der kræver ro og koncentration.",
+      "problem": "Alex rejser sig fra stolen hver 2. minut, rører ved alt og mister fokus på opgaven.",
+      "barnetsOplevelse": "Jeg kan ikke sidde så stille, det kilder og jeg vil bare væk.",
+      "typiskFejl": "Man forventer ro og stillesiddende adfærd for længe uden strategi eller pauser.",
+      "udfordringer": [
+        "Bevægelsestrang",
+        "Koncentrationsbesvær",
+        "Selvregulering"
+      ],
+      "anbefalinger": [
+        "Trafiklyskort system",
+        "Korte arbejdsintervaller (5-10 min)",
+        "Bevægelsesstationer i klassen",
+        "Ros for selvregulering"
+      ]
     }
   ]
 }
