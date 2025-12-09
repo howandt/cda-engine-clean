@@ -1,0 +1,25 @@
+{
+  "templates": [
+    {
+      "id": "observationsskema",
+      "navn": "Observationsskema",
+      "beskrivelse": "Struktureret skema til observation af barnets adfærd i forskellige situationer",
+      "kategori": "observation",
+      "formål": "Systematisk indsamling af data om barnets adfærd"
+    },
+    {
+      "id": "handleplan",
+      "navn": "Handleplan",
+      "beskrivelse": "Template til udarbejdelse af konkret handleplan for barnet",
+      "kategori": "planlægning",
+      "formål": "Planlægge og strukturere indsatser"
+    },
+    {
+      "id": "forældresamtale",
+      "navn": "Forældresamtale guide",
+      "beskrivelse": "Struktur til konstruktiv forældresamtale",
+      "kategori": "kommunikation",
+      "formål": "Sikre god dialog med forældre"
+    }
+  ]
+}

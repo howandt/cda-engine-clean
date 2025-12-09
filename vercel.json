@@ -24,6 +24,33 @@
     },
     "api/pbl-projects.js": {
       "includeFiles": "public/CDA/data/**"
+    },
+    "api/cdt/diagnoser.js": {
+      "includeFiles": "public/CDT/data/**"
+    },
+    "api/cdt/specialister.js": {
+      "includeFiles": "public/CDT/data/**"
+    },
+    "api/cdt/templates.js": {
+      "includeFiles": "public/CDT/data/**"
+    },
+    "api/cdt/rollespil.js": {
+      "includeFiles": "public/CDT/data/**"
+    },
+    "api/cdt/quiz.js": {
+      "includeFiles": "public/CDT/data/**"
+    },
+    "api/cdt/emotionmotor.js": {
+      "includeFiles": "public/CDT/data/**"
+    },
+    "api/cdt/pbl-projekter.js": {
+      "includeFiles": "public/CDT/data/**"
+    },
+    "api/cdt/semantic-engine.js": {
+      "includeFiles": "public/CDT/data/**"
+    },
+    "api/cdt/cases.js": {
+      "includeFiles": "public/CDT/data/**"
     }
   }
 }

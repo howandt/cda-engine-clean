@@ -1,0 +1,22 @@
+{
+  "rollespil": [
+    {
+      "id": "foraeldre-samtale-1",
+      "titel": "Forældresamtale om ADHD bekymringer",
+      "beskrivelse": "Øv en konstruktiv samtale med forældre der er bekymrede for deres barns koncentration",
+      "diagnose": "ADHD",
+      "scenarie": "Forældrene er kommet til møde fordi de har hørt fra læreren at deres barn har svært ved at koncentrere sig. De er usikre og måske defensive.",
+      "mål": "Skabe tillid og samarbejde",
+      "sværhedsgrad": "let"
+    },
+    {
+      "id": "klassesituation-1",
+      "titel": "Håndtering af forstyrrende adfærd",
+      "beskrivelse": "Øv håndtering af barn med autisme der bliver overstimuleret i klassen",
+      "diagnose": "Autisme",
+      "scenarie": "Et barn med autisme bliver overstimuleret under gruppearbejde og begynder at reagere kraftigt.",
+      "mål": "Ro barnet ned og genoptage undervisningen",
+      "sværhedsgrad": "mellem"
+    }
+  ]
+}

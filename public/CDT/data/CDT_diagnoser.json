@@ -1,0 +1,28 @@
+{
+  "diagnoser": [
+    {
+      "id": "adhd",
+      "navn": "ADHD",
+      "beskrivelse": "Attention Deficit Hyperactivity Disorder - en neuroudviklingsforstyrrelse der påvirker opmærksomhed, impulskontrol og aktivitetsniveau.",
+      "kernesymptomer": [
+        "Koncentrationsbesvær",
+        "Impulsivitet",
+        "Hyperaktivitet"
+      ],
+      "alderForDiagnose": "Typisk fra 6-12 år",
+      "praevalens": "3-5% af skolebørn"
+    },
+    {
+      "id": "autisme",
+      "navn": "Autisme",
+      "beskrivelse": "En neuroudviklingsforstyrrelse der påvirker social kommunikation og adfærd.",
+      "kernesymptomer": [
+        "Udfordringer med social kommunikation",
+        "Gentagne adfærdsmønstre",
+        "Sensoriske forskelle"
+      ],
+      "alderForDiagnose": "Kan diagnosticeres fra 2-3 år",
+      "praevalens": "1-2% af befolkningen"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "semanticEngine": {
+    "synonymer": {
+      "adhd": ["opmærksomhedsforstyrrelse", "hyperaktivitet", "koncentrationsbesvær"],
+      "autisme": ["autismespektrumforstyrrelse", "ASF", "autistisk"],
+      "diagnose": ["udredning", "vurdering", "undersøgelse"],
+      "adfærd": ["opførsel", "reaktion", "handling"],
+      "støtte": ["hjælp", "assistance", "vejledning"],
+      "læring": ["undervisning", "udvikling", "progression"]
+    },
+    "relateredeEmner": {
+      "adhd": ["medicin", "struktur", "rutiner", "impulsivitet"],
+      "autisme": ["sanser", "forudsigelighed", "kommunikation", "sociale færdigheder"],
+      "skole": ["klasseledelse", "differentiering", "inklusion", "tilpasninger"]
+    },
+    "kontekstForståelse": {
+      "forældresamtale": ["bekymring", "samarbejde", "dialog", "tillid"],
+      "klasserum": ["undervisning", "gruppe", "aktivitet", "støj"],
+      "observation": ["adfærd", "mønster", "situation", "reaktion"]
+    }
+  }
+}

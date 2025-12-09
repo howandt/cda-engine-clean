@@ -1,0 +1,40 @@
+{
+  "specialister": [
+    {
+      "id": "psykolog-1",
+      "navn": "Dr. Maria Hansen",
+      "titel": "Børnepsykolog",
+      "speciale": "ADHD og autisme",
+      "erfaring": "15 år",
+      "fokusområder": [
+        "Diagnosticering",
+        "Behandling",
+        "Familiestøtte"
+      ]
+    },
+    {
+      "id": "pædagog-1",
+      "navn": "Lars Nielsen",
+      "titel": "Specialpædagog",
+      "speciale": "Inkluderende undervisning",
+      "erfaring": "12 år",
+      "fokusområder": [
+        "Klasseledelse",
+        "Differentiering",
+        "Tilpasninger"
+      ]
+    },
+    {
+      "id": "læge-1",
+      "navn": "Dr. Anne Pedersen",
+      "titel": "Børnelæge",
+      "speciale": "Neuropsykiatri",
+      "erfaring": "20 år",
+      "fokusområder": [
+        "Medicinering",
+        "Udredning",
+        "Behandlingsplaner"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "projekter": [
+    {
+      "id": "pbl-1",
+      "titel": "Mit eget følelsesbarometer",
+      "beskrivelse": "Byg et personligt værktøj til at forstå og kommunikere følelser",
+      "diagnose": "ADHD",
+      "keywords": ["følelser", "selvregulering", "kreativt"],
+      "varighed": "2-3 lektioner",
+      "materialer": ["papir", "farver", "saks", "lim"],
+      "mål": "Hjælpe barnet med at identificere og kommunikere følelser"
+    },
+    {
+      "id": "pbl-2",
+      "titel": "Min tryghedszone",
+      "beskrivelse": "Design et personligt rum eller hjørne der giver ro",
+      "diagnose": "Autisme",
+      "keywords": ["sanser", "ro", "design"],
+      "varighed": "3-4 lektioner",
+      "materialer": ["kasse", "tæppe", "puder", "lys"],
+      "mål": "Skabe en tryg base når barnet bliver overstimuleret"
+    },
+    {
+      "id": "pbl-3",
+      "titel": "Daglig rutine-planche",
+      "beskrivelse": "Lav en visuel guide til dagens aktiviteter",
+      "diagnose": "ADHD",
+      "keywords": ["struktur", "rutiner", "visuel"],
+      "varighed": "2 lektioner",
+      "materialer": ["billeder", "velcro", "plade"],
+      "mål": "Give forudsigelighed og struktur i hverdagen"
+    }
+  ]
+}

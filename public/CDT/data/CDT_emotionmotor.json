@@ -1,0 +1,32 @@
+{
+  "emotioner": [
+    {
+      "id": "frustration",
+      "emotion": "Frustration",
+      "triggers": ["ikke forstå", "for svært", "giver ikke mening"],
+      "response": "Jeg kan mærke det kan være frustrerende. Lad os tage det i mindre bidder.",
+      "handling": "simplificer"
+    },
+    {
+      "id": "usikkerhed",
+      "emotion": "Usikkerhed",
+      "triggers": ["ved ikke", "usikker", "måske"],
+      "response": "Det er helt okay at være usikker. Lad os undersøge det sammen.",
+      "handling": "støtte"
+    },
+    {
+      "id": "engagement",
+      "emotion": "Engagement",
+      "triggers": ["interessant", "fortæl mere", "spændende"],
+      "response": "Dejligt at du er interesseret! Lad mig give dig mere.",
+      "handling": "udvid"
+    },
+    {
+      "id": "forvirring",
+      "emotion": "Forvirring",
+      "triggers": ["forstår ikke", "hvad mener du", "forklaring"],
+      "response": "Lad mig forklare det på en anden måde.",
+      "handling": "omformulér"
+    }
+  ]
+}

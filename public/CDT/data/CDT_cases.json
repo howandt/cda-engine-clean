@@ -1,0 +1,42 @@
+{
+  "cases": [
+    {
+      "id": "case-1",
+      "titel": "Emil - 8 år med ADHD",
+      "diagnose": "ADHD",
+      "alder": 8,
+      "setting": "Skole",
+      "beskrivelse": "Emil har svært ved at sidde stille i timerne og afbryder ofte undervisningen. Han glemmer sine ting og har svært ved at følge instruktioner.",
+      "udfordringer": [
+        "Koncentrationsbesvær",
+        "Impulsiv adfærd",
+        "Glemmer opgaver"
+      ],
+      "indsatser": [
+        "Kortere arbejdsperioder med pauser",
+        "Visuel huskeliste",
+        "Fidget-tools ved pulten"
+      ],
+      "resultat": "Efter 3 måneder kunne Emil arbejde i længere perioder og selv bede om pauser når nødvendigt."
+    },
+    {
+      "id": "case-2",
+      "titel": "Sofia - 10 år med autisme",
+      "diagnose": "Autisme",
+      "alder": 10,
+      "setting": "Skole",
+      "beskrivelse": "Sofia bliver overstimuleret af støj i klassen og har svært ved gruppearbejde. Hun har brug for forudsigelighed.",
+      "udfordringer": [
+        "Sensorisk overstimulering",
+        "Social interaktion",
+        "Behov for struktur"
+      ],
+      "indsatser": [
+        "Støjdæmpende hovedtelefoner",
+        "Visuel dagsplan",
+        "Stille hjørne i klassen"
+      ],
+      "resultat": "Sofia kan nu selv identificere når hun har brug for en pause og bruger sine værktøjer aktivt."
+    }
+  ]
+}

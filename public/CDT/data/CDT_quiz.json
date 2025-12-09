@@ -1,0 +1,51 @@
+{
+  "quiz": [
+    {
+      "id": "adhd-grundlæggende",
+      "titel": "ADHD - Grundlæggende viden",
+      "diagnose": "ADHD",
+      "spørgsmål": [
+        {
+          "id": "q1",
+          "spørgsmål": "Hvad står ADHD for?",
+          "svar": [
+            "Attention Deficit Hyperactivity Disorder",
+            "Autism Development Hyperactive Disorder",
+            "Active Deficit Hyperactive Disorder"
+          ],
+          "korrekt": 0,
+          "forklaring": "ADHD står for Attention Deficit Hyperactivity Disorder - opmærksomhedsforstyrrelse med hyperaktivitet."
+        },
+        {
+          "id": "q2",
+          "spørgsmål": "Hvilken alder diagnosticeres ADHD typisk?",
+          "svar": [
+            "0-3 år",
+            "6-12 år",
+            "13-18 år"
+          ],
+          "korrekt": 1,
+          "forklaring": "ADHD diagnosticeres typisk i skolealderen, mellem 6-12 år, når kravene til koncentration øges."
+        }
+      ]
+    },
+    {
+      "id": "autisme-grundlæggende",
+      "titel": "Autisme - Grundlæggende viden",
+      "diagnose": "Autisme",
+      "spørgsmål": [
+        {
+          "id": "q1",
+          "spørgsmål": "Hvad er hovedområderne autisme påvirker?",
+          "svar": [
+            "Kun social kommunikation",
+            "Social kommunikation og gentagne adfærdsmønstre",
+            "Kun motorik"
+          ],
+          "korrekt": 1,
+          "forklaring": "Autisme påvirker både social kommunikation og skaber gentagne adfærdsmønstre."
+        }
+      ]
+    }
+  ]
+}
