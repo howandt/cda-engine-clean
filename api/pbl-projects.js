@@ -58,6 +58,7 @@ const dataPath = path.join(
     }
 
     // Smart fritekstsøgning - split keywords og find matches
+    // Updated: 2024-12-09 - Matcher på enkelte keywords
     if (search) {
       const keywords = search.toLowerCase().split(/\s+/); // Split på mellemrum
       
