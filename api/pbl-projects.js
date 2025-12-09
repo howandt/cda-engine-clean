@@ -57,17 +57,24 @@ const dataPath = path.join(
       );
     }
 
-    // Fritekstsøgning
+    // Smart fritekstsøgning - split keywords og find matches
     if (search) {
-      const q = search.toLowerCase();
-      filtered = filtered.filter(
-        (p) =>
-          p.title.toLowerCase().includes(q) ||
-          p.subtitle?.toLowerCase().includes(q) ||
-          p.description?.toLowerCase().includes(q) ||
-          p.diagnosis_match?.some(d => d.toLowerCase().includes(q)) ||
-          p.level?.toLowerCase().includes(q)
-      );
+      const keywords = search.toLowerCase().split(/\s+/); // Split på mellemrum
+      
+      filtered = filtered.filter((p) => {
+        // Saml alt søgbart indhold
+        const searchableContent = [
+          p.title,
+          p.subtitle,
+          p.description,
+          ...(p.diagnosis_match || []),
+          ...(p.career_alignment || []),
+          p.level
+        ].filter(Boolean).join(' ').toLowerCase();
+        
+        // Match hvis MINDST ÉT keyword findes
+        return keywords.some(keyword => searchableContent.includes(keyword));
+      });
     }
 
     // Titel-søgning
