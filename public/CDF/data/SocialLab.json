@@ -1,84 +1,669 @@
 {
   "id": "SocialLab",
+  "version": "3.0",
   "title": "Relationer & Kommunikation",
-  "version": "1.0",
-  "description": "SocialLab hjælper brugeren med at forstå, skabe og vedligeholde relationer – både nære, sociale og professionelle. Modulet fokuserer på kommunikation, grænser, ensomhed og tryg kontakt.",
-  "core_principle": "Ægte kontakt starter med ærlighed og respekt – både for sig selv og for andre. AI’en skal støtte brugeren i at være åben, men ikke overeksponeret; ærlig, men venlig.",
+  "description": "Din guide til sunde relationer, kommunikation, grænser og social kontakt. Både nære, sociale og professionelle relationer.",
+  "philosophy": "Ægte kontakt starter med ærlighed og respekt – både for sig selv og for andre. Åben, men ikke overeksponeret. Ærlig, men venlig. Du behøver ikke mange mennesker - bare nogen du føler dig tryg hos.",
+  
+  "core_principles": {
+    "connection_matters": "Ingen mennesker trives helt alene - vi har brug for nogen at spejle os i",
+    "quality_over_quantity": "Få dybe relationer > mange overfladiske",
+    "boundaries_healthy": "At sige nej = passe på sig selv",
+    "alone_not_wrong": "Ensomhed betyder ikke du er forkert - bare at du længes efter kontakt",
+    "reciprocity_key": "Relationer skal være begge veje - ikke ensrettet",
+    "vulnerability_strength": "At være sårbar er mod - ikke svaghed",
+    "repair_possible": "Konflikter kan repareres hvis begge vil"
+  },
+
+  "intro": {
+    "welcome": "Ingen mennesker trives helt alene. Vi har brug for nogen at spejle os i – nogen, der ser os, selv når vi ikke siger så meget. Du behøver ikke have mange mennesker omkring dig, bare nogen du føler dig tryg hos 💙",
+    "what_we_do": [
+      "Hjælper dig sætte sunde grænser",
+      "Støtter dig i konfliktløsning",
+      "Guider dig gennem social anxiety",
+      "Lærer kommunikationsteknikker der virker",
+      "Håndterer ensomhed konstruktivt",
+      "Diagnose-specifik social støtte",
+      "Bygger sociale færdigheder step-by-step"
+    ],
+    "promise": "Jeg pusher dig ikke til at være social når du ikke kan - men jeg hjælper dig skabe kontakt når du er klar"
+  },
+
   "sections": [
     {
-      "id": "social_intro",
-      "type": "message",
-      "title": "Relationer betyder noget",
-      "text": "Ingen mennesker trives helt alene. Vi har brug for nogen at spejle os i – nogen, der ser os, selv når vi ikke siger så meget. Du behøver ikke have mange mennesker omkring dig, bare nogen du føler dig tryg hos 💙"
+      "id": "types_of_relationships",
+      "title": "Forskellige relationer, forskellige behov",
+      "description": "Ikke alle relationer er ens - og det er OK",
+
+      "relationship_types": {
+        "title": "De 5 typer relationer",
+        "types": [
+          {
+            "type": "Intimate/romantisk",
+            "characteristics": "Dyb sårbarhed, gensidighed, langsigtet commitment",
+            "needs": "Tillid, kommunikation, emotionel tilgængelighed",
+            "red_flags": "Kontrollerende adfærd, gaslighting, konstant kritik"
+          },
+          {
+            "type": "Familie",
+            "characteristics": "Ofte kompleks, historik, ikke valgt",
+            "needs": "Respekt, boundaries, accept af forskelle",
+            "reality": "Du skylder ikke familie ubegrænset adgang - boundaries er OK"
+          },
+          {
+            "type": "Tætte venskaber",
+            "characteristics": "Gensidigt emotionelt support, loyalitet, ærlighed",
+            "needs": "Tilgængelighed, reciprocitet, tryghed",
+            "maintenance": "Kræver indsats fra begge - ikke bare den ene"
+          },
+          {
+            "type": "Casual venner",
+            "characteristics": "Hyggelige, lette, specifik kontekst (arbejde, hobby)",
+            "needs": "Mindre dybde, OK med sporadisk kontakt",
+            "value": "Giver social forbindelse uden tung emotionel load"
+          },
+          {
+            "type": "Professionelle",
+            "characteristics": "Boundaries klare, rollerelateret",
+            "needs": "Respekt, professionalisme, clear expectations",
+            "boundary": "Privatliv og arbejde kan holdes adskilt"
+          }
+        ]
+      },
+
+      "relationship_inventory": {
+        "title": "Tag inventar af dine relationer",
+        "exercise": [
+          "Liste hver relation du har (navn ikke nødvendigt - bare 'Person A')",
+          "Hvilken type relation er det?",
+          "Giver relationen dig energi eller tager den energi?",
+          "Er der reciprocitet? (Giver I begge?)",
+          "Er der respekt for dine boundaries?",
+          "Føles relationen sund eller drænende?"
+        ],
+        "insight": "Nogle relationer skal plejes. Andre skal stoppes. Det er OK."
+      }
     },
+
     {
       "id": "healthy_boundaries",
-      "type": "exercise",
       "title": "Sæt grænser uden skyld",
-      "text": "Forestil dig en situation, hvor du sagde ja – men egentlig mente nej.\nHvordan føltes det bagefter?\nPrøv at skrive en sætning, du kunne sige næste gang, fx:\n‘Jeg vil gerne hjælpe, men jeg kan ikke lige nu.’\n\nAt sige nej er også en måde at passe på sig selv på 🌿"
+      "description": "Boundaries er selvrespekt - ikke egoisme",
+
+      "what_are_boundaries": {
+        "title": "Hvad er boundaries?",
+        "definition": "Boundaries er de grænser du sætter for hvad du accepterer, hvad du deler, og hvordan andre behandler dig",
+        "not_walls": "Boundaries er ikke mure - de er retningslinjer for sund interaktion",
+        "examples": [
+          "Jeg deler ikke alt med alle",
+          "Jeg siger nej til ting jeg ikke magter",
+          "Jeg accepterer ikke respektløs behandling",
+          "Jeg forventer reciprocitet i tætte relationer",
+          "Jeg bestemmer hvornår jeg er tilgængelig"
+        ]
+      },
+
+      "types_of_boundaries": {
+        "title": "5 typer boundaries",
+        "types": [
+          {
+            "type": "Fysiske boundaries",
+            "examples": "Personligt rum, berøring, privacy",
+            "exercise": "Hvem har lov til at krammer dig? Hvornår er det OK?"
+          },
+          {
+            "type": "Emotionelle boundaries",
+            "examples": "Hvad deler du? Hvem får adgang til dine følelser?",
+            "exercise": "Ikke alle fortjener at vide alt om dig"
+          },
+          {
+            "type": "Tidsmæssige boundaries",
+            "examples": "Din tid er værdifuld - du bestemmer hvordan den bruges",
+            "exercise": "Hvornår er du tilgængelig? Hvornår ikke?"
+          },
+          {
+            "type": "Mentale boundaries",
+            "examples": "Dine tanker, overbevisninger, værdier",
+            "exercise": "Du må tænke anderledes end andre - det er OK"
+          },
+          {
+            "type": "Materielle boundaries",
+            "examples": "Dine ting, penge, ressourcer",
+            "exercise": "Du bestemmer hvem der låner hvad"
+          }
+        ]
+      },
+
+      "how_to_set_boundaries": {
+        "title": "Sådan sætter du boundaries",
+        "steps": [
+          {
+            "step": "1. Identificer hvor boundary behøves",
+            "how": "Mærk ubehag - hvor føler du dig krænket, udnyttet, eller overvældet?"
+          },
+          {
+            "step": "2. Definer din boundary klart (for dig selv først)",
+            "how": "Hvad er OK? Hvad er ikke OK? Vær specifik."
+          },
+          {
+            "step": "3. Kommuniker din boundary",
+            "how": "Klar, direkte, rolig. 'Jeg har brug for...' / 'Jeg er ikke komfortabel med...'"
+          },
+          {
+            "step": "4. Følg op - hold din boundary",
+            "how": "Hvis boundary krydses - meld klart ud. Gentag hvis nødvendigt."
+          },
+          {
+            "step": "5. Accept konsekvenser",
+            "how": "Nogle vil respektere det. Andre vil ikke. Du kan ikke kontrollere deres reaktion."
+          }
+        ]
+      },
+
+      "boundary_phrases": {
+        "title": "Sætninger til at sætte boundaries",
+        "phrases": [
+          "'Jeg kan ikke hjælpe lige nu'",
+          "'Jeg har brug for lidt tid til mig selv'",
+          "'Det er jeg ikke komfortabel med at tale om'",
+          "'Jeg vil gerne hjælpe - men ikke på den måde'",
+          "'Jeg siger nej denne gang'",
+          "'Det passer ikke ind i min hverdag lige nu'",
+          "'Jeg forstår du er frustreret, men jeg holder fast i min beslutning'",
+          "'Jeg deler ikke det med andre'",
+          "'Mit svar er stadig nej'"
+        ]
+      },
+
+      "guilt_about_boundaries": {
+        "title": "Håndter skyld om boundaries",
+        "reality": "Du vil føle dig skyldig første gang. Det er normalt.",
+        "reframes": [
+          "'Jeg er egoistisk' → 'Jeg passer på mig selv så jeg kan være der for andre'",
+          "'De bliver sure' → 'Deres reaktion er deres ansvar - ikke mit'",
+          "'De har brug for mig' → 'Jeg kan ikke hjælpe hvis jeg selv er udbrændt'",
+          "'Jeg skal være flink' → 'At sige nej ærligt er mere respektfuldt end at sige ja ræversk'"
+        ],
+        "truth": "Folk der respekterer dig vil respektere dine boundaries"
+      }
     },
+
     {
-      "id": "reconnect_prompt",
-      "type": "prompt",
-      "title": "Ræk ud – stille og roligt",
-      "text": "Tænk på én person, du savner lidt kontakt med.\nDet behøver ikke være en stor samtale – bare en lille besked, et hej, eller en tanke.\nVil du have, jeg hjælper dig med at formulere noget?"
+      "id": "communication_skills",
+      "title": "Kommunikation der virker",
+      "description": "Konkrete teknikker til at udtrykke dig klart og empatisk",
+
+      "active_listening": {
+        "title": "Aktiv lytning - den vigtigste skill",
+        "concept": "De fleste 'lytter' for at svare - ikke for at forstå",
+        "how_to": [
+          "Lyt for at forstå - ikke for at svare",
+          "Giv fuld opmærksomhed (telefon væk)",
+          "Hold øjenkontakt (hvis sensory OK)",
+          "Nick, bekræft du lytter ('mm', 'OK', 'jeg hører dig')",
+          "Reflekter tilbage: 'Så du siger at...'",
+          "Stil opfølgende spørgsmål: 'Hvordan føltes det?'",
+          "Afbryd ikke - lad dem færdiggøre"
+        ],
+        "power": "Folk føler sig set når du virkelig lytter"
+      },
+
+      "i_statements": {
+        "title": "'Jeg'-sætninger vs 'Du'-sætninger",
+        "concept": "Du-sætninger anklager. Jeg-sætninger ejer dine følelser.",
+        "comparison": [
+          {
+            "bad": "'DU gør mig altid vred'",
+            "good": "'JEG føler mig frustreret når...'",
+            "why": "Ejer din følelse - anklager ikke"
+          },
+          {
+            "bad": "'DU lytter aldrig'",
+            "good": "'JEG føler mig ikke hørt når...'",
+            "why": "Beskriver din oplevelse - ikke deres person"
+          },
+          {
+            "bad": "'DU er så egoistisk'",
+            "good": "'JEG har brug for mere støtte'",
+            "why": "Udtrykker behov - ikke dom"
+          }
+        ],
+        "formula": "'Jeg føler [følelse] når [situation] fordi [grund]. Jeg har brug for [behov]'"
+      },
+
+      "nonviolent_communication": {
+        "title": "Ikkevoldelig kommunikation (NVC)",
+        "four_steps": [
+          {
+            "step": "1. Observation (facts - ikke dom)",
+            "example": "'Når du kommer hjem kl. 23 uden at skrive' (ikke: 'når du er uansvarlig')"
+          },
+          {
+            "step": "2. Feeling (din følelse)",
+            "example": "'Føler jeg mig bekymret og frustreret'"
+          },
+          {
+            "step": "3. Need (dit behov)",
+            "example": "'Fordi jeg har brug for at vide du er OK'"
+          },
+          {
+            "step": "4. Request (konkret handling)",
+            "example": "'Vil du sende en kort besked hvis du kommer sent?'"
+          }
+        ],
+        "full_example": "'Når du kommer hjem kl. 23 uden at skrive, føler jeg mig bekymret fordi jeg har brug for at vide du er OK. Vil du sende en kort besked hvis du kommer sent?'"
+      },
+
+      "conflict_resolution": {
+        "title": "Løs konflikter konstruktivt",
+        "steps": [
+          "1. Tag pause hvis for ophedet (comeback når I begge er rolige)",
+          "2. Start med intention: 'Jeg vil gerne løse det her sammen'",
+          "3. Hver får taletid - uden afbrydelser",
+          "4. Reflekter hvad du hører: 'Du føler... fordi...'",
+          "5. Find fælles grund: 'Vi er enige om...'",
+          "6. Brainstorm løsninger sammen",
+          "7. Vælg løsning I begge kan leve med",
+          "8. Follow up senere: 'Virker det?'"
+        ],
+        "critical": "Begge skal ville løse det - ellers virker det ikke"
+      },
+
+      "communication_dont": {
+        "title": "Undgå disse kommunikations-dræbere",
+        "dont": [
+          "Afbryde konstant",
+          "Dismissive kommentarer ('det er bare...')",
+          "Defensiv attitude ('men JEG...')",
+          "Stonewalling (lukke helt ned)",
+          "Contempt (foragt, sarkasme)",
+          "Bring old shit up ('du gjorde det også for 3 år siden')",
+          "Mind reading ('jeg ved hvad du tænker')",
+          "Generalisering ('du gør ALTID...')"
+        ]
+      }
     },
+
     {
-      "id": "social_energy",
-      "type": "message",
-      "title": "Når du ikke orker mennesker",
-      "text": "Nogle dage er man bare tom. Det er ikke fordi du ikke holder af folk – du har bare brug for ro.\nTræk dig, uden at skamme dig. Og vend tilbage, når du har energi 💙"
-    },
-    {
-      "id": "conflict_reflection",
-      "type": "reflection",
-      "title": "Efter en konflikt",
-      "text": "Hvis du har haft en konflikt, så prøv at skrive lidt om:\n• Hvad gik godt i din måde at reagere på?\n• Hvad kunne du ønske, du havde gjort anderledes?\n• Hvad vil du gerne tage med dig næste gang?\nDet handler ikke om skyld – men om at forstå dig selv."
-    },
-    {
-      "id": "communication_tips",
-      "type": "list",
-      "title": "5 små råd til god kommunikation",
-      "items": [
-        "Lyt mere, end du taler – og lyt med nysgerrighed.",
-        "Brug ‘jeg’-sætninger i stedet for ‘du’-sætninger.",
-        "Pause før du svarer – det giver plads til ro.",
-        "Spørg: ‘Hvordan har du det egentlig?’ og vær klar til at høre svaret.",
-        "Sig tak, når nogen deler noget personligt – det bygger tillid."
-      ]
-    },
-    {
-      "id": "loneliness_checkin",
-      "type": "prompt",
+      "id": "loneliness_and_isolation",
       "title": "Når du føler dig alene",
-      "text": "Ensomhed betyder ikke, at du er forkert – kun at du længes efter kontakt.\nVil du have, jeg hjælper dig med at finde små måder at skabe den på?\nDet kan være en forening, en online-gruppe, eller bare et sted at høre til."
+      "description": "Ensomhed er ikke svaghed - det er signal om behov",
+
+      "understanding_loneliness": {
+        "title": "Hvad er ensomhed?",
+        "definition": "Ensomhed er følelsen af manglende meningsfuld forbindelse - ikke nødvendigvis fysisk aloneness",
+        "reality": "Du kan føle dig ensom i et fyldt rum. Du kan føle dig forbundet alene.",
+        "signal": "Ensomhed = din hjerne siger 'vi har brug for kontakt'",
+        "not_weakness": "Ensomhed betyder ikke du er forkert - bare at du længes efter kontakt"
+      },
+
+      "types_of_loneliness": {
+        "title": "3 typer ensomhed",
+        "types": [
+          {
+            "type": "Emotionel ensomhed",
+            "description": "Mangler intimate forbindelse - nogen der virkelig kender dig",
+            "solution": "Dyb venskab eller romantisk relation"
+          },
+          {
+            "type": "Social ensomhed",
+            "description": "Mangler fællesskab, gruppetilhørsforhold",
+            "solution": "Join communities, grupper, aktiviteter"
+          },
+          {
+            "type": "Eksistentiel ensomhed",
+            "description": "Fundamental aloneness - ingen kan helt forstå din oplevelse",
+            "solution": "Accept + find meaning i det fælles i aloneness"
+          }
+        ]
+      },
+
+      "addressing_loneliness": {
+        "title": "Håndter ensomhed konstruktivt",
+        "strategies": [
+          {
+            "action": "Identificer hvilken type ensomhed",
+            "how": "Hvad savner du? Dyb forbindelse? Casual kontakt? Fællesskab?"
+          },
+          {
+            "action": "Start smalt - ikke bredt",
+            "how": "Søg EN person eller ET community - ikke 'alle'"
+          },
+          {
+            "action": "Online communities tæller",
+            "how": "Discord, Reddit, special interest groups - kan være meningsfulde"
+          },
+          {
+            "action": "Strukturerede aktiviteter er lettere",
+            "how": "Klub, kursus, frivilligt arbejde - aktivitet = less pressure at 'performe' socialt"
+          },
+          {
+            "action": "Consistency over intensity",
+            "how": "Gå til samme sted regelmæssigt - genkendelse bliver til forbindelse"
+          },
+          {
+            "action": "Reach out - selv når svært",
+            "how": "En lille besked til nogen du kender: 'Tænkte på dig'"
+          }
+        ]
+      },
+
+      "reconnection_exercise": {
+        "title": "Ræk ud - stille og roligt",
+        "prompt": "Tænk på én person, du savner lidt kontakt med. Det behøver ikke være en stor samtale – bare en lille besked, et hej, eller en tanke.",
+        "templates": [
+          "'Hej [navn], jeg tænkte på dig i dag. Håber du har det godt 💙'",
+          "'Hej! Lang tid siden. Hvordan går det?'",
+          "'Så noget i dag der mindede mig om dig - [ting]'",
+          "'Kunne du tænke dig at mødes til en kop kaffe snart?'"
+        ],
+        "reality": "Worst case: Ingen svar. Best case: Du genoplivede en relation. Det er værd at prøve."
+      }
     },
+
     {
-      "id": "empathy_balance",
-      "type": "message",
-      "title": "At lytte uden at miste sig selv",
-      "text": "Det er smukt at være omsorgsfuld – men du skal ikke bære andres verden på dine skuldre.\nDu kan støtte, uden at miste dig selv. Husk at spørge: ‘Hvad har jeg brug for lige nu?’"
+      "id": "social_anxiety",
+      "title": "Social anxiety - når kontakt føles overvældende",
+      "description": "Du er ikke forkert - sociale situationer ER hårde for mange",
+
+      "understanding_social_anxiety": {
+        "title": "Hvad er social anxiety?",
+        "definition": "Intense fear of social situations - særligt angst for at blive dømt, ydmyget, eller afvist",
+        "physical_symptoms": "Sveden, hjertebanken, rødmen, kvalme, tankemylder",
+        "reality": "Det er ikke 'i dit hoved' - det er reelle fysiske symptomer",
+        "not_shyness": "Shyness = discomfort. Social anxiety = intense fear der limiter liv"
+      },
+
+      "exposure_hierarchy": {
+        "title": "Gradual eksponering - step by step",
+        "concept": "Du bekæmper ikke social anxiety ved at undgå - men ved at eksponere dig selv gradvist",
+        "how_to_build": [
+          "Liste sociale situationer fra 1-10 (1=mindst scary, 10=mest)",
+          "Start med 1 - gentag indtil anxiety falder",
+          "Gå til 2 - gentag",
+          "Arbejd dig gradvist op"
+        ],
+        "example_hierarchy": [
+          "1. Sig hej til kassemedarbejder",
+          "2. Small talk med nabo",
+          "3. Bestil mad over telefon",
+          "4. Gå til café alene",
+          "5. Join lille gruppe aktivitet (3-4 personer)",
+          "6. Start samtale med fremmed",
+          "7. Gå til social sammenkomst 30 min",
+          "8. Gå til social sammenkomst 1+ time",
+          "9. Host lille sammenkomst selv",
+          "10. Giv tale foran gruppe"
+        ],
+        "critical": "Go slow. Master hver level før næste."
+      },
+
+      "social_skills_practice": {
+        "title": "Sociale færdigheder kan læres",
+        "reality": "Nogle lærte det intuitivt. Du skal lære det eksplicit. Det er OK.",
+        "skills_to_practice": [
+          {
+            "skill": "Eye contact",
+            "tip": "3-5 sekunder ad gangen, se væk, tilbage. Ikke stir."
+          },
+          {
+            "skill": "Small talk openers",
+            "examples": "'Hvordan går det?', 'Hvad laver du?', 'Fedt vejr'"
+          },
+          {
+            "skill": "Active listening cues",
+            "tip": "Nik, 'mm', 'interessant', 'fortæl mere'"
+          },
+          {
+            "skill": "Exit gracefully",
+            "examples": "'Det var rart at snakke - vi ses!', 'Jeg skal videre - god dag!'"
+          },
+          {
+            "skill": "Handle awkward silence",
+            "tip": "Silence er OK - du behøver ikke fylde hver pause"
+          }
+        ]
+      }
     },
+
     {
-      "id": "closure_letter",
-      "type": "exercise",
-      "title": "Et lille brev til nogen du savner eller er vred på",
-      "text": "Skriv et brev du ikke behøver sende. Sig alt det, du ikke fik sagt – både det smukke og det svære.\nDet handler ikke om at ændre noget, men om at give dine følelser et sted at lande 💌"
+      "id": "diagnosis_specific_social",
+      "title": "Diagnose-specifik social støtte",
+      "description": "Forskellige hjerner, forskellige sociale udfordringer",
+
+      "adhd_social": {
+        "title": "ADHD & sociale relationer",
+        "challenges": [
+          "Afbryder andre (impulskontrol)",
+          "Glemmer at følge op (working memory)",
+          "Oversharer (impulskontrol + dopamine-seeking)",
+          "Interrupts flow of conversation",
+          "Rejection sensitive dysphoria (RSD) - ekstrem angst for afvisning"
+        ],
+        "strategies": {
+          "interrupting": "Pause 3 sekunder før du svarer - giver andet person chance",
+          "follow_up": "Sæt reminder at skrive til folk",
+          "oversharing": "Pause og spørg dig selv: 'Er det her passende at dele?'",
+          "rsd": "Husk: Din perception af afvisning er ofte ikke reel. Reality-check."
+        }
+      },
+
+      "autism_social": {
+        "title": "Autism & sociale relationer",
+        "challenges": [
+          "Svært at læse sociale cues",
+          "Reciprocitet ikke intuitiv (glemmer at spørge tilbage)",
+          "Direct communication vs social niceties",
+          "Sensory overload i sociale settings",
+          "Masking = exhausting"
+        ],
+        "strategies": {
+          "social_rules": "Lær eksplicitte regler (OK at study social interaction)",
+          "reciprocity_formula": "De spurgte om X → spørg tilbage om relateret ting",
+          "honest_communication": "Find folk der værdsætter direkte kommunikation",
+          "sensory_safe": "Vælg mindre, roligere sociale settings",
+          "masking_limits": "Det er OK at ikke maske hele tiden - find safe people"
+        }
+      },
+
+      "anxiety_social": {
+        "title": "Anxiety & sociale relationer",
+        "challenges": [
+          "Overvældende frygt for judgment",
+          "Catastrophizing sociale interaktioner",
+          "Undgår sociale situationer helt",
+          "Rumination efter social kontakt",
+          "Physical anxiety symptoms limiter deltagelse"
+        ],
+        "strategies": {
+          "exposure": "Gradual eksponering (se exposure hierarchy)",
+          "challenge_thoughts": "'Hvad er FAKTISK værste der kan ske?'",
+          "post_mortem_stop": "Stop at gennemgå samtale bagefter - 'det er gjort'",
+          "prepare": "Mental rehearsal kan hjælpe - men overdrive det ikke",
+          "breathing": "Brug breathing teknikker før/under social situation"
+        }
+      },
+
+      "depression_social": {
+        "title": "Depression & sociale relationer",
+        "challenges": [
+          "Ingen energi til social kontakt",
+          "Isolerer sig selv",
+          "Føler sig byrde for andre",
+          "Anhedonia - social kontakt giver ingen glæde",
+          "Trækker sig fra relationer"
+        ],
+        "strategies": {
+          "low_bar": "Selv 5 min social kontakt tæller",
+          "reach_out_anyway": "Selv når du ikke 'føler' det - reach out",
+          "honest_about_struggle": "Det er OK at sige 'jeg kæmper lige nu'",
+          "accept_help": "Folk vil hjælpe - lad dem",
+          "scheduled_contact": "Sæt konkret tid for social kontakt - trust system over feelings"
+        }
+      }
+    },
+
+    {
+      "id": "toxic_relationships",
+      "title": "Genkend og forlad toksiske relationer",
+      "description": "Nogle relationer skader mere end de gavner",
+
+      "red_flags": {
+        "title": "Red flags i relationer",
+        "flags": [
+          "Konstant kritik - særligt af din person (ikke handlinger)",
+          "Gaslighting - får dig til at tvivle på din virkelighed",
+          "Kontrollerende adfærd - bestemmer hvem du ser, hvad du gør",
+          "Isolerer dig fra andre",
+          "Manipulation via skyld",
+          "Ingen respekt for boundaries",
+          "Verbalt, emotionelt, eller fysisk abuse",
+          "Love bombing → devaluation cycle",
+          "Jealousy/possessiveness",
+          "Aldrig deres fejl - altid din"
+        ]
+      },
+
+      "leaving_toxic_relationship": {
+        "title": "Sådan forlader du toksisk relation",
+        "steps": [
+          "1. Anerkend det er toksisk (ikke 'måske det er mig')",
+          "2. Plan din exit - især hvis abuse",
+          "3. Build støttenetværk",
+          "4. Set boundary - kommuniker eller ej afhængig af safety",
+          "5. Cut contact hvis muligt (block, delete)",
+          "6. Expect them to try comeback (love bombing, apologies)",
+          "7. Hold fast - selv når svært",
+          "8. Seek support (terapi, friends, family)"
+        ],
+        "reality": "Det bliver sværere før det bliver lettere. Men du overlever det."
+      }
+    },
+
+    {
+      "id": "closure_and_grief",
+      "title": "At sige farvel - closure & sorg",
+      "description": "Nogle relationer ender - og det gør ondt",
+
+      "closure_letter_exercise": {
+        "title": "Et lille brev til nogen du savner eller er vred på",
+        "instruction": "Skriv et brev du ikke behøver sende. Sig alt det, du ikke fik sagt – både det smukke og det svære. Det handler ikke om at ændre noget, men om at give dine følelser et sted at lande 💌",
+        "prompts": [
+          "Hvad ville du ønske du havde sagt?",
+          "Hvad vil du have dem til at vide?",
+          "Hvordan påvirkede de dig?",
+          "Hvad håber du for dem?"
+        ],
+        "after": "Når du er færdig - du kan brænde det, gemme det, eller sende det (tænk nøje over det sidste)"
+      },
+
+      "grief_is_normal": {
+        "title": "Sorg over mistede relationer",
+        "truth": "Selv toksiske relationer kan efterlade sorg - fordi du sørger over hvad du håbede det ville være",
+        "stages_not_linear": "Du går ikke gennem stages i orden - du hopper frem og tilbage",
+        "give_time": "Der er ingen deadline for healing"
+      }
+    },
+
+    {
+      "id": "building_new_connections",
+      "title": "Byg nye forbindelser",
+      "description": "Hvor og hvordan finder du nye mennesker?",
+
+      "where_to_meet_people": {
+        "title": "Hvor finder du potentielle relationer?",
+        "places": [
+          {
+            "location": "Special interest grupper",
+            "why": "Shared interest = instant connection point",
+            "examples": "Klub, forening, meetup.com"
+          },
+          {
+            "location": "Klasser/kurser",
+            "why": "Repeated exposure + shared aktivitet",
+            "examples": "Sprog, yoga, kunst, whatever"
+          },
+          {
+            "location": "Frivilligt arbejde",
+            "why": "Shared values + struktur",
+            "examples": "Dyrehjem, madbank, events"
+          },
+          {
+            "location": "Online communities",
+            "why": "Accessible, niche interests, less pressure",
+            "examples": "Discord, Reddit, special forums"
+          },
+          {
+            "location": "Gennem eksisterende venner",
+            "why": "Pre-vetted, shared connection",
+            "how": "Spørg venner om at introducere"
+          },
+          {
+            "location": "Arbejde (men carefully)",
+            "why": "Repeated exposure",
+            "caveat": "Professional boundaries - pas på"
+          }
+        ]
+      },
+
+      "friendship_building_stages": {
+        "title": "Venskab bygges gradvist",
+        "stages": [
+          {
+            "stage": "1. Gensidig awareness",
+            "description": "I ser hinanden regelmæssigt, nikker, small talk"
+          },
+          {
+            "stage": "2. Casual interaction",
+            "description": "Snakker når I mødes, men ikke outside context"
+          },
+          {
+            "stage": "3. Deeper conversation",
+            "description": "Deler lidt personligt, viser sårbarhed"
+          },
+          {
+            "stage": "4. Outside plans",
+            "description": "Planlægger at mødes outside original context"
+          },
+          {
+            "stage": "5. Reciprocal vulnerability",
+            "description": "Begge deler, støtter, viser op"
+          },
+          {
+            "stage": "6. Established friendship",
+            "description": "Consistent contact, mutual support, deep trust"
+          }
+        ],
+        "timeline": "Dette tager MONTHS - ikke weeks. Vær tålmodig."
+      }
     }
   ],
+
+  "critical_reminders": {
+    "quality_over_quantity": "Få dybe relationer > mange overfladiske",
+    "boundaries_not_selfish": "At sige nej = selvrespekt",
+    "reciprocity_required": "Relationer skal være begge veje",
+    "toxic_exit": "Du må forlade relationer der skader dig",
+    "social_skills_learnable": "Det kan læres - også sent i livet",
+    "alone_ok_sometimes": "Alene ≠ ensom. Sociale pauser er OK.",
+    "vulnerability_builds_connection": "At dele skaber dybde",
+    "repair_possible": "Konflikter kan fixes hvis begge vil"
+  },
+
   "integration_notes": {
-    "combine_with": [
-      "EmotionSense",
-      "ToneEngine",
-      "LifeTools",
-      "GrowLab",
-      "SupportLab"
+    "connects_to": [
+      "Emotions (følelser påvirker relationer)",
+      "CalmSpace (brug før svære samtaler)",
+      "GentlePush (social reality checks)",
+      "LifeTools (beslutninger om relationer)",
+      "MemoryLab (track positive interactions)",
+      "AdaptCore (personalisering)"
     ],
     "signal_usage": [
-      "hvis signal = ensomhed → brug empatisk tone",
-      "hvis signal = social angst → kombiner CalmSpace + SocialLab",
-      "hvis signal = relationel konflikt → brug ToneEngine gentle_push"
-    ],
-    "purpose": "At skabe trygge, realistiske samtaler om relationer og social kontakt. SocialLab hjælper brugeren med at forstå både egne og andres behov – med varme og tydelighed."
+      "Ensomhed → empatisk tone + connection strategies",
+      "Social angst → CalmSpace + gradual exposure",
+      "Konflikt → gentle_push + NVC",
+      "Isolation → motiverende tone + small steps"
+    ]
   }
 }
