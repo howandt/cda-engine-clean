@@ -1,57 +1,963 @@
 {
-  "id": "CalmSpace",
-  "title": "Sansestøtte & ro",
-  "intro": "Når dine sanser bliver overvældede, har du brug for hjælp til at finde ro igen – uden krav eller forklaringer. CalmSpace er dit stille rum, hvor du kan trække vejret og lande blidt 💙",
-  "sections": [
-    {
-      "id": "calming_exercises",
-      "type": "message",
-      "title": "Beroligende øvelser",
-      "text": "Her kan du finde små øvelser, der hjælper dig med at finde ro.\nDet kan være vejrtrækning, sanseøvelser eller bare en lille pause sammen med mig 💙"
-    },
-    {
-      "id": "soothing_sounds",
-      "type": "message",
-      "title": "Musik, lys og stemning",
-      "text": "Nogle gange hjælper det med lidt stemning: Rolig musik, dæmpet lys eller naturlyde.\nJeg kan hjælpe dig med at vælge noget, der passer til den ro, du har brug for."
-    },
-    {
-      "id": "sensory_overload",
-      "type": "message",
-      "title": "Når det hele larmer – hurtighjælp",
-      "text": "Hvis du føler dig overstimuleret eller overvældet, så stop lige her et øjeblik.\nJeg hjælper dig med at finde noget, der dæmper sanserne – hurtigt og blidt."
-    },
-    {
-      "id": "calmspace_home_therapy",
-      "type": "list",
-      "title": "Stille øvelser fra hjemmeterapi",
-      "text": "Her er nogle små øvelser du kan bruge, når du vil finde ro, styrke og selvforbindelse – lige så stille og i dit eget tempo 💙",
-      "items": [
+  "module_info": {
+    "id": "CalmSpace",
+    "title": "Sansestøtte, regulering & ro",
+    "version": "2.0",
+    "author": "Hans - CD AI Systems",
+    "description": "CalmSpace er Sarah's modul til sensorisk regulering, grounding og ro. Her findes værktøjer til at håndtere overstimulering, understimulering og dysregulering af alle 8 sanser.",
+    "philosophy": "Sensoriske udfordringer er reelle - ikke indbildte. Regulering er en færdighed man lærer. Alle har forskellige sensoriske behov - find hvad der virker for DIG."
+  },
+
+  "core_principles": [
+    "Dit nervesystem er ikke 'forkert' - det er anderledes",
+    "Sensory overload er ikke svaghed - det er neurologisk virkelighed",
+    "Stimming er regulering - ikke 'dårlig opførsel'",
+    "Safe spaces er nødvendige - ikke forkælelse",
+    "Din comfort er vigtig - ikke 'drama'",
+    "Meltdowns/shutdowns er ikke valg - de er overload responses"
+  ],
+
+  "understanding_sensory_processing": {
+    "description": "De fleste tænker kun på 5 sanser - men der er faktisk 8 sanser der alle kan være dysregulerede",
+
+    "eight_sensory_systems": [
+      {
+        "sense": "Auditory (Hørelse)",
+        "function": "Behandler lyde, volumen, tonehøjde, rytme",
+        "hypersensitivity": {
+          "description": "Overreagerer på lyde - selv normale lyde føles for høje",
+          "examples": [
+            "Støvsuger er smertefuldt",
+            "Mange stemmer samtidig = overload",
+            "Kan høre lyde andre ikke hører (lys der summer)",
+            "Må have stille for at koncentrere sig"
+          ]
+        },
+        "hyposensitivity": {
+          "description": "Underreagerer - søger højere volumen/mere lyd",
+          "examples": [
+            "Musik meget højt",
+            "Taler højt uden at indse det",
+            "Elsker højlydte miljøer",
+            "Synes stille er ubehageligt"
+          ]
+        }
+      },
+      {
+        "sense": "Visual (Syn)",
+        "function": "Behandler lys, farver, bevægelse, mønstre",
+        "hypersensitivity": {
+          "description": "Overvældes af visuelle stimuli",
+          "examples": [
+            "Lyse lys gør ondt i øjnene",
+            "Fluorescerende lys giver hovedpine",
+            "Mønstre/busyness er overvældende",
+            "Solbriller indendørs nødvendige",
+            "Svært at se TV/skærme længe"
+          ]
+        },
+        "hyposensitivity": {
+          "description": "Søger visuel stimulation",
+          "examples": [
+            "Stirrer på lys/roterende ting",
+            "Foretrækker lyse farver og mønstre",
+            "Elsker at se på bevægelse"
+          ]
+        }
+      },
+      {
+        "sense": "Tactile (Berøring)",
+        "function": "Behandler teksturer, tryk, temperatur, smerte",
+        "hypersensitivity": {
+          "description": "Berøring føles intenst - ofte ubehageligt",
+          "examples": [
+            "Tags i tøj er uudholdelige",
+            "Visse teksturer gør fysisk ondt",
+            "Let berøring føles ubehageligt (må være fast tryk eller ingen)",
+            "Kan ikke have beskidte hænder",
+            "Visse stoffer mod huden = overload"
+          ]
+        },
+        "hyposensitivity": {
+          "description": "Søger berøring og tryk",
+          "examples": [
+            "Elsker tight hugs",
+            "Rører ved alt",
+            "Mærker ikke smerte så meget",
+            "Søger weighted blankets"
+          ]
+        }
+      },
+      {
+        "sense": "Olfactory (Lugt)",
+        "function": "Behandler dufte og lugte",
+        "hypersensitivity": {
+          "description": "Lugte er overvældende - kan trigger kvalme/hovedpine",
+          "examples": [
+            "Parfume/kolongevand = instant hovedpine",
+            "Visse madlugte trigger kvalme",
+            "Kan lugte ting andre ikke kan",
+            "Må undgå parfumerier/sæbe-afdelinger"
+          ]
+        },
+        "hyposensitivity": {
+          "description": "Søger stærke lugte",
+          "examples": [
+            "Lugter til alt",
+            "Kan ikke mærke dårlige lugte",
+            "Elsker stærke dufte"
+          ]
+        }
+      },
+      {
+        "sense": "Gustatory (Smag)",
+        "function": "Behandler smagsoplevelser",
+        "hypersensitivity": {
+          "description": "Smage er intense - ofte overvældende",
+          "examples": [
+            "Meget begrænset madrepertoire ('safe foods')",
+            "Kan ikke spise blandet mad (ting må ikke røre)",
+            "Visse smagsretninger (bittert, surt) er uudholdelige",
+            "Meget specifik med krydderier"
+          ]
+        },
+        "hyposensitivity": {
+          "description": "Søger stærke smagsoplevelser",
+          "examples": [
+            "Elsker meget krydret mad",
+            "Putter alt i munden",
+            "Foretrækker intense smagsretninger"
+          ]
+        }
+      },
+      {
+        "sense": "Vestibular (Balance & Bevægelse)",
+        "function": "Behandler balance, rumlig orientering, hovedbevægelse",
+        "hypersensitivity": {
+          "description": "Overreagerer på bevægelse - føles usikkert",
+          "examples": [
+            "Svimmelhed ved små bevægelser",
+            "Angst for at falde",
+            "Undgår gyngere, rutsjebaner",
+            "Bilsyge let",
+            "Dårlig balance"
+          ]
+        },
+        "hyposensitivity": {
+          "description": "Søger intense bevægelser",
+          "examples": [
+            "Konstant i bevægelse",
+            "Elsker spinning, hopping, gyngen",
+            "Kan ikke sidde stille",
+            "Har brug for ekstreme aktiviteter"
+          ]
+        }
+      },
+      {
+        "sense": "Proprioceptive (Kropsbevidsthed)",
+        "function": "Behandler hvor kroppen er i rummet, muskel-/led-feedback",
+        "hypersensitivity": {
+          "description": "Sjældent - men kan føle ubehag ved tryk",
+          "examples": [
+            "Tight tøj ubehageligt",
+            "Kram føles kvælende"
+          ]
+        },
+        "hyposensitivity": {
+          "description": "Søger dyb tryk og modstand - meget almindeligt",
+          "examples": [
+            "Klemmer for hårdt når kram",
+            "Støder ind i ting 'ved et uheld'",
+            "Elsker tung vægt (weighted blanket)",
+            "Har brug for fysisk aktivitet",
+            "Bider negle, presser hænder sammen",
+            "'Clumsy' - ved ikke egen styrke"
+          ]
+        }
+      },
+      {
+        "sense": "Interoceptive (Indre fornemmelser)",
+        "function": "Behandler indre kropssignaler (sult, tørst, toiletbehov, smerte)",
+        "hypersensitivity": {
+          "description": "Overbevidst om indre fornemmelser - kan være overvældende",
+          "examples": [
+            "Føler hver lille ændring i krop",
+            "Hypokondri/sundhedsangst",
+            "Heartbeat awareness kan trigger panik"
+          ]
+        },
+        "hyposensitivity": {
+          "description": "Mærker ikke indre signaler - meget almindeligt ved ADHD/autisme",
+          "examples": [
+            "Glemmer at spise (mærker ikke sult)",
+            "Glemmer at drikke (mærker ikke tørst)",
+            "Opdager ikke toilet-behov før sidste sekund",
+            "Mærker ikke når syg før det er alvorligt",
+            "Dårlig til at identificere følelser ('alexithymia')"
+          ]
+        }
+      }
+    ],
+
+    "diagnosis_specific_patterns": {
+      "Autism": {
+        "common": "Hypersensitivity til auditory, visual, tactile. Proprioceptive hyposensitivity (søger deep pressure). Interoceptive challenges.",
+        "note": "Sensory processing differences er CORE til autisme - ikke sekundært symptom"
+      },
+      "ADHD": {
+        "common": "Understimulation generelt (søger input). Interoceptive hyposensitivity (glemmer basale behov). Vestibular søgende (constant movement).",
+        "note": "ADHD hjerner har brug for stimulation for at fokusere - 'fidgeting' er selvregulering"
+      },
+      "Anxiety": {
+        "common": "Kan udvikle sensory sensitivities grundet hypervigilance. Interoceptive hypersensitivity (overfokus på kropssignaler).",
+        "note": "Angst gør eksisterende sensory issues værre"
+      },
+      "PTSD": {
+        "common": "Hypervigilance til auditory (sudden sounds = startle). Tactile sensitivities (touch can trigger).",
+        "note": "Trauma kan ændre sensory processing"
+      }
+    }
+  },
+
+  "sensory_regulation_strategies": {
+    "description": "Forskellige strategier til at regulere nervesystemet når over/understimuleret",
+
+    "calming_strategies": {
+      "when": "Overstimuleret, anxious, overwhelmed, heading toward meltdown",
+      "goal": "Bring nervesystem ned til baseline",
+      "techniques": [
         {
-          "name": "Spejlterapi",
-          "type": "selvværd",
-          "description": "En øvelse til at styrke din indre kontakt og møde dig selv med varme.",
-          "instruction": "Stil dig foran et spejl. Kig dig selv i øjnene og sig stille: 'Jeg ser dig. Jeg er her for dig. Du gør det godt.' Gentag det, der føles rigtigt. Du skal ikke overbevise dig selv – bare være til stede."
+          "category": "Auditory Calming",
+          "methods": [
+            "Noise-cancelling headphones (reduce all input)",
+            "White noise / brown noise / pink noise",
+            "Soft classical musik (Debussy, Satie)",
+            "Nature sounds (regn, ocean, forest)",
+            "Binaural beats (432 Hz for relaxation)",
+            "Complete silence i stille rum"
+          ]
         },
         {
-          "name": "Mikro-dagbog",
-          "type": "refleksion",
-          "description": "Skriv én sætning om dagen om, hvad der påvirkede dig følelsesmæssigt.",
-          "instruction": "Sæt dig kort hver aften og skriv: 'Hvad rørte mig mest i dag?' Det kan være noget der gjorde dig ked af det, vred, glad eller bare satte tanker i gang. Notér det uden at dømme."
+          "category": "Visual Calming",
+          "methods": [
+            "Dæmp lys / sluk overhead lys",
+            "Soft lamp / fairy lights",
+            "Luk øjnene / sovemaske",
+            "Mørkt rum",
+            "Se på enkle, rolige mønstre (ikke busy)",
+            "Blå/grønne farver (cooler end rødt/gult)"
+          ]
         },
         {
-          "name": "Godnat dag – aftenritual",
-          "type": "afslutning",
-          "description": "Afslut dagen med accept og ro – så du kan give slip og lade morgendagen være ny.",
-          "instruction": "Læg skærmen væk 15 minutter før sengetid. Træk vejret roligt og tænk over dagen. Sig for dig selv: 'Godnat dag. Tak for det, jeg lærte. I morgen er en ny begyndelse.'"
+          "category": "Tactile Calming",
+          "methods": [
+            "Weighted blanket (deep pressure)",
+            "Blød, behagelig tekstur (fleece, velvet)",
+            "Varmt bad",
+            "Kold kompres på nakke/pande",
+            "Selv-kram (butterfly hug)",
+            "Pet dyr (hvis tilgængelig)"
+          ]
         },
         {
-          "name": "Mindfulness vejrtrækning",
-          "type": "grounding",
-          "description": "Find ro i kroppen med simpel vejrtrækning – selv i uro.",
-          "instruction": "Sæt dig stille. Træk vejret ind gennem næsen (4 sekunder), hold kort (2 sekunder), og pust ud gennem munden (6 sekunder). Gentag 3-5 gange. Mærk kroppen, uden at holde fast i tanker."
+          "category": "Proprioceptive Calming",
+          "methods": [
+            "Deep pressure: tight hug, squeeze",
+            "Wall pushes (pres hænder mod væg 10 sek)",
+            "Heavy work (bær noget tungt, skub noget)",
+            "Compression clothing",
+            "Ligge under tunge puder"
+          ]
+        },
+        {
+          "category": "Vestibular Calming",
+          "methods": [
+            "Slow, rhythmic rocking",
+            "Gentle swaying",
+            "Ligge ned (minimize movement)",
+            "Slow walking"
+          ]
+        },
+        {
+          "category": "Olfactory Calming",
+          "methods": [
+            "Lavendel duft",
+            "Kamille",
+            "Vanilla",
+            "Cedertræ",
+            "Din personlige 'comfort scent'",
+            "Undgå alle parfumer/kemiske lugte"
+          ]
+        },
+        {
+          "category": "Breathing Calming",
+          "methods": [
+            "4-7-8 breathing (ind 4, hold 7, ud 8)",
+            "Box breathing (4-4-4-4)",
+            "Emphasize exhale (longer out than in)",
+            "Humming (vagus nerve stimulation)"
+          ]
+        }
+      ]
+    },
+
+    "alerting_strategies": {
+      "when": "Understimuleret, lethargic, unfocused, shutting down",
+      "goal": "Wake up nervesystem, increase arousal",
+      "techniques": [
+        {
+          "category": "Auditory Alerting",
+          "methods": [
+            "Upbeat musik (fast tempo)",
+            "Loud music",
+            "Rhythmic drumming",
+            "Singing/humming loudly"
+          ]
+        },
+        {
+          "category": "Visual Alerting",
+          "methods": [
+            "Bright lights",
+            "Gå udenfor i sollys",
+            "Farverige, kontrastfulde visuals",
+            "Hurtig bevægelse (se noget der bevæger sig)"
+          ]
+        },
+        {
+          "category": "Tactile Alerting",
+          "methods": [
+            "Cold water on face/hands",
+            "Isklumper",
+            "Rough textures (scrub brush)",
+            "Massage med fast pressure",
+            "Jump under kold bruser"
+          ]
+        },
+        {
+          "category": "Proprioceptive Alerting",
+          "methods": [
+            "Jumping jacks",
+            "Push-ups",
+            "Heavy work (løft, bær, skub)",
+            "Hurtig gå/løb",
+            "Dance"
+          ]
+        },
+        {
+          "category": "Vestibular Alerting",
+          "methods": [
+            "Spinning",
+            "Jumping on trampoline",
+            "Running",
+            "Hurtige retningsændringer"
+          ]
+        },
+        {
+          "category": "Olfactory Alerting",
+          "methods": [
+            "Peppermint",
+            "Citrus (lemon, orange)",
+            "Eucalyptus",
+            "Coffee smell",
+            "Strong spices"
+          ]
+        },
+        {
+          "category": "Gustatory Alerting",
+          "methods": [
+            "Surt (citron)",
+            "Krydret/hot",
+            "Crunchy snacks (chips, carrots)",
+            "Kold drik",
+            "Mint gum"
+          ]
+        }
+      ]
+    },
+
+    "organizing_strategies": {
+      "when": "Dysregulated, can't focus, scattered, transition difficulties",
+      "goal": "Organize sensory input, improve focus",
+      "techniques": [
+        {
+          "category": "Rhythmic Activities",
+          "methods": [
+            "Rocking",
+            "Swinging (slow, predictable)",
+            "Marching",
+            "Drumming",
+            "Clapping patterns",
+            "Repetitive tasks"
+          ]
+        },
+        {
+          "category": "Structured Input",
+          "methods": [
+            "Follow routine rigidt",
+            "Use timers (visual time passing)",
+            "Checklists",
+            "Predictable sequence of activities"
+          ]
+        },
+        {
+          "category": "Bilateral Activities",
+          "methods": [
+            "Marching (opposite arm/leg)",
+            "Cross-crawls",
+            "Clapping games",
+            "Bilateral drawing (both hands)"
+          ]
         }
       ]
     }
-  ]
+  },
+
+  "sensory_tools_library": {
+    "description": "Konkrete værktøjer og produkter der kan hjælpe",
+
+    "portable_calm_kit": {
+      "description": "Ting du kan have med dig altid - din emergency sensory kit",
+      "items": [
+        {
+          "item": "Noise-cancelling headphones",
+          "use": "Reducer auditory overload hvor som helst"
+        },
+        {
+          "item": "Sunglasses",
+          "use": "Reducer visual overload (selv indendørs OK)"
+        },
+        {
+          "item": "Fidget toy",
+          "use": "Tactile/proprioceptive input diskret"
+        },
+        {
+          "item": "Gum/mints",
+          "use": "Gustatory regulation, jaw proprioception"
+        },
+        {
+          "item": "Small comfort object",
+          "use": "Tactile soothing, emotional anchor"
+        },
+        {
+          "item": "Essential oil roller",
+          "use": "Olfactory calming (lavendel) eller alerting (peppermint)"
+        },
+        {
+          "item": "Earplugs",
+          "use": "Backup hvis headphones ikke muligt"
+        },
+        {
+          "item": "Soft fabric/scarf",
+          "use": "Tactile comfort"
+        }
+      ]
+    },
+
+    "home_sensory_tools": {
+      "description": "Større items til hjemmet",
+      "items": [
+        {
+          "item": "Weighted blanket",
+          "weight": "Ca 10% af kropsvægt",
+          "use": "Proprioceptive calming, bedre søvn, anxiety reduction"
+        },
+        {
+          "item": "Compression clothing",
+          "use": "Constant deep pressure, kan bæres under andet tøj"
+        },
+        {
+          "item": "Body sock / lycra tunnel",
+          "use": "All-around pressure, proprioceptive input"
+        },
+        {
+          "item": "Yoga ball chair",
+          "use": "Vestibular input mens sitting, fidgeting allowed"
+        },
+        {
+          "item": "Mini trampoline",
+          "use": "Vestibular + proprioceptive, energy release"
+        },
+        {
+          "item": "Rocking chair",
+          "use": "Vestibular calming, self-soothing"
+        },
+        {
+          "item": "Blackout curtains",
+          "use": "Visual calming, better sleep"
+        },
+        {
+          "item": "White noise machine",
+          "use": "Mask disruptive sounds, better sleep"
+        },
+        {
+          "item": "Soft lighting",
+          "use": "Reducere visual overload (Philips Hue, salt lamper)"
+        },
+        {
+          "item": "Textured items",
+          "use": "Fidget tools (stress balls, therapy putty, kinetic sand)"
+        },
+        {
+          "item": "Crash pad / bean bag",
+          "use": "Safe place to 'crash' for proprioceptive input"
+        }
+      ]
+    },
+
+    "free_or_cheap_alternatives": {
+      "description": "Hvis du ikke har penge til fancy tools",
+      "items": [
+        "Weighted blanket → tunge puder/bøger i pillowcase",
+        "Noise-cancelling → cheap earplugs + regular headphones playing white noise",
+        "Fidget toys → paperclip, elastic, small stone",
+        "Compression clothing → tight leggings, sports bra",
+        "Essential oils → billig lavendel soap, citron juice",
+        "Blackout curtains → tæpper over vindue",
+        "White noise → app på telefon (gratis)",
+        "Proprioceptive input → wall pushes, carry heavy grocery bags, push furniture",
+        "Vestibular → free playground swing, walk fast/run",
+        "Safe space → make fort med tæpper og puder"
+      ]
+    }
+  },
+
+  "meltdown_shutdown_management": {
+    "description": "Forstå og håndtere autistic meltdowns og shutdowns",
+
+    "meltdown": {
+      "what": "Nervous system overload response - ikke temperament tantrum. Loss of control.",
+      "triggers": [
+        "Sensory overload (too much input for too long)",
+        "Emotional overload",
+        "Change in routine",
+        "Communication breakdown",
+        "Physical discomfort (hunger, pain, fatigue)"
+      ],
+      "warning_signs": [
+        "Increasing stimming",
+        "Verbal shutdown (words harder)",
+        "Irritability",
+        "Covering ears/eyes",
+        "Physically tensing up",
+        "Repetitive statements ('I can't', 'too much')"
+      ],
+      "during_meltdown": {
+        "do": [
+          "Reduce ALL stimuli immediately (quiet, dark, alone)",
+          "Remove demands (no questions, no instructions)",
+          "Ensure physical safety (move dangerous objects)",
+          "Give space - unless person asks for physical comfort",
+          "Stay calm yourself (your calm helps their nervous system)",
+          "Wait it out - meltdowns can't be 'stopped', only allowed to pass"
+        ],
+        "dont": [
+          "Try to reason or talk (cortex is offline)",
+          "Touch without permission (can escalate)",
+          "Give instructions or make demands",
+          "Punish or scold",
+          "Take it personally",
+          "Escalate with your own emotions"
+        ]
+      },
+      "after_meltdown": {
+        "immediate": [
+          "Continue low stimulation",
+          "Offer comfort if wanted",
+          "Provide hydration, soft food if needed",
+          "Rest - meltdowns are physically exhausting"
+        ],
+        "later_reflection": [
+          "When calm, identify triggers",
+          "What warning signs were there?",
+          "What could prevent next time?",
+          "Update sensory profile/safety plan"
+        ],
+        "no_shame": "Meltdowns are not failure - they're neurological response. No shame, no punishment."
+      }
+    },
+
+    "shutdown": {
+      "what": "Opposite of meltdown - nervous system goes into freeze/disconnect mode. Can't respond, speak, or move normally.",
+      "triggers": "Same as meltdown, but response is inward instead of outward",
+      "signs": [
+        "Non-verbal or minimal speech",
+        "Flat affect / no facial expression",
+        "Slow or no responses",
+        "Difficulty moving",
+        "Staring into space",
+        "Extreme fatigue"
+      ],
+      "during_shutdown": {
+        "do": [
+          "Reduce demands to ZERO",
+          "Allow time and space",
+          "Minimal communication (texts OK if verbal impossible)",
+          "Ensure basic needs met (water nearby, blanket)",
+          "Be patient - recovery takes time"
+        ],
+        "dont": [
+          "Force interaction",
+          "Get upset they're 'ignoring you'",
+          "Push for explanations",
+          "Add more demands"
+        ]
+      },
+      "recovery": "Can take hours to days. Respect process. Return to normal slowly."
+    },
+
+    "prevention": {
+      "know_your_limits": "Track what leads to meltdown/shutdown. Build awareness of 'battery level'.",
+      "early_intervention": "Act on warning signs EARLY. Take break before overload.",
+      "routine_breaks": "Build in sensory breaks throughout day.",
+      "communicate_needs": "Tell others what you need ('I'm heading toward overload, I need quiet').",
+      "environment_control": "Where possible, control your environment (lighting, sound, crowd density)."
+    }
+  },
+
+  "grounding_exercises": {
+    "description": "Dybdegående grounding techniques til forskellige situationer",
+
+    "five_senses_grounding": {
+      "name": "5-4-3-2-1 Technique",
+      "when": "Anxiety, panic, dissociation, overwhelm",
+      "steps": [
+        "Find 5 things you can SEE. Say them out loud or in your head. Look carefully at each one.",
+        "Find 4 things you can TOUCH. Notice texture, temperature, weight. Really feel them.",
+        "Find 3 things you can HEAR. Close eyes if it helps. Listen to near and far sounds.",
+        "Find 2 things you can SMELL. If nothing nearby, smell your shirt, skin, the air.",
+        "Find 1 thing you can TASTE. Notice taste in mouth, or sip water, or eat something."
+      ],
+      "variations": [
+        "Do it backwards (1-2-3-4-5) if you need longer grounding",
+        "Do only one sense if full technique too much",
+        "Focus extra on senses that work best for you"
+      ]
+    },
+
+    "body_scan": {
+      "name": "Body Scan Meditation",
+      "when": "Disconnect from body, tension, before sleep",
+      "duration": "5-20 minutes",
+      "steps": [
+        "Lie down or sit comfortably. Close eyes if comfortable.",
+        "Start at feet. Notice sensation - warm? cold? tense? relaxed? Just observe.",
+        "Move slowly up: ankles, calves, knees, thighs. Notice each part.",
+        "Continue: hips, stomach, chest, back. Breathe into any tension.",
+        "Arms: fingers, hands, wrists, forearms, elbows, upper arms, shoulders.",
+        "Neck, jaw, face, scalp. Notice where you hold tension.",
+        "Whole body: Feel yourself as complete. Breathe into the whole body."
+      ],
+      "note": "Don't try to change anything - just notice. Observation itself can release tension."
+    },
+
+    "progressive_muscle_relaxation": {
+      "name": "PMR - Tense and Release",
+      "when": "Physical tension, anxiety, before sleep",
+      "how": [
+        "Tense muscle group hard for 5 seconds",
+        "Release completely, notice the difference",
+        "Rest 10 seconds before next group"
+      ],
+      "sequence": [
+        "Hands: Make fists tight, then release",
+        "Arms: Bend arms, tense biceps, release",
+        "Shoulders: Shrug up to ears, hold, drop",
+        "Face: Scrunch all facial muscles, release",
+        "Jaw: Clench teeth, then let jaw hang loose",
+        "Stomach: Pull in tight, release",
+        "Legs: Point toes down, tense whole leg, release",
+        "Feet: Curl toes tight, release"
+      ],
+      "benefit": "Physical release leads to mental release. Teaches difference between tense and relaxed."
+    },
+
+    "breathing_techniques": {
+      "four_seven_eight": {
+        "name": "4-7-8 Relaxing Breath",
+        "when": "Anxiety, can't sleep, need to calm quickly",
+        "how": [
+          "Breathe in through nose: 4 counts",
+          "Hold breath: 7 counts",
+          "Exhale through mouth (whoosh sound): 8 counts",
+          "Repeat 4 times minimum"
+        ],
+        "why": "Long exhale activates parasympathetic nervous system (rest/digest)"
+      },
+      "box_breathing": {
+        "name": "Box/Square Breathing",
+        "when": "Panic, need focus, before stressful event",
+        "how": [
+          "Inhale: 4 counts",
+          "Hold: 4 counts",
+          "Exhale: 4 counts",
+          "Hold: 4 counts",
+          "Repeat"
+        ],
+        "why": "Equal counts create rhythm, gives mind something to focus on"
+      },
+      "belly_breathing": {
+        "name": "Diaphragmatic Breathing",
+        "when": "Shallow breathing, anxiety, need deep calm",
+        "how": [
+          "Hand on belly, hand on chest",
+          "Breathe so belly rises, chest minimal movement",
+          "Slow and deep - fill lungs completely",
+          "Exhale slowly, belly falls"
+        ],
+        "why": "Engages diaphragm, more oxygen, signals safety to nervous system"
+      },
+      "alternate_nostril": {
+        "name": "Nadi Shodhana",
+        "when": "Balance, focus, stress reduction",
+        "how": [
+          "Close right nostril with thumb",
+          "Inhale through left nostril",
+          "Close left nostril with finger, release right",
+          "Exhale through right nostril",
+          "Inhale through right",
+          "Switch, exhale through left",
+          "Repeat"
+        ],
+        "why": "Balances left/right brain hemispheres, deeply calming"
+      }
+    },
+
+    "mindfulness_exercises": {
+      "present_moment": {
+        "name": "Mindful Awareness",
+        "how": "Notice what is HERE, NOW. Not yesterday, not tomorrow. Just this breath. This moment. This sensation.",
+        "questions": [
+          "What do I notice right now?",
+          "Where is my attention?",
+          "Can I just be with this, without changing it?"
+        ]
+      },
+      "mindful_walking": {
+        "name": "Walking Meditation",
+        "how": [
+          "Walk slowly",
+          "Notice: heel touches ground, weight shifts, toes push off",
+          "Feel each micro-movement",
+          "If mind wanders, gently return to sensation of walking"
+        ],
+        "duration": "5-20 minutes"
+      },
+      "mindful_eating": {
+        "name": "Eating Meditation",
+        "how": [
+          "Take small piece of food",
+          "Look at it - really see it",
+          "Smell it",
+          "Put in mouth - don't chew yet, just feel texture",
+          "Chew slowly - notice flavors, texture changes",
+          "Swallow mindfully"
+        ],
+        "benefit": "Brings full awareness to present, slows down, increases enjoyment"
+      }
+    }
+  },
+
+  "self_soothing_practices": {
+    "description": "Therapeutic practices til emotional regulation og self-care",
+
+    "mirror_work": {
+      "name": "Spejlterapi for selvværd",
+      "purpose": "Bygge compassionate relationship med sig selv",
+      "how": [
+        "Stand foran spejl",
+        "Look into your own eyes",
+        "Say (out loud if possible): 'I see you. I'm here for you. You're doing your best.'",
+        "If too intense, start with just looking. Words can come later."
+      ],
+      "resistance": "Det føles weird første gang - det er normalt. Mange har aldrig kigget sig selv dybt i øjnene.",
+      "progression": "Start 30 seconds. Build to 2-5 minutes. Add affirmations når klar."
+    },
+
+    "journaling_prompts": {
+      "daily_check_in": {
+        "prompts": [
+          "How am I feeling right now? (physically and emotionally)",
+          "What do I need today?",
+          "What am I grateful for today? (even tiny things count)"
+        ]
+      },
+      "emotional_processing": {
+        "prompts": [
+          "What emotion am I feeling? Can I name it?",
+          "Where do I feel it in my body?",
+          "What triggered this feeling?",
+          "What does this emotion need from me?",
+          "What would I say to a friend feeling this?"
+        ]
+      },
+      "end_of_day_reflection": {
+        "name": "Godnat dag ritual",
+        "prompts": [
+          "What moved me today? (good or bad, just what had impact)",
+          "What did I learn?",
+          "What can I let go of?",
+          "Tomorrow is a new beginning."
+        ],
+        "practice": "Put screens away 15 min before bed. Write briefly. Let it go."
+      },
+      "micro_journal": {
+        "concept": "One sentence per day",
+        "prompt": "What touched my heart today?",
+        "why": "Low barrier to entry. Builds habit. Tracks emotional patterns over time."
+      }
+    },
+
+    "art_therapy_techniques": {
+      "emotion_drawing": {
+        "how": "Draw your feeling. Not realistic art - just colors, shapes, lines that EXPRESS the feeling.",
+        "no_skill_needed": "Not about artistic skill. About emotional release."
+      },
+      "mandala_coloring": {
+        "how": "Color repetitive, symmetrical patterns",
+        "benefit": "Meditative, organizing for dysregulated nervous system, predictable"
+      },
+      "collage_making": {
+        "how": "Rip/cut images from magazines. Glue into composition.",
+        "benefit": "Tactile, visual, creative without pressure of 'drawing skill'"
+      },
+      "destroy_art": {
+        "how": "Draw/paint something representing what you're angry about. Then destroy it (rip, burn, throw paint on).",
+        "benefit": "Physical release, symbolic letting go"
+      }
+    },
+
+    "self_compassion_practice": {
+      "kristin_neff_framework": {
+        "components": [
+          "Self-kindness: Treat yourself as you would a good friend",
+          "Common humanity: Suffering is part of being human, you're not alone",
+          "Mindfulness: Acknowledge pain without over-identifying with it"
+        ]
+      },
+      "self_compassion_break": {
+        "when": "You're struggling, being hard on yourself",
+        "steps": [
+          "1. Mindfulness: 'This is a moment of suffering' (acknowledge)",
+          "2. Common humanity: 'Suffering is part of life. I'm not alone.' (connection)",
+          "3. Self-kindness: 'May I be kind to myself. May I give myself what I need.' (compassion)"
+        ],
+        "physical_gesture": "Hand on heart while saying these. Activates oxytocin, self-soothing."
+      }
+    }
+  },
+
+  "environment_optimization": {
+    "description": "Creating sensory-friendly spaces at home and elsewhere",
+
+    "bedroom_optimization": {
+      "lighting": [
+        "Blackout curtains for total darkness at night",
+        "Dimmable warm lights (not overhead fluorescent)",
+        "Night light with red spectrum (doesn't disrupt melatonin)",
+        "Smart bulbs (control from bed)",
+        "Remove all LED lights (cover with tape if can't remove)"
+      ],
+      "sound": [
+        "White/brown noise machine",
+        "Ear plugs backup",
+        "Heavy curtains (mute outside noise)",
+        "Weatherstripping on door (reduce hallway noise)"
+      ],
+      "tactile": [
+        "Soft, comfortable bedding (your preferred texture)",
+        "Weighted blanket",
+        "Multiple pillow options (different firmnesses)",
+        "Temperature control (cool is generally better for sleep)"
+      ],
+      "visual_calm": [
+        "Minimal clutter (reduce visual overwhelm)",
+        "Calming colors (blues, greens, neutrals)",
+        "Nothing stimulating visible from bed (cover TV, bright objects)"
+      ]
+    },
+
+    "workspace_optimization": {
+      "lighting": [
+        "Natural light if possible",
+        "Task lighting (not overhead fluorescent)",
+        "Blue light filter on screens",
+        "Option to control/dim lights"
+      ],
+      "sound": [
+        "Headphones allowed",
+        "White noise if open office",
+        "Quiet space option for focus work"
+      ],
+      "ergonomics": [
+        "Comfortable chair (fidgeting allowed)",
+        "Standing desk option",
+        "Footrest",
+        "Ergonomic keyboard/mouse"
+      ],
+      "sensory_tools": [
+        "Fidget toys at desk",
+        "Stress ball",
+        "Standing mat (textured for proprioception)",
+        "Chewable pen caps / gum allowed"
+      ]
+    },
+
+    "safe_space_creation": {
+      "concept": "Dedicated calm-down space",
+      "where": "Quiet room, closet, corner with curtain, tent, under desk",
+      "essentials": [
+        "Low lighting",
+        "Quiet (or noise control)",
+        "Comfortable to sit/lie in",
+        "Sensory tools within reach",
+        "No one disturbs you here"
+      ],
+      "additions": [
+        "Weighted blanket",
+        "Favorite textures",
+        "Calming scents",
+        "Comfort objects",
+        "Journal and pen",
+        "Water bottle"
+      ],
+      "use": "Go here BEFORE meltdown/shutdown. This is prevention space."
+    }
+  },
+
+  "integration_notes": {
+    "combines_with": {
+      "emotions.json": "CalmSpace provides TOOLS to regulate emotions that emotions.json detects",
+      "carelab.json": "When crisis detected → CalmSpace grounding tools deployed",
+      "healthlab.json": "Sensory regulation impacts physical health → healthlab links stress management",
+      "adaptcore.json": "Sensory profile from AdaptCore determines which CalmSpace tools Sarah suggests",
+      "toneengine.json": "If sensory overload detected → toneengine goes to minimal input mode"
+    },
+
+    "sarah_usage": [
+      "Detect sensory overwhelm from user's words or patterns",
+      "Suggest appropriate calming/alerting/organizing strategy",
+      "Guide through grounding exercise step-by-step if needed",
+      "Remember what worked before for this user",
+      "Adjust communication style (less text, slower, simpler when overwhelmed)",
+      "Check in after sensory episode: 'How are you doing now?'"
+    ],
+
+    "personalization": [
+      "Track which sensory strategies work for individual user",
+      "Learn sensory profile over time (what they're hyper/hypo to)",
+      "Adjust suggestions based on diagnosis (autism vs ADHD vs anxiety)",
+      "Remember user's favorite calming tools",
+      "Identify patterns: 'You often get overwhelmed after X, let's prepare next time'"
+    ]
+  },
+
+  "critical_reminders": {
+    "sensory_needs_are_real": "Not manipulation, not being difficult - it's neurological",
+    "stimming_is_regulation": "Never shame stimming behaviors - they serve a purpose",
+    "meltdowns_not_tantrums": "Loss of control, not manipulation - respond with compassion",
+    "prevention_better_than_intervention": "Build in sensory breaks BEFORE overload",
+    "each_person_unique": "What calms one person may alert another - individualize",
+    "tools_not_crutches": "Using tools is smart, not weak",
+    "communicate_needs": "Teaching people your sensory needs = setting healthy boundaries"
+  }
 }
