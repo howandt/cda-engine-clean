@@ -1,84 +1,719 @@
 {
   "id": "PurposeLab",
+  "version": "3.0",
   "title": "Mening, retning & livsfaser",
-  "version": "1.0",
-  "description": "PurposeLab hjælper brugeren med at finde mening og retning i livet – på en realistisk og personlig måde. Fokus er på værdier, motivation og livsfaser, så AI’en kan støtte udvikling, uden at skabe pres.",
-  "core_principle": "Mening findes ikke i store svar, men i små handlinger, der føles sande. AI’en skal støtte brugeren i at opdage, hvad der giver liv og retning – ikke fortælle, hvad meningen er.",
+  "description": "Find mening og retning i livet – på en realistisk og personlig måde. Værdier, motivation, livsfaser og små handlinger der føles sande.",
+  "philosophy": "Mening findes ikke i store svar, men i små handlinger, der føles sande. Jeg støtter dig i at opdage, hvad der giver liv og retning – ikke fortæller hvad meningen er.",
+  
+  "core_principles": {
+    "meaning_in_small": "Store drømme er fine - men mening lever i små øjeblikke",
+    "values_as_compass": "Dine værdier viser vej når du er fortabt",
+    "chapters_not_failure": "Livsfaser er kapitler - ikke fejl",
+    "action_creates_clarity": "Du finder mening gennem handling - ikke ved at tænke",
+    "uncertainty_ok": "Du behøver ikke kende hele vejen",
+    "being_counts": "På dage hvor intet giver mening - at være ER nok",
+    "alignment_over_achievement": "Føles dit liv sandt for dig? Så er du på rette vej"
+  },
+
+  "intro": {
+    "welcome": "Nogle gange er det ikke store drømme, men små øjeblikke, der føles rigtige. Et smil, en rolig stund, en følelse af at høre til. Lad os sammen udforske, hvad der giver dig retning og glæde 💙",
+    "what_we_do": [
+      "Hjælper dig finde dine værdier - dit indre kompas",
+      "Støtter gennem livsfaser og kapitler",
+      "Finder små meningsfulde handlinger i hverdagen",
+      "Holder dig fast når alt føles tomt",
+      "Minder dig om at usikkerhed er mod - ikke svaghed",
+      "Feirer at du er i bevægelse - selv langsomt"
+    ],
+    "promise": "Jeg fortæller dig ikke hvad meningen er - jeg hjælper dig opdage din egen"
+  },
+
   "sections": [
     {
-      "id": "purpose_intro",
-      "type": "message",
-      "title": "Hvad får dit liv til at give mening?",
-      "text": "Nogle gange er det ikke store drømme, men små øjeblikke, der føles rigtige.\nEt smil, en rolig stund, en følelse af at høre til.\nLad os sammen udforske, hvad der giver dig retning og glæde 💙"
+      "id": "what_is_meaning",
+      "title": "Hvad er mening egentlig?",
+      "description": "Ikke et svar - men en følelse",
+
+      "meaning_misconceptions": {
+        "title": "Myter om mening",
+        "myths": [
+          {
+            "myth": "Mening = stort formål",
+            "reality": "Mening = små øjeblikke der føles rigtige"
+          },
+          {
+            "myth": "Du skal finde DIN mening",
+            "reality": "Du skaber mening gennem valg og handlinger"
+          },
+          {
+            "myth": "Mening er konstant",
+            "reality": "Hvad der giver mening ændrer sig gennem livet"
+          },
+          {
+            "myth": "Uden mening er livet spildt",
+            "reality": "Nogle faser handler om hvile - ikke mening"
+          },
+          {
+            "myth": "Andre har fundet deres mening",
+            "reality": "De fleste famler ligesom dig - de viser det bare ikke"
+          }
+        ]
+      },
+
+      "meaning_types": {
+        "title": "Forskellige slags mening",
+        "categories": [
+          {
+            "type": "Relational meaning",
+            "description": "Mening gennem forbindelse til andre",
+            "examples": ["At være god ven", "At støtte familie", "At hjælpe nogen"]
+          },
+          {
+            "type": "Creative meaning",
+            "description": "Mening gennem at skabe noget",
+            "examples": ["Kunst, musik, skrive", "Bygge noget", "Dyrke planter"]
+          },
+          {
+            "type": "Growth meaning",
+            "description": "Mening gennem personlig udvikling",
+            "examples": ["Lære nyt", "Overvinde frygt", "Blive bedre udgave af dig selv"]
+          },
+          {
+            "type": "Contribution meaning",
+            "description": "Mening gennem at gøre forskel",
+            "examples": ["Arbejde der hjælper", "Frivilligt arbejde", "Små venlige handlinger"]
+          },
+          {
+            "type": "Experiential meaning",
+            "description": "Mening gennem oplevelser",
+            "examples": ["Natur", "Musik", "At mærke sig i live"]
+          },
+          {
+            "type": "Existential meaning",
+            "description": "Mening gennem at acceptere livet som det er",
+            "examples": ["At være tilstede", "At acceptere usikkerhed", "At finde ro i kaos"]
+          }
+        ],
+        "note": "Du behøver ikke have alle. Én type mening ER nok."
+      },
+
+      "when_nothing_feels_meaningful": {
+        "title": "Når intet giver mening",
+        "reality": "Der kommer dage, hvor alt føles tomt. Det betyder ikke, der ingen mening er – kun at du ikke kan mærke den lige nu.",
+        "why_happens": [
+          "Depression slukker for meningsfølelsen",
+          "Burnout gør alt grå",
+          "Grief gør fremtiden usynlig",
+          "Trauma disconnecter dig fra nuet",
+          "Executive dysfunction gør alt overvældende"
+        ],
+        "what_helps": {
+          "dont_force": "Pres dig ikke til at føle mening - det kommer tilbage",
+          "just_be": "Nogle dage er 'bare være' nok",
+          "small_actions": "Gør én lille ting - følelsen følger handling",
+          "trust_process": "Mening vender tilbage når du er klar",
+          "hold_space": "Jeg holder håbet for dig indtil du selv kan"
+        }
+      }
     },
+
     {
-      "id": "values_check",
-      "type": "exercise",
+      "id": "values_compass",
       "title": "Dine værdier som kompas",
-      "text": "Prøv at vælge 3 værdier, der betyder mest for dig lige nu:\n– Tryghed\n– Frihed\n– Omsorg\n– Kreativitet\n– Ærlighed\n– Balance\n– At gøre en forskel\n\nSkriv dem ned – og tænk over, hvordan du allerede lever dem i hverdagen."
+      "description": "Når du er fortabt - værdier viser vej",
+
+      "values_identification": {
+        "title": "Find dine kerneeværdier",
+        "description": "Vælg 3-5 værdier der betyder MEST for dig lige nu",
+        "values_list": [
+          "Ærlighed",
+          "Venlighed",
+          "Mod",
+          "Tryghed",
+          "Frihed",
+          "Kreativitet",
+          "Balance",
+          "Omsorg",
+          "Vækst",
+          "Retfærdighed",
+          "Loyalitet",
+          "Nysgerrighed",
+          "Ro",
+          "Fællesskab",
+          "Selvstændighed",
+          "Glæde",
+          "Autenticitet",
+          "At gøre forskel",
+          "Respekt",
+          "Tålmodighed"
+        ],
+        "process": [
+          "Læs listen - hvilke trækker dig?",
+          "Vælg top 5",
+          "Ranker dem: Hvilken er MEST vigtig?",
+          "Noter dine top 3-5"
+        ]
+      },
+
+      "values_in_action": {
+        "title": "At leve dine værdier",
+        "description": "Værdier betyder intet hvis de ikke bliver til handling",
+        "exercise": {
+          "step_1": "Tag én af dine værdier",
+          "step_2": "Spørg: 'Hvordan lever jeg den allerede?'",
+          "step_3": "Spørg: 'Hvordan kunne jeg leve den mere?'",
+          "step_4": "Vælg ÉN lille handling i dag"
+        },
+        "examples": [
+          {
+            "value": "Omsorg",
+            "already": "Jeg ringede til en ven i går",
+            "more": "Jeg kunne starte med at vise omsorg til MIG SELV",
+            "action": "Tag 10 min pause i dag til noget jeg nyder"
+          },
+          {
+            "value": "Kreativitet",
+            "already": "Jeg doodler når jeg taler i telefon",
+            "more": "Jeg kunne afsætte tid til det bevidst",
+            "action": "15 min tegning i aften - bare for sjov"
+          },
+          {
+            "value": "Ærlighed",
+            "already": "Jeg sagde hvad jeg mener til min ven",
+            "more": "Jeg kunne være mere ærlig om mine grænser",
+            "action": "Sig 'nej' til én ting i dag hvis energi mangler"
+          }
+        ]
+      },
+
+      "values_conflicts": {
+        "title": "Når værdier konflikter",
+        "reality": "Nogle gange vil to værdier forskellige ting",
+        "example": "Frihed vs Tryghed: Du vil rejse (frihed) men også stabilitet (tryghed)",
+        "resolution": [
+          "Anerkend konflikten - det er normalt",
+          "Spørg: Hvilken værdi behøver jeg mest LIGE NU?",
+          "Vælg - men vær bevidst om valget",
+          "Accepter at du måske skifter senere"
+        ]
+      },
+
+      "values_check_in": {
+        "title": "Regelmæssig værdi-check",
+        "frequency": "Hver 3-6 måneder",
+        "questions": [
+          "Er mine top værdier stadig de samme?",
+          "Lever jeg efter mine værdier?",
+          "Hvor sviger jeg mine værdier?",
+          "Hvad skal ændres?"
+        ],
+        "evolution": "Værdier ændrer sig - det er OK. Du udvikler dig."
+      }
     },
-    {
-      "id": "motivation_reflection",
-      "type": "reflection",
-      "title": "Når du mister motivationen",
-      "text": "Alle mister gnisten engang imellem. Det betyder ikke, du har fejlet.\nSpørg dig selv:\n• Hvad plejede at give mig energi?\n• Er jeg træt – eller har jeg brug for noget nyt?\n• Hvad ville et lille skridt se ud som i dag?"
-    },
+
     {
       "id": "life_chapters",
-      "type": "prompt",
-      "title": "Dine livsfaser som kapitler",
-      "text": "Forestil dig dit liv som en bog. Hvilket kapitel er du i nu?\nEr du i en fase med læring, forandring, hvile eller genopbygning?\n\nHvad tror du, næste kapitel handler om? 🌿"
+      "title": "Livsfaser som kapitler",
+      "description": "Dit liv er en bog - hvilket kapitel er du i?",
+
+      "chapter_framework": {
+        "title": "Tænk i kapitler - ikke fiasko",
+        "philosophy": "Hver fase af livet er et kapitel. Nogle er spændende, andre svære, nogle stille. Alle hører med i historien.",
+        "reframe": [
+          "Ikke: 'Jeg har spildt de sidste 5 år'",
+          "Men: 'De sidste 5 år var overlevelseskapitlet - nu starter nyt kapitel'",
+          "",
+          "Ikke: 'Jeg burde være længere'",
+          "Men: 'Dette kapitel handler om at finde fodfæste - næste handler om at bygge'"
+        ]
+      },
+
+      "common_chapters": {
+        "title": "Typiske livskapitler",
+        "examples": [
+          {
+            "chapter": "Chaos kapitlet",
+            "description": "Alt er ustabilt - du overlever bare",
+            "goal": "Kom igennem. Stabilitet er sejr.",
+            "next": "Recovery kapitel"
+          },
+          {
+            "chapter": "Recovery kapitlet",
+            "description": "Genopbygge efter krise, sygdom, trauma",
+            "goal": "Hvile, heling, små skridt fremad",
+            "next": "Exploration eller Foundation"
+          },
+          {
+            "chapter": "Foundation kapitlet",
+            "description": "Bygge grundlag - job, relationer, rutiner",
+            "goal": "Skabe stabilitet der kan bære fremtiden",
+            "next": "Growth eller Maintenance"
+          },
+          {
+            "chapter": "Exploration kapitlet",
+            "description": "Prøve nyt, finde ud af hvem du er",
+            "goal": "Opdage, eksperimentere, fejle frit",
+            "next": "Foundation eller Specialization"
+          },
+          {
+            "chapter": "Growth kapitlet",
+            "description": "Aktiv udvikling - læring, udfordringer",
+            "goal": "Blive bedre, dygtigere, stærkere",
+            "next": "Mastery eller Transition"
+          },
+          {
+            "chapter": "Mastery kapitlet",
+            "description": "Du er god til noget - nu dybde",
+            "goal": "Excellence, bidrage med ekspertise",
+            "next": "Contribution eller Mentor"
+          },
+          {
+            "chapter": "Transition kapitlet",
+            "description": "Skift - job, by, forhold, identitet",
+            "goal": "Navigere forandring med ro",
+            "next": "Destination kommer senere"
+          },
+          {
+            "chapter": "Maintenance kapitlet",
+            "description": "Holde det du har - ikke vokse",
+            "goal": "Stabilitet, nyde hvad der er",
+            "next": "Growth eller Transition (når klar)"
+          },
+          {
+            "chapter": "Rest kapitlet",
+            "description": "Pause - ingen mål, bare være",
+            "goal": "Recuperation, genopladning",
+            "next": "Hvad du behøver når energi kommer tilbage"
+          }
+        ]
+      },
+
+      "your_chapter_now": {
+        "title": "Hvilket kapitel er du i NU?",
+        "reflection_prompts": [
+          "Hvad karakteriserer dit liv lige nu?",
+          "Føles det som growth, recovery, chaos, transition?",
+          "Hvad er dit primære fokus?",
+          "Kæmper du fordi du prøver forkert kapitel? (fx pusher for growth når du behøver rest)"
+        ]
+      },
+
+      "next_chapter": {
+        "title": "Hvad handler næste kapitel om?",
+        "not_rushing": "Du behøver ikke forcere næste kapitel",
+        "questions": [
+          "Føles nuværende kapitel færdigt?",
+          "Hvad mangler før du er klar til næste?",
+          "Hvilket kapitel trækker dig?",
+          "Hvad skal der til for at starte det?"
+        ],
+        "permission": "Det er OK at være i samme kapitel i lang tid. Der er ingen deadline."
+      }
     },
+
     {
-      "id": "purpose_actions",
-      "type": "tool",
-      "title": "Små handlinger med mening",
-      "text": "Skriv 1-2 små ting, du kunne gøre i dag, som føles meningsfulde for dig.\nDet behøver ikke være stort – bare ægte.\nFx: tage kontakt til nogen, du savner, plante noget grønt, dele noget venligt, skrive en tanke ned 💙"
+      "id": "motivation_reality",
+      "title": "Når motivation forsvinder",
+      "description": "Alle mister gnisten - det er ikke fiasko",
+
+      "motivation_loss_normal": {
+        "title": "Motivation kommer og går",
+        "truth": "Ingen er motiveret hele tiden. Det er umuligt.",
+        "why_happens": [
+          "Burnout - du har givet for meget",
+          "Depression - motivationscenteret er offline",
+          "Rutine-træthed - alt er blevet grå",
+          "Loss of meaning - ved ikke længere hvorfor",
+          "Overwhelm - så meget at du freezer"
+        ]
+      },
+
+      "rediscover_motivation": {
+        "title": "Find gnisten igen",
+        "approaches": [
+          {
+            "method": "Husk hvorfor du startede",
+            "action": "Skriv ned: Hvorfor begyndte jeg dette? Hvad håbede jeg på?"
+          },
+          {
+            "method": "Hvad plejede at energize dig?",
+            "action": "Før denne fase - hvad gav dig energi? Kan du gøre noget lignende?"
+          },
+          {
+            "method": "Er du træt eller klar til nyt?",
+            "action": "Behøver du hvile (rest kapitel) eller forandring (transition)?"
+          },
+          {
+            "method": "Små skridt tænder ild",
+            "action": "Gør ét lille skridt - motivation følger handling"
+          },
+          {
+            "method": "Skifte fokus midlertidigt",
+            "action": "Måske behøver du pause fra dette - gør noget helt andet"
+          }
+        ]
+      },
+
+      "discipline_over_motivation": {
+        "title": "Når motivation aldrig kommer",
+        "reality": "Nogle ting skal gøres selv uden motivation",
+        "practice": "Discipline = gøre det alligevel",
+        "balance": "Men discipline uden mening → burnout. Find WHY først."
+      }
     },
+
     {
-      "id": "values_in_action",
-      "type": "message",
-      "title": "At leve dine værdier",
-      "text": "Mening bliver stærkest, når værdier bliver til handling.\nHvis fx 'omsorg' er vigtig for dig, så start med dig selv.\nSpørg: ‘Hvordan kan jeg vise det i dag – bare lidt?’"
+      "id": "small_meaningful_actions",
+      "title": "Små handlinger med stor mening",
+      "description": "Mening lever i små ting - ikke store",
+
+      "daily_meaning_actions": {
+        "title": "Hverdagens meningsfulde øjeblikke",
+        "categories": [
+          {
+            "category": "Connection",
+            "actions": [
+              "Send besked til nogen du tænker på",
+              "Smil til en fremmed",
+              "Sid sammen uden at tale",
+              "Ring i stedet for at texte",
+              "Giv kompliment du mener"
+            ]
+          },
+          {
+            "category": "Creation",
+            "actions": [
+              "Tegn/skriv 5 minutter",
+              "Lav mad med omsorg",
+              "Plante noget der vokser",
+              "Byg/fix noget",
+              "Del noget du har lavet"
+            ]
+          },
+          {
+            "category": "Care",
+            "actions": [
+              "Gør én ting for dig selv uden skyld",
+              "Hjælp nogen med noget småt",
+              "Plej noget levende (plante, dyr, dig)",
+              "Ryd op et lille sted",
+              "Hvil når krop siger det"
+            ]
+          },
+          {
+            "category": "Growth",
+            "actions": [
+              "Lær én ny ting",
+              "Læs 10 sider",
+              "Prøv noget der skræmmer lidt",
+              "Reflekter over dagen",
+              "Sæt én lille grænse"
+            ]
+          },
+          {
+            "category": "Presence",
+            "actions": [
+              "5 min meditation/stille",
+              "Mærk kroppen",
+              "Observer naturen",
+              "Lyt VIRKELIG til nogen",
+              "Vær fuld tilstede i 5 min"
+            ]
+          }
+        ]
+      },
+
+      "meaning_audit": {
+        "title": "Hvor finder du allerede mening?",
+        "exercise": "Se på sidste uge - hvilke øjeblikke føltes meningsfulde?",
+        "questions": [
+          "Hvad gjorde du?",
+          "Hvem var med?",
+          "Hvorfor føltes det godt?",
+          "Kan du gøre mere af det?"
+        ]
+      }
     },
+
     {
-      "id": "existential_peace",
-      "type": "message",
-      "title": "Når livet ikke giver mening",
-      "text": "Der kommer dage, hvor alt føles tomt. Det betyder ikke, der *ingen* mening er – kun at du ikke kan mærke den lige nu.\nDen vender tilbage, når du er klar. I mellemtiden må du gerne bare *være*."
+      "id": "alignment_check",
+      "title": "Er du på vej i den retning du ønsker?",
+      "description": "Små justeringer ændrer kursen",
+
+      "life_alignment_audit": {
+        "title": "Check om dit liv matcher dine værdier",
+        "process": [
+          {
+            "step": "List dine top 3 værdier",
+            "example": "Kreativitet, Frihed, Omsorg"
+          },
+          {
+            "step": "Se på hvordan du bruger tid",
+            "question": "Hvor går mine timer hver dag?"
+          },
+          {
+            "step": "Match dem",
+            "question": "Bruger jeg tid på ting der matcher mine værdier?"
+          },
+          {
+            "step": "Identificer misalignment",
+            "example": "Værdi: Kreativitet. Tid: 0 timer kreativt. GAP!"
+          },
+          {
+            "step": "Juster",
+            "action": "Hvad kan ændres? Selv småt?"
+          }
+        ]
+      },
+
+      "course_correction": {
+        "title": "Små justeringer - store ændringer over tid",
+        "analogy": "Et fly der justerer 1 grad ændrer destination med hundreder kilometer",
+        "application": "Du behøver ikke total omvæltning - bare små justeringer",
+        "examples": [
+          {
+            "misalignment": "Job der drainer værdier",
+            "big_change": "Sige op, skifte karriere",
+            "small_adjustment": "Find én ting ved jobbet der matcher værdier, byg på det"
+          },
+          {
+            "misalignment": "Ingen kreativitet i livet",
+            "big_change": "Blive fuldtids kunstner",
+            "small_adjustment": "15 min kreativ tid hver dag"
+          },
+          {
+            "misalignment": "Isoleret, værdi er 'fællesskab'",
+            "big_change": "Flytte, nyt socialt liv",
+            "small_adjustment": "Skriv til 1 ven om ugen"
+          }
+        ]
+      },
+
+      "permission_to_pivot": {
+        "title": "Du må skifte retning",
+        "truth": "At ændre kurs er ikke fiasko - det er mod",
+        "examples": [
+          "Du må droppe uddannelsen du valgte for 3 år siden",
+          "Du må forlade forholdet der ikke giver mening længere",
+          "Du må erkende jobbet ikke er dig",
+          "Du må opgive drømmen der ikke passer"
+        ],
+        "reframe": "Sunk cost fallacy: Tiden er allerede brugt. Spørgsmålet er: Hvad nu?"
+      }
     },
+
     {
-      "id": "legacy_reflection",
-      "type": "exercise",
-      "title": "Et brev fra dit fremtidige jeg",
-      "text": "Forestil dig, at du er 10 år ældre, og du kigger tilbage på i dag.\nHvad ville du ønske, du havde haft mere mod til?\nHvad ville du sige til dig selv lige nu?\nSkriv et lille brev – fra dit fremtidige jeg til dig 💙"
+      "id": "existential_support",
+      "title": "Eksistentielle kriser & tomhed",
+      "description": "Når store spørgsmål overvælder",
+
+      "existential_questions": {
+        "title": "De store spørgsmål",
+        "common": [
+          "Hvad er meningen med livet?",
+          "Hvorfor er jeg her?",
+          "Betyder noget af det overhovedet noget?",
+          "Hvad sker der når jeg dør?",
+          "Er der et formål?"
+        ],
+        "truth": "Ingen har svarene. Alle med dybde stiller disse spørgsmål."
+      },
+
+      "existential_anxiety": {
+        "title": "Angst for meningsløshed",
+        "what_it_is": "Frygten for at intet betyder noget",
+        "why_happens": [
+          "Du tænker dybt - det er ikke sygdom",
+          "Confronting mortality",
+          "Transition mellem livsfaser",
+          "Efter traumatisk event",
+          "Depression amplificerer det"
+        ],
+        "what_helps": {
+          "accept_uncertainty": "Du behøver ikke have svar - usikkerhed er menneskeligt",
+          "create_meaning": "Mening findes ikke - den skabes gennem dine valg",
+          "focus_on_now": "Store spørgsmål for senere - hvad betyder noget I DAG?",
+          "connection": "Tal med andre - du er ikke alene i dette",
+          "professional": "Eksistentiel terapi hjælper - det er ikke svaghed"
+        }
+      },
+
+      "nihilism_vs_absurdism": {
+        "title": "Når du konkluderer intet betyder noget",
+        "nihilism": {
+          "view": "Intet har mening → derfor er alt meningsløst",
+          "problem": "Leder til apati og despair"
+        },
+        "absurdism": {
+          "view": "Intet har IBOENDE mening → derfor kan JEG skabe mening",
+          "solution": "Frihed til at vælge hvad der betyder noget for MIG",
+          "quote": "Sisyfos smiler når han ruller stenen - fordi HAN vælger at finde mening i det"
+        }
+      },
+
+      "peace_with_uncertainty": {
+        "title": "At finde ro i det uvisse",
+        "acceptance": "Du behøver ikke kende hele vejen for at bevæge dig. Bare vide, at du går i retning af noget, der føles sandt.",
+        "practice": [
+          "Accepter at du ikke ved",
+          "Det er OK at ikke have svar",
+          "Fokuser på næste skridt - ikke hele rejsen",
+          "Trust at mening unfolder sig",
+          "Usikkerhed er ikke svaghed - det er mod"
+        ]
+      }
     },
+
     {
-      "id": "life_alignment",
-      "type": "reflection",
-      "title": "Er du på vej i den retning, du ønsker?",
-      "text": "Se på dine seneste valg – føles de som et skridt *hen imod* det liv, du ønsker?\nHvis ikke, så er det okay. Du kan altid dreje roligt i en ny retning.\nSmå justeringer kan ændre kursen."
+      "id": "legacy_future_self",
+      "title": "Legacy & fremtids-dig",
+      "description": "Hvad vil du efterlade? Hvem vil du blive?",
+
+      "legacy_reflection": {
+        "title": "Hvad vil du efterlade?",
+        "not_about": "Det handler ikke om berømmelse eller storhed",
+        "about": "Hvordan vil du have rørt andres liv? Selv småt?",
+        "questions": [
+          "Hvordan vil du gerne blive husket?",
+          "Hvad håber du betyder noget for andre?",
+          "Hvilken forskel ville gøre dig glad?",
+          "Hvad ville du fortryde at IKKE have gjort?"
+        ]
+      },
+
+      "future_self_letter": {
+        "title": "Brev fra dit fremtidige jeg",
+        "exercise": "Forestil dig at du er 10 år ældre, og du kigger tilbage på i dag. Skriv et brev til nuværende-dig.",
+        "prompts": [
+          "Hvad ville jeg ønske jeg havde haft mere mod til?",
+          "Hvad bekymrede jeg mig om som ikke betød noget?",
+          "Hvad skulle jeg have gjort mere af?",
+          "Hvad ville jeg sige til mig selv nu?"
+        ],
+        "power": "Fremtids-dig har perspektiv nuværende-dig mangler"
+      },
+
+      "deathbed_perspective": {
+        "title": "Dødsleje-perspektiv",
+        "morbid_but_clarifying": "Tænk dig du er på dit dødsleje - hvad ville du ønske du havde gjort mere/mindre af?",
+        "typical_regrets": [
+          "Arbejdede for meget",
+          "Bekymrede mig om andres mening",
+          "Tog ikke nok risici",
+          "Sagde ikke 'jeg elsker dig' nok",
+          "Ikke fulgte mine drømme"
+        ],
+        "action": "Brug det til at guide valg NU - ikke vente til sidst"
+      }
     },
+
     {
-      "id": "peace_with_uncertainty",
-      "type": "message",
-      "title": "At finde ro i det uvisse",
-      "text": "Du behøver ikke kende hele vejen for at bevæge dig.\nBare vide, at du går i retning af noget, der føles sandt.\nUsikkerhed er ikke et tegn på svaghed – men på mod 💫"
+      "id": "diagnosis_purpose_challenges",
+      "title": "Diagnose & meningsfuldhed",
+      "description": "Hvordan forskellige hjerner finder mening",
+
+      "adhd_purpose": {
+        "challenges": [
+          "Hyperfokus på forkert ting - mister større billede",
+          "Novelty-seeking - aldrig tilfreds med nuværende",
+          "Impulsive pivots - skifter retning for ofte",
+          "Time blindness - fremtiden føles usynlig"
+        ],
+        "strategies": [
+          "Skriv dit 'why' ned - læs det dagligt",
+          "Visual board med værdier og mål",
+          "Tillad rotation mellem projekter - det er OK",
+          "Accountability partner for store beslutninger"
+        ]
+      },
+
+      "autism_purpose": {
+        "challenges": [
+          "Special interests KAN være mening - eller distraction",
+          "Sort/hvid tænkning om 'rigtig' vs 'forkert' vej",
+          "Social expectations vs autentisk selv",
+          "Interoception - svært at mærke hvad der føles rigtigt"
+        ],
+        "strategies": [
+          "Special interests ER valid mening - embrace dem",
+          "Systematisk værdi-identificering - list og prioriter",
+          "Ignorér hvad 'man skal' - hvad føles sandt for DIG?",
+          "External check: Forklar din retning til nogen - giver det mening?"
+        ]
+      },
+
+      "depression_purpose": {
+        "challenges": [
+          "Anhedonia - intet føles meningsfuldt",
+          "Nihilisme - konkluderer alt er meningsløst",
+          "Fremtiden usynlig - kan ikke se point",
+          "Energi til at tænke stort mangler"
+        ],
+        "strategies": [
+          "Micro-meaning - find mening i NU, ikke fremtid",
+          "Trust at mening kommer tilbage når depression letter",
+          "Lån andres håb - jeg holder det for dig",
+          "Gør handlinger selv uden meaning-følelsen - den følger"
+        ]
+      },
+
+      "anxiety_purpose": {
+        "challenges": [
+          "Bekymring om at vælge forkert vej",
+          "Perfektionisme - ingen vej er god nok",
+          "Katastrofe-tænkning om fremtiden",
+          "Undgåelse af store valg"
+        ],
+        "strategies": [
+          "Der er ingen 'forkert' vej - kun forskellige",
+          "Valg kan ændres - intet er permanent",
+          "Små eksperimenter - prøv retninger før commitment",
+          "Exposure til usikkerhed - øv at ikke vide"
+        ]
+      }
+    },
+
+    {
+      "id": "integration_other_modules",
+      "title": "Integration med andre funktioner",
+      "description": "PurposeLab arbejder sammen med resten",
+
+      "connections": {
+        "growlab": "Personlig udvikling støtter purpose discovery",
+        "memorylab": "Se udvikling over tid - hvor var du vs hvor er du",
+        "lifetools": "Værdier guide beslutninger",
+        "emotions": "Følelser viser hvad der betyder noget",
+        "hobbylab": "Hobbyer kan være mening - ikke bare tidsfordriv",
+        "sociallab": "Connection er ofte kilde til mening"
+      }
     }
   ],
+
+  "critical_reminders": {
+    "meaning_in_small": "Store svar er overvurderet - små sande handlinger tæller",
+    "chapters_not_failure": "Livsfaser er kapitler - hvert hører med i historien",
+    "values_as_compass": "Når fortabt - spørg dine værdier",
+    "action_creates_clarity": "Find mening gennem handling - ikke bare tænkning",
+    "uncertainty_is_courage": "At ikke vide hele vejen ER mod",
+    "being_is_enough": "På tomme dage - at være ER nok",
+    "alignment_over_achievement": "Føles dit liv sandt? Så er du på vej",
+    "permission_to_pivot": "Skifte retning er mod - ikke fiasko"
+  },
+
   "integration_notes": {
-    "combine_with": [
-      "GrowLab",
-      "GreenLab",
-      "EmotionSense",
-      "ToneEngine",
-      "LifeTools"
+    "connects_to": [
+      "GrowLab (udvikling)",
+      "MemoryLab (se rejse)",
+      "LifeTools (værdier→beslutninger)",
+      "Emotions (følelser viser mening)",
+      "HobbyLab (aktiviteter som mening)",
+      "SocialLab (connection som mening)"
     ],
     "signal_usage": [
-      "hvis signal = håbløshed → brug empatisk tone og small-steps øvelse",
-      "hvis signal = forvirring → brug life_chapters reflection",
-      "hvis signal = klarhed → aktivér gentle_push tone for handling"
-    ],
-    "purpose": "PurposeLab hjælper brugeren med at opdage personlig mening og bevægelse i livet. Det støtter balance mellem refleksion og handling – og minder om, at ro også er fremgang."
+      "Håbløshed → small steps + values",
+      "Forvirring → life chapters reflection",
+      "Klarhed → gentle push til handling",
+      "Eksistentiel krise → uncertainty acceptance"
+    ]
   }
 }
