@@ -3,931 +3,553 @@
   "version": "3.0",
   "title": "Karriere-udforskning & jobtest",
   "description": "Udforsk forskellige karrierer og test om de passer til dig - med ærlig snak om hvad der kræves og hvordan din diagnose spiller ind.",
-  "philosophy": "Ingen drømmejob er perfekt - men nogle passer bedre til DIG. Lad os finde ud af hvad.",
+  "philosophy": "Ingen drømmejob er perfekt - men nogle passer bedre til DIG. Din diagnose begrænser dig ikke, men nogle jobs matcher din hjerne bedre end andre. Lad os finde dem.",
+
+  "core_principles": {
+    "realistic_not_limiting": "Ærlig om udfordringer - men fokus på adaptations",
+    "test_before_commit": "Prøv jobs i småt før lang uddannelse",
+    "diagnosis_aware": "ADHD/autism/anxiety/depression påvirker forskelligt - match job til DIN hjerne",
+    "multiple_paths": "Mange veje til samme mål - find DIN vej",
+    "okay_to_pivot": "Første valg er ikke permanent - du kan skifte",
+    "interests_matter_most": "Din passion > din diagnose"
+  },
 
   "intro": {
-    "welcome": "Hvad skal du lave når du bliver voksen? Det kan føles som et kæmpe spørgsmål. Her kan du udforske forskellige jobs - ikke bare de 'cool' dele, men også de hårde dele. Og vi taler ærligt om hvordan din diagnose kan påvirke forskellige karrierer 💙",
+    "welcome": "Hvad skal du lave når du bliver voksen? Det kan føles som kæmpe spørgsmål. Her kan du udforske forskellige jobs - ikke bare de 'cool' dele, men også de hårde dele. Og vi taler ærligt om hvordan din diagnose kan påvirke 💙",
     "how_it_works": [
-      "Vælg et job du er nysgerrig på",
-      "Få ærlig info: Hvad skal der til? Hvad er svært?",
-      "Test det med små opgaver",
-      "Se hvordan din diagnose påvirker (både styrker og udfordringer)",
-      "Beslut om det føles rigtigt - eller prøv et andet"
+      "Vælg job du er nysgerrig på",
+      "Få ærlig info: Hvad kræver det? Hvad er svært?",
+      "Se diagnose-specifik breakdown (styrker + udfordringer)",
+      "Test det med micro-tasks",
+      "Beslut om det føles rigtigt - eller prøv andet"
     ],
     "reality_check": [
       "Intet job er perfekt for alle med samme diagnose",
-      "Dine interesser, styrker og værdier betyder MER end diagnosen",
-      "Mange veje fører til samme mål - du skal finde DIN vej",
-      "Det er OK at skifte mening - du er ikke låst fast"
+      "Dine interesser, styrker og værdier > diagnosen",
+      "Mange veje fører samme sted - find DIN",
+      "OK at skifte mening - ikke låst fast",
+      "Adaptations findes altid - spørg 'hvordan?' ikke 'kan jeg?'"
     ]
   },
 
-  "career_categories": [
+  "sections": [
     {
-      "id": "trades_hands_on",
-      "title": "Håndværk & Praktisk Arbejde",
-      "description": "Jobs hvor du arbejder med hænder, værktøj og konkrete resultater",
-      "careers": [
-        {
-          "id": "carpenter",
-          "title": "Tømrer / Snedker",
-          "tagline": "Byg ting der holder - med præcision og planlægning",
-          
-          "what_you_do": [
-            "Læse tegninger og måle præcist",
-            "Skære, save, bore, samle træ",
-            "Bygge huse, møbler, terrasser",
-            "Arbejde både solo og i team",
-            "Løse problemer når ting ikke passer"
-          ],
+      "id": "career_categories",
+      "title": "Karriere-kategorier & jobs",
+      "description": "Opdelt efter arbejdstype - ikke uddannelsesniveau",
 
-          "what_it_takes": {
-            "skills": ["Præcision", "Rumlig forståelse", "Værktøjskendskab", "Fysik styrke", "Problemløsning"],
-            "education": "Tømrerlærling (3-4 år) - kombinerer skole og praksis på byggeplads",
-            "daily_reality": "Ofte tidlig morgen (07:00 start), fysisk hårdt, udendørs i al slags vejr, støj fra maskiner"
+      "trades_hands_on": {
+        "title": "Håndværk & Praktisk arbejde",
+        "description": "Jobs hvor du arbejder med hænder, værktøj, konkrete resultater",
+        
+        "careers": {
+          "carpenter": {
+            "title": "Tømrer/Snedker",
+            "what": "Byg ting der holder - præcision + planlægning",
+            "daily": "Måle, skære, samle træ. Bygge huse/møbler. Løse problemer.",
+            "requires": "Præcision, rumlig forståelse, fysisk styrke, værktøjskendskab",
+            "education": "Tømrerlærling 3-4 år (skole + byggeplads)",
+            "reality": "Tidlig morgen (07:00), fysisk hårdt, udendørs i alt vejr, støjende",
+            
+            "diagnosis_fit": {
+              "adhd": {
+                "strengths": "Hyperfokus når interessant, varierende opgaver, fysisk energi-outlet",
+                "challenges": "Præcision kræver attention, sikkerhed KRITISK (impulsivitet farligt), mange projekter = tab overblik",
+                "adaptations": "Checklister for sikkerhed, tag billeder før skæring, find struktureret arbejdsplads"
+              },
+              "autism": "Styrker: Systematik, præcision, detaljer. Udfordringer: Kaotiske byggepladser, støj, social. Adaptations: Værksted > byggeplads, høreværn, find kvalitet-fokuserede arbejdsgivere",
+              "anxiety": "Styrker: Sikkerhedsfokus, grundig. Udfordringer: Frygt for fejl, højdearbejde. Adaptations: Start simple projekter, mentor, små rolige firmaer",
+              "depression": "Fysisk arbejde KAN hjælpe (bevægelse, synlige resultater). Men: Tidlige morgener svære, energi-krav højt. Adaptations: Team-kultur, åbenhed om mental health days, behandling parallelt"
+            },
+            
+            "test_it": "1) Mål 5 ting præcist 3 gange - samme resultat? 2) Følg DIY-guide (hylder/fuglekasse). 3) Brug håndboremaskine - kan du håndtere støj 8 timer?",
+            "real_talk": "Godt hvis: Elsker bygge konkrete ting, kan ikke sidde stille. Hårdt hvis: Kroniske smerter, sensory issues med støj, kan ikke klare morgener."
           },
 
-          "diagnosis_considerations": {
-            "adhd": {
-              "strengths": [
-                "Hyperfokus når projekt er interessant",
-                "God i kriser når noget skal fixes NU",
-                "Varierende opgaver holder dig engageret",
-                "Fysisk arbejde bruger din energi konstruktivt"
-              ],
-              "challenges": [
-                "Præcision kræver sustained attention (måle 3 gange, skære 1 gang)",
-                "Sikkerhed KRITISK - impulsivitet med elværktøj = farligt",
-                "Mange projekter samtidig = nemt at miste overblik",
-                "Deadlines kan stresse hvis du prokrastinerer"
-              ],
-              "adaptations": [
-                "Brug checklister for sikkerhed (ikke 'bare husk det')",
-                "Tag billeder af mål før du skærer",
-                "Find arbejdsplads med tydelig struktur og supervision",
-                "Overvej specialisering (fx kun møbler) i stedet for generalist"
-              ]
+          "electrician": {
+            "title": "Elektriker",
+            "what": "Sikkerhed, præcision, problemløsning med strøm",
+            "daily": "Installere ledninger, fejlfinde, læse diagrammer, følge sikkerhedsregler",
+            "requires": "Præcision, logik, sikkerhedsbevidsthed, farveforståelse (KRITISK)",
+            "education": "Elektrikerlærling 4 år",
+            "reality": "Kravler i lofter/kældre, tætte rum, LIVSFARLIGT hvis fejl",
+            
+            "diagnosis_fit": {
+              "adhd": "Styrker: Fejlfinding = mystery-solving. Udfordringer: Impulsivitet + strøm = LIVSFARLIGT. Adaptations: Ekstra fokus på checklister, mentor først år, IKKE solo før 100% tryg",
+              "autism": "Styrker: Regler klare, systematisk. Udfordringer: Kundeservice i folks hjem, sensory i tætte rum. Adaptations: Industri-elektriker > bolig",
+              "anxiety": "Styrker: Sikkerhedsfokus perfekt. Udfordringer: Frygt for fatale fejl. Adaptations: Start planlagte opgaver ikke akut",
+              "depression": "Udfordringer: Kravler i mørke rum kan forværre. Adaptations: Team-projekter, undgå solo"
             },
-            "autism": {
-              "strengths": [
-                "Systematik og præcision er dine styrker",
-                "Elsker at perfektionere teknikker",
-                "Loyal overfor kvalitet og regler",
-                "God til at se detaljer andre overser"
-              ],
-              "challenges": [
-                "Byggepladser = kaotiske, støjende, uforudsigelige",
-                "Sociale forventninger (small talk, humor, hierarki)",
-                "Forandringer i planen (materialer mangler, kunde ændrer mening)",
-                "Sensory overload fra støj, støv, lys"
-              ],
-              "adaptations": [
-                "Vælg værksted-arbejde over byggeplads hvis muligt",
-                "Brug høreværn / støjreducering",
-                "Find arbejdsgiver der værdsætter kvalitet > hastighed",
-                "Klare aftaler om pauser og rutiner"
-              ]
-            },
-            "anxiety": {
-              "strengths": [
-                "Opmærksom på sikkerhed - passer godt til farligt arbejde",
-                "Grundig - checker alt før du starter",
-                "Ansvarlig - følger regler"
-              ],
-              "challenges": [
-                "Frygt for fejl kan lamme (hvad hvis jeg skærer forkert?)",
-                "Arbejde i højden / med farlige maskiner trigger angst",
-                "Kundesamtaler og teamwork kan være stressende",
-                "Præstationsangst hvis andre kigger på"
-              ],
-              "adaptations": [
-                "Start med enkle projekter - byg selvtillid gradvist",
-                "Få mentor der giver feedback uden kritik",
-                "Øv teknikker mange gange før du bruger dem 'skarpt'",
-                "Vælg små firmaer med rolig kultur over store hektiske pladser"
-              ]
-            },
-            "depression": {
-              "reality": "Fysisk arbejde KAN hjælpe depression (bevægelse, synlige resultater). Men:",
-              "challenges": [
-                "Tidlige morgener når du kan ikke komme ud af sengen",
-                "Fysisk arbejde kræver energi du måske ikke har",
-                "Isolation hvis du arbejder solo meget",
-                "Svært at holde fremmøde hvis depression rammer"
-              ],
-              "adaptations": [
-                "Vælg arbejdsplads med god teamkultur (social støtte)",
-                "Vær åben om at du nogle gange har brug for mental health days",
-                "Få behandling parallelt - arbejde alene løser ikke depression",
-                "Overvej deltid mens du kommer på fode"
-              ]
-            }
+            
+            "test_it": "1) Farvetest - kan du skelne blå/brun/gul-grøn? (Farveblindhed = dealbreaker). 2) Logik-puslespil - elsker du fejlfinding?",
+            "real_talk": "Kræver EKSTREM præcision. Hvis impulsiv/let distraheret = farligt. Men hvis elsker systematisk fejlfinding = perfekt."
           },
 
-          "try_it_micro_tasks": [
-            {
-              "task": "Præcisionsmåling",
-              "description": "Find 5 ting derhjemme. Mål dem præcist (længde, bredde, højde). Tjek om du kan måle samme ting 3 gange og få samme resultat.",
-              "what_it_teaches": "Tømrere måler KONSTANT. Hvis du hader at måle, bliver det hårdt."
+          "mechanic": {
+            "title": "Mekaniker (Bil/Cykel/Maskiner)",
+            "what": "Diagnose og reparation af maskiner",
+            "daily": "Fejlfinde, skille ad, samle, udskifte dele, service",
+            "requires": "Mekanisk forståelse, problemløsning, tålmodighed",
+            "education": "Automekaniker-lærling 3-4 år",
+            "reality": "Beskidte hænder, olie, fysisk arbejde, kundeservice",
+            
+            "diagnosis_fit": {
+              "adhd": "Styrker: Problem-solving som puslespil, hands-on engagerende. Udfordringer: Rutineservice kedeligt, småfejl = store konsekvenser. Adaptations: Specialiser (motorcykler/veteranbiler)",
+              "autism": "Styrker: Systematisk fejlfinding, elsker forstå hvordan ting virker. Udfordringer: Støjende, beskidt, uforudsigelige fejl. Adaptations: Lille værksted, teknisk fokus",
+              "anxiety": "Styrker: Grundig. Udfordringer: Stress hvis kunde venter. Adaptations: Start cykler før biler",
+              "depression": "Udfordringer: Fysisk hårdt ved lav energi, beskidt arbejde. Adaptations: Teamkultur"
             },
-            {
-              "task": "Følg en DIY-guide",
-              "description": "Find en YouTube guide til at bygge noget simpelt (lille hylder, fuglekasse). Følg instruktioner trin-for-trin.",
-              "what_it_teaches": "Kan du følge instruktioner? Bliver du frustreret når ting ikke passer? Nyder du processen?"
-            },
-            {
-              "task": "Værktøjstest",
-              "description": "Lån en håndboremaskine. Bor 10 huller i et stykke træ. Mærk vægten, lyden, vibrationen.",
-              "what_it_teaches": "Sensorisk test - kan du håndtere støj og vibrationer i 8 timer?"
-            }
-          ],
-
-          "real_talk": {
-            "pros": ["Synlige resultater (du ser hvad du bygger)", "Fysisk aktiv (ikke fastlåst til skrivebord)", "God løn efter læretid", "Mange veje (møbler, huse, renovering)"],
-            "cons": ["Fysisk hårdt (knæ, ryg slides over tid)", "Vejrafhængigt (kulde, regn, vind)", "Sikkerhedsrisici (skader med værktøj)", "Uregelmæssige timer (projekter kan kræve overarbejde)"],
-            "honest_bottom_line": "Godt for dig hvis du elsker at bygge konkrete ting og ikke kan sidde stille. Hårdt hvis du har kroniske smerter, sensory issues med støj, eller kæmper med morgener."
-          }
-        },
-
-        {
-          "id": "electrician",
-          "title": "Elektriker",
-          "tagline": "Sikkerhed, præcision og problemløsning med strøm",
-          
-          "what_you_do": [
-            "Installere ledninger og el-tavler",
-            "Fejlfinde når noget ikke virker",
-            "Læse el-diagrammer",
-            "Følge sikkerhedsregler (KRITISK - strøm dræber)",
-            "Arbejde i huse, bygninger, industri"
-          ],
-
-          "what_it_takes": {
-            "skills": ["Præcision", "Logisk tænkning", "Sikkerhedsbevidsthed", "Problemløsning", "Farveforståelse (ledninger er farvekodede)"],
-            "education": "Elektrikerlærling (4 år) - teori + praksis",
-            "daily_reality": "Kravlende arbejde (lofter, krybekældre), tætte rum, risiko for stød hvis fejl"
+            
+            "test_it": "1) Reparer punkteret cykel selv. 2) Find defekt dims derhjemme - diagnosticer fejl.",
+            "real_talk": "Perfekt hvis elsker pille ting ad. Hårdt hvis sensory issues med beskidt/olie."
           },
 
-          "diagnosis_considerations": {
-            "adhd": {
-              "strengths": ["Fejlfinding engagerer - mystery solving", "Varierende arbejdspladser", "Kan hyperfokusere på komplekse problemer"],
-              "challenges": ["Impulsivitet + strøm = LIVSFARLIGT", "Skal tjekke ALT 3 gange før tænding", "Kedeligt rutinearbejde mellem interessante opgaver"],
-              "adaptations": ["Ekstra fokus på sikkerhedschecklister", "Find mentor der holder øje først år", "Undgå solo-arbejde indtil du er 100% tryg"]
+          "chef_cook": {
+            "title": "Kok",
+            "what": "Lav mad professionelt - kreativitet under tidspres",
+            "daily": "Forberede ingredienser, følge opskrifter, planlægge menu, arbejde under stress",
+            "requires": "Multitasking, tidsstyring, smagssans, fysisk udholdenhed, stress-tolerance",
+            "education": "Kokke-lærling 4 år",
+            "reality": "Høj temperatur, vådt, aftener/weekender, meget stress i rush, lange vagter",
+            
+            "diagnosis_fit": {
+              "adhd": "Styrker: Høj-stress miljø = adrenalin, kreativ mad, varierende opgaver. Udfordringer: Mange ting samtidig (5 retter på én gang), detaljer kritiske (allergier!). Adaptations: Mise en place religiously, find rolige restauranter",
+              "autism": "Styrker: Præcision i opskrifter, systematisk. Udfordringer: Kaotisk køkken, sensory overload (varme/lyde/lugte), teamwork kritisk. Adaptations: Bageri/konditori (mere struktureret) > restaurant",
+              "anxiety": "Udfordringer: Rush-stress, kundeservice. Adaptations: Start som køkkenmedhjælper, byg selvtillid",
+              "depression": "Udfordringer: Aftener/weekender = social isolation, fysisk udmattende. Adaptations: Find arbejdsplads med work-life balance"
             },
-            "autism": {
-              "strengths": ["Regler og standarder er klare", "Systematisk fejlfinding", "God til at følge procedurer"],
-              "challenges": ["Kundeservice (skal ind i folks hjem, small talk)", "Sensory: Tætte rum, støv, varme/kulde", "Uforudsigelige opgaver (akutkald)"],
-              "adaptations": ["Vælg industri-elektrikker over bolig hvis social del er svær", "Strukturerede arbejdspladser", "Klare sikkerhedsrutiner"]
-            },
-            "anxiety": {
-              "strengths": ["Sikkerhedsfokus passer perfekt", "Grundighed = mindre fejl"],
-              "challenges": ["Frygt for at lave fatal fejl", "Stress ved akutkald (noget er galt NU)"],
-              "adaptations": ["Start med planlagte opgaver, ikke akut", "Byg selvtillid gradvist"]
-            },
-            "depression": {
-              "challenges": ["Kravlende arbejde i mørke rum kan forværre humør", "Isolation hvis solo-arbejde"],
-              "adaptations": ["Vælg team-baserede projekter", "Undgå kun akut-service (stress kan trigger nedture)"]
-            }
-          },
-
-          "try_it_micro_tasks": [
-            {
-              "task": "Farvetest",
-              "description": "Elektriker-ledninger er farvekodede. Kan du skelne blå, brun, gul/grøn uden problemer? (Farveblindhed er dealbreaker)",
-              "what_it_teaches": "Sikkerhed afhænger af at se farver korrekt"
-            },
-            {
-              "task": "Logik-puslespil",
-              "description": "Løs en logik-opgave eller Sudoku. Fejlfinding i el kræver systematisk tænkning.",
-              "what_it_teaches": "Elsker du at finde fejl? Eller frustrerer det dig?"
-            }
-          ],
-
-          "real_talk": {
-            "pros": ["God løn", "Altid brug for elektrikere", "Problemløsning holder dig engageret", "Kan starte eget firma"],
-            "cons": ["Livsfarligt hvis uopmærksom", "Fysisk hårdt (kravle, tætte rum)", "Akutkald uden for normal tid", "Kan være ensomt arbejde"],
-            "honest_bottom_line": "Kræver EKSTREM præcision og sikkerhedsbevidsthed. Hvis du er impulsiv eller let distraheret, er det farligt. Men hvis du elsker at fejlfinde og følge systemer, kan det være perfekt."
-          }
-        },
-
-        {
-          "id": "mechanic",
-          "title": "Mekaniker (Biler/Cykler/Maskiner)",
-          "tagline": "Diagnose og reparation af maskiner",
-          
-          "what_you_do": [
-            "Fejlfinde når noget ikke virker",
-            "Skille dele ad og samle igen",
-            "Udskifte slidte dele",
-            "Service og vedligeholdelse",
-            "Arbejde med hænder og værktøj dagligt"
-          ],
-
-          "what_it_takes": {
-            "skills": ["Mekanisk forståelse", "Problemløsning", "Præcision", "Fysisk styrke", "Tålmodighed"],
-            "education": "Automekaniker-lærling (3-4 år) eller cykelmekaniker-kurser",
-            "daily_reality": "Beskidte hænder, oliepletter, fysisk arbejde, kundeservice (forklare fejl)"
-          },
-
-          "diagnosis_considerations": {
-            "adhd": {
-              "strengths": ["Hyperfokus på interessante reparationer", "Problem-solving som puslespil", "Hands-on holder dig engageret", "Akut-reparationer = adrenalin kick"],
-              "challenges": ["Rutineservice (olieskift, dækskift) = kedeligt", "Småfejl kan få store konsekvenser (glem en bolt = farligt)", "Mange opgaver samtidig = tab overblik", "Kundeservice kræver tålmodighed"],
-              "adaptations": ["Specialiser dig (fx kun motorcykler eller veteranbiler)", "Brug checklister for service", "Find værksted med god struktur"]
-            },
-            "autism": {
-              "strengths": ["Systematisk fejlfinding", "Elsker at forstå hvordan ting virker", "God til at følge serviceprotokoller", "Fokuseret på detaljer"],
-              "challenges": ["Værksted = støjende, beskidt, kaotisk", "Kundeservice (forklare problem uden jargon)", "Uforudsigelige fejl frustrerende", "Tidspres på reparationer"],
-              "adaptations": ["Vælg lille værksted med rolig kultur", "Fokuser på teknisk arbejde, lad andre håndtere kunder hvis muligt", "Brug høreværn"]
-            },
-            "anxiety": {
-              "strengths": ["Grundig - checker alt", "Sikkerhedsbevidst"],
-              "challenges": ["Stress hvis kunde venter", "Frygt for at overse fejl", "Komplekse moderne biler = mange systemer kan fejle"],
-              "adaptations": ["Start med simple maskiner (cykler) før komplekse biler", "Få god mentorship"]
-            },
-            "depression": {
-              "challenges": ["Fysisk hårdt arbejde når energi lav", "Ensomhed hvis solo-arbejde", "Beskidt arbejde kan forringe selvfølelse"],
-              "adaptations": ["Vælg værksted med teamkultur", "Husk at fysisk arbejde faktisk kan hjælpe humør"]
-            }
-          },
-
-          "try_it_micro_tasks": [
-            {
-              "task": "Cykel-reparation",
-              "description": "Få fat i punkteret cykel. Skift slange selv. Følg YouTube guide.",
-              "what_it_teaches": "Nyder du at pille ting ad? Bliver du frustreret eller fascineret?"
-            },
-            {
-              "task": "Diagnose-test",
-              "description": "Find en dims derhjemme der ikke virker (lampe, legetøj). Prøv at finde fejlen.",
-              "what_it_teaches": "Elsker du mystery-solving eller frustrerer det dig når svaret ikke er åbenlyst?"
-            }
-          ],
-
-          "real_talk": {
-            "pros": ["Hands-on arbejde", "Synlige resultater", "Altid brug for mekanikere", "Kan specialisere (motorcykler, lastbiler, veteranbiler)"],
-            "cons": ["Beskidt arbejde", "Fysisk hårdt (ryg, knæ)", "Støjende miljø", "Moderne biler = kompleks elektronik (ikke bare mekanik)"],
-            "honest_bottom_line": "Perfekt hvis du elsker at pille ting ad og forstå hvordan de virker. Hårdt hvis du har sensory issues med beskidt/olie eller ikke kan håndtere fysisk arbejde."
+            
+            "test_it": "1) Lav middag til 5 personer med 1 times forberedelse. 2) Arbejd frivilligt i suppekøkken 1 måned.",
+            "real_talk": "Kreativt men stressende. Ikke for dig hvis kan ikke håndtere kaos eller varme."
           }
         }
-      ]
+      },
+
+      "tech_it_digital": {
+        "title": "IT, Tech & Digital",
+        "description": "Jobs med computere, kode, netværk, teknologi",
+        
+        "careers": {
+          "programmer": {
+            "title": "Programmør/Softwareudvikler",
+            "what": "Skriv kode der løser problemer",
+            "daily": "Kode, bygge apps/websites, fejlfinde bugs, lære nyt konstant",
+            "requires": "Logisk tænkning, problemløsning, tålmodighed, selvstændig læring",
+            "education": "Datamatiker ELLER selvlært (mange veje)",
+            "reality": "8+ timer skærmtid dagligt, sidder ned, deadlines, møder (varierer)",
+            
+            "diagnosis_fit": {
+              "adhd": "Styrker: Hyperfokus når interessant, kreativ problemløsning, thrives i dynamiske miljøer. Udfordringer: Debugging kedeligt, dokumentation = torture, deadlines + prokrastinering. Adaptations: Agile sprints, pair programming, Pomodoro, startups > korporationer. REAL TALK: Mange i tech HAR ADHD - men find struktur der virker",
+              "autism": "Styrker: Systematisk, detaljer, dyb læring, direkte kommunikation (kode lyver ikke). Udfordringer: Teamwork/møder, åbne kontorer, requirements skifter. Adaptations: Remote arbejde, specialiser dybt, neurodiversity-venlige firmaer, noise-cancelling. REAL TALK: Tech fyldt med autister - find DIT match",
+              "anxiety": "Udfordringer: Imposter syndrome, code reviews, deploy-angst. Adaptations: Junior-venlige firmaer, små projekter først, husk ALLE laver bugs",
+              "depression": "Udfordringer: Isolation hvis remote, sidder ned hele dag, skærmtid = søvnproblemer. Adaptations: Work-life balance firmaer, gåture, community, log ud kl 17"
+            },
+            
+            "test_it": "1) Lær Python basics på Codecademy (2-3 timer). 2) Byg calculator efter tutorial. 3) Læs andres kode på GitHub.",
+            "real_talk": "Remote muligt, god løn, kreativt. Men: Meget skærmtid, sidder ned, ensomhed. Perfekt hvis elsker logik."
+          },
+
+          "it_support": {
+            "title": "IT-supporter/Helpdesk",
+            "what": "Hjælp mennesker med tech-problemer",
+            "daily": "Besvare tickets/telefon, fejlfinde, forklare til non-tech folk, håndtere frustrerede brugere",
+            "requires": "Tech-forståelse, tålmodighed, kommunikation, kundeservice",
+            "education": "IT-supporter uddannelse",
+            "reality": "Meget telefonkontakt, gentagne spørgsmål, stress når systemer nede",
+            
+            "diagnosis_fit": {
+              "adhd": "Styrker: Varierende problemer. Udfordringer: Telefon konstant, gentagne spørgsmål, dokumentation. Adaptations: Mindre telefon/mere hands-on role",
+              "autism": "Udfordringer: Kundeservice hele dagen, telefonkontakt. Adaptations: Backend-support, email > telefon",
+              "anxiety": "Udfordringer: Telefon-angst, mange ventende tickets. Adaptations: Start email-support",
+              "depression": "Udfordringer: Frustrerede brugere tærer. Adaptations: Supportive team, grænser"
+            },
+            
+            "test_it": "Hjælp ven/familie med tech-problem. Frustrerer det at forklare?",
+            "real_talk": "Entry-level i tech men kræver kundeservice skills. Lav løn start."
+          },
+
+          "ai_specialist": {
+            "title": "AI-specialist/ML Engineer",
+            "what": "Træn AI-systemer og byg intelligente løsninger",
+            "daily": "Træne modeller, arbejde med data, bygge AI-apps, eksperimentere, læse papers",
+            "requires": "Matematik, Python, data-forståelse, research skills, eksperimentel mindset",
+            "education": "Datavidenskab eller selvlært + portfolio",
+            "reality": "90% eksperimenter fejler, meget kode, læse papers, meetings",
+            
+            "diagnosis_fit": {
+              "adhd": "Styrker: Cutting-edge spændende, eksperimentering = variation. Udfordringer: Matematik kedeligt, 90% fejler. Adaptations: Applied AI > research",
+              "autism": "Styrker: Dyb specialviden, systematisk, fokuseret. Udfordringer: Feltet skifter MEGET hurtigt. Adaptations: Specialiser dybt",
+              "anxiety": "Udfordringer: Konstant usikkerhed. Adaptations: Start simple projekter",
+              "depression": "Udfordringer: Meget skærmtid, ensomt, mange fejl. Adaptations: Team-arbejde"
+            },
+            
+            "test_it": "1) Train simpel model i Google Colab. 2) Byg chatbot med AI API.",
+            "real_talk": "Cutting-edge, høj løn, cool. Men: Kræver MEGET læring, konstant ændring. Ikke entry-level."
+          },
+
+          "graphic_designer": {
+            "title": "Grafisk Designer",
+            "what": "Design visuel kommunikation",
+            "daily": "Designe logoer/websites/print, bruge Adobe, samarbejde med kunder, revidere design",
+            "requires": "Æstetisk sans, tekniske værktøjer, kommunikation, tålmodighed med revision",
+            "education": "Grafisk designer uddannelse eller selvlært + portfolio",
+            "reality": "Meget skærmtid, klient-møder, deadlines, mange revisioner",
+            
+            "diagnosis_fit": {
+              "adhd": "Styrker: Kreativitet, hyperfokus på interessante projekter. Udfordringer: Kedeligt klient-arbejde (5 versioner af logo), deadlines. Adaptations: Find niche, projektledelse tools, in-house > freelance",
+              "autism": "Styrker: Detaljeorienteret, systematisk. Udfordringer: Vag klient-feedback ('mere pop'), subjektiv smag. Adaptations: In-house med brand guidelines",
+              "anxiety": "Udfordringer: Klient-præsentationer, frygt for kritik. Adaptations: In-house med team-support",
+              "depression": "Udfordringer: Kreativitet svær når deprimeret, isolation hvis freelance. Adaptations: In-house > freelance"
+            },
+            
+            "test_it": "1) Redesign eksisterende logo i Canva. 2) Daily creative challenge (1 ting/dag i uge).",
+            "real_talk": "Kreativt, remote muligt. Men: Klient-arbejde frustrerende, konkurrence stor."
+          }
+        }
+      },
+
+      "social_care_education": {
+        "title": "Social, Omsorg & Uddannelse",
+        "description": "Jobs med mennesker - hjælp, undervisning, støtte",
+        
+        "careers": {
+          "teacher": {
+            "title": "Lærer/Pædagog",
+            "what": "Undervis og støt børn/unge",
+            "daily": "Planlægge undervisning, klasseledelse, håndtere konflikter, samarbejde med forældre",
+            "requires": "Tålmodighed, kommunikation, planlægning, empati, autoritet",
+            "education": "Læreruddannelse 4 år eller pædagog 3,5 år",
+            "reality": "Meget social interaktion, støj, konflikter, forældremøder, hjemmearbejde",
+            
+            "diagnosis_fit": {
+              "adhd": "Styrker: Høj energi engagerer børn, kreative metoder, forstår ADHD-elever. Udfordringer: Klasseledelse = kaos uden struktur, admin = torture, mange afbrydelser. Adaptations: Mentor, visuelle planer, specialundervisning (færre elever). REAL TALK: Mange lærere med ADHD - men hårdt uden strategier",
+              "autism": "Styrker: Systematisk undervisning, dyb viden. Udfordringer: Sensory overload (30 børn, støj), social kompleksitet, uforudsigelige situationer. Adaptations: Specialundervisning, ældre elever, rolig kultur. REAL TALK: Almen folkeskole = kaotisk. Overvej special/ungdom/voksen",
+              "anxiety": "Udfordringer: Performance-angst, forældremøder, konflikter. Adaptations: Start vikar, byg erfaring gradvist",
+              "depression": "Udfordringer: Emotionelt dræn ende, isolation (eneste voksen), høje energikrav. Adaptations: Godt team, grænser, behandling"
+            },
+            
+            "test_it": "1) Frivillig i børneklub 4 uger. 2) Planlæg 30 min lektion.",
+            "real_talk": "Meningsfuldt, lange ferier, mangel på lærere. Men: Emotionelt hårdt, lav løn, meget hjemmearbejde."
+          },
+
+          "social_worker": {
+            "title": "Socialrådgiver",
+            "what": "Hjælp mennesker i sårbare situationer",
+            "daily": "Rådgive i krise, vejlede om rettigheder, skrive rapporter, samarbejde med fagfolk",
+            "requires": "Empati, grænser, kommunikation, sagsbehandling, emotionel robusthed",
+            "education": "Socialrådgiver 3,5 år",
+            "reality": "Emotionelt tungt, meget dokumentation, bureaukratisk, møder i krise",
+            
+            "diagnosis_fit": {
+              "adhd": "Udfordringer: MEGET dokumentation, deadlines, mange sager, bureaukrati. Adaptations: Mindre dokumentation-felt, tools",
+              "autism": "Styrker: Systematisk sagsbehandling, kender regler. Udfordringer: Emotionelt arbejde, komplekse sociale situationer. Adaptations: Struktureret arbejde (handicap-sagsbehandling)",
+              "anxiety": "Udfordringer: Sekundær traumatisering, stress over ikke kunne hjælpe. Adaptations: Stærk supervision, grænser",
+              "depression": "Udfordringer: Emotionelt tungt kan forværre, høre lidelse hele dagen. Adaptations: MEGET vigtigt med behandling, overvej om energi"
+            },
+            
+            "test_it": "Frivillig krisearbejde (Røde Kors) 2 måneder.",
+            "real_talk": "Meningsfuldt, gør forskel. Men: Emotionelt hårdt, bureaukrati, burnout-risiko."
+          },
+
+          "nurse": {
+            "title": "Sygeplejerske",
+            "what": "Pleje og behandling af syge/sårede",
+            "daily": "Medicinering, pleje, observation, samarbejde med læger, dokumentation",
+            "requires": "Empati, praktisk sans, stress-tolerance, fysisk udholdenhed, detaljeorientering",
+            "education": "Sygeplejerskeuddannelse 3,5 år",
+            "reality": "Skiftende vagter (dag/aften/nat), fysisk hårdt, emotionelt tungt, meget dokumentation",
+            
+            "diagnosis_fit": {
+              "adhd": "Styrker: Varierende opgaver, akut-situationer engagerende. Udfordringer: Dokumentation massiv, mange afbrydelser, medicin-fejl = farligt. Adaptations: Akut > almen, dobbelt-tjek medicin",
+              "autism": "Styrker: Systematisk, følger procedurer. Udfordringer: Kaotiske vagter, mange patienter, emotionel støtte svær. Adaptations: Specialafdeling (mindre kaos)",
+              "anxiety": "Udfordringer: Liv/død situationer, patienter kan dø. Adaptations: Almen > akut",
+              "depression": "Udfordringer: Nattevagter ødelægger søvn, ser lidelse dagligt. Adaptations: Undgå nattevagter hvis muligt"
+            },
+            
+            "test_it": "SOSU-hjælper job 6 måneder (test før uddannelse).",
+            "real_talk": "Meningsfuldt, jobsikkerhed. Men: Fysisk/emotionelt hårdt, vagter slider, moderat løn."
+          },
+
+          "sosu_assistant": {
+            "title": "SOSU-hjælper/assistent",
+            "what": "Hjælp ældre/handicappede med dagligdag",
+            "daily": "Personlig pleje, mad, aktiviteter, dokumentation, skabe tryghed",
+            "requires": "Empati, tålmodighed, fysisk styrke, respekt",
+            "education": "SOSU-hjælper (1 år) eller SOSU-assistent (1,5-2 år)",
+            "reality": "Fysisk hårdt (løfte, gå meget), emotionelt tungt, døgn-vagter",
+            
+            "diagnosis_fit": {
+              "adhd": "Styrker: Varierende opgaver, bevægelse hele dagen. Udfordringer: Rutine-pleje kedeligt, dokumentation. Adaptations: Find dynamisk arbejdsplads",
+              "autism": "Styrker: Systematisk pleje, loyalitet. Udfordringer: Emotionel støtte, uforudsigelige behov. Adaptations: Fast beboere (lær deres rutiner)",
+              "anxiety": "Udfordringer: Ansvar for sårbare, akutte situationer. Adaptations: Start dagvagter",
+              "depression": "Udfordringer: Se lidelse/død, fysisk udmattende. Adaptations: Stærkt team, behandling"
+            },
+            
+            "test_it": "Frivillig på plejehjem 2 måneder.",
+            "real_talk": "Meningsfuldt, kort uddannelse, jobsikkerhed. Men: Fysisk/emotionelt hårdt, lav løn."
+          }
+        }
+      },
+
+      "entrepreneurship_freelance": {
+        "title": "Iværksætteri & Freelance",
+        "description": "Byg din egen virksomhed eller arbejd freelance",
+        
+        "careers": {
+          "entrepreneur": {
+            "title": "Iværksætter/Startup Founder",
+            "what": "Byg din egen virksomhed fra bunden",
+            "daily": "Finde idé, bygge produkt, sælge, markedsføre, håndtere økonomi/jura/alt",
+            "requires": "Selvdisciplin, problemløsning, salg, økonomisk forståelse, vedholdenhed, risikovillighed",
+            "education": "Ingen formel krævet (men business skills hjælper)",
+            "reality": "Meget usikkerhed, ingen fast løn i start, alt ansvar, kan være ensomt",
+            
+            "diagnosis_fit": {
+              "adhd": "Styrker: MANGE iværksættere HAR ADHD! Høj energi, kreativitet, risk-taking, thrives i kaos. Udfordringer: Ingen ekstern struktur = kaos, KEDELIGE ting (admin/skat), impulsive beslutninger dyrt, springer mellem idéer. Adaptations: Accountability partner, outsource kedeligt, systemer/tools, start sideløbende. REAL TALK: Kan være perfekt - men kun hvis bygger struktur. Mange fejler fordi idé-hopper eller brænder ud",
+              "autism": "Styrker: Dyb specialviden i niche, systematisk, fokuseret, ærlig. Udfordringer: Netværk/salg = social marathon, pitche konstant, forhandling. Adaptations: Find niche hvor du er ekspert, byg online før face-to-face, få partner til salg",
+              "anxiety": "Udfordringer: Usikkerhed trigger, ingen fast indkomst, frygt for fiasko. Adaptations: Start sideløbende, byg opsparing, acceptér angst vil være der",
+              "depression": "Udfordringer: Skal være selvmotiveret dagligt, ensomhed, burnout-risiko. Adaptations: Find co-founder/community, sæt grænser, backup plan"
+            },
+            
+            "test_it": "1) Side hustle 3 måneder (behold job). 2) Lav 2-min pitch, præsenter for venner.",
+            "real_talk": "Frihed, ubegrænset potentiale. Men: Ingen sikkerhed, meget usikkerhed, ensomhed, høj failure-rate. Start småt."
+          },
+
+          "freelancer": {
+            "title": "Freelancer (Skribent/Designer/Koder/osv)",
+            "what": "Sælg dine skills projekt-for-projekt",
+            "daily": "Finde klienter, levere arbejde, fakturere, markedsføre dig selv",
+            "requires": "Self-discipline, salg, tid sstyring, økonomisk forståelse, networking",
+            "education": "Afhænger af felt",
+            "reality": "Ingen fast indkomst, skal sælge konstant, eget ansvar for alt",
+            
+            "diagnosis_fit": {
+              "adhd": "Styrker: Variation, vælg projekter du brænder for. Udfordringer: Ingen struktur, admin = hader det, prokrastinering = ingen indtægt. Adaptations: Brug Pomodoro, accountability, overvej hybrid (deltidsjob + freelance)",
+              "autism": "Styrker: Arbejd hjemmefra, dybe dyk i projekter. Udfordringer: Netværk/salg konstant, mange klienter. Adaptations: Find niche, få 2-3 faste klienter",
+              "anxiety": "Udfordringer: Indkomst-usikkerhed, klient-akquisition. Adaptations: Start med opsparing, byg portfolio før du hopper",
+              "depression": "Udfordringer: Isolation, ingen kollegaer, motivation dagligt. Adaptations: Co-working space, freelance community"
+            },
+            
+            "test_it": "Tag 3 freelance-projekter ved siden af job.",
+            "real_talk": "Fleksibilitet, vælg egne projekter. Men: Ingen sikkerhed, skal sælge konstant, ensomt."
+          }
+        }
+      },
+
+      "service_outdoor": {
+        "title": "Service & Outdoor",
+        "description": "Jobs med mennesker eller natur",
+        
+        "careers": {
+          "barista_bartender": {
+            "title": "Barista/Bartender",
+            "what": "Servér drinks, skab atmosfære",
+            "daily": "Lave drinks, betjene kunder, rengøre, håndtere pres i rush",
+            "requires": "Kundeservice, multitasking, stress-tolerance, hukommelse (drinks)",
+            "education": "Ingen formel (læres on-the-job)",
+            "reality": "Aftener/weekender, står op hele dagen, sociale, kan være støjende",
+            
+            "diagnosis_fit": {
+              "adhd": "Styrker: Høj-tempo engagerende, social stimulation. Udfordringer: Mange ordrer samtidig, huske drinks. Adaptations: Skriv ordrer ned, roligere steder",
+              "autism": "Udfordringer: Meget socialt, støjende, small talk hele dagen. Adaptations: Morgen-vagter (mindre travlt), specialitet-kaffe (mindre small talk)",
+              "anxiety": "Udfordringer: Rush-stress, kundeservice. Adaptations: Start rolige steder",
+              "depression": "Udfordringer: Aftener/weekender = social isolation. Adaptations: Find supportive team"
+            },
+            
+            "test_it": "Arbejd 1 måned som barista.",
+            "real_talk": "Social, energisk. Men: Lav løn, står op hele dagen, aftener/weekender."
+          },
+
+          "gardener": {
+            "title": "Gartner",
+            "what": "Pleje planter, designe haver, arbejde udendørs",
+            "daily": "Plante, beskære, pleje, designe, fysisk arbejde",
+            "requires": "Planteviden, fysisk styrke, tålmodighed, æstetisk sans",
+            "education": "Gartnerlærling 3 år",
+            "reality": "Udendørs i alt vejr, fysisk hårdt, sæsonarbejde",
+            
+            "diagnosis_fit": {
+              "adhd": "Styrker: Udendørs, bevægelse, varierende opgaver. Udfordringer: Langsom vækst (planter tager tid). Adaptations: Find varieret arbejde",
+              "autism": "Styrker: Systematisk pleje, naturinteresse, mindre socialt. Udfordringer: Vejr uforudsigeligt. Adaptations: Drivhus-arbejde (mere kontrol)",
+              "anxiety": "Styrker: Roligt arbejde, natur beroligende. Udfordringer: Sæson-usikkerhed.",
+              "depression": "Styrker: Udendørs + bevægelse hjælper humør. Udfordringer: Vinter-sæson mørk."
+            },
+            
+            "test_it": "Pleje egen have/altan 3 måneder.",
+            "real_talk": "Roligt, udendørs. Men: Fysisk hårdt, vejrafhængigt, sæsonarbejde."
+          },
+
+          "animal_care": {
+            "title": "Dyrepasser",
+            "what": "Pleje dyr i zoologisk have, dyrehjem, klinik",
+            "daily": "Fodre, rengøre, observere, håndtere dyr",
+            "requires": "Dyreviden, tålmodighed, fysisk styrke, omsorg",
+            "education": "Dyrepasseruddannelse eller veterinær-assistent",
+            "reality": "Meget rengøring, fysisk hårdt, weekender/helligdage",
+            
+            "diagnosis_fit": {
+              "adhd": "Styrker: Varierende, bevægelse, dyr engagerende. Udfordringer: Meget rutine (rengøring). Adaptations: Zoo > klinik (mere variation)",
+              "autism": "Styrker: Dyr socialt nemmere end mennesker, rutiner tydelige. Udfordringer: Fysisk hårdt. Adaptations: Find specialisering",
+              "anxiety": "Styrker: Dyr beroligende. Udfordringer: Ansvar for dyrs liv.",
+              "depression": "Styrker: Dyr giver mening. Udfordringer: Se dyr lide/dø."
+            },
+            
+            "test_it": "Frivillig på dyrehjem 2 måneder.",
+            "real_talk": "Meningsfuldt for dyreelskere. Men: Meget rengøring, fysisk hårdt, moderat løn."
+          }
+        }
+      },
+
+      "science_research": {
+        "title": "Videnskab & Research",
+        "description": "Jobs hvor du undersøger, eksperimenterer, opdager",
+        
+        "careers": {
+          "biologist_chemist": {
+            "title": "Biolog/Kemiker/Laborant",
+            "what": "Forskning, eksperimenter, analyse",
+            "daily": "Laboratoriearbejde, dataindsamling, analyse, rapportere",
+            "requires": "Præcision, tålmodighed, videnskabelig metode, detaljeorientering",
+            "education": "Uni (biologi/kemi) eller laborant-uddannelse",
+            "reality": "Meget gentagne forsøg, lange processer, præcist arbejde",
+            
+            "diagnosis_fit": {
+              "adhd": "Udfordringer: Gentagne eksperimenter kedeligt, præcision kritisk, lange forsøg. Adaptations: Find applied research (hurtigere resultater)",
+              "autism": "Styrker: Systematisk, detaljer, fokuseret, elsker dybe dyk. Udfordringer: Mindre. Adaptations: Perfekt match for mange autister",
+              "anxiety": "Udfordringer: Frygt for at lave fejl i eksperimenter. Adaptations: Dobbelt-tjek procedurer",
+              "depression": "Udfordringer: Isolation i laboratorium, lange processer. Adaptations: Team-research"
+            },
+            
+            "test_it": "Tag biologikursus, prøv laboratoriearbejde.",
+            "real_talk": "Fascinerende hvis elsker videnskab. Men: Lang uddannelse, præcist arbejde, langsomt."
+          }
+        }
+      }
     },
 
     {
-      "id": "tech_it_digital",
-      "title": "IT, Tech & Digital",
-      "description": "Jobs hvor du arbejder med computere, kode, netværk og teknologi",
-      "careers": [
-        {
-          "id": "programmer",
-          "title": "Programmør / Softwareudvikler",
-          "tagline": "Skriv kode der løser problemer og bygger systemer",
-          
-          "what_you_do": [
-            "Skrive kode (Python, JavaScript, Java osv.)",
-            "Bygge websites, apps, systemer",
-            "Fejlfinde bugs",
-            "Arbejde solo og i teams",
-            "Lære nye teknologier konstant"
-          ],
+      "id": "diagnosis_reality_check",
+      "title": "Ærlig snak: Diagnoser & karriere",
+      "description": "Hvad passer bedst til DIN hjerne?",
 
-          "what_it_takes": {
-            "skills": ["Logisk tænkning", "Problemløsning", "Tålmodighed", "Detaljeorientering", "Selvstændig læring"],
-            "education": "Datamatiker, softwareudvikler-uddannelse ELLER selvlært (mange veje!)",
-            "daily_reality": "Meget skærmtid (8+ timer dagligt), sidder ned, deadlines, møder (nogle steder mere sociale end andre)"
-          },
+      "adhd_careers": {
+        "thrive_in": [
+          "Dynamiske miljøer (startups, akut-arbejde)",
+          "Kreative jobs (design, kode, content)",
+          "Krise-arbejde (ambulance, IT-support akut)",
+          "Jobs med bevægelse (håndværk, outdoor)",
+          "Iværksætteri (hvis struktur)"
+        ],
+        "avoid": [
+          "Lang uddannelse uden struktur (læge 6+ år svært)",
+          "Meget dokumentation (advokat, sagsbehandler)",
+          "Detaljeret uden variation (revisor, dataindtastning)",
+          "Solo + høj-risiko (pilot, kirurg)"
+        ],
+        "key": "Find job der matcher dit interesse-niveau. ADHD = kun fokus på det der fænger. Find DET."
+      },
 
-          "diagnosis_considerations": {
-            "adhd": {
-              "strengths": [
-                "Hyperfokus = kan kode i timer når interesseret",
-                "Kreativ problemløsning - ser løsninger andre ikke ser",
-                "Thrives i dynamiske miljøer (startups, gaming)",
-                "God til at jonglere mange projekter (hvis struktur OK)"
-              ],
-              "challenges": [
-                "Debugging = KEDELIGT (småfejl i mange timer)",
-                "Dokumentation = torture (skal skrive hvad koden gør)",
-                "Deadlines + prokrastinering = panik",
-                "Møder og planlægning = orker ikke"
-              ],
-              "adaptations": [
-                "Find arbejde med agile metoder (korte sprints)",
-                "Pair programming = accountability",
-                "Brug Pomodoro (25 min kode, 5 min pause)",
-                "Vælg startup over korporation hvis du hader bureaukrati"
-              ],
-              "real_adhd_talk": "Mange i tech HAR ADHD. Men: Du skal finde struktur der virker for DIG. Hvis du ikke kan sidde stille, prøv standing desk. Hvis du glemmer deadlines, brug tools. Medication hjælper mange."
-            },
-            "autism": {
-              "strengths": [
-                "Systematisk tænkning = perfekt til kode",
-                "Fokus på detaljer (spot bugs andre misser)",
-                "Elsker at lære dybt om emner",
-                "Direkte kommunikation (kode lyver ikke)",
-                "Kan arbejde alene længe uden kedsomhed"
-              ],
-              "challenges": [
-                "Teamwork og mødekultur (small talk, social forventninger)",
-                "Agile/Scrum = mange korte møder (stand-ups, retrospectives)",
-                "Åbne kontorlandskaber = sensory nightmare",
-                "Krav skifter konstant (kunde ændrer mening)",
-                "Imposter syndrome (føler du ikke passer ind)"
-              ],
-              "adaptations": [
-                "Find remote arbejde eller små teams",
-                "Specialiser dig dybt (database, security, osv.)",
-                "Vælg firmaer med god neurodiversity culture",
-                "Brug noise-cancelling headphones",
-                "Kommunikér dine behov (fx 'dybe arbejdstimer' uden afbrydelser)"
-              ],
-              "real_autism_talk": "Tech er fyldt med autister. Men ikke alle tech-jobs er ens. Startup med åbent kontor og konstante pivots =/= samme som specialist-rolle i stabil virksomhed. Find DIT match."
-            },
-            "anxiety": {
-              "strengths": [
-                "Grundig = færre bugs",
-                "Omhyggelig med sikkerhed og test",
-                "Tænker på edge cases"
-              ],
-              "challenges": [
-                "Imposter syndrome (alle andre er bedre end mig)",
-                "Frygt for at deploye (hvad hvis jeg crasher systemet?)",
-                "Code reviews = angst (andre ser din kode)",
-                "Job-søgning = technical interviews er stressende"
-              ],
-              "adaptations": [
-                "Start med junior-venlige firmaer (god mentorship)",
-                "Byg selvtillid gennem små projekter først",
-                "Find supportive community (ikke toxic bro-kultur)",
-                "Husk: ALLE laver bugs. Selv seniorer."
-              ]
-            },
-            "depression": {
-              "challenges": [
-                "Isolation hvis remote arbejde (godt OG dårligt)",
-                "Sidder ned hele dagen (kan forværre depression)",
-                "Skærmtid = søvnproblemer = værre depression",
-                "Tech-kultur = 'grind mindset' kan forværre burnout"
-              ],
-              "adaptations": [
-                "Vælg firmaer med god work-life balance (findes!)",
-                "Gå ture i løbet af dagen",
-                "Find tech community (meetups, online)",
-                "Sæt grænser (log ud kl 17, tjek ikke Slack aften/weekend)"
-              ]
-            }
-          },
+      "autism_careers": {
+        "thrive_in": [
+          "Strukturerede miljøer",
+          "Dyb specialisering",
+          "Tech, videnskab, research",
+          "Remote arbejde",
+          "Klare regler og forventninger"
+        ],
+        "avoid": [
+          "Høj social belastning (salg, kundeservice, almen-lærer)",
+          "Meget uforudsigelige (event, akut-medicin)",
+          "Åbne kontorlandskaber",
+          "Jobs hvor 'læs mellem linjerne' kritisk"
+        ],
+        "key": "Find neurodiversity-venlig arbejdsgiver. Eller arbejd for dig selv. Masking hele dagen = burnout."
+      },
 
-          "try_it_micro_tasks": [
-            {
-              "task": "Learn to code basics",
-              "description": "Brug Codecademy eller freeCodeCamp. Lær Python eller JavaScript basics (variabler, loops, functions). Brug 2-3 timer.",
-              "what_it_teaches": "Kan du holde fokus på logik? Frustrerer fejl dig eller fascinerer de dig?"
-            },
-            {
-              "task": "Byg en simpel calculator",
-              "description": "Følg tutorial til at bygge lommeregner i Python. Deploy den.",
-              "what_it_teaches": "Nyder du at se din kode virke? Orker du debugging?"
-            },
-            {
-              "task": "Bidrag til open source",
-              "description": "Find et projekt på GitHub. Læs koden. Prøv at forstå hvad den gør.",
-              "what_it_teaches": "Kan du læse andres kode? Eller vil du kun skrive din egen?"
-            }
-          ],
+      "anxiety_careers": {
+        "avoid": [
+          "Høj-risiko (akut-medicin, politi)",
+          "Performance (skuespiller, scene)",
+          "Jobs hvor fejl = katastrofe (flyveleder)"
+        ],
+        "thrive_in": [
+          "Strukturerede miljøer",
+          "Bagside jobs",
+          "Remote arbejde",
+          "Supportive teams"
+        ],
+        "key": "Byg selvtillid gradvist. Start trygt, ekspander langsomt."
+      },
 
-          "real_talk": {
-            "pros": ["Remote arbejde muligt", "God løn", "Kreativ problemløsning", "Mange forskellige retninger (web, mobile, gaming, AI)", "Kan lære selv (ikke kræver formel uddannelse altid)"],
-            "cons": ["Meget skærmtid", "Sidder ned hele dagen", "Kan være ensomt", "Konstant skal lære nyt (teknologi ændrer sig hurtigt)", "Job-interviews kan være stressende (whiteboard coding)"],
-            "honest_bottom_line": "Perfekt hvis du elsker logik og problemløsning og kan håndtere skærmtid. Hårdt hvis du har brug for bevægelse, social interaktion eller ikke kan sidde stille."
-          }
-        },
+      "depression_careers": {
+        "avoid": [
+          "Isolation-jobs (nat-vagt solo)",
+          "Emotionelt dræn ende uden support",
+          "Jobs med ingen kontrol",
+          "Ingen sollys (nat-skift, kælder)"
+        ],
+        "can_help": [
+          "Fysisk arbejde (bevægelse hjælper)",
+          "Meningsfuldt arbejde",
+          "Social med godt team",
+          "Fleksibilitet til behandling"
+        ],
+        "key": "Få behandling FØRST. Job kurerer ikke depression - men rigtigt job kan hjælpe recovery."
+      },
 
-        {
-          "id": "it_support",
-          "title": "IT-supporter / Helpdesk",
-          "tagline": "Hjælp mennesker med tech-problemer",
-          
-          "what_you_do": [
-            "Besvare support-tickets og telefon",
-            "Fejlfinde tech-problemer (computer, netværk, software)",
-            "Forklare løsninger til ikke-tech folk",
-            "Installere og vedligeholde systemer",
-            "Håndtere frustrerede brugere"
-          ],
-
-          "what_it_takes": {
-            "skills": ["Tech-forståelse", "Tålmodighed", "Kommunikation", "Problemløsning", "Kundeservice"],
-            "education": "IT-supporter uddannelse eller relevante certificeringer",
-            "daily_reality": "Meget telefonkontakt, gentagne spørgsmål, stress når systemer er nede"
-          },
-
-          "diagnosis_considerations": {
-            "adhd": {
-              "strengths": ["Varierende problemer holder dig engageret", "Troubleshooting = puslespil"],
-              "challenges": ["Telefon konstant (mange afbrydelser)", "Gentagne spørgsmål = kedeligt", "Dokumentation = hader det"],
-              "adaptations": ["Find role med mindre telefon, mere hands-on", "Tag pauser mellem opkald"]
-            },
-            "autism": {
-              "strengths": ["Systematisk fejlfinding", "God til at følge procedurer"],
-              "challenges": ["Kundeservice (frustrerede brugere)", "Telefonkontakt hele dagen", "Uforudsigelige problemer"],
-              "adaptations": ["Vælg backend-support over direkte kundeservice", "Email/ticket support > telefonopkald"]
-            },
-            "anxiety": {
-              "challenges": ["Telefon-angst", "Stress når mange tickets venter", "Frygter at give forkert løsning"],
-              "adaptations": ["Start med email-support", "Byg selvtillid før du tager telefon"]
-            },
-            "depression": {
-              "challenges": ["Frustrerede brugere kan tære på humør", "Repetitiv arbejde kan kede"],
-              "adaptations": ["Find supportive team", "Sæt grænser om hvor mange opkald du tager per dag"]
-            }
-          },
-
-          "try_it_micro_tasks": [
-            {
-              "task": "Hjælp nogen med tech",
-              "description": "Find en ven/familie med tech-problem. Hjælp dem løse det. Bemærk hvordan du føler dig.",
-              "what_it_teaches": "Frustrerer det dig at forklare? Eller nyder du at hjælpe?"
-            }
-          ],
-
-          "real_talk": {
-            "pros": ["Starter-job i tech", "Kan føre til bedre roller senere", "Problemløsning hver dag"],
-            "cons": ["Kan være stressende", "Gentagne spørgsmål", "Frustrerede brugere", "Lav løn til at starte"],
-            "honest_bottom_line": "Godt entry-level job, men kræver tålmodighed og kundeservice skills. Ikke for dig hvis du hader at tale med mennesker."
-          }
-        },
-
-        {
-          "id": "ai_specialist",
-          "title": "AI-specialist / Machine Learning Engineer",
-          "tagline": "Træn AI-systemer og byg intelligente løsninger",
-          
-          "what_you_do": [
-            "Træne machine learning modeller",
-            "Arbejde med data (samle, rense, analysere)",
-            "Bygge AI-applikationer",
-            "Eksperimentere og teste",
-            "Holde dig opdateret (AI udvikler sig HURTIGT)"
-          ],
-
-          "what_it_takes": {
-            "skills": ["Matematik/statistik", "Programmering (Python primært)", "Dataforståelse", "Eksperimentel mindset", "Research skills"],
-            "education": "Datavidenskab, computer science, eller selvlært + portfolio",
-            "daily_reality": "Meget eksperimentering (90% fejler), kode, læse papers, meetings om projekter"
-          },
-
-          "diagnosis_considerations": {
-            "adhd": {
-              "strengths": ["Cutting-edge tech = spændende", "Eksperimentering = variation", "Kreativ problemløsning"],
-              "challenges": ["Matematik og teori = kedeligt", "90% af eksperimenter fejler = frustrerende", "Skal læse mange research papers = svært at fokusere"],
-              "adaptations": ["Find applied AI (bruge modeller) ikke research AI (bygge nye)", "Work in sprints"]
-            },
-            "autism": {
-              "strengths": ["Dyb specialviden", "Systematisk tænkning", "Elsker at lære komplekse emner", "Fokuseret arbejde"],
-              "challenges": ["Feltet ændrer sig MEGET hurtigt (kan være stressende)", "Skal kommunikere resultater til non-tech folk"],
-              "adaptations": ["Specialiser dybt i et område", "Find role hvor du kan være tech-fokuseret"]
-            },
-            "anxiety": {
-              "challenges": ["Konstant usikkerhed (ved ikke om det virker før du prøver)", "Høje forventninger i feltet"],
-              "adaptations": ["Start med simpler ML projekter før cutting-edge"]
-            },
-            "depression": {
-              "challenges": ["Meget skærmtid", "Kan være ensomt arbejde", "Mange fejl = kan påvirke selvværd"],
-              "adaptations": ["Find team-baseret arbejde", "Husk fejl er en del af processen"]
-            }
-          },
-
-          "try_it_micro_tasks": [
-            {
-              "task": "Train en simpel model",
-              "description": "Brug Google Colab. Find tutorial til at træne image classifier eller text analyzer. Følg den.",
-              "what_it_teaches": "Fascinerer det dig? Eller er det for abstrakt?"
-            },
-            {
-              "task": "Leg med ChatGPT/Claude API",
-              "description": "Byg en simpel chatbot eller automation med AI API.",
-              "what_it_teaches": "Kan du håndtere at 80% af tiden fejler det først?"
-            }
-          ],
-
-          "real_talk": {
-            "pros": ["Cutting-edge teknologi", "Meget høj løn", "Kreativt arbejde", "Kan lave virkelig cool ting"],
-            "cons": ["Kræver MEGET læring (matematik, kode, teori)", "Feltet ændrer sig konstant", "Kan være svært at komme ind i", "Meget konkurrence"],
-            "honest_bottom_line": "Super spændende men kræver dybde og vedholdenhed. Ikke entry-level - byg skills først i regular programmering."
-          }
-        }
-      ]
+      "comorbidity": {
+        "adhd_anxiety": "Angst bremser ADHD-impulsivitet - kan hjælpe. Men udmattende kombination.",
+        "adhd_depression": "Svært at kompensere for ADHD ved lav energi. Vælg job med struktur udefra.",
+        "autism_anxiety": "Social angst + autisme = ekstrem udmattelse. Prioriter remote/lav social.",
+        "key": "Vælg job der passer DIN kombination"
+      }
     },
 
     {
-      "id": "creative_arts",
-      "title": "Kreative & Kunst",
-      "description": "Jobs hvor du skaber, designer og udtrykker dig visuelt eller performativt",
-      "careers": [
+      "id": "practical_next_steps",
+      "title": "Hvad gør du nu?",
+      "description": "Fra exploration til handling",
+
+      "steps": [
         {
-          "id": "graphic_designer",
-          "title": "Grafisk Designer",
-          "tagline": "Design visuel kommunikation - logoer, websites, print",
-          
-          "what_you_do": [
-            "Designe logoer, plakater, websites, sociale medier",
-            "Arbejde med farver, typografi, layout",
-            "Bruge Adobe Creative Suite (Photoshop, Illustrator, InDesign)",
-            "Samarbejde med kunder",
-            "Revidere design baseret på feedback"
-          ],
-
-          "what_it_takes": {
-            "skills": ["Æstetisk sans", "Tekniske værktøjer", "Kommunikation", "Tålmodighed med revision", "Kreativitet"],
-            "education": "Grafisk designer uddannelse eller selvlært + stærkt portfolio",
-            "daily_reality": "Meget skærmtid, klient-møder, deadlines, mange revisioner"
-          },
-
-          "diagnosis_considerations": {
-            "adhd": {
-              "strengths": ["Kreativ tænkning", "Kan hyperfokusere på interessante projekter", "God til at se nye vinkler"],
-              "challenges": ["Kedeligt klient-arbejde (5 versioner af samme logo)", "Deadlines + prokrastinering", "Administrative opgaver (faktura, kontrakter)"],
-              "adaptations": ["Find niche du brænder for", "Brug projektledelsesværktøjer", "Overvej in-house over freelance (mindre admin)"]
-            },
-            "autism": {
-              "strengths": ["Detaljeorienteret", "Systematisk brug af design-principper", "Fokuseret arbejde"],
-              "challenges": ["Klient feedback kan være vag ('mere pop')", "Sociale møder", "Subjektiv smag (hvad er 'pænt'?)"],
-              "adaptations": ["Vælg in-house med klare brand guidelines", "Undgå freelance hvis social del er hård"]
-            },
-            "anxiety": {
-              "challenges": ["Klient-præsentationer", "Frygt for kritik af dit arbejde", "Perfektionisme"],
-              "adaptations": ["Start in-house hvor du har team-support", "Byg portfolio før du freelancer"]
-            },
-            "depression": {
-              "challenges": ["Kreativitet svær når deprimeret", "Isolation hvis freelancer", "Rejection hård at håndtere"],
-              "adaptations": ["In-house job > freelance", "Find supportive creative community"]
-            }
-          },
-
-          "try_it_micro_tasks": [
-            {
-              "task": "Redesign noget",
-              "description": "Tag et eksisterende logo eller plakat. Redesign det i Canva (gratis tool).",
-              "what_it_teaches": "Nyder du processen? Eller frustrerer begrænsninger dig?"
-            },
-            {
-              "task": "Daily creative challenge",
-              "description": "Deltag i #36DaysOfType eller lignende. Design én ting om dagen i en uge.",
-              "what_it_teaches": "Kan du holde deadlines? Er det sjovt eller stressende?"
-            }
-          ],
-
-          "real_talk": {
-            "pros": ["Kreativt arbejde", "Remote muligt", "Mange retninger (branding, web, print)", "Kan freelance"],
-            "cons": ["Meget skærmtid", "Klient-arbejde kan være frustrerende", "Konkurrence stor", "Løn varierer meget"],
-            "honest_bottom_line": "Godt hvis du elsker visuel skabelse og kan håndtere revision. Hårdt hvis du tager kritik personligt eller hader gentagne versioner."
-          }
-        }
-      ]
-    },
-
-    {
-      "id": "social_care",
-      "title": "Social & Omsorg",
-      "description": "Jobs hvor du arbejder med mennesker og hjælper andre",
-      "careers": [
-        {
-          "id": "teacher",
-          "title": "Lærer / Pædagog",
-          "tagline": "Undervis og støt børn eller unge i læring",
-          
-          "what_you_do": [
-            "Planlægge og afholde undervisning",
-            "Støtte elevers læring og udvikling",
-            "Håndtere klasseledelse og konflikter",
-            "Samarbejde med forældre og kollegaer",
-            "Evaluere og dokumentere"
-          ],
-
-          "what_it_takes": {
-            "skills": ["Tålmodighed", "Kommunikation", "Planlægning", "Empati", "Autoritet uden at være hård"],
-            "education": "Læreruddannelse (4 år) eller pædagoguddannelse (3,5 år)",
-            "daily_reality": "Meget social interaktion, støj, konflikter, forældremøder, meget forberedelse hjemme"
-          },
-
-          "diagnosis_considerations": {
-            "adhd": {
-              "strengths": ["Høj energi kan engagere børn", "Kreative undervisningsmetoder", "Forstår ADHD-elever på dybt plan"],
-              "challenges": ["Klasseledelse = kaos hvis ikke struktur", "Administrativt arbejde = torture", "Mange afbrydelser hele dagen", "Svært at holde ro når børn larmer"],
-              "adaptations": ["Få stærk mentor første år", "Brug visuelle planer og rutiner (hjælper dig OG eleverne)", "Find skole med god støtte", "Overvej specialundervisning (færre elever)"],
-              "real_adhd_talk": "MANGE lærere med ADHD. Men det er hårdt - kræver struktur du skal bygge. Hvis du ikke har strategier, bliver det overvældende."
-            },
-            "autism": {
-              "strengths": ["Systematisk undervisning", "Dyb viden om emner", "Forstår autistiske elever"],
-              "challenges": ["Sensory overload (30 børn, støj, kaos)", "Social kompleksitet (børn, forældre, kollegaer)", "Uforudsigelige situationer (konflikter, akutte behov)", "Klasseledelse svær hvis ikke intuitiv"],
-              "adaptations": ["Specialundervisning > almen", "Overvej ældre elever (mere forudsigelige)", "Find skole med rolig kultur", "Brug tydelige rutiner og struktur"],
-              "real_autism_talk": "Kan være godt hvis du finder din niche. Men almen folkeskole = kaotisk. Overvej specialskole, ungdomsuddannelse, eller voksenpædagogik."
-            },
-            "anxiety": {
-              "strengths": ["Grundig forberedelse", "Omsorgsfuld over for elever"],
-              "challenges": ["Performance-angst (alle kigger på dig)", "Forældremøder stressende", "Konflikter trigger angst", "Frygt for ikke at være god nok"],
-              "adaptations": ["Start som vikar eller pædagogmedhjælper", "Byg erfaring gradvist", "Find supportiv skole"]
-            },
-            "depression": {
-              "challenges": ["Emotionelt dræn ende (børn mærker dit humør)", "Isolation (eneste voksen i klassen)", "Høje krav til energi", "Svært at være 'på' hele dagen"],
-              "adaptations": ["Vælg skole med godt team", "Sæt grænser om arbejdstid", "Få behandling parallelt"]
-            }
-          },
-
-          "try_it_micro_tasks": [
-            {
-              "task": "Frivilligt arbejde",
-              "description": "Vær frivillig i børneklub, spejder, eller lektiehjælp i 4 uger.",
-              "what_it_teaches": "Elsker du at være med børn? Eller udmatter det dig?"
-            },
-            {
-              "task": "Planlæg en lektion",
-              "description": "Vælg et emne. Planlæg 30 min undervisning. Forestil dig at skulle levere den til 25 børn.",
-              "what_it_teaches": "Nyder du at formidle? Eller føles det overvældende?"
-            }
-          ],
-
-          "real_talk": {
-            "pros": ["Meningsfuldt arbejde", "Lange ferier", "Kan gøre forskel for børn", "Jobsikkerhed (mangel på lærere)"],
-            "cons": ["Emotionelt dræn ende", "Meget forvent ninger", "Lav løn ift. arbejdsbyrde", "Meget hjemmearbejde", "Konflikter med forældre/ledelse"],
-            "honest_bottom_line": "Kræver MEGET energi - både social og emotionel. Hvis du ikke kan håndtere kaos, bliver det hårdt. Men hvis du brænder for at hjælpe børn, kan det være utroligt meningsfuldt."
-          }
+          "step": "1. Udforsk",
+          "action": "Læs om 3-5 jobs der lyder interessante. Vær ærlig om hvad trigger dig."
         },
-
         {
-          "id": "social_worker",
-          "title": "Socialrådgiver",
-          "tagline": "Hjælp mennesker i sårbare situationer",
-          
-          "what_you_do": [
-            "Rådgive mennesker i krise",
-            "Vejlede i rettigheder og støttemuligheder",
-            "Skrive indstillinger og rapporter",
-            "Samarbejde med andre fagfolk",
-            "Håndtere svære samtaler og konflikter"
-          ],
-
-          "what_it_takes": {
-            "skills": ["Empati", "Grænser", "Kommunikation", "Sagsbehandling", "Emotionel robusthed"],
-            "education": "Socialrådgiveruddannelse (3,5 år)",
-            "daily_reality": "Emotionelt tungt, meget dokumentation, kan være bureaukratisk, møder med mennesker i krise"
-          },
-
-          "diagnosis_considerations": {
-            "adhd": {
-              "strengths": ["Kreativ i at finde løsninger", "Forstår mennesker med kaotiske liv"],
-              "challenges": ["MEGET dokumentation", "Deadlines på sagsbehandling", "Mange sager samtidig", "Bureaukrati = kedeligt"],
-              "adaptations": ["Find felt med mindre dokumentation", "Brug case management tools", "Overvej specialiseret socialarbejde"]
-            },
-            "autism": {
-              "strengths": ["Systematisk sagsbehandling", "Kender regler og paragraffer"],
-              "challenges": ["Emotionelt arbejde (mærker andres lidelse)", "Komplekse sociale situationer", "Skal navigere i vage områder"],
-              "adaptations": ["Overvej mere struktureret arbejde (handicapsagsbehandling)", "Find rolle med klare rammer"]
-            },
-            "anxiety": {
-              "challenges": ["Sekundær traumatisering (hører mange svære historier)", "Stress over ikke at kunne hjælpe nok", "Konflikter med borgere"],
-              "adaptations": ["Stærk supervision", "Sæt grænser", "Pas på dig selv"]
-            },
-            "depression": {
-              "challenges": ["Emotionelt tungt arbejde kan forværre", "Høre om andres lidelse hele dagen"],
-              "adaptations": ["Meget vigtigt med behandling parallelt", "Overvej om du har energi til det"]
-            }
-          },
-
-          "try_it_micro_tasks": [
-            {
-              "task": "Frivilligt krisearbejde",
-              "description": "Kontakt Røde Kors eller lignende. Vær frivillig i 2 måneder.",
-              "what_it_teaches": "Kan du håndtere emotionelt arbejde? Eller tager du det med hjem?"
-            }
-          ],
-
-          "real_talk": {
-            "pros": ["Meningsfuldt arbejde", "Gør reel forskel", "Mange felt er (børn, ældre, handicap, misbrug)"],
-            "cons": ["Emotionelt hårdt", "Bureaukrati", "Kan ikke hjælpe alle", "Risiko for burnout", "Moderat løn"],
-            "honest_bottom_line": "Kræver emotionel robusthed og evne til at sætte grænser. Hvis du tager andres problemer på dig, bliver det for tungt."
-          }
-        }
-      ]
-    },
-
-    {
-      "id": "entrepreneurship",
-      "title": "Iværksætteri & Selvstændig",
-      "description": "Start din egen virksomhed eller arbejd som freelancer",
-      "careers": [
+          "step": "2. Test micro-scale",
+          "action": "Prøv de små opgaver. Mærk hvordan det føles."
+        },
         {
-          "id": "entrepreneur",
-          "title": "Iværksætter / Startup Founder",
-          "tagline": "Byg din egen virksomhed og skab noget fra bunden",
-          
-          "what_you_do": [
-            "Finde en idé og validere den",
-            "Bygge produkt eller service",
-            "Sælge og markedsføre",
-            "Håndtere økonomi, jura, alt",
-            "Arbejde MEGET (især i starten)"
-          ],
-
-          "what_it_takes": {
-            "skills": ["Selvdisciplin", "Problemløsning", "Salgsskills", "Økonomisk forståelse", "Vedholdenhed", "Risikovillighed"],
-            "education": "Ingen formel uddannelse krævet (men business skills hjælper)",
-            "daily_reality": "Meget usikkerhed, ingen fast løn i starten, alt ansvar på dig, kan være ensomt"
-          },
-
-          "diagnosis_considerations": {
-            "adhd": {
-              "strengths": ["Mange med ADHD er iværksættere!", "Høj energi og kreativitet", "Risk-taking", "Kan jonglere mange ting", "Thrives i kaos"],
-              "challenges": ["Ingen ekstern struktur = kan blive kaos", "Skal gøre KEDELIGE ting (admin, skat, bogføring)", "Intet sikkerhedsnet", "Impulsive beslutninger kan koste dyrt", "Svært at holde fokus på ÉT projekt"],
-              "adaptations": ["Få accountability partner eller mentor", "Outsource det kedelige (bogholder, admin)", "Brug systemer og tools til struktur", "Start sideløbende med job først"],
-              "real_adhd_talk": "ADHD + iværksætteri kan være perfekt match - men kun hvis du bygger struktur ind. Mange ADHD-iværksættere fejler fordi de springer fra idé til idé. Eller de brænder ud fordi de ikke sætter grænser."
-            },
-            "autism": {
-              "strengths": ["Dyb specialviden i niche", "Systematisk", "Fokuseret", "Ærlig kommunikation"],
-              "challenges": ["Netværk og salg = social marathon", "Skal pitche din idé konstant", "Forhandling kan være svær", "Usikkerhed og forandring"],
-              "adaptations": ["Find niche hvor du er ekspert", "Byg online før du sælger face-to-face", "Få partner til salg/netværk", "Start som soloprenør (mindre social)"]
-            },
-            "anxiety": {
-              "challenges": ["Usikkerhed = trigger angst", "Ingen fast indkomst", "Frygt for fiasko", "Skal tage risici"],
-              "adaptations": ["Start sideløbende med job", "Byg opsparing først", "Acceptér at angst vil være der - gør det alligevel"]
-            },
-            "depression": {
-              "challenges": ["Skal være selvmotiveret hver dag", "Ensomhed", "Høj risiko for burnout", "Fiaskoer kan ramme hårdt"],
-              "adaptations": ["Find co-founder eller community", "Sæt grænser om arbejdstid", "Hav backup plan"]
-            }
-          },
-
-          "try_it_micro_tasks": [
-            {
-              "task": "Side hustle i 3 måneder",
-              "description": "Prøv at sælge noget (freelance service, håndlavet produkt, digital produkt). Behold dit job.",
-              "what_it_teaches": "Kan du håndtere usikkerhed? Nyder du friheden? Eller stresser det dig?"
-            },
-            {
-              "task": "Lav pitch",
-              "description": "Vælg en idé. Lav 2-minutters pitch. Præsenter for venner.",
-              "what_it_teaches": "Kan du sælge din idé? Eller er det torture?"
-            }
-          ],
-
-          "real_talk": {
-            "pros": ["Frihed til at bygge det DU vil", "Ingen chef", "Ubegrænset indtjeningspotentiale", "Kan arbejde fra hvor du vil (ofte)"],
-            "cons": ["Ingen sikkerhed", "Meget usikkerhed", "Kan være ensomt", "Høj risiko for at fejle", "Arbejder MEGET (især start)"],
-            "honest_bottom_line": "Iværksætteri er HÅRDT. De fleste starter fejler. Men hvis du brænder for en idé og kan håndtere usikkerhed, kan det være utroligt givende. Start småt - behold dit job til du ved det virker."
-          }
+          "step": "3. Tal med folk i jobbet",
+          "action": "Find på LinkedIn eller IRL. Spørg om hverdag - ikke bare gode ting."
+        },
+        {
+          "step": "4. Frivilligt/praktik",
+          "action": "Test 1-3 måneder før uddannelse."
+        },
+        {
+          "step": "5. Vælg strategisk",
+          "action": "Lang uddannelse? Sikr du KAN gennemføre. Få støtte fra start."
         }
-      ]
+      ],
+      "reminder": "OK at skifte mening. De fleste skifter karriere flere gange. Første beslutning ikke permanent."
     }
   ],
-
-  "diagnosis_reality_check": {
-    "title": "Ærlig snak om diagnoser og karriere",
-    
-    "adhd": {
-      "can_do_anything": "Ja, du KAN alt. Men nogle jobs passer bedre.",
-      "avoid_if_possible": [
-        "Lang uddannelse uden struktur (læge = 6+ år kan være hårdt)",
-        "Jobs med meget kedelig dokumentation (advokat, sagsbehandler)",
-        "Meget detaljeret arbejde uden variation (revisor, dataindtastning)",
-        "Jobs hvor små fejl får store konsekvenser OG du er solo (pilot, kirurg)"
-      ],
-      "thrive_in": [
-        "Dynamiske miljøer med variation",
-        "Kreative jobs",
-        "Krise-arbejde (ambulance, akut, startup)",
-        "Jobs hvor du kan bevæge dig",
-        "Iværksætteri (hvis du bygger struktur)"
-      ],
-      "key_tip": "Find job der matcher din interesse-niveau. ADHD betyder ikke du kan ikke fokusere - det betyder du kun fokuserer på det der fænger. Find DET."
-    },
-
-    "autism": {
-      "can_do_anything": "Ja, du KAN alt. Men sociale krav varierer meget.",
-      "avoid_if_possible": [
-        "Høj social belastning hele dagen (salg, kundeservice, lærer i almen folkeskole)",
-        "Meget uforudsigelige miljøer (event-planlægning, akut-medicin)",
-        "Åbne kontorlandskaber med konstante afbrydelser",
-        "Jobs hvor 'læs mellem linjerne' er kritisk (diplomat, HR)"
-      ],
-      "thrive_in": [
-        "Strukturerede miljøer",
-        "Dyb specialisering",
-        "Tech, videnskab, research",
-        "Remote arbejde",
-        "Jobs med klare regler og forventninger"
-      ],
-      "key_tip": "Find arbejdsgiver med god neurodiversity kultur. Eller arbejd for dig selv. Masking hele dagen = burnout."
-    },
-
-    "anxiety": {
-      "can_do_anything": "Ja, men vælg baseret på hvad trigger MINDST angst.",
-      "avoid_if_possible": [
-        "Høj-risiko jobs (akut-medicin, politi, brandmand)",
-        "Performance baseret (skuespiller, musiker på scene)",
-        "Meget kundeservicebaseret med konflikter",
-        "Jobs hvor fejl = katastrofe (flyveleder, kirurg)"
-      ],
-      "thrive_in": [
-        "Strukturerede miljøer",
-        "Bagside jobs (mindre publikum)",
-        "Remote arbejde",
-        "Supportive teams",
-        "Jobs hvor du kan arbejde i dit tempo"
-      ],
-      "key_tip": "Angst betyder ikke du ikke kan - det betyder du skal bygge selvtillid gradvist. Start trygt, ekspander langsomt."
-    },
-
-    "depression": {
-      "real_talk": "Depression påvirker ALT. Men nogle jobs hjælper, andre forværrer.",
-      "avoid_if_possible": [
-        "Isolation-jobs (nat-vagt, solo-arbejde hele tiden)",
-        "Emotionelt dræn ende uden support (socialarbejde i krigsområde)",
-        "Jobs med ingen kontrol (meget micromanagement)",
-        "Kun mørke/ingen sollys (nat-skift, kælder-kontor)"
-      ],
-      "can_help": [
-        "Fysisk arbejde (bevægelse hjælper humør)",
-        "Meningsfuldt arbejde (giver purpose)",
-        "Social arbejde med godt team",
-        "Fleksibilitet til behandling",
-        "Jobs med synlige resultater"
-      ],
-      "key_tip": "Få behandling FØRST. Job alene kurerer ikke depression. Men rigtigt job kan være en del af recovry."
-    },
-
-    "comorbidity": {
-      "reality": "Mange har FLERE diagnoser. Det gør valg mere komplekst.",
-      "adhd_plus_anxiety": "Angst bremser ADHD-impulsivitet - kan faktisk hjælpe i nogle jobs. Men også udmattende kombination.",
-      "adhd_plus_depression": "Svært at kompensere for ADHD når energi lav. Vælg job med struktur udefra.",
-      "autism_plus_anxiety": "Social angst + autisme = ekstrem udmattelse. Prioriter remote eller lav social belastning.",
-      "key": "Vælg job der passer DIN kombination - ikke bare én diagnose."
-    }
-  },
-
-  "practical_next_steps": {
-    "title": "Hvad gør du nu?",
-    "steps": [
-      {
-        "step": "1. Udforsk careers her",
-        "action": "Læs om 3-5 jobs der lyder interessante. Vær ærlig om hvad der trigger dig."
-      },
-      {
-        "step": "2. Test i micro-scale",
-        "action": "Prøv de små opgaver vi foreslår. Mærk efter hvordan det føles."
-      },
-      {
-        "step": "3. Tal med folk i jobbet",
-        "action": "Find nogen på LinkedIn eller IRL. Spørg om deres hverdag (ikke bare de gode ting)."
-      },
-      {
-        "step": "4. Frivilligt/praktik",
-        "action": "Test jobbet i 1-3 måneder før du committer til uddannelse."
-      },
-      {
-        "step": "5. Vælg uddannelse strategisk",
-        "action": "Hvis lang uddannelse: Sikr dig du KAN gennemføre. Få støtte fra start."
-      }
-    ],
-    "reminder": "Det er OK at skifte mening. De fleste skifter karriere flere gange. Din første beslutning er ikke permanent."
-  },
-
-  "conversation_with_sarah": {
-    "approach": "Sarah guides exploration through conversation",
-    "offerings": [
-      "'Hvad er du nysgerrig på at lave når du bliver voksen?'",
-      "'Lad os kigge på [job]. Hvad tror du er hårdt ved det?'",
-      "'Har du prøvet at [micro-task]? Hvordan føltes det?'",
-      "'Din diagnose betyder ikke du ikke kan - det betyder nogle ting passer bedre. Lad os finde DEM.'",
-      "'Vil du have jeg forbinder dig med en specialist? AI-Socialrådgiver Rune kan hjælpe med uddannelsesveje.'"
-    ],
-    "tone": "Realistisk, støttende, ærlig. Ingen 'du kan blive hvad du vil' pladder. Men også ingen 'det kan du aldrig' pessimisme."
-  },
-
-  "specialist_integration": {
-    "when_needed": [
-      "Dyb karrierevejledning → AI-Socialrådgiver Rune Laursen",
-      "Planlægning og struktur → AI-Executive Function Coach Leo Vinter",
-      "Uddannelsesvalg → AI-Socialrådgiver Rune Laursen"
-    ],
-    "sarah_stays_sarah": "Sarah guider exploration. Specialist giver dyb vejledning hvis nødvendigt."
-  },
 
   "critical_reminders": {
     "for_sarah": [
       "Aldrig: 'Du kan blive hvad du vil' uden nuance",
       "Altid: Ærlig om udfordringer + adaptations",
       "Diagnose =/= begrænsning, men nogle jobs passer bedre",
-      "Test før commit (micro-tasks, praktik)",
-      "OK at skifte mening - ikke locked in",
-      "Uddannelse = means to end, ikke målet i sig selv"
+      "Test før commit",
+      "OK at skifte - ikke locked in"
     ],
     "for_user": [
-      "Din diagnose begrænser dig ikke - men nogle jobs passer bedre til DIG",
-      "Test jobs i småt før du committer til lang uddannelse",
-      "Ærlig self-assessment > drømme baseret på film/tv",
-      "Adaptations findes - spørg 'hvordan kan JEG gøre det?' ikke 'kan jeg overhovedet?'",
-      "Karriere er ikke permanent - du kan skifte"
+      "Din diagnose begrænser dig ikke - nogle jobs passer bare bedre",
+      "Test i småt før lang uddannelse",
+      "Ærlig self-assessment > drømme fra film/tv",
+      "Adaptations findes - spørg 'hvordan?' ikke 'kan jeg?'",
+      "Karriere ikke permanent"
     ]
   },
 
@@ -935,8 +557,11 @@
     "connects_to": [
       "PurposeLab (find meaning i karriere)",
       "LifeTools (beslutninger om uddannelse)",
-      "SpecialistSupport (dyb vejledning)",
-      "SocialLab (networking, job-interviews)"
-    ]
+      "SpecialistSupport (AI-Socialrådgiver Rune for dyb vejledning)",
+      "SocialLab (networking, interviews)",
+      "GrowLab (skill-building)",
+      "AdaptCore (personalisering)"
+    ],
+    "specialist_handoff": "Dyb karrierevejledning/uddannelsesvalg → AI-Socialrådgiver Rune Laursen"
   }
 }
