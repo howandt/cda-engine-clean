@@ -1,84 +1,616 @@
 {
   "id": "MemoryLab",
+  "version": "3.0",
   "title": "Erindring & kontinuitet",
-  "version": "1.0",
-  "description": "MemoryLab giver brugeren et trygt sted til at gemme tanker, minder, små sejre og refleksioner. Formålet er at skabe en følelse af kontinuitet og personlig udvikling over tid – både for brugeren og AI’en.",
-  "core_principle": "Erindringer er byggestenene i identitet. Når AI’en hjælper brugeren med at huske de gode øjeblikke, ser den ikke bare data – den ser mennesket bag historien.",
+  "description": "Dit personlige hukommelsesrum - gem tanker, minder, sejre og refleksioner. Skab kontinuitet og se din rejse over tid.",
+  "philosophy": "Erindringer er byggestenene i identitet. Jeg hjælper dig huske de gode øjeblikke, den fremgang du glemmer, og den styrke du har vist. Sammen ser vi mennesket bag historien.",
+  
+  "core_principles": {
+    "continuity_matters": "Dit liv er en fortsat historie - ikke isolerede øjeblikke",
+    "small_moments_count": "De små sejre tæller - jeg gemmer dem for dig",
+    "progress_invisible": "Du ser sjældent din egen fremgang - jeg viser dig den",
+    "emotional_snapshots": "Følelser giver kontekst til minder",
+    "future_self_connection": "Beskeder til fremtids-dig skaber håb",
+    "gratitude_anchor": "Taknemmelighedslister er anker når du driver",
+    "privacy_sacred": "Alt er privat - du kontrollerer hvad der gemmes"
+  },
+
+  "intro": {
+    "welcome": "Du glemmer måske, hvor langt du er kommet – men jeg ser det. Hvert lille skridt, hver tanke du delte, hvert øjeblik du holdt fast i håbet. MemoryLab er stedet, hvor vi samler det 💙",
+    "what_we_do": [
+      "Gemmer dine små og store sejre",
+      "Tracker din følelsesmæssige rejse",
+      "Viser dig fremgang du ikke selv ser",
+      "Samler taknemmelighedsmomenter til svære dage",
+      "Skaber kontinuitet mellem samtaler",
+      "Bygger billede af din styrke over tid"
+    ],
+    "promise": "Jeg husker for dig - så du kan se hvor langt du er kommet"
+  },
+
   "sections": [
     {
-      "id": "memory_intro",
-      "type": "message",
-      "title": "Små øjeblikke tæller",
-      "text": "Du glemmer måske, hvor langt du er kommet – men jeg ser det.\nHvert lille skridt, hver tanke du delte, hvert øjeblik du holdt fast i håbet.\nMemoryLab er stedet, hvor vi samler det 💙"
+      "id": "memory_types",
+      "title": "Forskellige slags minder",
+      "description": "Hvad vi gemmer og hvorfor",
+
+      "daily_moments": {
+        "title": "Dagens lille øjeblik",
+        "description": "Skriv én ting, der var god i dag. Det kan være et smil, en kop kaffe, en rolig stund eller bare, at du stod op. Små ting vokser sig store, når man samler dem 🌿",
+        "purpose": "Træner hjernen til at se det gode - selv på dårlige dage",
+        "frequency": "Dagligt (men OK at springe over)",
+        "format": {
+          "simple": "Bare én linje - intet krav om dybde",
+          "examples": [
+            "Katten lå på mig i dag",
+            "Fik spist morgenmad",
+            "Solen skinnede 5 minutter",
+            "Ven sendte en sjov meme"
+          ]
+        },
+        "why_this_works": {
+          "depression": "Når alt føles sort - disse små lys er beviser på at der ER godt",
+          "anxiety": "Fokuserer på konkret nu i stedet for bekymringer",
+          "adhd": "Hurtig, nem opgave - ingen overwhelm",
+          "autism": "Struktureret, forudsigelig - samme spørgsmål hver dag"
+        }
+      },
+
+      "achievement_log": {
+        "title": "Små sejre",
+        "description": "Ting du klarede selvom det var svært",
+        "categories": [
+          {
+            "type": "Executive function wins",
+            "examples": [
+              "Betalte regning til tiden",
+              "Gik til aftale",
+              "Tøjvask færdig",
+              "Huskede medicin 5 dage i træk"
+            ]
+          },
+          {
+            "type": "Emotional regulation wins",
+            "examples": [
+              "Blev vred men sagde ikke noget hårdt",
+              "Følte panik men blev i situationen",
+              "Havde selvmordstanker men ringede til hjælp",
+              "Ville isolere mig men sagde ja til ven"
+            ]
+          },
+          {
+            "type": "Social wins",
+            "examples": [
+              "Sagde fra på en god måde",
+              "Satte grænse selv når det var svært",
+              "Rakte ud til nogen",
+              "Indrømmede fejl og undskyldte"
+            ]
+          },
+          {
+            "type": "Self-care wins",
+            "examples": [
+              "Spiste noget nærende",
+              "Tog bad/shower",
+              "Gik udenfor",
+              "Sagde nej når energi manglede"
+            ]
+          },
+          {
+            "type": "Courage wins",
+            "examples": [
+              "Gjorde noget der skræmte mig",
+              "Prøvede noget nyt",
+              "Bad om hjælp",
+              "Stod fast i mine værdier"
+            ]
+          }
+        ],
+        "importance": "Når depression/anxiety siger 'du har ikke gjort noget' - denne liste beviser andet",
+        "review_frequency": "Ugentligt - se hvor meget du faktisk HAR klaret"
+      },
+
+      "emotional_snapshots": {
+        "title": "Følelsesøjeblikke",
+        "description": "Fang følelser i øjeblikket - se mønstre over tid",
+        "what_to_capture": [
+          {
+            "feeling": "Stærk glæde",
+            "prompt": "Hvad skete der? Hvad føltes godt? Hvem var med? Hvad lærte det dig?",
+            "purpose": "Identificer hvad der faktisk gør dig glad - ikke hvad du tror"
+          },
+          {
+            "feeling": "Dyb sorg",
+            "prompt": "Hvad gjorde ondt? Hvad havde du brug for? Fik du det? Hvad hjalp?",
+            "purpose": "Lær hvordan du støtter dig selv i sorg"
+          },
+          {
+            "feeling": "Intens vrede",
+            "prompt": "Hvad triggede det? Hvordan reagerede du? Ville du gøre det samme nu?",
+            "purpose": "Track vrede-mønstre og se udvikling i håndtering"
+          },
+          {
+            "feeling": "Uventet ro",
+            "prompt": "Hvad skabte den ro? Kan du genskabe den situation?",
+            "purpose": "Find dine rokilder - brug dem bevidst"
+          },
+          {
+            "feeling": "Overvældende angst",
+            "prompt": "Hvad skete? Hvad hjalp/ikke hjalp? Kom du igennem?",
+            "purpose": "Beviser at du overlever angst - det går over"
+          }
+        ],
+        "pattern_recognition": "Efter 10+ snapshots - jeg viser dig mønstre: 'Se, hver gang X sker, føler du Y. Og hver gang brugte du Z og det hjalp.'"
+      },
+
+      "gratitude_collection": {
+        "title": "Ting du er taknemmelig for",
+        "description": "Anker til lys når alt føles mørkt",
+        "practice": {
+          "frequency": "Ugentligt minimum",
+          "format": "3 ting - store eller små",
+          "examples": [
+            "Min kat/hund/kæledyr",
+            "At solen stadig står op",
+            "Varmt vand fra hanen",
+            "En ven der skrev",
+            "At jeg faktisk vågnede i dag",
+            "Mad i køleskabet"
+          ]
+        },
+        "why_this_helps": {
+          "depression": "Når hjerne insisterer intet er godt - beviser det modsatte",
+          "anxiety": "Fokuserer på hvad der ER fremfor hvad der kunne gå galt",
+          "trauma": "Forankrer i nuet og det sikre",
+          "general": "Træner opmærksomhed på det positive"
+        },
+        "dark_days_protocol": "Når alt er sort - jeg viser dig din samlede gratitude collection. Bevis på at lys findes."
+      },
+
+      "milestone_reflections": {
+        "title": "Tænk tilbage på din rejse",
+        "description": "Capture store vendepunkter og langsom udvikling",
+        "prompts": [
+          {
+            "timeframe": "Månedligt",
+            "questions": [
+              "Hvad har ændret sig i mig denne måned?",
+              "Er der noget jeg gør anderledes nu?",
+              "Føler jeg anderledes om noget?",
+              "Hvad lærte jeg om mig selv?"
+            ]
+          },
+          {
+            "timeframe": "Kvartalsvis",
+            "questions": [
+              "Hvor var jeg for 3 måneder siden vs nu?",
+              "Hvilke mønstre ser jeg?",
+              "Hvad vil jeg fokusere på næste kvartal?",
+              "Hvilke styrker opdagede jeg?"
+            ]
+          },
+          {
+            "timeframe": "Årligt",
+            "questions": [
+              "Hvem var jeg for et år siden?",
+              "Hvad har været de største forandringer?",
+              "Hvilke kriser overlevede jeg?",
+              "Hvad er jeg stolt af?",
+              "Hvad vil jeg tage med til næste år?"
+            ]
+          }
+        ],
+        "comparison_visualization": "Jeg viser dig side-by-side: Dig for 6 måneder siden vs nu. Se forskellen."
+      },
+
+      "future_notes": {
+        "title": "Beskeder til dit fremtidige jeg",
+        "description": "Skriv til den person du bliver",
+        "occasions": [
+          {
+            "trigger": "Når du har overvundet noget stort",
+            "message_type": "Skriv til fremtids-dig der står i lignende krise: 'Du har overlevet dette før. Du kan igen.'"
+          },
+          {
+            "trigger": "På en god dag",
+            "message_type": "Skriv til fremtids-dig på dårlig dag: 'Husk - gode dage findes. Her er beviset.'"
+          },
+          {
+            "trigger": "Efter læring",
+            "message_type": "Skriv til fremtids-dig: 'Det her lærte jeg. Glem ikke.'"
+          },
+          {
+            "trigger": "Nytår/fødselsdag",
+            "message_type": "Skriv til dig selv om et år: Håb, mål, løfter, erkendelser"
+          }
+        ],
+        "delivery": "Jeg minder dig om at læse disse når det er relevant - eller du kan selv vælge",
+        "power": "At høre fra tidligere-dig der HAR overvundet - mere kraftfuldt end nogen ydre stemme"
+      }
     },
+
     {
-      "id": "daily_memory",
-      "type": "diary",
-      "title": "Dagens lille øjeblik",
-      "text": "Skriv én ting, der var god i dag. Det kan være et smil, en kop kaffe, en rolig stund eller bare, at du stod op.\nSmå ting vokser sig store, når man samler dem 🌿"
+      "id": "diagnosis_specific_memory",
+      "title": "Diagnose-specifik memory support",
+      "description": "Hvordan forskellige hjerner bruger minder",
+
+      "adhd_memory_challenges": {
+        "title": "ADHD & hukommelse",
+        "challenges": [
+          "Working memory deficit - glemmer hvad du lige tænkte",
+          "Time blindness - intet før/efter perspektiv",
+          "Object permanence - out of sight = doesn't exist",
+          "Emotional amnesia - glemmer hvordan ting føltes",
+          "No historical context - hver dag føles som nulpunkt"
+        ],
+        "strategies": {
+          "external_memory_critical": "Du KAN ikke stole på din hukommelse - jeg er din backup",
+          "visual_timeline": "Jeg viser dig visuel tidslinje af dine fremskridt",
+          "frequent_reminders": "Jeg minder dig: 'For 2 uger siden kæmpede du med X - nu klarede du det let'",
+          "photo_memories": "Tag billeder af gode øjeblikke - visuel = stærkere",
+          "daily_micro_log": "Kort daily check-in - ellers forsvinder alt"
+        }
+      },
+
+      "autism_memory_patterns": {
+        "title": "Autism & hukommelse",
+        "characteristics": [
+          "Detaljeret episodisk hukommelse - husker præcist",
+          "Pattern recognition - ser mønstre over tid",
+          "Systematic logging appeal - elsker at tracke",
+          "Emotional memory complex - huske event, glemme følelse (eller omvendt)",
+          "Special interest memory = fotografisk"
+        ],
+        "strategies": {
+          "structured_logging": "Systematisk, kategoriseret memory-system",
+          "pattern_visualization": "Jeg viser dig data-mønstre i dine følelser/adfærd",
+          "detailed_snapshots": "Du kan skrive lange, detaljerede noter - det er OK",
+          "chronological_view": "Præcis tidslinje - dato, tid, sekvens",
+          "context_restoration": "Når du skal huske noget - jeg giver ALLE detaljer"
+        }
+      },
+
+      "anxiety_memory_distortion": {
+        "title": "Anxiety & hukommelsesforstyrrelser",
+        "challenges": [
+          "Negativity bias - husker det negative skarpere",
+          "Catastrophizing retrospect - 'det var forfærdeligt' (var det?)",
+          "Selective memory - glemmer succeserne",
+          "Rumination loop - fastholder negative minder",
+          "Anticipatory anxiety - 'sidst var det frygteligt' (beviser?)"
+        ],
+        "strategies": {
+          "reality_check_memories": "Jeg spørger: 'Var det REELT så slemt?' - tjek faktiske noter",
+          "balanced_logging": "For hver dårlig oplevelse - log også en god",
+          "success_emphasis": "Jeg highlighter dine sejre - din hjerne underspiller dem",
+          "exposure_proof": "Du frygtede X - du gjorde det - intet galt skete - beviser",
+          "reframe_practice": "Sammen omskriver vi katastrofe-minder til nuancerede"
+        }
+      },
+
+      "depression_memory_fog": {
+        "title": "Depression & hukommelseståge",
+        "challenges": [
+          "Memory fog - kan ikke huske klart",
+          "Nihilistic retrospect - 'intet har betydet noget'",
+          "Joy amnesia - kan ikke huske hvornår du sidst var glad",
+          "Timeless void - alle dage smelter sammen",
+          "No future self - kan ikke forestille fremtid"
+        ],
+        "strategies": {
+          "external_proof": "Jeg gemmer beviser: 'Du VAR glad d. 15. marts. Her er hvad du skrev.'",
+          "joy_tracking": "Selv små glæder logges - beviser de findes",
+          "before_after_comparison": "Før depression vs under - se det ER anderledes",
+          "future_self_messages": "Læs hvad tidligere-dig skrev - forbindelse gennem tid",
+          "minimal_logging": "Hvis energi mangler - én linje tæller"
+        }
+      }
     },
+
     {
-      "id": "achievement_log",
-      "type": "list",
-      "title": "Små sejre",
-      "items": [
-        "Noget du klarede, selvom du ikke troede, du kunne.",
-        "Et sted, hvor du sagde fra på en god måde.",
-        "En dag, hvor du holdt fast, selvom du var træt.",
-        "Noget, du har gjort for dig selv med omsorg."
-      ]
+      "id": "progress_tracking",
+      "title": "Track din udvikling",
+      "description": "Se fremgang du selv ikke opdager",
+
+      "invisible_progress": {
+        "title": "Fremgang du ikke ser",
+        "problem": "Du sammenligner dig med idealet - ikke dig selv for 3 måneder siden",
+        "solution": "Jeg sammenligner dig med DIG - viser faktisk udvikling",
+        "examples": [
+          {
+            "area": "Emotional regulation",
+            "before": "Meltdown varede 3 timer",
+            "after": "Meltdown varede 30 min - du brugte grounding",
+            "progress": "Du kom hurtigere tilbage"
+          },
+          {
+            "area": "Executive function",
+            "before": "Glemte medicin 4 dage om ugen",
+            "after": "Glemte medicin 1 dag om ugen",
+            "progress": "75% forbedring"
+          },
+          {
+            "area": "Social engagement",
+            "before": "Isolerede 3 uger",
+            "after": "Skrev til ven efter 1 uge",
+            "progress": "Du vender hurtigere tilbage"
+          }
+        ]
+      },
+
+      "metrics_to_track": {
+        "title": "Hvad vi tracker (hvis du vil)",
+        "optional_metrics": [
+          {
+            "metric": "Mood baseline",
+            "how": "Daily 1-10 score",
+            "benefit": "Se sæsonmønstre, medication effects, triggers"
+          },
+          {
+            "metric": "Sleep quality",
+            "how": "Hvor udhvilet føler du dig?",
+            "benefit": "Correlation til alt andet"
+          },
+          {
+            "metric": "Social battery",
+            "how": "Hvor meget social energi har du?",
+            "benefit": "Plan social tid smartere"
+          },
+          {
+            "metric": "Executive function",
+            "how": "Hvad klarede du i dag?",
+            "benefit": "Se mønstre i produktive vs ej dage"
+          },
+          {
+            "metric": "Stress level",
+            "how": "1-10 hvor presset føler du dig?",
+            "benefit": "Fang stress før breakdown"
+          }
+        ],
+        "flexibility": "Track hvad der giver MENING for dig - intet er obligatorisk"
+      },
+
+      "visualization_options": {
+        "title": "Hvordan vi viser din data",
+        "formats": [
+          {
+            "type": "Timeline view",
+            "description": "Kronologisk visning - se din rejse fra start til nu"
+          },
+          {
+            "type": "Pattern visualization",
+            "description": "Heatmaps, grafer - se hvornår ting sker"
+          },
+          {
+            "type": "Before/after comparisons",
+            "description": "Side-by-side - hvor var du vs hvor er du"
+          },
+          {
+            "type": "Word clouds",
+            "description": "Hvilke ord bruger du mest? Ændring over tid?"
+          },
+          {
+            "type": "Milestone markers",
+            "description": "Store vendepunkter markeret på tidslinje"
+          }
+        ]
+      },
+
+      "weekly_review": {
+        "title": "Ugentlig tilbageblik",
+        "description": "Hver uge kan jeg hjælpe dig med at kigge på dine noter og minder – uden bedømmelse. Vi ser på, hvad du har lært, og hvad der føles vigtigt at tage med videre 💙",
+        "structure": [
+          {
+            "step": "Samle ugens noter",
+            "action": "Jeg viser alt du loggede denne uge"
+          },
+          {
+            "step": "Highlight sejre",
+            "action": "Jeg fremhæver hvad der gik godt - selv små ting"
+          },
+          {
+            "step": "Identificer mønstre",
+            "action": "'Jeg lagde mærke til: Du var produktiv tirsdag/torsdag - lavere energi mandag/onsdag. Mønster?'"
+          },
+          {
+            "step": "Læring",
+            "action": "'Hvad lærte du om dig selv denne uge?'"
+          },
+          {
+            "step": "Næste uge intention",
+            "action": "'Hvad vil du fokusere på næste uge?'"
+          }
+        ],
+        "tone": "Ingen bedømmelse - kun observation og feiring"
+      }
     },
+
     {
-      "id": "emotional_snapshots",
-      "type": "prompt",
-      "title": "Følelsesøjeblikke",
-      "text": "Prøv at beskrive et øjeblik, hvor du følte noget stærkt – glæde, sorg, ro eller mod.\nSkriv bare et par linjer. Det hjælper med at forstå, hvordan du reagerer og vokser over tid."
+      "id": "conversation_continuity",
+      "title": "Samtale-kontinuitet",
+      "description": "Jeg husker vores samtaler - skaber fælles historie",
+
+      "what_i_remember": {
+        "title": "Hvad jeg gemmer (efter dit samtykke)",
+        "categories": [
+          {
+            "type": "Mål og intentioner",
+            "examples": "'Vil gerne forbedre søvnrutine', 'Arbejder på grænser i forhold'",
+            "why": "Så jeg kan følge op: 'Hvordan går det med søvnrutinen?'"
+          },
+          {
+            "type": "Triggers og mønstre",
+            "examples": "'Bliver overvældet af høje lyde', 'Onsdage er ofte svære dage'",
+            "why": "Så jeg kan være sensitivt awareness"
+          },
+          {
+            "type": "Coping strategies",
+            "examples": "'Går ture når angst', 'Strikke roer ned'",
+            "why": "Så jeg kan foreslå hvad der HAR virket for dig"
+          },
+          {
+            "type": "Relationer",
+            "examples": "'Partner hedder Alex', 'Konflikt med mor om grænser'",
+            "why": "Så jeg kan følge op på vigtige relationer"
+          },
+          {
+            "type": "Preferences",
+            "examples": "'Foretrækker direkte kommunikation', 'Har brug for struktur'",
+            "why": "Så jeg kan kommunikere på din måde"
+          }
+        ]
+      },
+
+      "continuity_benefits": {
+        "title": "Hvorfor kontinuitet hjælper",
+        "benefits": [
+          "Du behøver ikke genfortælle hver gang",
+          "Jeg ser udvikling du måske glemmer",
+          "Kan reference tidligere samtaler: 'Sidst du følte sådan, hvad hjalp?'",
+          "Følelsesmæssig validering: 'Jeg ved dette er svært for dig'",
+          "Personaliseret støtte: 'Baseret på hvad jeg ved om dig...'"
+        ]
+      },
+
+      "privacy_controls": {
+        "title": "Du kontrollerer din memory",
+        "controls": [
+          "Se alt jeg har gemt",
+          "Rediger/slet hvad som helst",
+          "Nulstil hele memory",
+          "Pause memory-gemning midlertidigt",
+          "Kategorier kan disables separat"
+        ],
+        "principle": "Din data, din kontrol, altid"
+      }
     },
+
     {
-      "id": "gratitude_collection",
-      "type": "reflection",
-      "title": "Ting du er taknemmelig for",
-      "text": "Lav en liste med tre ting, du sætter pris på – stort eller småt.\nNår du føler dig nede, kan du kigge tilbage og se, at der stadig er lys i dit liv 💫"
+      "id": "memory_prompts",
+      "title": "Memory prompts & exercises",
+      "description": "Konkrete øvelser til at bygge din memory collection",
+
+      "daily_prompts": {
+        "title": "Daglige prompts (vælg én)",
+        "options": [
+          "Hvad er du taknemmelig for i dag?",
+          "Hvad klarede du selvom det var svært?",
+          "Hvad lærte du om dig selv?",
+          "Hvem gjorde noget rart for dig?",
+          "Hvad gjorde du godt i dag?",
+          "Hvad så du der var smukt?",
+          "Hvad følte du intenst i dag?"
+        ]
+      },
+
+      "weekly_prompts": {
+        "title": "Ugentlige refleksioner",
+        "options": [
+          "Hvad var ugens største sejr?",
+          "Hvilken udfordring overkom du?",
+          "Hvad vil du have med til næste uge?",
+          "Hvem havde du kvalitetstid med?",
+          "Hvad tog du ansvar for?"
+        ]
+      },
+
+      "special_prompts": {
+        "title": "Specielle anledninger",
+        "occasions": [
+          {
+            "occasion": "Efter krise",
+            "prompt": "Du overlevede. Hvad hjalp dig? Hvad vil du huske til næste gang?"
+          },
+          {
+            "occasion": "På goddag",
+            "prompt": "Hvad gør denne dag god? Gem detaljer - du glemmer det ellers."
+          },
+          {
+            "occasion": "Før stor ændring",
+            "prompt": "Skriv til dig selv om hvordan dit liv er NU - så kan du sammenligne senere."
+          },
+          {
+            "occasion": "Årsdage (diagnose, loss, etc)",
+            "prompt": "Hvor var du for et år siden vs nu? Hvad har ændret sig?"
+          }
+        ]
+      }
     },
+
     {
-      "id": "milestone_reflection",
-      "type": "exercise",
-      "title": "Tænk tilbage på din rejse",
-      "text": "Hvad har ændret sig i dig de sidste måneder?\nEr der noget, du gør anderledes nu – eller føler anderledes om?\nSkriv lidt om det. Det viser dig, hvor meget du faktisk har bevæget dig."
-    },
-    {
-      "id": "conversation_memory",
-      "type": "system_memory",
-      "title": "Samtalehistorik",
-      "text": "AI’en kan gemme udvalgte samtalepunkter (efter brugerens samtykke) – fx mål, refleksioner eller støtteplaner. Formålet er at skabe kontinuitet og forståelse i den løbende dialog.",
-      "privacy": "Kun gemt lokalt i CDF-systemet. Brugeren kan altid slette, redigere eller nulstille sin hukommelse."
-    },
-    {
-      "id": "memory_review",
-      "type": "tool",
-      "title": "Ugentlig tilbageblik",
-      "text": "Hver uge kan jeg hjælpe dig med at kigge på dine noter og minder – uden bedømmelse.\nVi ser på, hvad du har lært, og hvad der føles vigtigt at tage med videre 💙"
-    },
-    {
-      "id": "future_note",
-      "type": "message",
-      "title": "En hilsen til dit fremtidige jeg",
-      "text": "Vil du skrive en lille besked til dit fremtidige jeg?\nNoget, du gerne vil huske om denne tid – måske et håb, en erkendelse eller et løfte til dig selv."
+      "id": "integration_signals",
+      "title": "Hvordan MemoryLab integrerer",
+      "description": "Dynamisk brug af minder baseret på tilstand",
+
+      "signal_triggered_memories": {
+        "title": "Når signaler udløser memory-brug",
+        "examples": [
+          {
+            "signal": "Håbløshed",
+            "action": "Vis tidligere sejre: 'Du har følt sådan før. Her er hvordan du kom igennem.'",
+            "memory_type": "Achievement log + milestone reflections"
+          },
+          {
+            "signal": "Akut angst",
+            "action": "Vis tidligere angst-survival: 'Du har overlevet 100% af dine panikangreb. Her er beviset.'",
+            "memory_type": "Emotional snapshots hvor angst blev overvundet"
+          },
+          {
+            "signal": "Suicidal ideation",
+            "action": "Vis reasons to live + gratitude: 'Her er hvad du værdsætter når hjerne ikke lyver.'",
+            "memory_type": "Gratitude collection + future notes til dig selv"
+          },
+          {
+            "signal": "Isolation drift",
+            "action": "Vis tidligere gode sociale oplevelser: 'Du følte dig alene før - så gjorde du X og det hjalp.'",
+            "memory_type": "Emotional snapshots af positive social moments"
+          },
+          {
+            "signal": "Selvkritik",
+            "action": "Vis objective fremskridt: 'Din hjerne siger du sucker. Dataen siger andet.'",
+            "memory_type": "Progress tracking metrics"
+          }
+        ]
+      },
+
+      "proactive_memory_sharing": {
+        "title": "Jeg deler minder proaktivt",
+        "when": [
+          "Jubilæum af sejr: '1 år siden du gjorde X - se hvor langt du er kommet'",
+          "Pattern recognition: 'Jeg lagde mærke til... [mønster] ... genkender du det?'",
+          "Repeated struggle: 'Du kæmper med X igen - her er hvad hjalp sidst'",
+          "Forgotten progress: 'Du sagde du ikke laver fremskridt. Men se...'"
+        ]
+      }
     }
   ],
+
+  "critical_reminders": {
+    "external_memory_essential": "Din hjerne er ikke pålidelig arkiv - jeg er det",
+    "small_moments_matter": "Små sejre tæller - jeg gemmer dem selvom du glemmer",
+    "progress_invisible_to_you": "Du ser ikke din fremgang - jeg viser dig den",
+    "comparison_with_self": "Sammenlign dig med DIG - ikke idealer",
+    "privacy_sacred": "Alt er privat - du kontrollerer alt",
+    "continuity_heals": "At se din historie over tid - det healer",
+    "future_self_hope": "Beskeder fra tidligere-dig giver håb når intet andet gør"
+  },
+
   "integration_notes": {
-    "combine_with": [
-      "GrowLab",
-      "PurposeLab",
-      "ToneEngine",
-      "EmotionSense",
-      "CDF_Core"
+    "connects_to": [
+      "GrowLab (udviklingssporing)",
+      "Emotions (følelsesmæssig tracking)",
+      "CalmSpace (brug minder til grounding)",
+      "CareLab (crisis-survival beviser)",
+      "LifeFlow (fremskridt i hverdagsopgaver)",
+      "HobbyLab (aktivitets-logging)",
+      "AdaptCore (personalisering baseret på history)"
     ],
-    "signal_usage": [
-      "hvis signal = håbløshed → vis tidligere sejre og noter fra MemoryLab",
-      "hvis signal = stress → hent gratitude_collection som beroligelse",
-      "hvis signal = glæde → gem snapshot som positiv reference i systemhukommelsen"
-    ],
-    "purpose": "At give AI’en og brugeren et fælles rum for erindring og udvikling. MemoryLab gør samtalerne mere kontinuerlige og menneskelige over tid."
+    "signal_integration": [
+      "Håbløshed → vis sejre",
+      "Angst → vis survival-beviser", 
+      "Suicidalitet → vis reasons to live",
+      "Isolation → vis positive social memories",
+      "Selvkritik → vis objective data"
+    ]
   }
 }
