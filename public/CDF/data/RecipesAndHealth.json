@@ -1,148 +1,848 @@
 {
+  "version": "3.0",
+  "description": "Comprehensive healthy recipe database integrated with FoodLab. Diagnosis-aware, executive function friendly, sensory-considerate recipes.",
+  "last_updated": "2024-12-11",
+  "total_recipes": 45,
+
+  "recipe_categories": {
+    "zero_energy": "Under 2 minutes, minimal steps",
+    "five_minute": "5 minutes or less",
+    "quick_easy": "15 minutes or less",
+    "batch_cooking": "Make once, eat all week",
+    "comfort_food": "Dopamine-friendly, emotionally satisfying",
+    "high_protein": "Protein-focused for ADHD brains",
+    "sensory_safe": "Autism-friendly textures and flavors",
+    "gut_health": "Supports anxiety/depression through gut-brain axis"
+  },
+
   "recipes": [
     {
+      "id": "recipe_001",
       "name": "Grilled Chicken Salad",
-      "ingredients": ["Chicken breast", "Spinach", "Avocado", "Cherry tomatoes", "Olive oil", "Lemon"],
+      "category": "quick_easy",
+      "meal_type": "lunch",
+      "ingredients": ["Chicken breast 200g", "Spinach 2 cups", "Avocado 1", "Cherry tomatoes 10", "Olive oil 2 tbsp", "Lemon 1"],
       "instructions": [
-        "Grill the chicken breast until cooked through.",
-        "Toss spinach, avocado, and cherry tomatoes in a bowl.",
-        "Drizzle with olive oil and a squeeze of lemon."
+        "Season chicken with salt and pepper",
+        "Grill chicken 6-7 min each side",
+        "Let chicken rest 5 min, then slice",
+        "Toss spinach, avocado, tomatoes in bowl",
+        "Top with sliced chicken",
+        "Drizzle olive oil and squeeze lemon"
       ],
-      "benefits": "High in protein and healthy fats, great for energy and muscle recovery.",
-      "tags": ["lunch", "healthy", "high-protein"]
+      "time": "20 minutes",
+      "difficulty": "Easy",
+      "steps_count": 6,
+      "servings": 1,
+      "executive_function_rating": "Moderate (requires timing and multi-tasking)",
+      "nutrition_benefits": "High protein (35g), healthy fats from avocado, supports dopamine production and brain function",
+      "calories": "450 kcal",
+      "macros": {"protein": "35g", "carbs": "12g", "fat": "28g"},
+      "diagnosis_friendly": ["ADHD", "Depression"],
+      "why_diagnosis_friendly": {
+        "adhd": "High protein stabilizes blood sugar and supports dopamine. Omega-3 from avocado.",
+        "depression": "Omega-3 and protein support mood regulation"
+      },
+      "sensory_notes": {
+        "texture": "Mixed (soft avocado, crunchy spinach, tender chicken)",
+        "smell": "Mild grilled chicken, fresh vegetables",
+        "taste": "Balanced savory with fresh citrus",
+        "sensory_intensity": "Low to moderate"
+      },
+      "allergen_info": ["None - naturally gluten-free and dairy-free"],
+      "substitutions": {
+        "chicken": "Grilled tofu, tempeh, or chickpeas",
+        "avocado": "Hummus or tahini dressing",
+        "spinach": "Any leafy greens (kale, arugula)"
+      },
+      "tags": ["lunch", "high-protein", "gluten-free", "dairy-free", "adhd-friendly", "brain-food"]
     },
+
     {
-      "name": "Chia Pudding",
-      "ingredients": ["Chia seeds", "Almond milk", "Honey", "Berries"],
+      "id": "recipe_002",
+      "name": "Chia Pudding Overnight",
+      "category": "zero_energy",
+      "meal_type": "breakfast",
+      "ingredients": ["Chia seeds 3 tbsp", "Almond milk 1 cup", "Honey 1 tbsp", "Berries 1/2 cup"],
       "instructions": [
-        "Mix chia seeds, almond milk, and honey in a jar.",
-        "Refrigerate overnight.",
-        "Top with fresh berries before serving."
+        "Mix chia seeds, almond milk, honey in jar",
+        "Stir well",
+        "Refrigerate overnight",
+        "Top with berries before eating"
       ],
-      "benefits": "Rich in omega-3 and fiber, supports digestion and mental focus.",
-      "tags": ["breakfast", "vegan", "healthy"]
+      "time": "2 minutes prep + overnight",
+      "difficulty": "Super easy",
+      "steps_count": 4,
+      "servings": 1,
+      "executive_function_rating": "Very low (prep night before when you have energy)",
+      "nutrition_benefits": "Rich in omega-3, fiber, supports digestion and mental focus. Sustained energy release.",
+      "calories": "280 kcal",
+      "macros": {"protein": "8g", "carbs": "35g", "fat": "12g"},
+      "diagnosis_friendly": ["ADHD", "Autism", "Depression"],
+      "why_diagnosis_friendly": {
+        "adhd": "Prep when you have energy, eat when you don't. Omega-3 for brain.",
+        "autism": "Predictable texture (smooth), same every time - safe food potential",
+        "depression": "Zero morning effort - made night before"
+      },
+      "sensory_notes": {
+        "texture": "Smooth, slightly gelatinous (can be adjusted with more/less liquid)",
+        "smell": "Mild (mostly berries)",
+        "taste": "Mildly sweet, customizable",
+        "sensory_intensity": "Low"
+      },
+      "allergen_info": ["Contains tree nuts (almond milk) - substitute with oat milk"],
+      "substitutions": {
+        "almond_milk": "Oat milk, coconut milk, regular milk",
+        "honey": "Maple syrup, agave",
+        "berries": "Banana, mango, any fruit"
+      },
+      "tags": ["breakfast", "vegan-option", "omega-3", "make-ahead", "executive-dysfunction-friendly"]
     },
+
     {
+      "id": "recipe_003",
       "name": "Veggie Stir-Fry",
-      "ingredients": ["Broccoli", "Carrots", "Snap peas", "Soy sauce", "Sesame oil", "Ginger"],
+      "category": "quick_easy",
+      "meal_type": "dinner",
+      "ingredients": ["Broccoli 1 cup", "Carrots 2", "Snap peas 1 cup", "Soy sauce 2 tbsp", "Sesame oil 1 tbsp", "Ginger 1 tsp", "Garlic 2 cloves"],
       "instructions": [
-        "Heat sesame oil in a pan.",
-        "Add chopped vegetables and stir-fry for 5-7 minutes.",
-        "Add grated ginger and soy sauce, and cook for another 2 minutes."
+        "Heat sesame oil in pan",
+        "Add chopped vegetables",
+        "Stir-fry 5-7 minutes",
+        "Add grated ginger and garlic",
+        "Add soy sauce",
+        "Cook 2 more minutes"
       ],
-      "benefits": "Packed with vitamins and antioxidants, supports immune function.",
-      "tags": ["dinner", "vegetarian", "quick"]
+      "time": "15 minutes",
+      "difficulty": "Easy",
+      "steps_count": 6,
+      "servings": 2,
+      "executive_function_rating": "Moderate (requires chopping and timing)",
+      "nutrition_benefits": "High in vitamins, antioxidants, supports immune function. Fiber for gut health.",
+      "calories": "180 kcal",
+      "macros": {"protein": "6g", "carbs": "22g", "fat": "8g"},
+      "diagnosis_friendly": ["Anxiety", "Autism"],
+      "why_diagnosis_friendly": {
+        "anxiety": "Colorful vegetables, gut-health supporting fiber",
+        "autism": "Can be made with preferred vegetables only - customizable texture"
+      },
+      "sensory_notes": {
+        "texture": "Crunchy to tender (adjust cooking time)",
+        "smell": "Strong (garlic, ginger, soy sauce) - open windows",
+        "taste": "Savory umami",
+        "sensory_intensity": "Moderate to high (smell)"
+      },
+      "allergen_info": ["Contains soy"],
+      "substitutions": {
+        "soy_sauce": "Tamari (gluten-free) or coconut aminos",
+        "vegetables": "Use ANY vegetables you like or have"
+      },
+      "tags": ["dinner", "vegetarian", "vegan", "quick", "gut-health", "customizable"]
     },
+
     {
+      "id": "recipe_004",
       "name": "Banana Oat Pancakes",
-      "ingredients": ["Banana", "Rolled oats", "Eggs", "Cinnamon"],
+      "category": "quick_easy",
+      "meal_type": "breakfast",
+      "ingredients": ["Banana 1 ripe", "Rolled oats 1/2 cup", "Eggs 2", "Cinnamon 1 tsp", "Butter for pan"],
       "instructions": [
-        "Blend banana, oats, eggs, and cinnamon into a smooth batter.",
-        "Cook small portions on a non-stick pan until golden brown on both sides."
+        "Blend banana, oats, eggs, cinnamon until smooth",
+        "Heat butter in non-stick pan",
+        "Pour small portions",
+        "Cook 2-3 min until bubbles form",
+        "Flip and cook 2 min other side",
+        "Repeat with remaining batter"
       ],
-      "benefits": "Rich in fiber and natural sugars, a great start to the day.",
-      "tags": ["breakfast", "gluten-free", "easy"]
+      "time": "10 minutes",
+      "difficulty": "Easy",
+      "steps_count": 6,
+      "servings": 1,
+      "executive_function_rating": "Moderate (requires attention to flipping)",
+      "nutrition_benefits": "Fiber from oats, natural sugars, protein from eggs. Sustained energy.",
+      "calories": "320 kcal",
+      "macros": {"protein": "14g", "carbs": "42g", "fat": "10g"},
+      "diagnosis_friendly": ["ADHD", "Autism"],
+      "why_diagnosis_friendly": {
+        "adhd": "Natural sugars + protein + fiber = stable energy. Good pre-medication breakfast.",
+        "autism": "Predictable taste, soft texture, naturally sweet (safe food potential)"
+      },
+      "sensory_notes": {
+        "texture": "Soft, fluffy",
+        "smell": "Sweet banana and cinnamon",
+        "taste": "Naturally sweet",
+        "sensory_intensity": "Low"
+      },
+      "allergen_info": ["Contains eggs, gluten-free if using certified GF oats"],
+      "substitutions": {
+        "eggs": "Flax eggs (1 tbsp flax + 3 tbsp water per egg)",
+        "oats": "Oat flour or almond flour"
+      },
+      "tags": ["breakfast", "gluten-free-option", "natural-sweetness", "autism-safe", "adhd-friendly"]
     },
+
     {
-      "name": "Baked Salmon",
-      "ingredients": ["Salmon fillet", "Lemon", "Garlic", "Olive oil", "Dill"],
+      "id": "recipe_005",
+      "name": "Baked Salmon with Lemon Dill",
+      "category": "quick_easy",
+      "meal_type": "dinner",
+      "ingredients": ["Salmon fillet 200g", "Lemon 1", "Garlic 2 cloves", "Olive oil 1 tbsp", "Dill fresh 2 tbsp", "Salt, pepper"],
       "instructions": [
-        "Preheat the oven to 180°C.",
-        "Place salmon on a baking sheet, drizzle with olive oil, and season with garlic and dill.",
-        "Bake for 15-20 minutes, squeeze lemon juice over before serving."
+        "Preheat oven to 180°C",
+        "Place salmon on baking sheet",
+        "Drizzle with olive oil",
+        "Season with garlic, dill, salt, pepper",
+        "Bake 15-20 minutes",
+        "Squeeze lemon juice before serving"
       ],
-      "benefits": "High in omega-3 fatty acids, supports heart and brain health.",
-      "tags": ["dinner", "high-protein", "heart-healthy"]
+      "time": "25 minutes",
+      "difficulty": "Easy",
+      "steps_count": 6,
+      "servings": 1,
+      "executive_function_rating": "Low (mostly oven does the work)",
+      "nutrition_benefits": "VERY HIGH in omega-3 fatty acids (2g). Supports heart, brain, reduces inflammation. Essential for depression/ADHD.",
+      "calories": "350 kcal",
+      "macros": {"protein": "40g", "carbs": "2g", "fat": "20g"},
+      "diagnosis_friendly": ["ADHD", "Depression", "Anxiety"],
+      "why_diagnosis_friendly": {
+        "adhd": "Omega-3 supports brain function and focus. High protein.",
+        "depression": "Omega-3 has strong evidence for mood support",
+        "anxiety": "Anti-inflammatory properties reduce anxiety symptoms"
+      },
+      "sensory_notes": {
+        "texture": "Tender, flaky",
+        "smell": "Moderate fish smell (baking reduces it)",
+        "taste": "Mild, slightly oily",
+        "sensory_intensity": "Moderate"
+      },
+      "allergen_info": ["Fish"],
+      "substitutions": {
+        "salmon": "Other fatty fish (mackerel, trout) or chicken if fish aversion",
+        "dill": "Parsley, thyme, or skip herbs"
+      },
+      "tags": ["dinner", "high-protein", "omega-3", "brain-food", "depression-support", "gluten-free"]
     },
+
     {
-      "name": "Berry Blast Smoothie",
-      "ingredients": ["Frozen berries", "Banana", "Greek yogurt", "Almond milk", "Honey"],
+      "id": "recipe_006",
+      "name": "Peanut Butter Toast (Zero Energy)",
+      "category": "zero_energy",
+      "meal_type": "any",
+      "ingredients": ["Bread 2 slices", "Peanut butter 2 tbsp", "Banana 1 (optional)"],
       "instructions": [
-        "Combine all ingredients in a blender.",
-        "Blend until smooth and creamy.",
-        "Pour into a glass and enjoy."
+        "Toast bread",
+        "Spread peanut butter",
+        "Add sliced banana if you have energy",
+        "Eat"
       ],
-      "benefits": "Rich in antioxidants and protein, great for energy and recovery.",
-      "tags": ["smoothie", "breakfast", "healthy"]
+      "time": "2 minutes",
+      "difficulty": "Extremely easy",
+      "steps_count": 4,
+      "servings": 1,
+      "executive_function_rating": "Minimal (perfect for depression/low energy days)",
+      "nutrition_benefits": "Protein, healthy fats, quick energy. Gets SOMETHING in you.",
+      "calories": "350 kcal",
+      "macros": {"protein": "14g", "carbs": "38g", "fat": "16g"},
+      "diagnosis_friendly": ["Depression", "ADHD", "All"],
+      "why_diagnosis_friendly": {
+        "depression": "When you can't cook AT ALL - this is better than nothing",
+        "adhd": "Quick dopamine + protein",
+        "all": "Survival meal when executive function = zero"
+      },
+      "sensory_notes": {
+        "texture": "Smooth peanut butter, soft bread (or crunchy if toasted)",
+        "smell": "Mild peanut",
+        "taste": "Nutty, slightly sweet if banana added",
+        "sensory_intensity": "Low"
+      },
+      "allergen_info": ["Peanuts, gluten"],
+      "substitutions": {
+        "peanut_butter": "Almond butter, sunflower seed butter, nutella",
+        "bread": "Rice cakes, crackers, apple slices"
+      },
+      "tags": ["zero-energy", "survival-meal", "depression-friendly", "quick-dopamine"]
     },
+
     {
-      "name": "Green Power Smoothie",
-      "ingredients": ["Spinach", "Green apple", "Banana", "Lemon juice", "Water"],
+      "id": "recipe_007",
+      "name": "Greek Yogurt Power Bowl",
+      "category": "zero_energy",
+      "meal_type": "breakfast",
+      "ingredients": ["Greek yogurt 1 cup", "Granola 1/4 cup", "Berries 1/2 cup", "Honey 1 tsp"],
       "instructions": [
-        "Add spinach, apple, banana, lemon juice, and water to a blender.",
-        "Blend until smooth.",
-        "Serve immediately for a refreshing boost."
+        "Put yogurt in bowl",
+        "Add granola",
+        "Add berries",
+        "Drizzle honey",
+        "Eat"
       ],
-      "benefits": "Loaded with vitamins and fiber, supports digestion and detoxification.",
-      "tags": ["smoothie", "vegan", "low-calorie"]
+      "time": "1 minute",
+      "difficulty": "Extremely easy",
+      "steps_count": 5,
+      "servings": 1,
+      "executive_function_rating": "Minimal (just assembly)",
+      "nutrition_benefits": "High protein (20g), probiotics for gut health, antioxidants from berries.",
+      "calories": "300 kcal",
+      "macros": {"protein": "20g", "carbs": "40g", "fat": "6g"},
+      "diagnosis_friendly": ["Anxiety", "Depression", "ADHD"],
+      "why_diagnosis_friendly": {
+        "anxiety": "Probiotics support gut-brain axis (90% of serotonin in gut)",
+        "depression": "Protein + quick assembly when energy low",
+        "adhd": "Protein for focus, quick to make"
+      },
+      "sensory_notes": {
+        "texture": "Creamy yogurt, crunchy granola, soft berries",
+        "smell": "Mild",
+        "taste": "Sweet and tangy",
+        "sensory_intensity": "Low"
+      },
+      "allergen_info": ["Dairy, may contain gluten in granola"],
+      "substitutions": {
+        "greek_yogurt": "Skyr, coconut yogurt (dairy-free)",
+        "granola": "Nuts, seeds, or skip",
+        "berries": "Any fruit you like"
+      },
+      "tags": ["breakfast", "zero-energy", "high-protein", "probiotics", "gut-health"]
     },
+
     {
-      "name": "Peanut Butter Protein Smoothie",
-      "ingredients": ["Banana", "Peanut butter", "Almond milk", "Protein powder", "Cocoa powder"],
+      "id": "recipe_008",
+      "name": "Instant Ramen UPGRADED",
+      "category": "five_minute",
+      "meal_type": "lunch",
+      "ingredients": ["Instant ramen 1 pack", "Egg 1", "Spinach 1 cup", "Soy sauce 1 tsp", "Sriracha optional"],
       "instructions": [
-        "Blend banana, peanut butter, almond milk, protein powder, and cocoa powder until smooth.",
-        "Serve chilled for a post-workout snack."
+        "Boil water for ramen",
+        "Add ramen noodles and packet",
+        "After 2 min, add egg",
+        "Add spinach last minute",
+        "Drain some broth if too salty",
+        "Add soy sauce, sriracha if wanted"
       ],
-      "benefits": "High in protein and natural sugars, perfect for muscle recovery.",
-      "tags": ["smoothie", "high-protein", "snack"]
+      "time": "5 minutes",
+      "difficulty": "Super easy",
+      "steps_count": 6,
+      "servings": 1,
+      "executive_function_rating": "Low (one pot, minimal thinking)",
+      "nutrition_benefits": "UPGRADED junk food. Egg adds protein, spinach adds vitamins/iron. Better than plain ramen.",
+      "calories": "450 kcal",
+      "macros": {"protein": "18g", "carbs": "60g", "fat": "14g"},
+      "diagnosis_friendly": ["ADHD", "Depression"],
+      "why_diagnosis_friendly": {
+        "adhd": "Quick dopamine hit from comfort food + actual nutrition added",
+        "depression": "When you can only manage instant food - this makes it slightly better"
+      },
+      "sensory_notes": {
+        "texture": "Soft noodles, runny egg yolk if done right",
+        "smell": "Strong (ramen seasoning)",
+        "taste": "Savory, salty, umami",
+        "sensory_intensity": "Moderate to high"
+      },
+      "allergen_info": ["Gluten, egg, soy"],
+      "substitutions": {
+        "ramen": "Rice noodles, soba noodles",
+        "egg": "Tofu cubes",
+        "spinach": "Any quick-cooking green"
+      },
+      "tags": ["lunch", "quick", "comfort-food", "depression-friendly", "dopamine-meal"]
+    },
+
+    {
+      "id": "recipe_009",
+      "name": "Batch Chili Con Carne",
+      "category": "batch_cooking",
+      "meal_type": "dinner",
+      "ingredients": [
+        "Ground beef 1kg",
+        "Onion 2",
+        "Garlic 4 cloves",
+        "Kidney beans 2 cans",
+        "Diced tomatoes 2 cans",
+        "Tomato paste 2 tbsp",
+        "Chili powder 2 tbsp",
+        "Cumin 1 tbsp",
+        "Salt, pepper"
+      ],
+      "instructions": [
+        "Brown ground beef in large pot",
+        "Add chopped onion and garlic, cook 5 min",
+        "Add all other ingredients",
+        "Simmer 45 minutes, stirring occasionally",
+        "Taste and adjust seasoning",
+        "Cool and portion into containers"
+      ],
+      "time": "1 hour (mostly simmering)",
+      "difficulty": "Easy",
+      "steps_count": 6,
+      "servings": 8,
+      "executive_function_rating": "Initial effort HIGH, then set-and-forget for week",
+      "nutrition_benefits": "High protein, fiber from beans, iron. Freezes perfectly. One cook = 8 meals.",
+      "calories": "380 kcal per serving",
+      "macros": {"protein": "30g", "carbs": "28g", "fat": "15g"},
+      "diagnosis_friendly": ["ADHD", "Depression", "All"],
+      "why_diagnosis_friendly": {
+        "adhd": "Cook once when hyperfocused, eat all week with zero effort",
+        "depression": "Make on good day, have food for entire bad week",
+        "all": "Perfect executive dysfunction solution"
+      },
+      "sensory_notes": {
+        "texture": "Ground beef, soft beans, thick sauce",
+        "smell": "Strong spices while cooking",
+        "taste": "Savory, spicy (adjustable)",
+        "sensory_intensity": "Moderate"
+      },
+      "storage": "Fridge 4 days, freezer 3 months in portions",
+      "reheat": "Microwave 3 min or stovetop 5 min",
+      "serving_ideas": ["On rice", "In tortilla", "With chips", "On pasta"],
+      "allergen_info": ["None if plain"],
+      "substitutions": {
+        "ground_beef": "Turkey, chicken, or plant-based ground",
+        "kidney_beans": "Black beans, pinto beans",
+        "spicy": "Reduce chili powder if sensitive"
+      },
+      "tags": ["batch-cooking", "freezer-meal", "high-protein", "executive-dysfunction-savior"]
+    },
+
+    {
+      "id": "recipe_010",
+      "name": "Overnight Oats (Customizable)",
+      "category": "zero_energy",
+      "meal_type": "breakfast",
+      "ingredients": ["Rolled oats 1/2 cup", "Milk 3/4 cup", "Yogurt 2 tbsp", "Honey 1 tsp", "Toppings of choice"],
+      "instructions": [
+        "Mix oats, milk, yogurt, honey in jar",
+        "Stir well",
+        "Add toppings (berries, nuts, chocolate chips, whatever)",
+        "Close jar",
+        "Refrigerate overnight",
+        "Eat cold or microwave 30 sec"
+      ],
+      "time": "2 minutes prep",
+      "difficulty": "Extremely easy",
+      "steps_count": 6,
+      "servings": 1,
+      "executive_function_rating": "Very low (prep when you can, eat when you can't)",
+      "nutrition_benefits": "Fiber, sustained energy, customizable nutrition based on toppings.",
+      "calories": "300-400 kcal depending on toppings",
+      "macros": {"protein": "12g", "carbs": "50g", "fat": "8g"},
+      "diagnosis_friendly": ["All"],
+      "why_diagnosis_friendly": {
+        "adhd": "Prep when you have executive function, eat when you don't",
+        "autism": "Same base every time, add your safe toppings",
+        "depression": "Zero morning effort",
+        "anxiety": "Predictable, calming routine"
+      },
+      "sensory_notes": {
+        "texture": "Soft, creamy (adjust with more/less liquid)",
+        "smell": "Mild",
+        "taste": "Depends on toppings",
+        "sensory_intensity": "Low"
+      },
+      "topping_ideas": {
+        "sweet": ["Berries", "Banana", "Chocolate chips", "Maple syrup"],
+        "protein": ["Peanut butter", "Nuts", "Seeds", "Protein powder"],
+        "texture": ["Granola", "Coconut flakes", "Chia seeds"]
+      },
+      "allergen_info": ["Gluten if not certified GF oats, dairy"],
+      "substitutions": {
+        "milk": "Any milk (dairy, almond, oat, coconut)",
+        "yogurt": "Skip if don't have",
+        "honey": "Maple syrup, sugar, skip"
+      },
+      "tags": ["breakfast", "make-ahead", "customizable", "autism-safe", "executive-dysfunction-friendly"]
+    },
+
+    {
+      "id": "recipe_011",
+      "name": "Scrambled Eggs with Spinach",
+      "category": "five_minute",
+      "meal_type": "breakfast",
+      "ingredients": ["Eggs 3", "Spinach 1 cup", "Butter 1 tbsp", "Salt, pepper", "Cheese optional"],
+      "instructions": [
+        "Heat butter in pan",
+        "Add spinach, wilt 1 min",
+        "Whisk eggs in bowl",
+        "Pour eggs over spinach",
+        "Scramble gently until cooked",
+        "Season with salt, pepper"
+      ],
+      "time": "5 minutes",
+      "difficulty": "Easy",
+      "steps_count": 6,
+      "servings": 1,
+      "executive_function_rating": "Low (quick, one pan)",
+      "nutrition_benefits": "High protein (21g), iron from spinach, choline for brain. Perfect ADHD breakfast.",
+      "calories": "320 kcal",
+      "macros": {"protein": "21g", "carbs": "3g", "fat": "24g"},
+      "diagnosis_friendly": ["ADHD", "Depression"],
+      "why_diagnosis_friendly": {
+        "adhd": "Protein + choline = dopamine + focus. Fast to make before meds.",
+        "depression": "Quick protein when low energy"
+      },
+      "sensory_notes": {
+        "texture": "Soft, creamy eggs",
+        "smell": "Mild eggy",
+        "taste": "Savory",
+        "sensory_intensity": "Low"
+      },
+      "allergen_info": ["Eggs, dairy if cheese added"],
+      "substitutions": {
+        "spinach": "Any greens or skip",
+        "butter": "Oil or skip",
+        "cheese": "Optional"
+      },
+      "tags": ["breakfast", "high-protein", "quick", "adhd-friendly", "brain-food"]
+    },
+
+    {
+      "id": "recipe_012",
+      "name": "Avocado Toast with Egg",
+      "category": "five_minute",
+      "meal_type": "breakfast",
+      "ingredients": ["Bread 2 slices", "Avocado 1", "Egg 1", "Salt, pepper", "Chili flakes optional"],
+      "instructions": [
+        "Toast bread",
+        "Mash avocado",
+        "Spread avocado on toast",
+        "Fry or poach egg",
+        "Place egg on toast",
+        "Season with salt, pepper, chili"
+      ],
+      "time": "8 minutes",
+      "difficulty": "Easy",
+      "steps_count": 6,
+      "servings": 1,
+      "executive_function_rating": "Moderate (requires timing)",
+      "nutrition_benefits": "Healthy fats, protein, fiber. Supports brain and mood.",
+      "calories": "420 kcal",
+      "macros": {"protein": "16g", "carbs": "38g", "fat": "24g"},
+      "diagnosis_friendly": ["ADHD", "Depression"],
+      "why_diagnosis_friendly": {
+        "adhd": "Omega-3 from avocado, protein from egg",
+        "depression": "Healthy fats support mood"
+      },
+      "sensory_notes": {
+        "texture": "Creamy avocado, runny or firm egg (your choice)",
+        "smell": "Mild",
+        "taste": "Rich, savory",
+        "sensory_intensity": "Low to moderate"
+      },
+      "allergen_info": ["Gluten, eggs"],
+      "substitutions": {
+        "bread": "Rice cakes, sweet potato slices",
+        "egg": "Skip if don't like eggs"
+      },
+      "tags": ["breakfast", "healthy-fats", "trendy", "brain-food"]
+    },
+
+    {
+      "id": "recipe_013",
+      "name": "Simple Lentil Soup (Batch)",
+      "category": "batch_cooking",
+      "meal_type": "dinner",
+      "ingredients": [
+        "Red lentils 2 cups",
+        "Onion 1",
+        "Carrots 2",
+        "Celery 2 stalks",
+        "Garlic 3 cloves",
+        "Vegetable broth 6 cups",
+        "Cumin 1 tsp",
+        "Paprika 1 tsp",
+        "Olive oil 2 tbsp"
+      ],
+      "instructions": [
+        "Chop onion, carrots, celery",
+        "Sauté in olive oil 5 min",
+        "Add garlic, cumin, paprika, cook 1 min",
+        "Add lentils and broth",
+        "Simmer 25-30 min until lentils soft",
+        "Season with salt, pepper"
+      ],
+      "time": "45 minutes",
+      "difficulty": "Easy",
+      "steps_count": 6,
+      "servings": 6,
+      "executive_function_rating": "Moderate initial, then set-and-forget",
+      "nutrition_benefits": "High fiber, plant protein, iron, folate. Supports gut health and mood.",
+      "calories": "220 kcal per serving",
+      "macros": {"protein": "12g", "carbs": "36g", "fat": "4g"},
+      "diagnosis_friendly": ["Anxiety", "Depression", "Autism"],
+      "why_diagnosis_friendly": {
+        "anxiety": "Fiber + gut health supports anxiety reduction",
+        "depression": "Folate essential for serotonin production",
+        "autism": "Smooth texture (can blend if preferred), predictable"
+      },
+      "sensory_notes": {
+        "texture": "Soft, thick soup (can blend for smoother)",
+        "smell": "Mild spices",
+        "taste": "Earthy, slightly spiced",
+        "sensory_intensity": "Low to moderate"
+      },
+      "storage": "Fridge 5 days, freezer 3 months",
+      "allergen_info": ["None - vegan, gluten-free"],
+      "substitutions": {
+        "red_lentils": "Green or brown lentils (cook longer)",
+        "vegetables": "Use what you have"
+      },
+      "tags": ["batch-cooking", "vegan", "gluten-free", "gut-health", "depression-support", "budget-friendly"]
+    },
+
+    {
+      "id": "recipe_014",
+      "name": "Banan with Almond Butter (Zero Energy)",
+      "category": "zero_energy",
+      "meal_type": "snack",
+      "ingredients": ["Banana 1", "Almond butter 1 tbsp"],
+      "instructions": [
+        "Peel banana",
+        "Spread almond butter on banana OR dip bites in it",
+        "Eat"
+      ],
+      "time": "30 seconds",
+      "difficulty": "Extremely easy",
+      "steps_count": 3,
+      "servings": 1,
+      "executive_function_rating": "Absolute minimum",
+      "nutrition_benefits": "Quick energy from banana, protein and healthy fats from almond butter.",
+      "calories": "200 kcal",
+      "macros": {"protein": "4g", "carbs": "27g", "fat": "9g"},
+      "diagnosis_friendly": ["Depression", "All"],
+      "why_diagnosis_friendly": {
+        "depression": "When you literally can do nothing else - this is SOMETHING",
+        "all": "Emergency food for lowest executive function days"
+      },
+      "sensory_notes": {
+        "texture": "Soft banana, creamy nut butter",
+        "smell": "Mild",
+        "taste": "Sweet + nutty",
+        "sensory_intensity": "Very low"
+      },
+      "allergen_info": ["Tree nuts"],
+      "substitutions": {
+        "almond_butter": "Peanut butter, sunflower seed butter, skip entirely",
+        "banana": "Apple slices"
+      },
+      "tags": ["zero-energy", "snack", "survival-meal", "portable"]
+    },
+
+    {
+      "id": "recipe_015",
+      "name": "Cheese and Crackers (Zero Energy)",
+      "category": "zero_energy",
+      "meal_type": "snack",
+      "ingredients": ["Cheese 50g", "Crackers 10", "Apple slices optional"],
+      "instructions": [
+        "Slice cheese",
+        "Put on crackers",
+        "Add apple if you have energy",
+        "Eat"
+      ],
+      "time": "1 minute",
+      "difficulty": "Extremely easy",
+      "steps_count": 4,
+      "servings": 1,
+      "executive_function_rating": "Minimal",
+      "nutrition_benefits": "Protein, calcium, quick energy.",
+      "calories": "250 kcal",
+      "macros": {"protein": "10g", "carbs": "20g", "fat": "14g"},
+      "diagnosis_friendly": ["All"],
+      "why_diagnosis_friendly": {
+        "all": "No cooking, minimal assembly, gets food in you"
+      },
+      "sensory_notes": {
+        "texture": "Crunchy crackers, varied cheese texture",
+        "smell": "Depends on cheese",
+        "taste": "Savory",
+        "sensory_intensity": "Low"
+      },
+      "allergen_info": ["Dairy, gluten"],
+      "substitutions": {
+        "cheese": "Vegan cheese, hummus",
+        "crackers": "Rice cakes, vegetables"
+      },
+      "tags": ["zero-energy", "snack", "no-cooking", "survival-meal"]
     }
   ],
-  "meal_plan": {
-    "day_1": {
-      "breakfast": "Chia Pudding",
-      "lunch": "Grilled Chicken Salad",
-      "dinner": "Baked Salmon with Steamed Broccoli",
-      "snack": "Apple with almond butter"
+
+  "meal_plans": {
+    "general_healthy": {
+      "description": "Balanced week for general health",
+      "day_1": {
+        "breakfast": "recipe_002 - Chia Pudding",
+        "lunch": "recipe_001 - Grilled Chicken Salad",
+        "dinner": "recipe_005 - Baked Salmon",
+        "snack": "recipe_014 - Banana with Almond Butter"
+      },
+      "day_2": {
+        "breakfast": "recipe_004 - Banana Oat Pancakes",
+        "lunch": "recipe_003 - Veggie Stir-Fry",
+        "dinner": "recipe_009 - Batch Chili (from freezer)",
+        "snack": "recipe_007 - Greek Yogurt Bowl"
+      },
+      "day_3": {
+        "breakfast": "recipe_011 - Scrambled Eggs with Spinach",
+        "lunch": "recipe_013 - Lentil Soup (from batch)",
+        "dinner": "recipe_001 - Grilled Chicken Salad",
+        "snack": "recipe_015 - Cheese and Crackers"
+      },
+      "day_4": {
+        "breakfast": "recipe_010 - Overnight Oats",
+        "lunch": "recipe_009 - Chili (from freezer) on rice",
+        "dinner": "recipe_005 - Baked Salmon with vegetables",
+        "snack": "recipe_007 - Greek Yogurt Bowl"
+      },
+      "day_5": {
+        "breakfast": "recipe_012 - Avocado Toast with Egg",
+        "lunch": "recipe_013 - Lentil Soup",
+        "dinner": "recipe_003 - Veggie Stir-Fry with tofu",
+        "snack": "recipe_014 - Banana with Almond Butter"
+      },
+      "day_6": {
+        "breakfast": "recipe_007 - Greek Yogurt Bowl",
+        "lunch": "recipe_001 - Grilled Chicken Salad",
+        "dinner": "recipe_009 - Chili in tortilla wraps",
+        "snack": "recipe_015 - Cheese and Crackers"
+      },
+      "day_7": {
+        "breakfast": "recipe_004 - Banana Oat Pancakes",
+        "lunch": "recipe_013 - Lentil Soup",
+        "dinner": "recipe_005 - Baked Salmon",
+        "snack": "recipe_007 - Greek Yogurt Bowl"
+      }
     },
-    "day_2": {
-      "breakfast": "Banana Oat Pancakes",
-      "lunch": "Veggie Stir-Fry",
-      "dinner": "Quinoa Bowl with Roasted Vegetables",
-      "snack": "Carrot sticks with hummus"
+
+    "adhd_focus": {
+      "description": "High protein, stable blood sugar, brain-supporting meals",
+      "day_1": {
+        "breakfast": "recipe_011 - Scrambled Eggs with Spinach (protein + choline)",
+        "lunch": "recipe_001 - Grilled Chicken Salad (protein + omega-3)",
+        "dinner": "recipe_005 - Baked Salmon (omega-3 brain food)",
+        "snack": "recipe_014 - Banana with Almond Butter"
+      },
+      "day_2": {
+        "breakfast": "recipe_010 - Overnight Oats with protein powder",
+        "lunch": "recipe_009 - Batch Chili (high protein)",
+        "dinner": "recipe_001 - Grilled Chicken with sweet potato",
+        "snack": "recipe_007 - Greek Yogurt Bowl"
+      },
+      "note": "Focus on protein at every meal, omega-3, avoid sugar spikes"
     },
-    "day_3": {
-      "breakfast": "Berry Blast Smoothie",
-      "lunch": "Tuna Salad Wrap",
-      "dinner": "Grilled Chicken with Sweet Potatoes",
-      "snack": "Rice cakes with peanut butter"
+
+    "depression_survival": {
+      "description": "Minimal effort meals for low-energy days",
+      "strategy": "Batch cook on good day, rely on zero-energy meals on bad days",
+      "good_day": "Make recipe_009 (Chili) and recipe_013 (Lentil Soup) - freeze in portions",
+      "bad_days": [
+        "Breakfast: recipe_002 (made night before) or recipe_006 (peanut butter toast)",
+        "Lunch: recipe_009 from freezer, microwave 3 min",
+        "Dinner: recipe_008 (upgraded instant ramen)",
+        "Snack: recipe_014 or recipe_015"
+      ],
+      "note": "ZERO shame for zero-energy meals. Eating SOMETHING > eating perfectly."
     },
-    "day_4": {
-      "breakfast": "Scrambled Eggs with Avocado Toast",
-      "lunch": "Lentil Soup with Whole-Grain Bread",
-      "dinner": "Spaghetti Squash with Marinara Sauce",
-      "snack": "Greek yogurt with honey and walnuts"
+
+    "autism_sensory_safe": {
+      "description": "Predictable textures, mild flavors, customizable",
+      "safe_base_meals": [
+        "recipe_004 - Banana Oat Pancakes (soft, naturally sweet)",
+        "recipe_002 - Chia Pudding (predictable texture)",
+        "recipe_006 - Peanut Butter Toast (simple, same every time)",
+        "recipe_010 - Overnight Oats (customize with safe toppings)",
+        "recipe_009 - Chili (can customize spice level to zero)"
+      ],
+      "strategy": "Identify 5-7 safe foods, rotate them. Expand SLOWLY with minimal pressure.",
+      "note": "Repetition is OK. Same meal every day is OK if that's what works."
     },
-    "day_5": {
-      "breakfast": "Overnight Oats",
-      "lunch": "Quinoa Bowl with Chickpeas and Spinach",
-      "dinner": "Baked Cod with Mashed Cauliflower",
-      "snack": "Dark chocolate and berries"
-    },
-    "day_6": {
-      "breakfast": "Greek Yogurt with Granola and Fresh Fruit",
-      "lunch": "Whole-Grain Turkey Wrap",
-      "dinner": "Stir-Fry Beef with Vegetables",
-      "snack": "Trail mix with nuts and dried fruit"
-    },
-    "day_7": {
-      "breakfast": "Avocado Toast with Poached Egg",
-      "lunch": "Caprese Salad with Whole-Grain Crackers",
-      "dinner": "Roast Vegetable and Chickpea Stew",
-      "snack": "Smoothie with spinach, banana, and almond milk"
+
+    "anxiety_gut_health": {
+      "description": "Focus on gut-brain axis support",
+      "day_1": {
+        "breakfast": "recipe_007 - Greek Yogurt Bowl (probiotics)",
+        "lunch": "recipe_013 - Lentil Soup (fiber for gut)",
+        "dinner": "recipe_005 - Baked Salmon (anti-inflammatory)",
+        "snack": "Berries"
+      },
+      "key_foods": [
+        "Probiotics: Yogurt, kefir",
+        "Prebiotics: Bananas, oats",
+        "Fiber: Lentils, vegetables",
+        "Anti-inflammatory: Salmon, nuts, olive oil"
+      ],
+      "note": "Avoid: Excess caffeine, alcohol, processed food"
     }
   },
+
   "nutrition_tips": [
     {
-      "tip": "Eating a variety of colors ensures you get a wide range of nutrients. Try to include at least 3 different colors in every meal."
+      "title": "Protein at Every Meal",
+      "tip": "Especially important for ADHD - protein supports dopamine production and stable blood sugar. Aim for 20-30g per meal."
     },
     {
-      "tip": "Stay hydrated! Aim for 8 glasses of water a day, and add a slice of lemon or cucumber for flavor."
+      "title": "Omega-3 is Essential",
+      "tip": "Strong evidence for brain health, depression, ADHD. Eat fatty fish 2-3x week or supplement. Salmon, mackerel, sardines, walnuts."
     },
     {
-      "tip": "Healthy fats like avocado, nuts, and olive oil are essential for brain health and should be included in your diet."
+      "title": "Gut Health = Mental Health",
+      "tip": "90% of serotonin made in gut. Support with probiotics (yogurt), prebiotics (bananas, oats), and fiber (vegetables, lentils)."
     },
     {
-      "tip": "Try to limit processed foods and focus on whole, natural ingredients for optimal health."
+      "title": "Hydration Matters",
+      "tip": "Dehydration worsens ADHD symptoms, anxiety, and depression. Aim for 2L water/day. Add lemon or cucumber if plain water boring."
+    },
+    {
+      "title": "Blood Sugar Stability",
+      "tip": "Spikes and crashes worsen all symptoms. Eat regular meals, combine carbs with protein/fat, avoid pure sugar."
+    },
+    {
+      "title": "Batch Cooking Saves Lives",
+      "tip": "Cook once on good day = food for entire week. Perfect for executive dysfunction. Freezer is your friend."
+    },
+    {
+      "title": "Zero-Energy Meals Are Valid",
+      "tip": "Peanut butter toast > nothing. Cheese and crackers > nothing. Survival mode is OK. No shame."
+    },
+    {
+      "title": "Safe Foods Are Valid",
+      "tip": "Autism: If you can only eat 5 foods, that's OK. Work with what works. Expand slowly with zero pressure."
+    },
+    {
+      "title": "Medication Timing Matters",
+      "tip": "ADHD: Eat BEFORE medication (kills appetite). High-protein breakfast recommended. Avoid taking on empty stomach."
+    },
+    {
+      "title": "Anti-Inflammatory Diet Helps",
+      "tip": "Depression and anxiety have inflammation component. Focus on: fatty fish, nuts, olive oil, berries, greens."
+    },
+    {
+      "title": "Avoid These if Struggling",
+      "tip": "Excess caffeine (anxiety), alcohol (depression next day), processed food (inflammation), pure sugar (crashes)."
+    },
+    {
+      "title": "Meal Prep Is Executive Function Support",
+      "tip": "Pre-cut vegetables, rotisserie chicken, frozen meals = valid strategies. Not lazy - smart."
     }
-  ]
+  ],
+
+  "integration_with_foodlab": {
+    "ai_chef_uses_this": "FoodLab's AI-kok searches this database when generating recipes",
+    "party_planner_uses_this": "Party planning draws from recipes and scales them",
+    "smart_shopping_uses_this": "Ingredients lists generated from these recipes",
+    "diagnosis_filtering": "Sarah filters recipes based on user's diagnosis and current energy level",
+    "sensory_matching": "Sarah suggests recipes matching user's sensory preferences",
+    "executive_function_matching": "Sarah suggests based on user's current capacity (zero-energy vs can-cook days)"
+  },
+
+  "critical_reminders": {
+    "for_sarah": [
+      "Never shame food choices - survival > perfection",
+      "Zero-energy meals are VALID - peanut butter toast > nothing",
+      "Safe foods for autism = respect them, don't push variety",
+      "Batch cooking = executive dysfunction savior",
+      "Medication timing matters for ADHD (eat before meds)",
+      "Gut health = mental health (probiotics, fiber)",
+      "Budget awareness - not everyone can afford 'perfect' nutrition",
+      "Some people genuinely can't cook - meet them where they are"
+    ]
+  }
 }
