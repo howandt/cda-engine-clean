@@ -1,37 +1,844 @@
 {
   "id": "LifeFlow",
+  "version": "3.0",
   "title": "Hverdagsflow & påmindelser",
-  "intro": "De små ting vælter ofte mest. Her hjælper jeg dig med at få styr på alt det løse: regninger, bibliotekbøger, små opgaver – og de sociale ting, du måske glemmer, men egentlig har brug for 💙",
+  "description": "Din personlige hverdags-manager med executive dysfunction support, smart påmindelser og praktiske systemer for at holde de små ting i orden",
+  "philosophy": "De små ting vælter ofte mest. Glemte regninger, udløbne lånekort, usagte beskeder - det larmer i baghovedet. Her får du systemer der hjælper, ikke straffer.",
+  
+  "core_principles": {
+    "no_shame": "Du glemmer ikke fordi du er doven - din hjerne fungerer anderledes",
+    "external_brain": "Jeg er din eksterne hjerne for hverdagens små ting",
+    "micro_tasks": "Gør tingene så små at de ikke kan undgås",
+    "energy_aware": "Matcher opgaver til din faktiske energi",
+    "prevention_over_crisis": "Små påmindelser før det bliver akut",
+    "flexibility": "Planer må ændres - det er OK",
+    "one_thing": "Når alt er for meget: Vælg én ting"
+  },
+
+  "intro": {
+    "welcome": "De små ting vælter ofte mest. Her hjælper jeg dig med at få styr på alt det løse: regninger, bibliotekbøger, små opgaver – og de sociale ting, du måske glemmer, men egentlig har brug for 💙",
+    "what_we_do": [
+      "Påminder dig før deadlines - ikke efter",
+      "Nedbryder store opgaver til mikro-steps",
+      "Matcher opgaver til din energi hver dag",
+      "Hjælper med social kontakt uden pres",
+      "Prioriterer når alt føles lige vigtigt",
+      "Laver konkrete planer - ikke bare 'husk'"
+    ],
+    "promise": "Dit liv skal ikke styres af glemte ting og sidste-øjeblik-stress"
+  },
+
   "sections": [
     {
-      "id": "library_return",
-      "type": "message",
-      "title": "Husk biblioteket",
-      "text": "Det er dejligt at låne bøger – men de skal også retur. Jeg kan hjælpe dig med en lille påmindelse, så du undgår gebyrer og stress. Små ting giver ro, når de ikke vokser sig store."
+      "id": "executive_dysfunction_core",
+      "title": "Executive dysfunction & hverdagsstyring",
+      "description": "Hvorfor de små ting er så svære - og hvordan vi hjælper",
+
+      "why_small_things_are_hard": {
+        "title": "Hvorfor er de 'simple' ting så svære?",
+        "explanation": "Det er IKKE dovenskab - det er executive dysfunction",
+        "mechanisms": [
+          {
+            "issue": "Time blindness",
+            "description": "Du har ingen fornemmelse for tid - deadlines føles fjernt indtil de er akutte",
+            "example": "Regning forfald 1. december føles lige langt væk 15. november og 29. november"
+          },
+          {
+            "issue": "Working memory deficit",
+            "description": "Hvis du ikke ser det, eksisterer det ikke",
+            "example": "Du beslutter at betale regning - går til badeværelse - regning er glemt"
+          },
+          {
+            "issue": "Task initiation paralysis",
+            "description": "Kan ikke starte selvom du VIL",
+            "example": "Stirrer på regning i 30 minutter - kan ikke få dig til at åbne den"
+          },
+          {
+            "issue": "Decision fatigue",
+            "description": "Hver lille ting kræver beslutning - hjernen går i stå",
+            "example": "'Skal jeg gøre det nu eller om 5 min?' - paralyseret af valget"
+          },
+          {
+            "issue": "Overwhelm shutdown",
+            "description": "For mange små ting = total freeze",
+            "example": "10 små opgaver føles som 1 kæmpe bjerg - gør ingenting"
+          }
+        ],
+        "reframe": "Din hjerne mangler et OS til hverdagsadministration - jeg er det OS"
+      },
+
+      "diagnosis_specific_challenges": {
+        "adhd": {
+          "title": "ADHD & hverdagsstyring",
+          "key_challenges": [
+            "Time blindness - ingen fornemmelse for tid",
+            "Object permanence - out of sight = doesn't exist",
+            "Dopamin-deficit - kedsomme opgaver er fysisk smertefulde",
+            "Hyperfokus på forkerte ting - vigtigt ignoreres, uvigtigt absorberer",
+            "Impulsstyret - gør det der FØLES vigtigt nu"
+          ],
+          "strategies": {
+            "external_reminders": "Timers, alarmer, notifikationer - mange og synlige",
+            "dopamine_pairing": "Par kedelig opgave med noget sjovt (musik, podcast)",
+            "body_doubling": "Gør kedsomme ting mens andre er der (selv virtuelt)",
+            "hyperfocus_redirect": "Når du hyperfokuserer på forkert ting - gentle redirect",
+            "immediate_capture": "Skriv ALT ned med det samme - ellers væk"
+          }
+        },
+        "autism": {
+          "title": "Autism & hverdagsstyring",
+          "key_challenges": [
+            "Rutine disruption - ændringer koster energi",
+            "Executive function fatigue - 'simple' ting dræner",
+            "Sensory overwhelm - kan ikke fokusere gennem overstimulation",
+            "Social administration - husker ikke at kontakte folk",
+            "Monotropisme - kun ét fokus ad gangen"
+          ],
+          "strategies": {
+            "rigid_routines": "Samme tid, samme sted, samme måde - hver gang",
+            "visual_schedules": "Se hele dagen på én gang",
+            "transition_warnings": "Advar før opgave-skift",
+            "sensory_check_first": "Kan du overhovedet fokusere nu? (støj, lys, etc)",
+            "special_interest_integration": "Link kedelige opgaver til special interests"
+          }
+        },
+        "anxiety": {
+          "title": "Anxiety & hverdagsstyring",
+          "key_challenges": [
+            "Perfection paralysis - kan ikke starte før det er perfekt",
+            "Catastrophizing - lille opgave føles kæmpe stor",
+            "Avoidance - undgår opgaver der gør angst",
+            "Decision paralysis - hvad hvis jeg vælger forkert?",
+            "Rumination - tænker på opgaver men gør dem ikke"
+          ],
+          "strategies": {
+            "micro_steps": "Så små at de ikke kan være skræmmende",
+            "permission_to_imperfect": "Gjort er bedre end perfekt",
+            "time_limits": "5 min max - så kan du stoppe",
+            "grounding_first": "Calm ned før opgave",
+            "celebrate_done": "Fokus på færdig, ikke hvordan"
+          }
+        },
+        "depression": {
+          "title": "Depression & hverdagsstyring",
+          "key_challenges": [
+            "Anhedonia - intet føles værd at gøre",
+            "Ingen energi - selv små ting føles uovervindelige",
+            "Cognitive slowing - alt tager længere tid",
+            "Motivation deficit - ved det skal gøres men kan ikke",
+            "Self-care collapse - basale ting droppes"
+          ],
+          "strategies": {
+            "absolute_minimum": "Hvad er det MINDSTE der skal gøres?",
+            "behavioral_activation": "Gør det selv når det ikke føles godt",
+            "no_chain_breaking": "Én glemt dag = ikke fiasko",
+            "external_accountability": "Jeg minder dig - du behøver ikke huske",
+            "energy_matching": "Dårlig dag = nul-energi opgaver"
+          }
+        }
+      }
     },
+
     {
-      "id": "pay_on_time",
-      "type": "message",
-      "title": "Regninger til tiden",
-      "text": "Det er så let at udskyde – men det koster dyrt. Jeg kan hjælpe dig med at lægge regningerne i system og minde dig i tide. Du fortjener et system, der hjælper dig – ikke straffer dig."
+      "id": "smart_reminder_system",
+      "title": "Smart påmindelser der virker",
+      "description": "Ikke bare 'husk' - konkrete systemer",
+
+      "reminder_philosophy": {
+        "title": "Hvorfor standard påmindelser fejler",
+        "problems": [
+          "'Husk at betale regning' - OK, men HVORNÅR? HVORDAN?",
+          "Påmindelse 1 dag før - stadig for abstrakt",
+          "Ingen breakdown - opgaven føles stadig kæmpe",
+          "Notifikation ignoreres hvis ikke actionable NÅR du ser den"
+        ],
+        "solution": "Konkrete, actionable, timed reminders med step-by-step"
+      },
+
+      "layered_reminder_system": {
+        "title": "3-lags påmindelser",
+        "description": "Tidlig advarsel → Konkret påmindelse → Akut nudge",
+        
+        "layer_1_early_warning": {
+          "timing": "1-2 uger før deadline",
+          "purpose": "Mental forberedelse - ved det kommer",
+          "format": "FYI: Regning forfalder 1. december - vi planlægger dette snart",
+          "action": "Ingen action krævet - bare awareness"
+        },
+        
+        "layer_2_action_reminder": {
+          "timing": "3-5 dage før deadline",
+          "purpose": "Konkret action plan",
+          "format": "Opgave: Betal regning\nHvordan: Log ind bank → find regning → betal\nHvornår: I dag mellem 14-16?\nTid: 5 minutter\nEnergi: Lav",
+          "action": "Konkret plan - skal udføres"
+        },
+        
+        "layer_3_urgent_nudge": {
+          "timing": "Deadline dag (morgen)",
+          "purpose": "SIDSTE chance før konsekvenser",
+          "format": "⚠️ URGENT: Regning SKAL betales i dag\nGør det NU - 5 minutter\nKonsekvens ved at vente: Gebyr + stress",
+          "action": "Drop alt andet - gør dette først"
+        }
+      },
+
+      "executive_function_support": {
+        "title": "Påmindelser der respekterer executive dysfunction",
+        "features": [
+          {
+            "feature": "Breakdown included",
+            "description": "Hver påmindelse har step-by-step",
+            "example": "Ikke: 'Betal regning' → Men: '1) Åbn MobilePay 2) Vælg regninger 3) Find [specifik] 4) Betal 5) Screenshot kvittering'"
+          },
+          {
+            "feature": "Time estimate",
+            "description": "Hvor lang tid tager det REELT?",
+            "benefit": "Ingen 'det tager evigt' katastrofe-tænkning"
+          },
+          {
+            "feature": "Energy level required",
+            "description": "Høj/medium/lav energi nødvendig?",
+            "benefit": "Match opgave til dagens energi"
+          },
+          {
+            "feature": "Optimal timing suggestion",
+            "description": "Hvornår på dagen passer det bedst?",
+            "example": "Regninger: Efter morgenmad, før hjerne er træt"
+          },
+          {
+            "feature": "Dopamine pairing",
+            "description": "Forslag til at gøre det mere tåleligt",
+            "example": "Sæt god musik på mens du betaler regninger"
+          }
+        ]
+      },
+
+      "customizable_reminder_intensity": {
+        "title": "Tilpas påmindelses-intensitet",
+        "description": "Du bestemmer hvor meget support du har brug for",
+        "levels": {
+          "minimal": {
+            "description": "Du har styr på det meste - bare lidt backup",
+            "frequency": "Kun layer 2 + 3",
+            "tone": "Friendly nudge"
+          },
+          "moderate": {
+            "description": "Har brug for regelmæssig support",
+            "frequency": "Alle 3 layers",
+            "tone": "Supportive guidance"
+          },
+          "intensive": {
+            "description": "Executive dysfunction er svært lige nu",
+            "frequency": "Daglige check-ins + alle layers",
+            "tone": "Gentle but persistent"
+          },
+          "crisis": {
+            "description": "Livet er kaos - brug for meget hjælp",
+            "frequency": "Multiple daily check-ins + breakdown af ALT",
+            "tone": "Ultra-supportive, zero judgment"
+          }
+        }
+      }
     },
+
     {
-      "id": "do_it_now",
-      "type": "message",
-      "title": "Gør det nu – ellers glemmer du det",
-      "text": "Du kender det måske: 'Jeg gør det senere'… og så bliver det glemt. Jeg kan støtte dig i at tage de små ting med det samme – så de ikke larmer i baghovedet hele dagen."
+      "id": "common_life_tasks",
+      "title": "Hverdagens små opgaver - konkrete systemer",
+      "description": "Praktiske guides til de ting der altid glemmes",
+
+      "bills_and_payments": {
+        "title": "Regninger & betalinger",
+        "system": {
+          "setup": [
+            "List alle tilbagevendende regninger",
+            "Noter forfaldsdag for hver",
+            "Sæt påmindelser: 5 dage før + deadline dag",
+            "Automatiser hvad der kan automatiseres"
+          ],
+          "emergency_rescue": {
+            "title": "Hvis du allerede er bagud",
+            "steps": [
+              "Lav liste over ALT du skylder",
+              "Prioriter: 1) Husleie/bolig 2) Strøm/varme 3) Resten",
+              "Kontakt kreditor FØRST - forklar situation",
+              "Lav betalingsaftale hvis muligt",
+              "Sæt alarm for hver aftale"
+            ]
+          },
+          "prevention": {
+            "autopay": "Sæt alt på autopay du kan - eliminér beslutningen",
+            "single_day": "Vælg ÉN dag månedligt som 'regningsdag'",
+            "immediate_filing": "Gem kvittering med det samme - ikke 'senere'"
+          }
+        },
+        "adhd_support": {
+          "visual_system": "Fysisk kurv med 'skal betales' + 'betalt'",
+          "body_doubling": "Betal regninger mens på FaceTime med ven",
+          "dopamine_reward": "Treat efter hver betalt regning"
+        }
+      },
+
+      "library_returns": {
+        "title": "Bibliotek - returner til tiden",
+        "system": {
+          "setup": [
+            "Sæt påmindelse når du låner: Returdag - 2 dage",
+            "Læg bøger synligt ved døren",
+            "Lav fast 'biblioteksdag' (fx hver søndag)",
+            "Overvej e-bøger (auto-retur)"
+          ],
+          "forny_system": {
+            "title": "Forny inden deadline",
+            "steps": [
+              "Sæt alarm 3 dage før",
+              "Check: Kan det fornys? Forny med det samme",
+              "Hvis ikke: Planlæg konkret returnering"
+            ]
+          },
+          "gebyr_undgåelse": {
+            "prevention": "Lån færre bøger ad gangen hvis du ofte glemmer",
+            "acceptance": "Hvis du får gebyr: Betal det, lær, gå videre - ingen skam"
+          }
+        },
+        "adhd_support": {
+          "out_of_sight": "Bøger skal være SYNLIGE - ellers glemmes de",
+          "phone_alarm": "Alarm titlen: 'RETURNER BØGER NU'",
+          "combine_tasks": "Gør det på vej til noget andet"
+        }
+      },
+
+      "household_tasks": {
+        "title": "Huslige opgaver",
+        "system": {
+          "daily_minimum": {
+            "description": "Absolut minimum for at huset ikke kollapser",
+            "tasks": [
+              "Opvask (eller i maskine)",
+              "Tøj fra gulv til kurv",
+              "Skrald ud hvis fuld",
+              "Gør overflader spisebare"
+            ],
+            "time": "15 minutter total"
+          },
+          "weekly_minimum": {
+            "tasks": [
+              "Vask tøj",
+              "Støvsuge/feje",
+              "Badeværelse basis",
+              "Køkken dybrengøring"
+            ],
+            "strategy": "1 opgave pr dag - ikke alt på én dag"
+          },
+          "monthly_tasks": {
+            "tasks": [
+              "Skift sengetøj",
+              "Køleskab gennemgang",
+              "Badeværelse dybrengøring",
+              "Organisere/rydde op"
+            ]
+          }
+        },
+        "executive_dysfunction_rescue": {
+          "title": "Når du ikke kan gøre noget",
+          "absolute_minimum": [
+            "Skrald ud (lugter)",
+            "Køkken spisebart (sundhed)",
+            "Toilet funktionelt"
+          ],
+          "give_permission": "Resten kan vente - overlev først"
+        }
+      },
+
+      "appointments_and_dates": {
+        "title": "Aftaler & deadlines",
+        "system": {
+          "calendar_discipline": {
+            "rule": "Hvis det ikke er i kalenderen, eksisterer det ikke",
+            "method": [
+              "Ind i kalender NU - ikke 'senere'",
+              "Alarm: 1 dag før + 1 time før + 10 min før",
+              "Inkluder rejsetid i event",
+              "Bloker forberedelsestid før"
+            ]
+          },
+          "appointment_preparation": {
+            "night_before": [
+              "Hvad skal du have med? Pak det",
+              "Transport planlagt?",
+              "Tjek adresse/tid igen"
+            ],
+            "morning_of": [
+              "Sæt alt ved døren",
+              "Skriv på hånd om nødvendigt",
+              "Gå tidligt - buffer for forsinkelser"
+            ]
+          },
+          "cancellation_protocol": {
+            "title": "Hvis du er nødt til at aflyse",
+            "steps": [
+              "Aflys så tidligt som muligt",
+              "Giv grund (hvis komfortabel)",
+              "Foreslå ny tid",
+              "Ingen undskyldninger-spiral - bare gør det"
+            ]
+          }
+        }
+      },
+
+      "mail_and_admin": {
+        "title": "Post & administration",
+        "system": {
+          "physical_mail": {
+            "daily_routine": [
+              "Hent post",
+              "Sorter: 1) Akut 2) Vigtigt 3) Skrald",
+              "Åbn akut med det samme",
+              "Gem vigtigt synligt"
+            ],
+            "filing": "Lav simpelt system - ikke perfekt"
+          },
+          "digital_mail": {
+            "inbox_zero_alternative": "Glem inbox zero - fokus på flagging vigtigt",
+            "filters": "Auto-sorter så vigtigt ikke drukner",
+            "unsubscribe": "Ubarmhjertigt unsubscribe"
+          },
+          "forms_and_paperwork": {
+            "strategy": [
+              "Gør det med det samme hvis <5 min",
+              "Hvis >5 min: Book tid i kalender",
+              "Bed om hjælp hvis uoverskueligt"
+            ]
+          }
+        }
+      }
     },
+
     {
-      "id": "social_reminder",
-      "type": "message",
+      "id": "social_life_management",
       "title": "Social kontakt uden pres",
-      "text": "Nogle gange glemmer vi at række ud – selv til dem vi holder af. Jeg kan hjælpe dig med små ideer og påmindelser: en besked, en invitation, et lille tegn på liv."
+      "description": "Hjælp til at vedligeholde relationer når executive function er svær",
+
+      "why_social_admin_is_hard": {
+        "title": "Hvorfor glemmer vi folk vi elsker?",
+        "reasons": [
+          "Out of sight, out of mind (object permanence)",
+          "Social initiation kræver energi",
+          "Angst for at være til besvær",
+          "Glemmer hvor lang tid siden sidste kontakt",
+          "Skriv besked → glemmer at sende"
+        ],
+        "not_that_you_dont_care": "Du glemmer ikke fordi du er ligeglad - din hjerne tracke ikke tid/relationer automatisk"
+      },
+
+      "social_reminders": {
+        "title": "Påmind mig om folk jeg elsker",
+        "system": {
+          "contact_intervals": {
+            "description": "Hvor ofte vil du gerne have kontakt?",
+            "categories": {
+              "close_family": "Ugentligt check-in",
+              "close_friends": "Hver 2. uge",
+              "good_friends": "Månedligt",
+              "acquaintances": "Når det passer"
+            }
+          },
+          "low_effort_contact": {
+            "title": "Det behøver ikke være stort",
+            "examples": [
+              "Enkelt emoji som reaktion på deres story",
+              "Link til noget de vil kunne lide",
+              "5-ords besked: 'Tænker på dig ❤️'",
+              "Meme/funny billede",
+              "'Hvordan går det?' - tre ord"
+            ]
+          },
+          "special_dates": {
+            "title": "Fødselsdage & begivenheder",
+            "system": [
+              "Lav liste over vigtige dage",
+              "Påmind 1 uge før (så du kan købe gave)",
+              "Påmind på dagen (så du kan skrive)",
+              "Gave-ideer noter året rundt"
+            ]
+          }
+        }
+      },
+
+      "initiate_without_anxiety": {
+        "title": "Reach out uden angst",
+        "common_fears": [
+          "'Hvad hvis de synes jeg er irriterende?'",
+          "'Det er for lang tid siden - det er akavet nu'",
+          "'Hvad hvis de ikke svarer?'",
+          "'Jeg ved ikke hvad jeg skal skrive'"
+        ],
+        "reframes": [
+          "De fleste er glade for at høre fra dig",
+          "Der er ingen 'for lang tid' - bare reach out",
+          "Intet svar = de er travle, ikke dit problem",
+          "Du behøver ikke sige noget smart - bare sig hej"
+        ],
+        "templates": {
+          "long_time_no_contact": "Hej! Det er vildt lang tid siden. Hvordan har du det?",
+          "thinking_of_you": "Tænkte på dig i dag - håber du har det godt ❤️",
+          "saw_something": "Så [X] og tænkte på dig! [link]",
+          "direct": "Har savnet at snakke med dig. Har du tid til en kop kaffe snart?"
+        }
+      },
+
+      "saying_no_without_guilt": {
+        "title": "Sige nej når social energi mangler",
+        "permission": "Du må sige nej - det betyder ikke du er dårlig",
+        "honest_templates": [
+          "'Jeg har ikke social energi lige nu, men vil gerne en anden dag'",
+          "'Min hjerne er fuld - skal have ro i dag'",
+          "'Vil meget gerne, men har ikke spoons til det. Regn med mig næste gang?'",
+          "'Kan ikke love noget lige nu - må jeg vende tilbage?'"
+        ],
+        "no_elaborate_excuses": "Du skylder ikke lange forklaringer"
+      }
     },
+
     {
-      "id": "low_energy_structure",
-      "type": "message",
-      "title": "Når energien er lav",
-      "text": "På de dage, hvor alting føles uoverskueligt, kan jeg hjælpe dig med at vælge én ting. Bare én. Og hvis det føles for meget – så vælger vi sammen i morgen."
+      "id": "energy_matching",
+      "title": "Match opgaver til energi",
+      "description": "Gør de rigtige ting når du har den rigtige energi",
+
+      "daily_energy_check": {
+        "title": "Morgen energi-vurdering",
+        "question": "Hvor meget energi har jeg i dag?",
+        "scale": {
+          "zero": "Kan næsten ingenting - survival mode",
+          "low": "Kan gøre lidt - basale ting",
+          "medium": "Normal dag - kan klare det meste",
+          "high": "God energi - kan tackle svære ting"
+        }
+      },
+
+      "energy_categorized_tasks": {
+        "zero_energy_tasks": {
+          "description": "For 'kan næsten ikke' dage",
+          "tasks": [
+            "Intet - hvile er OK",
+            "Drikke vand",
+            "Spise noget simpelt",
+            "Ligge i sengen",
+            "Se noget let"
+          ],
+          "permission": "At gøre nul er også valid - overlev dagen"
+        },
+
+        "low_energy_tasks": {
+          "description": "Minimale kognitive/fysiske krav",
+          "tasks": [
+            "Betale 1 regning (hvis system klar)",
+            "Smide skrald ud",
+            "Svare på 1 besked",
+            "5 min oprydning",
+            "Ordre mad online"
+          ],
+          "approach": "Vælg MAX 1-2 ting - ikke mere"
+        },
+
+        "medium_energy_tasks": {
+          "description": "Normal hverdags-opgaver",
+          "tasks": [
+            "Hente post + åbne",
+            "Lave mad",
+            "Tøjvask",
+            "Betale flere regninger",
+            "Planlægge uge",
+            "Social kontakt (kort)"
+          ]
+        },
+
+        "high_energy_tasks": {
+          "description": "Når du faktisk kan tackle det svære",
+          "tasks": [
+            "Ringe til offentlig instans",
+            "Udfylde komplicerede formularer",
+            "Stor oprydning",
+            "Planlægge fremtid",
+            "Social events",
+            "Konflikt-håndtering"
+          ],
+          "capture_momentum": "Når energien er her - brug den klogt"
+        }
+      },
+
+      "flexible_scheduling": {
+        "title": "Planer der kan ændres",
+        "philosophy": "Planlagt mandag opgave kan gøres tirsdag hvis energi mangler",
+        "dynamic_adjustment": [
+          "Check energi hver morgen",
+          "Flyt opgaver hvis nødvendigt",
+          "Ingen skyld over ændringer",
+          "Vigtigt er at det bliver gjort - ikke HVORNÅR"
+        ]
+      }
+    },
+
+    {
+      "id": "overwhelm_rescue",
+      "title": "Når alt er for meget",
+      "description": "Akut-hjælp til total overwhelm",
+
+      "overwhelm_protocol": {
+        "title": "Akut overwhelm-protokol",
+        "when": "Alt larmer, kan ikke prioritere, frysning",
+        "immediate_steps": [
+          {
+            "step": "Stop",
+            "action": "Træk vejret. Du behøver ikke gøre ALT nu."
+          },
+          {
+            "step": "Grund",
+            "action": "5-4-3-2-1 sensory grounding (se CalmSpace)"
+          },
+          {
+            "step": "Skriv alt ned",
+            "action": "Dump hele listen - få det ud af hovedet"
+          },
+          {
+            "step": "Sorter efter akut",
+            "action": "Hvad SKAL gøres i dag? (Sandsynligvis mindre end du tror)"
+          },
+          {
+            "step": "Vælg ÉN ting",
+            "action": "Det mindste, nemmeste - gør DEN"
+          },
+          {
+            "step": "Vurdér igen",
+            "action": "Er der mere energi? Vælg næste. Hvis nej: Stop."
+          }
+        ]
+      },
+
+      "one_thing_philosophy": {
+        "title": "Vælg én ting",
+        "description": "Når du ikke kan gøre alt - gør ét",
+        "questions": [
+          "Hvad vil give mest ro hvis gjort?",
+          "Hvad har konsekvens hvis IKKE gjort i dag?",
+          "Hvad tager mindst energi?",
+          "Hvad kan jeg faktisk klare lige nu?"
+        ],
+        "permission": "Én ting gjort > ti ting undladt"
+      },
+
+      "delegation_and_help": {
+        "title": "Bed om hjælp",
+        "when_to_delegate": "Når opgave er for stor + energi mangler",
+        "who_can_help": [
+          "Partner/familie: Praktiske opgaver",
+          "Venner: Body doubling, transport, selskab",
+          "Professionelle: Terapeut, læge, socialrådgiver",
+          "Mig (Sarah): Planlægning, nedbrydning, reminders"
+        ],
+        "how_to_ask": [
+          "Vær specifik: 'Kan du hjælpe med X?'",
+          "Forklar hvorfor: 'Jeg er overvældet'",
+          "Accept hjælp: Ikke 'jeg skal selv' mindset"
+        ]
+      }
+    },
+
+    {
+      "id": "habit_building",
+      "title": "Byg små vaner",
+      "description": "Micro-habits for executive dysfunction",
+
+      "why_habits_help": {
+        "title": "Vaner = mindre beslutninger",
+        "explanation": "Executive dysfunction = beslutningstræthed. Vaner eliminerer beslutninger.",
+        "goal": "Automatiser de små ting så hjerne-energi spares"
+      },
+
+      "habit_stacking": {
+        "title": "Habit stacking",
+        "method": "Efter [eksisterende vane], gør jeg [ny vane]",
+        "examples": [
+          "Efter jeg børster tænder → tag medicin",
+          "Efter morgenmad → check kalender",
+          "Efter jeg kommer hjem → læg nøgler på fast sted",
+          "Efter jeg får post → sorter med det samme"
+        ]
+      },
+
+      "tiny_habits": {
+        "title": "Micro-habits: SÅ små de ikke kan fejle",
+        "philosophy": "Start absurd lille - ekspander senere",
+        "examples": [
+          {
+            "habit": "Oprydning",
+            "tiny_version": "Flyt 1 ting fra gulv hver dag",
+            "expansion": "Efter 2 uger: Flyt 3 ting"
+          },
+          {
+            "habit": "Check kalender",
+            "tiny_version": "Åbn kalender-app hver morgen",
+            "expansion": "Efter 2 uger: Åbn + læs dagens events"
+          },
+          {
+            "habit": "Social kontakt",
+            "tiny_version": "Reakter på 1 story om ugen",
+            "expansion": "Send 1 besked om ugen"
+          }
+        ]
+      },
+
+      "visual_cues": {
+        "title": "Gør vaner synlige",
+        "strategies": [
+          "Post-its på steder du ser",
+          "Lav objekt-triggers (medicin ved kaffemaskine)",
+          "Phone widgets med reminders",
+          "Streak-tracking apps (men lad være med at straffe dig ved break)"
+        ]
+      },
+
+      "permission_to_fail": {
+        "title": "Vane-breaks er OK",
+        "anti_advice": "Glem 'miss ikke 2 dage i træk' - det skaber skam",
+        "better_mindset": "'Jeg missede i går - så starter jeg igen i dag'",
+        "no_perfection": "80% er fantastisk - det behøver ikke være 100%"
+      }
+    },
+
+    {
+      "id": "do_it_now_strategy",
+      "title": "Gør det nu - ellers glemmer du det",
+      "description": "2-minutters regel og immediacy strategi",
+
+      "two_minute_rule": {
+        "title": "Hvis det tager <2 minutter: Gør det NU",
+        "philosophy": "Det tager mere energi at huske + planlægge end at bare gøre",
+        "examples": [
+          "Svare på simpel besked",
+          "Smide skrald ud",
+          "Hænge jakke op",
+          "Sætte opvask i maskine",
+          "Notere aftale i kalender"
+        ],
+        "override_adhd_delay": "Din hjerne siger 'gør senere' - gør nu"
+      },
+
+      "immediate_capture": {
+        "title": "Fang tanker med det samme",
+        "problem": "Tænker 'jeg skal huske X' → 5 sekunder senere: Væk",
+        "solution": "Skriv ALT ned NU - ikke om 5 min",
+        "tools": [
+          "Notes app altid tilgængelig",
+          "Voice memos hvis skrivning er for meget",
+          "Siri/Google Assistant: 'Remind me'",
+          "Fysisk notesbog i lommen"
+        ]
+      },
+
+      "do_not_put_down_rule": {
+        "title": "'Put it away, don't put it down' regel",
+        "explanation": "Når du har noget i hånden - læg det på RETTE sted, ikke bare ned",
+        "examples": [
+          "Jakke → garderobe (ikke stol)",
+          "Saks → skuffe (ikke bord)",
+          "Post → afleveringssted (ikke bunke)",
+          "Opvask → maskine (ikke vask)"
+        ],
+        "benefit": "Eliminerer 'oprydning senere' opgaver"
+      }
+    },
+
+    {
+      "id": "weekly_planning",
+      "title": "Ugentlig planlægning",
+      "description": "Få overblik uden overvældelse",
+
+      "sunday_reset": {
+        "title": "Søndag/mandag morgen reset",
+        "duration": "15-30 minutter",
+        "steps": [
+          {
+            "step": "Brain dump",
+            "action": "Skriv ALT der skal gøres denne uge"
+          },
+          {
+            "step": "Prioriter",
+            "action": "Markér: SKAL gøres / Vigtigt / Kan vente"
+          },
+          {
+            "step": "Tildel dage",
+            "action": "Spread opgaver over ugen - ikke alt på én dag"
+          },
+          {
+            "step": "Check kalender",
+            "action": "Er der aftaler? Bloker tid før/efter"
+          },
+          {
+            "step": "Meal planning",
+            "action": "Hvad skal du spise? Indkøb behov?"
+          }
+        ]
+      },
+
+      "daily_micro_planning": {
+        "title": "Daglig morgen micro-plan",
+        "duration": "5 minutter",
+        "questions": [
+          "Hvad er dagens energi?",
+          "Hvad SKAL gøres i dag?",
+          "Hvad kan droppes hvis energi mangler?",
+          "Hvilken tid passer bedst til hvilke opgaver?"
+        ]
+      },
+
+      "evening_review": {
+        "title": "Aften gennemgang (optional)",
+        "duration": "3-5 minutter",
+        "purpose": "Forbered næste dag",
+        "steps": [
+          "Hvad blev gjort? (Celebrate!)",
+          "Hvad ikke gjort? (Flyt eller drop)",
+          "Check i morgen kalender",
+          "Klargør ting til i morgen"
+        ]
+      }
+    },
+
+    {
+      "id": "integration_other_modules",
+      "title": "Integration med andre funktioner",
+      "description": "Hvordan LifeFlow arbejder sammen med resten af Sarah",
+
+      "connections": {
+        "calmspace": "Brug grounding før overvældende opgaver",
+        "healthlab": "Planlæg opgaver efter søvn/energi/medicin",
+        "emotions": "Check følelser før social kontakt",
+        "hobbylab": "Schedule hobby-tid som recovery efter opgaver",
+        "sociallab": "Brug social strategi når du skal række ud",
+        "timesafe": "Integration med timer-systemer",
+        "carelab": "Eskalér til crisis support hvis nødvendigt"
+      }
     }
-  ]
+  ],
+
+  "critical_reminders": {
+    "no_shame": "Du glemmer ikke fordi du er doven - din hjerne fungerer anderledes",
+    "systems_over_willpower": "Bygger systemer så du ikke skal huske alt",
+    "done_over_perfect": "Gjort fejlagtigt > ikke gjort",
+    "flexibility": "Planer må ændres - det er features, ikke bugs",
+    "one_thing_counts": "Én ting gjort > ti ting tænkt",
+    "ask_for_help": "Delegation er ikke fiasko - det er smart ressource-brug",
+    "celebrate_small": "Betalte 1 regning? Det tæller! Skrev 1 besked? Sejr!"
+  },
+
+  "integration_notes": {
+    "connects_to": [
+      "AdaptCore (personalisering)",
+      "CalmSpace (overwhelm)",
+      "HealthLab (energi)",
+      "Emotions (motivation)",
+      "HobbyLab (scheduling)",
+      "SocialLab (social initiation)",
+      "CareLabTimeSafe (crisis escalation)"
+    ]
+  }
 }
