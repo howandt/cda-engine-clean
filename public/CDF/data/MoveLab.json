@@ -1,69 +1,596 @@
 {
   "id": "MoveLab",
+  "version": "3.0",
   "title": "Bevægelse & kropslighed",
-  "intro": "Bevægelse handler ikke om at præstere – men om at mærke sig selv. I MoveLab kan du finde inspiration, ærlige råd og støtte til at bevæge dig på en måde, der passer til dit liv og dit tempo 💙",
+  "description": "Din personlige bevægelses-guide med diagnose-specifik tilgang, executive dysfunction support og respekt for kroppens signaler.",
+  "philosophy": "Bevægelse handler ikke om at præstere – men om at mærke sig selv. Det er ikke straff for at have en krop - det er kærlighed til den. Start småt, vær ærlig, hold fast.",
+  
+  "core_principles": {
+    "movement_not_performance": "Du bevæger dig for at føle dig selv - ikke for at imponere",
+    "start_small": "5 minutter tæller - det behøver ikke være timer",
+    "rest_is_training": "Hvile er ikke dovenskab - det er hvordan kroppen bliver stærkere",
+    "pain_awareness": "Godt træt vs dårligt træt - lær forskellen",
+    "no_comparison": "Din krop, dit tempo - ikke andres",
+    "sensory_respect": "Respekter dine sensory needs i bevægelse",
+    "executive_friendly": "Minimal barriere til at starte - maksimal støtte"
+  },
+
+  "intro": {
+    "welcome": "Bevægelse handler ikke om at præstere – men om at mærke sig selv. I MoveLab kan du finde inspiration, ærlige råd og støtte til at bevæge dig på en måde, der passer til dit liv og dit tempo 💙",
+    "what_we_do": [
+      "Finder bevægelse der passer til DIN krop og hjerne",
+      "Støtter dig når motivation mangler",
+      "Lærer dig forskellen på godt træt og dårligt træt",
+      "Respekterer sensory needs og executive dysfunction",
+      "Giver konkrete starter-guides - ikke vage råd",
+      "Minder dig om at hvile ER træning"
+    ],
+    "promise": "Ingen præstation. Ingen skam. Bare bevægelse på dine præmisser."
+  },
+
   "sections": [
     {
+      "id": "movement_philosophy",
+      "title": "Hvorfor bevæge sig?",
+      "description": "Ikke fordi du skal - men fordi det hjælper",
+
+      "real_benefits": {
+        "title": "Hvad bevægelse faktisk gør",
+        "mental_health": [
+          "Lindrer depression (dokumenteret effekt)",
+          "Reducer angst (fysisk udladning af stress)",
+          "ADHD support (dopamin + endorfiner)",
+          "Bedre søvn (kroppen træt = hjerne rolig)",
+          "Emotionel regulering (bevægelse metaboliserer følelser)"
+        ],
+        "physical_health": [
+          "Stærkere krop - daglige ting bliver nemmere",
+          "Bedre energi (paradoksalt - bevægelse giver energi)",
+          "Sundere hjerte og lunger",
+          "Bedre balance og koordination",
+          "Smertereduktion (især kronisk smerte)"
+        ],
+        "neurodivergent_specific": [
+          "ADHD: Dopamin naturligt - ikke kun fra medicin",
+          "Autism: Sensory regulering gennem proprioception",
+          "Anxiety: Burn off nervøs energi",
+          "Depression: Behavioral activation - gør DET selv når motivation mangler"
+        ]
+      },
+
+      "not_about": {
+        "title": "Hvad bevægelse IKKE handler om",
+        "misconceptions": [
+          "Ikke vægttab som primært mål",
+          "Ikke at se ud på en bestemt måde",
+          "Ikke at kunne løbe marathon",
+          "Ikke at præstere som andre",
+          "Ikke straff for at spise"
+        ],
+        "reframe": "Bevægelse er gave til dig selv - ikke pligt du skylder verden"
+      }
+    },
+
+    {
       "id": "movement_types",
-      "type": "list",
       "title": "Bevægelsesformer du kan vælge",
-      "text": "Du bestemmer, hvordan du vil bevæge dig – her er nogle ideer, du kan starte med:",
-      "items": [
-        "Cykling – ude eller på motionscykel",
-        "Gåture – korte, lange eller bare rundt i hjemmet",
-        "Fitness og styrketræning – med fokus på form og pauser",
-        "Yoga – blid bevægelse og stræk",
-        "Dans – med musik du kan mærke i kroppen",
-        "Svømning – skånsomt og rytmisk"
-      ]
+      "description": "Find det der passer til din krop, hjerne og situation",
+
+      "low_barrier_movement": {
+        "title": "Lav barriere - start her",
+        "activities": [
+          {
+            "name": "Gå tur",
+            "setup": "Sko på, dør ud",
+            "duration": "5-60 minutter",
+            "benefits": "Frisk luft, gentle, kan gøres alene",
+            "adhd_note": "Gåture = ADHD-medicin. Dopamin + natur + bevægelse.",
+            "autism_note": "Forudsigelig rute, headphones OK, ingen social krav",
+            "anxiety_note": "Grounding gennem bevægelse, kan stoppe når som helst",
+            "depression_note": "Behavioral activation - gør det selv når du ikke gider"
+          },
+          {
+            "name": "Stræk i sengen",
+            "setup": "Ingenting - bare stræk",
+            "duration": "2-10 minutter",
+            "benefits": "Minimal energi, proprioception, blid start på dagen",
+            "who": "Når energi er NUL men du vil mærke kroppen"
+          },
+          {
+            "name": "Dans hjemme",
+            "setup": "Musik på, bevæg dig som du vil",
+            "duration": "5-30 minutter",
+            "benefits": "Dopamin, fri udtryk, ingen regler",
+            "adhd_note": "Impulsiv? Dans! Nervøs energi? Dans!",
+            "note": "Ingen ser dig - dans grimt hvis du vil"
+          },
+          {
+            "name": "Cykel (ude eller indendørs)",
+            "setup": "Cykel + vej/motionscykel",
+            "duration": "10-60 minutter",
+            "benefits": "Ikke weight-bearing (skånsomt), transport + motion",
+            "adhd_note": "Speed + wind + dopamin = chef's kiss",
+            "autism_note": "Repetitiv, forudsigelig bevægelse"
+          }
+        ]
+      },
+
+      "moderate_barrier_movement": {
+        "title": "Kræver lidt mere - men værd det",
+        "activities": [
+          {
+            "name": "Yoga",
+            "setup": "Måtte (eller tæppe), YouTube video",
+            "duration": "10-60 minutter",
+            "benefits": "Stræk, mindfulness, balance, styrke",
+            "types": {
+              "gentle": "Yin yoga, restorative - ultra blid",
+              "moderate": "Hatha, basic flow",
+              "intense": "Vinyasa, power yoga"
+            },
+            "autism_note": "Struktureret, forudsigelig sekvens",
+            "anxiety_note": "Åndedræt + bevægelse = rolig"
+          },
+          {
+            "name": "Svømning",
+            "setup": "Pool access, badetøj",
+            "duration": "20-45 minutter",
+            "benefits": "Fuld krop, low-impact, sensory soothing",
+            "autism_note": "Vand = sensory heaven for mange",
+            "adhd_note": "Hele krop engageret = fokus",
+            "note": "Kan være overwhelmende (larm, folk) - vælg rolige timer"
+          },
+          {
+            "name": "Styrketræning (hjemme eller gym)",
+            "setup": "Vægte (eller kropsvægt), program",
+            "duration": "20-45 minutter",
+            "benefits": "Styrke, bone density, konkrete mål",
+            "adhd_note": "Trackable progress = dopamin hits",
+            "autism_note": "Systematisk, målbar, kan følge program præcist",
+            "start": "Kropsvægt først - pushups, squats, planks"
+          },
+          {
+            "name": "Løb",
+            "setup": "Løbesko, vej/sti",
+            "duration": "10-45 minutter",
+            "benefits": "Cardio, endorfiner, kan gøres overalt",
+            "adhd_note": "Runner's high = stærkt for ADHD",
+            "anxiety_note": "Kan være anxiety-reducing ELLER triggerende - test det",
+            "couch_to_5k": "Brug program hvis nybegynder - gradual buildup"
+          }
+        ]
+      },
+
+      "high_barrier_but_amazing": {
+        "title": "Kræver commitment - men transformerende",
+        "activities": [
+          {
+            "name": "Martial arts (karate, judo, BJJ)",
+            "setup": "Dojo, instruktør, gear",
+            "benefits": "Disciplin, community, self-defense, respect",
+            "adhd_note": "Struktur + fysisk + social = trifecta",
+            "autism_note": "Klare regler, hierarki, forudsigelig progression",
+            "commitment": "2-3x ugentligt for fremgang"
+          },
+          {
+            "name": "Klatring",
+            "setup": "Klatrecenter, sko, sikring",
+            "benefits": "Problem-solving + fysisk, community, progression",
+            "adhd_note": "Hyperfokus heaven - kun nuet eksisterer",
+            "autism_note": "Systematisk problemløsning, clear routes",
+            "social": "Kan klares solo eller med partner"
+          },
+          {
+            "name": "Team sports",
+            "setup": "Hold, tidspunkt, gear",
+            "benefits": "Social, accountability, konkurrence (hvis det motiverer)",
+            "note": "Høj social energi - vurder om det passer"
+          }
+        ]
+      }
     },
+
     {
-      "id": "training_balance",
-      "type": "message",
-      "title": "Træn med ro – ikke med pres",
-      "text": "Når man begynder at bevæge sig mere, kan det gøre lidt ondt. Det betyder ikke, du gør noget forkert – bare at kroppen skal vænne sig.\n\nDu skal ikke træne hver dag. Det er ikke sundt. Din krop har brug for hvile – og du må gerne tage en pause uden at føle dig doven. Det vigtigste er, at du holder fast i kontakten til dig selv 💙"
+      "id": "diagnosis_specific_movement",
+      "title": "Diagnose-specifik bevægelses-guide",
+      "description": "Hvordan forskellige hjerner oplever bevægelse",
+
+      "adhd_movement": {
+        "title": "ADHD & bevægelse",
+        "why_critical": "Bevægelse = naturlig ADHD-medicin. Dopamin, endorfiner, focus.",
+        "challenges": [
+          "Starter entusiastisk → brenner out",
+          "Kedsomhed = død - rutine er impossible",
+          "Glemmer at træne hvis ikke synligt",
+          "Impulsivitet → skader sig ved at pushe for hårdt",
+          "Motivation fluctuates voldsomt"
+        ],
+        "strategies": {
+          "variety": "Roter mellem bevægelsesformer - aldrig samme 5 dage i træk",
+          "novel": "Prøv NYE ting regelmæssigt - kiteboarding, parkour, whatever",
+          "dopamine_music": "Musik ALTID - high tempo, energi",
+          "social_accountability": "Træn med nogen eller livestream accountability",
+          "visual_cues": "Træningssko ved døren, gear synligt",
+          "immediate_reward": "Træk sticker på kalender HVER gang - visual progress",
+          "micro_sessions": "15 min tæller - drop '1 time or nothing' mindset",
+          "competitive": "Apps der gamificerer (Strava, fitness challenges)"
+        },
+        "best_activities": "Dans, martial arts, løb, HIIT, klatring, team sports"
+      },
+
+      "autism_movement": {
+        "title": "Autism & bevægelse",
+        "why_helpful": "Proprioception = sensory regulering. Routine = tryghed.",
+        "challenges": [
+          "Sensory overwhelm i gyms (lyde, lys, folk)",
+          "Motor coordination issues",
+          "Social anxiety i gruppe-aktiviteter",
+          "Interoception deficit - svært at mærke kropssignaler",
+          "Routine disruption anxiety"
+        ],
+        "strategies": {
+          "structured_routine": "Samme tid, samme sted, samme sekvens",
+          "solo_preferred": "Hjemmetræning eller solo activities",
+          "sensory_safe": "Quiet hours i gym, outdoor fremfor indoor",
+          "weighted": "Weighted vest, heavy lifting = proprioceptive input",
+          "repetitive": "Aktiviteter med forudsigelig pattern (cykling, svømning)",
+          "tracking": "Systematisk log - excel, app, whatever",
+          "headphones": "Musik/podcasts = auditory shield"
+        },
+        "best_activities": "Svømning, cykling, styrketræning (solo), yoga, gåture med headphones"
+      },
+
+      "anxiety_movement": {
+        "title": "Anxiety & bevægelse",
+        "why_helpful": "Burn off cortisol/adrenalin. Ground i kroppen.",
+        "challenges": [
+          "Panikangst kan trigges af høj puls (misforstår som panic)",
+          "Perfektionisme = paralyzed",
+          "Social anxiety i gyms/klasser",
+          "Catastrophizing om skader",
+          "Undgåelse når angst højt"
+        ],
+        "strategies": {
+          "gradual_intensity": "Start roligt - byg op LANGSOMT",
+          "breath_awareness": "Fokus på vejrtrækning - det er OK at være åndenød",
+          "grounding": "Mærk fødder på jorden, kroppen i rummet",
+          "solo_safe": "Hjemme/outdoor - undgå social hvis det udløser",
+          "permission_to_stop": "Du kan stoppe når som helst - ingen straff",
+          "routine_calms": "Samme ting samme tid = mindre angst"
+        },
+        "best_activities": "Yoga, gåture, svømning, stræk, blid cykling"
+      },
+
+      "depression_movement": {
+        "title": "Depression & bevægelse",
+        "why_critical": "Behavioral activation. Endorfiner. Bevis at du KAN.",
+        "challenges": [
+          "Ingen energi - 'umuligt' at starte",
+          "Anhedonia - føles meningsløst",
+          "Executive dysfunction - kan ikke initiare",
+          "Ingen motivation - hvorfor gøre det?",
+          "Self-neglect - 'jeg fortjener ikke'"
+        ],
+        "strategies": {
+          "micro_start": "5 minutter ER nok. Seriøst.",
+          "external_accountability": "Aftale med ven, terapeut, whoever",
+          "do_before_feel": "Venter IKKE på motivation - gør det alligevel",
+          "celebrate_tiny": "Du gik 10 min? SEJR. Ingen 'burde have været mere'",
+          "lower_bar": "Succeskriterie: Jeg gjorde det. Ikke hvor godt.",
+          "schedule_it": "Fast tid i kalender - ikke 'når jeg gider'"
+        },
+        "best_activities": "Gåture (simpelt), yoga (blidt), dans hjemme (privat)"
+      }
     },
+
     {
-      "id": "training_guides",
-      "type": "list",
+      "id": "getting_started",
+      "title": "Kom i gang - praktisk guide",
+      "description": "Fra tanke til handling",
+
+      "absolute_beginner": {
+        "title": "Hvis du aldrig har trænet",
+        "week_1": {
+          "goal": "Bare start - ingen præstation",
+          "plan": [
+            "Dag 1: 5 min gåtur",
+            "Dag 2: Hvil",
+            "Dag 3: 5 min dans hjemme",
+            "Dag 4: Hvil",
+            "Dag 5: 10 min gåtur",
+            "Dag 6-7: Hvil"
+          ],
+          "note": "2-3 aktivitetsdage om ugen ER nok for start"
+        },
+        "week_2_4": {
+          "goal": "Byg vane - ikke intensitet",
+          "progression": "Tilføj 5 min om ugen HVIS det føles godt"
+        },
+        "month_2": {
+          "goal": "Udforsk variation",
+          "action": "Prøv 2-3 nye bevægelsesformer"
+        }
+      },
+
+      "restarting_after_break": {
+        "title": "Hvis du HAR trænet før - men stoppede",
+        "reality": "Du er ikke tilbage ved start - men kroppen skal genaktiveres",
+        "mistake": "Forsøge at starte hvor du stoppede = skade garanteret",
+        "smart_restart": {
+          "week_1": "50% af hvad du plejede - selv om det føles latterligt let",
+          "week_2": "60%",
+          "week_3": "70%",
+          "week_4": "80%",
+          "month_2": "90-100%"
+        },
+        "patience": "Det tager 3-4 uger - så vil du være tilbage"
+      },
+
+      "executive_dysfunction_rescue": {
+        "title": "Når du IKKE kan starte",
+        "barriers": [
+          "Kan ikke beslutte hvad at gøre → Preset: Gåtur 10 min. Altid.",
+          "Kan ikke finde gear → Hav træningsgrej ved døren",
+          "Glemmer at træne → Alarm på telefon",
+          "Overvældet af planlægning → Brug denne: Sko på → Dør ud → Gå 10 min → Hjem",
+          "Paralyseret af valg → Ingen valg - gør den samme ting i 2 uger"
+        ]
+      }
+    },
+
+    {
+      "id": "training_wisdom",
       "title": "Ærlige råd om træning",
-      "text": "Her er nogle menneskelige råd. Ikke regler – bare noget du kan mærke efter i:",
-      "items": [
-        "Start roligt – 5-10 minutter er fint. Du skylder ikke nogen en time.",
-        "Drik lidt vand – men du behøver ikke gøre det perfekt.",
-        "Stop, hvis noget gør ondt på den forkerte måde – det er ikke svaghed, det er omtanke.",
-        "Tag hviledage – også selvom hjernen siger: 'du burde'.",
-        "Sammenlign dig ikke med andre. Du er dig – og det er nok."
-      ]
+      "description": "Det ingen fortæller dig",
+
+      "rest_is_training": {
+        "title": "Hvile ER træning",
+        "truth": "Muskler vokser i hvile - ikke under træning",
+        "minimum_rest": "1 dag mellem styrketræning, 1-2 dage mellem hård cardio",
+        "overtraining_signs": [
+          "Konstant træt",
+          "Sover dårligt",
+          "Irritabel/depressed",
+          "Præstation falder",
+          "Bliver ofte syg",
+          "Kroniske smerter"
+        ],
+        "fix": "TAG EN UGE FRI. Seriøst. Kroppen recupererer."
+      },
+
+      "pain_types": {
+        "title": "Godt træt vs dårligt træt",
+        "good_pain": {
+          "description": "Normale muskelsmerter (DOMS)",
+          "feeling": "Øm, stiv, men dyb følelse",
+          "timing": "24-48 timer efter træning",
+          "action": "Fortsæt (måske lidt lettere)"
+        },
+        "bad_pain": {
+          "description": "Skade",
+          "feeling": "Skarp, stikkende, lokaliseret",
+          "timing": "Under eller umiddelbart efter",
+          "action": "STOP. Hvil. Hvis det ikke går væk på 3 dage → læge"
+        },
+        "rule": "Hvis i tvivl - hvil en dag ekstra"
+      },
+
+      "hydration_real_talk": {
+        "title": "Drik vand - men ikke crazy",
+        "reality": "Du skal ikke drikke 3 liter om dagen",
+        "guidelines": [
+          "Før træning: Drik lidt hvis du er tørstig",
+          "Under træning <30 min: Intet behov",
+          "Under træning >30 min: Sips af vand",
+          "Efter træning: Drik indtil du ikke er tørstig"
+        ],
+        "sign": "Hvis urin er lys gul: Du er hydrated. Hvis mørk: Drik mere."
+      },
+
+      "no_comparison": {
+        "title": "Sammenlign dig ikke",
+        "truth": "Den person i gymmet der lifter 100kg? De startede også ved 0.",
+        "your_race": "Du konkurrere med dig selv i går - ingen andre",
+        "social_media_lie": "Instagram kroppe = favorable angles + filter + genetics + ofte steroider",
+        "focus": "Bliver JEG stærkere? Hurtigere? Gladere? Ja? SÅ virker det."
+      }
     },
+
     {
-      "id": "food_support",
-      "type": "list",
-      "title": "Mad før og efter træning",
-      "text": "Det handler ikke om kostplaner – bare om at give kroppen noget, den kan bruge. Her er nogle ideer:",
-      "items": [
-        "Før træning: en banan, lidt yoghurt, brød med ost eller æg",
-        "Efter træning: smoothie, suppe, rugbrød med protein, varm mad med grønt",
-        "Drik lidt vand før og efter – ikke af pligt, men fordi du fortjener det"
-      ]
+      "id": "food_and_movement",
+      "title": "Mad & bevægelse",
+      "description": "Enkel fueling - ikke kostplaner",
+
+      "before_movement": {
+        "title": "Før træning - hvis du vil",
+        "timing": "30-60 min før",
+        "options": [
+          "Banan",
+          "Havregryn med bær",
+          "Toast med peanutbutter",
+          "Yoghurt",
+          "Lidt frugt"
+        ],
+        "note": "Mange træner fasting - det er OK hvis det fungerer for dig"
+      },
+
+      "after_movement": {
+        "title": "Efter træning",
+        "why": "Genopbyg muskler, gendan energi",
+        "timing": "Indenfor 2 timer",
+        "what": "Protein + carbs",
+        "options": [
+          "Smoothie (frugt + proteinpulver)",
+          "Æg på toast",
+          "Kylling + ris",
+          "Bønner + rugbrød",
+          "Yoghurt + granola",
+          "Whatever du har - bare spis noget"
+        ],
+        "realistic": "Perfekt meal timing < faktisk spise noget"
+      },
+
+      "foodlab_integration": {
+        "title": "Vil du have mere om mad?",
+        "message": "FoodLab har smoothie opskrifter, meal prep guides og executive dysfunction mad-hacks. Check det ud!"
+      }
     },
+
+    {
+      "id": "tracking_progress",
+      "title": "Track din udvikling (optional)",
+      "description": "Hvis det motiverer dig - ellers skip",
+
+      "what_to_track": {
+        "title": "Hvad du kan måle",
+        "options": [
+          {
+            "metric": "Frequency",
+            "how": "Hvor mange dage om ugen?",
+            "benefit": "Bygger vane"
+          },
+          {
+            "metric": "Duration",
+            "how": "Hvor længe?",
+            "benefit": "Se hvordan du kan mere over tid"
+          },
+          {
+            "metric": "Performance",
+            "how": "Længere distance, tungere vægt, flere reps",
+            "benefit": "Konkret fremgang"
+          },
+          {
+            "metric": "How you feel",
+            "how": "Energi efter? Humør? Søvn?",
+            "benefit": "Se sammenhæng mellem træning og wellbeing"
+          }
+        ]
+      },
+
+      "tracking_tools": {
+        "simple": "Kalender med X hver dag du trænede",
+        "moderate": "App (Strava, Fitbit, whatever)",
+        "detailed": "Træningsdagbog med noter",
+        "adhd_friendly": "Apps med badges/streaks = dopamin"
+      },
+
+      "dont_track_if": {
+        "title": "Skip tracking hvis:",
+        "situations": [
+          "Det bliver obsessivt",
+          "Du straffer dig for missed days",
+          "Det tager glæden ud af det",
+          "Det udløser eating disorder patterns"
+        ],
+        "permission": "Det er OK bare at gøre det uden at tracke"
+      }
+    },
+
+    {
+      "id": "motivation_reality",
+      "title": "Når motivation mangler",
+      "description": "Alle mister motivationen - hvad så?",
+
+      "motivation_myth": {
+        "title": "Motivation kommer ikke først",
+        "truth": "Action → Motivation (ikke omvendt)",
+        "practice": "Gør det i 5 min → Motivation kommer ofte"
+      },
+
+      "slump_strategies": {
+        "title": "Når du er i slump",
+        "approaches": [
+          {
+            "strategy": "Lavere bar midlertidigt",
+            "action": "Var det 30 min? Gør 10. Still counts."
+          },
+          {
+            "strategy": "Switch activity",
+            "action": "Kedet af løb? Prøv dans. Variation genopliver."
+          },
+          {
+            "strategy": "Social accountability",
+            "action": "Aftale med ven, online community, whatever"
+          },
+          {
+            "strategy": "Remember why",
+            "action": "Hvorfor startede du? Skriv det ned. Læs det."
+          },
+          {
+            "strategy": "Accept break",
+            "action": "Nogle gange skal du pause. 1 uge off ≠ fiasko."
+          }
+        ]
+      },
+
+      "restart_protocol": {
+        "title": "Efter lang pause",
+        "acceptance": "Du vil føle dig svag. Det er OK.",
+        "restart": "Start ved 50% - byg op gradvist",
+        "no_shame": "Du starter ikke fra scratch - muscle memory er real"
+      }
+    },
+
     {
       "id": "movement_journal",
-      "type": "input",
-      "title": "Hvad mærkede du i dag?",
-      "text": "Fortæl mig lidt om hvad du lavede – og hvordan det føltes i kroppen bagefter. Var det godt? Træls? Ingenting? Alt er okay. Jeg er her og lytter 💙"
+      "title": "Bevægelsesdagbog (optional)",
+      "description": "Refleksioner over din bevægelsesrejse",
+
+      "journal_prompts": [
+        "Hvad mærkede du i kroppen i dag?",
+        "Hvordan var dit energiniveau efter?",
+        "Var der noget der føltes godt? Dårligt?",
+        "Hvad lærte du om din krop?",
+        "Hvad vil du gøre næste gang?"
+      ],
+
+      "pattern_recognition": {
+        "title": "Se mønstre over tid",
+        "examples": [
+          "Jeg har mest energi om morgenen",
+          "Jeg sover bedre når jeg træner",
+          "Dans giver mig mere glæde end løb",
+          "Jeg har brug for 2 hviledage mellem strength"
+        ]
+      }
     },
+
     {
-      "id": "motivation_support",
-      "type": "message",
-      "title": "Når du mister lysten…",
-      "text": "Nogle dage gider man ikke. Eller man bliver vred over, at det er så svært. Det er helt normalt. Det betyder ikke, du skal give op – det betyder, du er i gang med noget ægte.\n\nDu kan altid starte igen. Også i morgen. Eller om tre dage. Jeg giver ikke op på dig 💙"
-    },
-    {
-      "id": "more_food_support",
-      "type": "message",
-      "title": "Vil du have mere om mad & energi?",
-      "text": "Hvis du vil udforske mere om hvad du kan spise før og efter træning – eller bare finde ideer til smoothies og superfoods – så kan jeg hente inspiration fra FoodLab og Recipes & Health 💙"
+      "id": "integration_other_modules",
+      "title": "Integration med andre funktioner",
+      "description": "MoveLab arbejder sammen med resten",
+
+      "connections": {
+        "healthlab": "Træning påvirker søvn, energi, medicin-effekt",
+        "foodlab": "Meal timing, smoothies, meal prep til træning",
+        "lifeflow": "Schedule træning i din uge",
+        "emotions": "Bevægelse som emotional regulation",
+        "calmspace": "Bevægelse som grounding technique",
+        "memorylab": "Track progress over tid, se udvikling"
+      }
     }
-  ]
+  ],
+
+  "critical_reminders": {
+    "start_small": "5 minutter tæller - ingen 'alt eller intet'",
+    "rest_is_training": "Hvile er ikke dovenskab - det er vækst",
+    "pain_awareness": "Godt træt vs dårligt træt - lær forskellen",
+    "no_comparison": "Din krop, dit tempo - fuck andres",
+    "motivation_myth": "Gør det FØRST - så kommer motivation",
+    "sensory_respect": "Respekter dine sensory needs",
+    "executive_friendly": "Lav barriere - preset valg",
+    "diagnosis_awareness": "ADHD/autism/anxiety/depression - bevægelse hjælper MEN forskelligt"
+  },
+
+  "integration_notes": {
+    "connects_to": [
+      "HealthLab (søvn, energi, medicin)",
+      "FoodLab (nutrition, meal timing)",
+      "LifeFlow (scheduling)",
+      "Emotions (regulation)",
+      "CalmSpace (grounding)",
+      "MemoryLab (progress tracking)",
+      "AdaptCore (personalisering)"
+    ]
+  }
 }
