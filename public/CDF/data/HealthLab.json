@@ -1,41 +1,641 @@
 {
-  "id": "HealthLab",
-  "title": "Sundhed, energi & balance",
-  "intro": "Sundhed handler ikke om at præstere – men om at finde en rytme, der passer til dig. Her kan du finde små ideer til at styrke din energi, søvn og bevægelse 💙",
-  "sections": [
-    {
-      "id": "energy_boosts",
-      "type": "list",
-      "title": "Små energiboosts i hverdagen",
-      "text": "Når du føler dig træt eller udkørt, kan små handlinger gøre en forskel. Prøv én af disse næste gang du har brug for lidt mere energi:",
-      "items": [
-        "Drik et glas vand og bevæg dig lidt.",
-        "Lyt til musik med roligt tempo, hvis du føler dig overstimuleret.",
-        "Lav tre dybe vejrtrækninger før du fortsætter med næste opgave."
-      ]
+  "module_info": {
+    "id": "HealthLab",
+    "title": "Sundhed, energi & balance",
+    "version": "2.0",
+    "author": "Hans - CD AI Systems",
+    "description": "HealthLab er Sarah's omfattende sundhedsguide. Her finder brugeren værktøjer til energistyring, kropsbevidsthed, søvn, bevægelse, ernæring og stress-håndtering. Alt tilpasset diagnoser og individuelle behov.",
+    "philosophy": "Sundhed handler ikke om at præstere eller 'fikse sig selv'. Det handler om at forstå sin krop, finde balance og opdage hvad der virker for netop DIG. Sarah guider - ikke dømmer."
+  },
+
+  "core_principles": [
+    "Din krop er ikke din fjende - den gør sit bedste med de ressourcer den har",
+    "Sundhed er ikke lineær - op og ned er normalt",
+    "Små skridt over tid > store korte indsatser",
+    "Lyt til kroppen før du lytter til andres 'skal'-regler",
+    "Diagnose betyder ikke defekt - det betyder anderledes behov",
+    "Hvile er produktivt - ikke dovenskab"
+  ],
+
+  "energy_management": {
+    "description": "Energistyring er en af de vigtigste færdigheder for neurodivergente personer. At forstå og respektere sin energi kan forhindre udbrændthed.",
+    
+    "energy_types": [
+      {
+        "type": "Fysisk energi",
+        "description": "Kroppens evne til aktivitet og bevægelse",
+        "signs_of_depletion": [
+          "Tung krop",
+          "Muskelsvaghed",
+          "Konstant træthed",
+          "Hovedpine"
+        ],
+        "recharge_methods": [
+          "Søvn og hvile",
+          "Let bevægelse (gåtur)",
+          "Sund mad",
+          "Hydration"
+        ]
+      },
+      {
+        "type": "Mental energi",
+        "description": "Hjernens kapacitet til fokus, beslutninger og problemløsning",
+        "signs_of_depletion": [
+          "Tåget hjerne (brain fog)",
+          "Svært ved at træffe beslutninger",
+          "Glemmer ting",
+          "Kan ikke koncentrere sig"
+        ],
+        "recharge_methods": [
+          "Mental pause (ingen input)",
+          "Søvn",
+          "Mindfulness/meditation",
+          "Kreativ aktivitet uden krav"
+        ]
+      },
+      {
+        "type": "Emotionel energi",
+        "description": "Evnen til at håndtere følelser og sociale interaktioner",
+        "signs_of_depletion": [
+          "Føler ingenting (numbed)",
+          "Overvældet af små ting",
+          "Irritabel over alt",
+          "Grædende uden klar grund"
+        ],
+        "recharge_methods": [
+          "Tid alene",
+          "Grænser til andre",
+          "Følelsesmæssig udtryk (græde, skrive)",
+          "Connection med nære personer"
+        ]
+      },
+      {
+        "type": "Sensorisk energi",
+        "description": "Kapacitet til at håndtere sanseindtryk (lyd, lys, berøring)",
+        "signs_of_depletion": [
+          "Alt er for højt/lyst/meget",
+          "Fysisk ubehag ved normale ting",
+          "Behov for at isolere sig",
+          "Meltdown/shutdown risiko"
+        ],
+        "recharge_methods": [
+          "Sensorisk hvile (mørke, stille)",
+          "Weighted blanket",
+          "Noise-cancelling headphones",
+          "Foretrukne teksturer/dufte"
+        ]
+      }
+    ],
+
+    "spoon_theory": {
+      "description": "En metafor udviklet af Christine Miserandino til at forklare begrænsede energiressourcer ved kronisk sygdom/diagnose.",
+      "concept": "Du starter dagen med et bestemt antal 'skeer' (energi-enheder). Hver opgave koster skeer. Når du løber tør, kan du ikke bare få flere - du må vente til næste dag.",
+      "application": [
+        "Prioriter hvad der virkelig betyder noget",
+        "Lær at sige nej til ting der koster for mange skeer",
+        "Planlæg hvile-dage efter energikrævende dage",
+        "Kommuniker dine begrænsninger til andre"
+      ],
+      "example_costs": {
+        "shower": "2-3 skeer",
+        "social_event": "5-8 skeer",
+        "work_8hours": "10-12 skeer",
+        "cooking_meal": "2-4 skeer",
+        "phone_call": "2-5 skeer (afhænger af hvem)"
+      }
     },
-    {
-      "id": "sleep_routines",
-      "type": "list",
-      "title": "Gode søvnvaner",
-      "text": "Søvn er ikke bare pause – det er genopladning. Her er nogle vaner, der kan hjælpe dig med at finde ro om aftenen:",
-      "items": [
-        "Gå i seng på samme tidspunkt hver dag.",
-        "Undgå skærmlys 30 minutter før sengetid.",
-        "Lav en kort refleksion over dagen, før du lægger dig."
-      ]
+
+    "diagnosis_specific_energy": {
+      "ADHD": {
+        "challenge": "Inkonsekvente energiniveauer - hyperfokus vs crash",
+        "strategies": [
+          "Brug energispidser strategisk (lav svære opgaver når du har energi)",
+          "Acceptér crashes kommer - planlæg hvile ind",
+          "External motivation når energi er lav (body doubling, musik)",
+          "Meget korte pauser (5 min) oftere end lange pauser sjældent"
+        ]
+      },
+      "Autisme": {
+        "challenge": "Masking dræner enormt meget energi + sensorisk overload",
+        "strategies": [
+          "Reducer masking hvor muligt - spar energi",
+          "Sensorisk diæt (foretrukne stimuli gennem dagen)",
+          "Meget strukturerede rutiner sparer mental energi",
+          "Alenetid efter sociale situationer er NØDVENDIG"
+        ]
+      },
+      "Angst": {
+        "challenge": "Konstant hypervigilance dræner energi døgnet rundt",
+        "strategies": [
+          "Grounding øvelser flere gange dagligt",
+          "Nervesystem-regulering (vagusnerve stimulation)",
+          "Acceptér at angst bruger energi - det er ikke dovenskab",
+          "Bygge sikkerhed ind i hverdagen (rutiner, forudsigelighed)"
+        ]
+      },
+      "Depression": {
+        "challenge": "Basal energi mangler - selv små ting føles umulige",
+        "strategies": [
+          "Micro-tasks: Opdel alt i mindste mulige skridt",
+          "Fejr ethvert skridt - selv at stå op er en sejr",
+          "Brug external motivation (friends, accountability)",
+          "Acceptér: Energien kommer tilbage - det er ikke permanent"
+        ]
+      }
     },
-    {
-      "id": "movement_ideas",
-      "type": "list",
-      "title": "Let bevægelse i din hverdag",
-      "text": "Bevægelse behøver ikke være træning. Det kan være noget blidt og meningsfuldt – her er nogle ideer:",
-      "items": [
-        "5 minutters strækøvelser om morgenen.",
-        "Gå en kort tur i frisk luft efter måltider.",
-        "Lav let motion – fx at bære indkøb eller støvsuge som bevægelse."
+
+    "energy_tracking": {
+      "why": "At tracke energi hjælper med at opdage mønstre og forhindre crashes",
+      "how": "Notér energiniveau 1-10 flere gange dagligt + hvad du lavede",
+      "patterns_to_notice": [
+        "Hvilke aktiviteter dræner mest?",
+        "Hvornår på dagen har du mest energi?",
+        "Hvor lang tid tager det at genoplade efter X?",
+        "Hvilke ting giver faktisk energi (ikke altid det du tror)?"
       ]
     }
-  ]
-}
+  },
 
+  "body_awareness": {
+    "description": "Mange neurodivergente har nedsat interoception (evne til at mærke kroppens signaler). At lære at lytte til kroppen er en færdighed.",
+
+    "interoception": {
+      "what": "Evnen til at mærke hvad der sker INDE i kroppen (sult, tørst, smerte, temperatur, behov for toiletbesøg)",
+      "why_important": "Uden interoception opdager du ikke at du er sulten/tørstig/udmattet før det er en krise",
+      "building_interoception": [
+        {
+          "exercise": "Body scan",
+          "how": "Sæt 5 min timer. Scan kroppen fra fødder til hoved. Notér hvad du mærker - uden at ændre det. Bare observér.",
+          "frequency": "Dagligt"
+        },
+        {
+          "exercise": "Hunger/fullness check",
+          "how": "Før og efter måltider: Hvad fortæller maven? (1-10 skala). Byg bevidsthed om signaler.",
+          "frequency": "Ved hvert måltid"
+        },
+        {
+          "exercise": "Emotion location",
+          "how": "Når du føler noget stærkt - HVOR i kroppen mærker du det? Bryst? Mave? Hoved? Byg connection mellem følelse og krop.",
+          "frequency": "Når følelser opstår"
+        }
+      ]
+    },
+
+    "stress_signals_in_body": {
+      "description": "Kroppen fortæller dig når du er stresset - ofte før hjernen gør",
+      "physical_signs": [
+        "Spændte skuldre/nakke",
+        "Ondt i maven",
+        "Hovedpine",
+        "Hjertebanken",
+        "Kortåndet",
+        "Klamme hænder",
+        "Klump i halsen"
+      ],
+      "behavioral_signs": [
+        "Nagelægning",
+        "Tænder sammen",
+        "Rastløse ben/hænder",
+        "Undgår øjenkontakt",
+        "Isolerer sig"
+      ],
+      "what_to_do": "Når du opdager disse tegn → STOP. Tag 3 dybe vejrtrækninger. Spørg: Hvad har jeg brug for lige nu?"
+    },
+
+    "grounding_techniques": {
+      "description": "Grounding bringer dig tilbage til nuet når du dissocierer, panikkerer eller er overvældet",
+      "methods": [
+        {
+          "name": "5-4-3-2-1 teknik",
+          "steps": [
+            "Navngiv 5 ting du kan SE",
+            "4 ting du kan RØRE",
+            "3 ting du kan HØRE",
+            "2 ting du kan LUGTE",
+            "1 ting du kan SMAGE"
+          ]
+        },
+        {
+          "name": "Coldshock",
+          "steps": [
+            "Hold hænder under koldt vand i 30 sek",
+            "Eller hold isterning",
+            "Kulde aktiverer vagusnerven og regulerer nervesystemet"
+          ]
+        },
+        {
+          "name": "Haveatbreathe",
+          "steps": [
+            "Indånd 4 sekunder",
+            "Hold 4 sekunder",
+            "Udånd 6 sekunder",
+            "Gentag 5 gange"
+          ]
+        },
+        {
+          "name": "Grounding objects",
+          "description": "Hav en genstand du altid kan røre ved (sten, fidget toy, stof). Fokusér på tekstur, vægt, temperatur."
+        }
+      ]
+    }
+  },
+
+  "sleep_health": {
+    "description": "Dybere end sleeplab - her er fysiologi og søvnforstyrrelser ved diagnoser",
+    "link_to": "sleeplab.json for konkrete søvnrutiner og øvelser",
+
+    "circadian_rhythm": {
+      "what": "Kroppens 24-timers ur som styrer søvn-vågne cyklus",
+      "dysregulation_in": [
+        "ADHD: Delayed sleep phase (går sent i seng, våg ner sent)",
+        "Autisme: Melatonin-produktion ofte forstyrret",
+        "Depression: Hypersomni eller insomnia",
+        "Angst: Søvn forstyrret af bekymringer"
+      ],
+      "support_circadian": [
+        "Dagslys om morgenen (15 min inden 10:00)",
+        "Undgå blåt lys 2 timer før sengetid",
+        "Samme sengetid hver dag (også weekend)",
+        "Kold temperatur i soveværelse (18-19°C)"
+      ]
+    },
+
+    "sleep_hygiene_advanced": {
+      "bedroom_environment": [
+        "Mørkt (blackout gardiner eller sovemaske)",
+        "Køligt (kroppen skal sænke temperatur for at sove)",
+        "Stille (eller white noise hvis du har brug)",
+        "Kun til søvn og sex (ikke arbejde/mobil/TV)"
+      ],
+      "pre_sleep_routine": [
+        "Start rutine 1 time før sengetid",
+        "Dæmp lys i hele huset",
+        "Undgå skærme (eller brug bluelight filter)",
+        "Varm bad/bruser (kropstemperatur drop efter hjælper søvn)",
+        "Let læsning eller meditation",
+        "Journaling (få tanker ud af hovedet)"
+      ],
+      "what_to_avoid": [
+        "Koffein efter kl 14",
+        "Alkohol (forstyrrer REM-søvn)",
+        "Tung mad 3 timer før sengetid",
+        "Intens træning 4 timer før sengetid",
+        "Emotionelle samtaler/konflikter før sengetid"
+      ]
+    },
+
+    "insomnia_strategies": {
+      "if_cant_sleep": [
+        "20-minutters regel: Hvis du ikke sover efter 20 min → stå op",
+        "Gå til andet rum, lav noget kedeligt (læs faktabog)",
+        "Gå først tilbage når du er søvnig",
+        "IKKE: Se på mobil, tv, check sociale medier"
+      ],
+      "cognitive_strategies": [
+        "Worry time: Sæt 15 min af tidligere på dagen til bekymringer",
+        "Thought parking: Skriv bekymringer ned, sig til dem 'vi tager dig i morgen'",
+        "Paradoxical intention: Prøv aktivt at holde dig vågen (ofte får det dig til at sove)"
+      ]
+    }
+  },
+
+  "movement_and_exercise": {
+    "description": "Bevægelse er medicin - men skal tilpasses DIG, ikke omvendt",
+    "philosophy": "Anti-ableist tilgang: Der er ingen 'rigtig' måde at bevæge sig på. Find hvad der føles godt for DIN krop.",
+
+    "gentle_movement": {
+      "what": "Bevægelse der føles godt, ikke straffer kroppen",
+      "examples": [
+        "Stretching/yoga",
+        "Gåture i eget tempo",
+        "Dans til musik hjemme",
+        "Svømning (let modstand)",
+        "Havearbejde",
+        "Leg med dyr/børn"
+      ],
+      "principles": [
+        "Lyt til kroppens signaler - smerte er STOP, ikke 'push through'",
+        "Konsistens > intensitet (15 min dagligt > 2 timer en gang om ugen)",
+        "Find bevægelse du faktisk NYDER",
+        "Det er OK at stoppe når du har brug"
+      ]
+    },
+
+    "movement_for_adhd": {
+      "why": "ADHD hjerner har brug for dopamin - bevægelse giver dopamin",
+      "strategies": [
+        "Korte burst (5-10 min) flere gange dagligt",
+        "Kombiner med interessant input (musik, podcast, audiobook)",
+        "Variér - ADHD bliver hurtigt kedet",
+        "Brug bevægelse til at regulere: Hyper? → løb/dans. Understimueret? → yoga/strech"
+      ],
+      "warning": "ADHD kan hyperfokusere på træning og glemme at spise/drikke/hvile. Sæt timers!"
+    },
+
+    "movement_for_autism": {
+      "why": "Kan hjælpe med sensorisk regulering og proprioceptive input",
+      "strategies": [
+        "Strukturerede rutiner (samme tid/sted)",
+        "Solo-aktiviteter ofte bedre end gruppe",
+        "Dyb tryk/tung vægt (vægte, resistance bands)",
+        "Gentagne bevægelser kan være regulerende (stimming is OK)",
+        "Undgå overstimulerende miljøer (travle fitnesscentre)"
+      ]
+    },
+
+    "movement_for_depression": {
+      "challenge": "Motivation og energi er ikke der",
+      "micro_movement": [
+        "5 minutters stretch i sengen før du står op",
+        "Gå til postkassen og tilbage",
+        "Dans til én sang",
+        "Strech mens du venter på kaffe"
+      ],
+      "accountability": "Det er OK at bede nogen om hjælp til at komme i gang. Body-doubling virker."
+    },
+
+    "movement_myths": {
+      "myth": "Du skal træne 30-60 min for at det giver mening",
+      "truth": "5 minutters bevægelse ER værdifuldt. Det hele tæller."
+    },
+    {
+      "myth": "Ingen smerte, ingen fremgang (no pain, no gain)",
+      "truth": "Smerte er kroppens advarsel. Lyt til den. Fremgang sker også ved blid bevægelse."
+    },
+    {
+      "myth": "Du skal lave det andre laver (gym, løb osv)",
+      "truth": "Find HVAD DER PASSER DIG. Havearbejde, dans, gåture - det hele er motion."
+    }
+  },
+
+  "nutrition_and_health": {
+    "description": "Links mellem kost, hjerne og mental sundhed",
+    "link_to": "foodlab.json for nutrition database og AI-kok funktionalitet",
+    "link_to_2": "recipesandhealth.json for konkrete opskrifter",
+
+    "gut_brain_connection": {
+      "what": "Dit tarmsystem og hjerne kommunikerer konstant via vagusnerven",
+      "importance": "90% af serotonin produceres i tarmen - tarmsundhed = mental sundhed",
+      "support_gut_health": [
+        "Fiber (frugt, grønt, fuldkorn)",
+        "Fermenteret mad (yogurt, kimchi, sauerkraut)",
+        "Probiotika (naturligt eller supplement)",
+        "Hydration",
+        "Undgå for meget sukker og forarbejdet mad"
+      ]
+    },
+
+    "adhd_nutrition": {
+      "protein_focus": "Protein hjælper med dopamin-produktion",
+      "breakfast_importance": "ADHD-hjerner har brug for stabilt blodsukker - spring IKKE morgenmad over",
+      "omega3": "Essentielt for hjernefunktion - find i fisk, valnødder, hørfrø",
+      "avoid": "For meget sukker → crash → executive dysfunction værre"
+    },
+
+    "autism_nutrition": {
+      "safe_foods": "Mange autister har 'safe foods' - det er OK. Udvid gradvist hvis muligt.",
+      "sensory_issues": "Tekstur/lugt/smag kan være overvældende - respektér det",
+      "routines": "Forudsigelighed i måltider kan hjælpe med at reducere stress"
+    },
+
+    "hydration": {
+      "importance": "Dehydration = tåget hjerne, hovedpine, træthed, irritabilitet",
+      "how_much": "Generelt: 2-3 liter vand dagligt (mere hvis du træner/det er varmt)",
+      "signs_of_dehydration": [
+        "Mørk urin",
+        "Hovedpine",
+        "Svimmelhed",
+        "Tør mund",
+        "Koncentrationsbesvær"
+      ],
+      "tips": [
+        "Drik glas vand når du står op",
+        "Hav vandflaske synlig hele tiden",
+        "Sæt påmindelser hvis du glemmer (ADHD)",
+        "Smag med citron/agurk hvis vand er kedeligt"
+      ]
+    }
+  },
+
+  "stress_and_nervous_system": {
+    "description": "Forståelse af nervesystemet er nøglen til at håndtere stress og dysregulering",
+
+    "polyvagal_theory_simplified": {
+      "what": "Teori om hvordan nervesystemet reagerer på sikkerhed vs trussel",
+      "three_states": [
+        {
+          "state": "Ventral vagal (Safe & Social)",
+          "description": "Du føler dig tryg, kan tænke klart, være social, reguleret",
+          "signs": "Rolig vejrtrækning, åbent kropssprog, nysgerrig, kan lytte"
+        },
+        {
+          "state": "Sympathetic (Fight or Flight)",
+          "description": "Nervesystemet mobiliserer til kamp eller flugt",
+          "signs": "Hjertebanken, anspændt, irritabel, hyperårvågen, impulsiv"
+        },
+        {
+          "state": "Dorsal vagal (Freeze/Shutdown)",
+          "description": "Nervesystemet lukker ned når trussel er for stor",
+          "signs": "Følelsesmæssig numbness, dissociation, udmattelse, isolation"
+        }
+      ],
+      "goal": "Blive bevidst om hvilken state du er i, og lære at navigere tilbage til ventral vagal"
+    },
+
+    "fight_flight_freeze_fawn": {
+      "description": "Fire overlevelsesresponser nervesystemet bruger ved trussel (ikke altid bevidst valg)",
+      "responses": [
+        {
+          "type": "Fight",
+          "description": "Kæmp - angreb som forsvar",
+          "looks_like": "Vrede, irritabilitet, argumentere, defensiv, slå ud"
+        },
+        {
+          "type": "Flight",
+          "description": "Flygt - undgå faren",
+          "looks_like": "Undgå situationer, prokrastinere, distraherer sig selv, fysisk flugt"
+        },
+        {
+          "type": "Freeze",
+          "description": "Frys - lammelse når kamp/flugt ikke er muligt",
+          "looks_like": "Dissociation, kan ikke bevæge sig, tomhedsfølelse, 'spaced out'"
+        },
+        {
+          "type": "Fawn",
+          "description": "Behag - undgå konflikt ved at please",
+          "looks_like": "People-pleasing, sige ja når du mener nej, ignorere egne grænser"
+        }
+      ],
+      "awareness": "Hvilken respons bruger DU oftest? At kende sit mønster er første skridt til at ændre det."
+    },
+
+    "regulation_techniques": {
+      "vagus_nerve_stimulation": [
+        {
+          "technique": "Kold eksponering",
+          "how": "Koldt vand i ansigt/hænder, isklump på nakke, kold bruser",
+          "effect": "Aktiverer parasympatiske nervesystem → ro"
+        },
+        {
+          "technique": "Dyb langsomme vejrtrækning",
+          "how": "Udånd længere end indånd (4-7-8 teknik)",
+          "effect": "Signalerer sikkerhed til nervesystemet"
+        },
+        {
+          "technique": "Summende lyde",
+          "how": "Humming, synge, 'om' lyd",
+          "effect": "Vibrationer stimulerer vagusnerven"
+        },
+        {
+          "technique": "Gargling",
+          "how": "Skyl med vand i 30 sek morgen/aften",
+          "effect": "Aktiverer vagusnerve via halsmuskler"
+        }
+      ],
+      "physical_regulation": [
+        "Progressive muskelafspænding (spænd/slap muskelgrupper)",
+        "Tung tæppe (deep pressure)",
+        "Butterfly hug (kram dig selv med krydsede arme)",
+        "Rocking/swaying (stimming er regulerende)"
+      ],
+      "cognitive_regulation": [
+        "Navngiv følelsen ('Jeg mærker angst')",
+        "Reality-check ('Er jeg i fare LIGE NU?')",
+        "Timeline ('Dette er midlertidigt')",
+        "Self-compassion ('Det er OK at have det svært')"
+      ]
+    },
+
+    "co_regulation": {
+      "what": "Nogle gange kan vi ikke regulere os selv - vi har brug for en anden rolig person til at hjælpe",
+      "importance": "Særligt for børn, men også voksne med traumer eller svær dysregulering",
+      "how_it_works": "En reguleret persons nervesystem kan 'smitte' og hjælpe dit nervesystem ned",
+      "practical": [
+        "Være i selskab med rolig person",
+        "Fysisk kontakt (hvis det føles godt)",
+        "Synchronized breathing sammen",
+        "Blot at sidde ved siden af nogen tryg"
+      ]
+    }
+  },
+
+  "diagnosis_specific_health_tips": {
+    "ADHD": {
+      "executive_dysfunction_support": [
+        "Sæt alarmer for basale behov (spis, drik, medicin)",
+        "Meal prep i rolige perioder (brug hyperfokus strategisk)",
+        "Hav nemme snacks synlige (hvis ikke du ser det, glemmer du det)",
+        "Body-doubling for selvpleje (video-call ven mens I laver ting)"
+      ],
+      "sleep_issues": "ADHD + søvn er svært. Melatonin kan hjælpe. Konsistens er nøglen.",
+      "impulsivity_health": "Impulsivitet kan føre til dårlige sundhedsvalg. Forbered sunde valg i forvejen (så du kan være impulsiv på en sund måde)."
+    },
+    "Autisme": {
+      "sensory_diet": [
+        "Sørg for regelmæssig sensorisk input der regulerer",
+        "Hav 'safe space' med forudsigelige stimuli",
+        "Brug tools (noise-cancelling, sunglasses, fidgets)",
+        "Respektér behov for alenetid efter sociale ting"
+      ],
+      "routine_importance": "Rutiner sparer mental energi. Sundhedsrutiner skal være MEGET strukturerede for at holde.",
+      "meltdown_prevention": "Kend dine triggers. Byg buffers ind. Respektér shutdown som nødvendig hvile."
+    },
+    "Angst": {
+      "hypervigilance_management": [
+        "Grounding øvelser flere gange dagligt (ikke kun ved panik)",
+        "Byg sikkerhed ind i hverdagen (rutiner, forudsigelighed)",
+        "Lær at skelne mellem reel fare og angst-alarm",
+        "Eksponering gradvist (ikke undgå alt der skræmmer)"
+      ],
+      "physical_symptoms": "Angst viser sig i kroppen. Lær at genkende DINE tegn tidligt.",
+      "medication": "Angstmedicin kan være nødvendig - det er ikke svaghed."
+    },
+    "Depression": {
+      "behavioral_activation": [
+        "Handlinger før følelser (venter du på motivation, sker intet)",
+        "Micro-tasks: Opdel ALT i mindste mulige skridt",
+        "Fejr ethvert skridt - selv at børste tænder er en sejr",
+        "Eksterne strukturer (aftaler, accountability partner)"
+      ],
+      "self_compassion": "Depression fortæller dig at du er værdiløs. Det er en løgn. Vær blid mod dig selv.",
+      "professional_help": "Depression kan ikke altid 'fikses' selv. Terapi og/eller medicin er OK."
+    }
+  },
+
+  "tracking_and_awareness": {
+    "description": "At tracke mønstre hjælper med at forstå hvad der virker for DIG",
+
+    "what_to_track": [
+      {
+        "metric": "Energiniveau",
+        "how": "1-10 skala, 3 gange dagligt (morgen, middag, aften)",
+        "why": "Opdage mønstre i energi over tid"
+      },
+      {
+        "metric": "Søvnkvalitet",
+        "how": "Timer i seng, hvor mange gange vågen, hvordan føles det",
+        "why": "Se sammenhæng mellem rutiner og søvnkvalitet"
+      },
+      {
+        "metric": "Måltider",
+        "how": "Hvad du spiste, hvornår, hvordan du følte dig efter",
+        "why": "Opdage food-mood sammenhænge"
+      },
+      {
+        "metric": "Bevægelse",
+        "how": "Hvad gjorde du, hvor længe, hvordan føltes det",
+        "why": "Find hvad der faktisk giver dig energi"
+      },
+      {
+        "metric": "Symptomer",
+        "how": "Fysiske og emotionelle symptomer dagligt",
+        "why": "Se triggere og mønstre"
+      },
+      {
+        "metric": "Medicin",
+        "how": "Hvornår taget, effekt, bivirkninger",
+        "why": "Optimere medicin med læge"
+      }
+    ],
+
+    "tools": [
+      "Bullet journal",
+      "Apps (Daylio, Bearable, Moodpath)",
+      "Simple noter på telefon",
+      "Voice notes (nemmere for nogle end at skrive)"
+    ],
+
+    "pattern_recognition": {
+      "look_for": [
+        "Tid på døgnet (morgenmenneske vs aftenmenneske?)",
+        "Sociale events (giver/tager energi?)",
+        "Bestemte foods (trigger/hjælper?)",
+        "Årstider (seasonal affective disorder?)",
+        "Menstruationscyklus (hvis relevant - hormonelle påvirkninger?)",
+        "Medicin-timings (virker bedst hvornår?)"
+      ]
+    }
+  },
+
+  "integration_notes": {
+    "combine_with": {
+      "emotions.json": "HealthLab informerer om fysisk state → emotions detekterer følelsesmæssig state → sammen giver komplet billede",
+      "foodlab.json": "Ernæring sektion linker direkte til foodlab for konkret mad-rådgivning og AI-kok",
+      "recipesandhealth.json": "HealthLab forklarer HVORFOR sund mad → recipes giver HVORDAN (konkrete opskrifter)",
+      "sleeplab.json": "HealthLab giver fysiologi og diagnose-specifikke søvntips → sleeplab giver konkrete rutiner og øvelser",
+      "sociallab.json": "Energistyring inkluderer sociale interaktioner → sociallab dykker dybere i relationer",
+      "lifeflow.json": "Sundhed kræver struktur og rutiner → lifeflow hjælper med at bygge dem",
+      "toneengine.json": "Sarah bruger healthlab viden til at vurdere om bruger er fysisk/mentalt udmattet → justerer tone derefter"
+    },
+    "dynamic_usage": "Sarah skal ALDRIG bare liste sundhedstips. Hun skal: 1) Lytte til brugerens situation, 2) Hente relevant viden fra healthlab, 3) Tilpasse til brugerens diagnose/behov, 4) Levere med passende tone fra toneengine.",
+    "personalization": "HealthLab indeholder generelle guidelines, men Sarah skal ALTID tilpasse baseret på: brugerens diagnose, energiniveau lige nu, tidligere succesfulde strategier, kulturel baggrund, alder, fysiske begrænsninger."
+  },
+
+  "critical_reminders": {
+    "sarah_is_not_doctor": "Sarah er guide og ven - IKKE læge. Ved alvorlige helbredsproblemer skal bruger søge professionel hjælp.",
+    "individual_differences": "Hvad der virker for én person virker ikke nødvendigvis for en anden. Sarah opfordrer til eksperimentering.",
+    "small_steps_philosophy": "Sarah pusher aldrig til store ændringer på én gang. Små skridt over tid er vejen.",
+    "celebrate_everything": "Ethvert lille sundhedsvalg skal fejres. Selv at drikke et glas vand er en sejr.",
+    "no_shame": "Sarah dømmer ALDRIG sundhedsvalg. Hun møder brugeren hvor de er, og hjælper derfra."
+  }
+}
