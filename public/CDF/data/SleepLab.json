@@ -1,96 +1,636 @@
 {
   "id": "SleepLab",
+  "version": "3.0",
   "title": "Søvn, ro & genopladning",
-  "version": "1.0",
-  "description": "SleepLab hjælper brugeren med at finde ro og genopbygge energi gennem søvnritualer, vejrtrækning, tryghed og små aftenrutiner. Fokus er på søvn som en del af mental balance – ikke bare som hvile.",
-  "core_principle": "Søvn er ikke et mål – det er en tilstand af tryghed. Når kroppen og tankerne får lov at lande, følger søvnen af sig selv.",
+  "description": "Din guide til bedre søvn gennem ritualer, vejrtrækning, tryghed og søvnhygiejne. Søvn som mental balance - ikke bare hvile.",
+  "philosophy": "Søvn er ikke et mål – det er en tilstand af tryghed. Når kroppen og tankerne får lov at lande, følger søvnen af sig selv. Du kan ikke tvinge søvn - men du kan skabe betingelser for den.",
+  
+  "core_principles": {
+    "sleep_is_safety": "Søvn kræver følelse af tryghed - hjerne slipper kun når den føler sig safe",
+    "cant_force_sleep": "Jo mere du prøver at sove - jo sværere bliver det",
+    "create_conditions": "Du kan ikke kontrollere søvn - men du kan skabe de rigtige betingelser",
+    "rest_counts_too": "Selv uden søvn - hvile giver restitution",
+    "consistency_key": "Samme sengetid > perfekt rutine",
+    "anxiety_blocks_sleep": "Bekymring om søvn = største søvnblokerer",
+    "sleep_debt_real": "Manglende søvn akkumulerer - men kan indhentes"
+  },
+
+  "intro": {
+    "welcome": "Nogle nætter bliver bare ikke, som vi håber. Tankerne kører, kroppen vil ikke give slip, og stilheden bliver for høj. Det er okay 💙 Jeg er her, og vi kan tage det roligt sammen.",
+    "what_we_do": [
+      "Lærer dig søvnhygiejne der faktisk virker",
+      "Giver konkrete ritualer til aftenrutine",
+      "Støtter når insomnia rammer",
+      "Diagnose-specifik søvnstøtte",
+      "Reality check på søvnmyter",
+      "Hjælper genopbygge søvnmønster efter krise"
+    ],
+    "promise": "Jeg tvinger dig ikke til at sove - jeg skaber tryghed så søvn kan komme"
+  },
+
   "sections": [
     {
-      "id": "sleep_intro",
-      "type": "message",
-      "title": "Når natten føles lang",
-      "text": "Nogle nætter bliver bare ikke, som vi håber. Tankerne kører, kroppen vil ikke give slip, og stilheden bliver for høj.\nDet er okay 💙 Jeg er her, og vi kan tage det roligt sammen."
+      "id": "why_sleep_matters",
+      "title": "Hvorfor søvn er kritisk",
+      "description": "Ikke bare hvile - fundamentet for alt",
+
+      "what_sleep_does": {
+        "title": "Søvn er ikke luksus - det er nødvendigt",
+        "functions": [
+          {
+            "area": "Mental sundhed",
+            "effects": [
+              "Emotionel regulering (manglende søvn = emotionel volatilitet)",
+              "Hukommelseskonsolidering",
+              "Kognitiv funktion (focus, beslutninger, læring)",
+              "Stress-håndtering",
+              "Depression/anxiety lindring"
+            ]
+          },
+          {
+            "area": "Fysisk sundhed",
+            "effects": [
+              "Immunforsvar styrkes",
+              "Vævs-reparation",
+              "Hormon balance",
+              "Appetit regulering",
+              "Inflammation reduktion"
+            ]
+          },
+          {
+            "area": "Diagnose-specifik",
+            "effects": [
+              "ADHD: Søvn = medicin effectiveness booster",
+              "Autism: Sensory recovery, routine stability",
+              "Anxiety: Nedtoner hypervigilance",
+              "Depression: Critical for recovery"
+            ]
+          }
+        ]
+      },
+
+      "sleep_deprivation_effects": {
+        "title": "Hvad manglende søvn gør",
+        "immediate": [
+          "Irritabilitet, kort lunte",
+          "Nedsat koncentration",
+          "Emotionel dysregulering",
+          "Impulskontrol svækket",
+          "Øget angst/depression"
+        ],
+        "chronic": [
+          "Metabolisk dysfunktion",
+          "Immunforsvar nedbrudt",
+          "Kognitiv decline",
+          "Øget risiko for mental sygdom",
+          "Fysisk sygdomsrisiko"
+        ],
+        "vicious_cycle": "Manglende søvn → angst/depression → sværere at sove → værre angst/depression"
+      }
     },
+
+    {
+      "id": "sleep_hygiene",
+      "title": "Søvnhygiejne - basics der virker",
+      "description": "Fundamentet for god søvn",
+
+      "core_sleep_hygiene": {
+        "title": "De 10 søvnhygiejne regler",
+        "rules": [
+          {
+            "rule": "Samme sengetid HVER dag",
+            "why": "Circadian rhythm kræver konsistens",
+            "application": "Også weekender - maksimalt 1 time variation",
+            "adhd_note": "Sæt alarm for 'start aftenrutine' - ikke kun vækker"
+          },
+          {
+            "rule": "Kun søvn (og sex) i sengen",
+            "why": "Hjerne skal associere seng = søvn",
+            "application": "Ingen telefon, arbejde, TV i sengen",
+            "reality": "Hvis du bor på 1 værelse - lav mental grænse: På sengen = aktivitet, I sengen = søvn"
+          },
+          {
+            "rule": "Mørkt, køligt, stille",
+            "why": "Melatonin produceres i mørke, krop sover bedst køligt (16-19°C)",
+            "application": "Blackout gardiner, ørepropper hvis nødvendigt, varm seng men køligt rum",
+            "autism_note": "Weighted blanket kan hjælpe proprioception → tryghed"
+          },
+          {
+            "rule": "Ingen skærme 30-60 min før søvn",
+            "why": "Blåt lys supprimerer melatonin",
+            "application": "Night mode hjælper - men bedre at stoppe helt",
+            "adhd_note": "Dette er den SVÆRESTE for ADHD - men mest kritiske"
+          },
+          {
+            "rule": "Ingen koffein efter kl. 14",
+            "why": "Koffein half-life = 5-6 timer",
+            "application": "Kaffe, te, cola, energidrik - stop efter frokost",
+            "reality": "Hvis du SKAL - max 1 kop efter 14"
+          },
+          {
+            "rule": "Ingen store måltider 3 timer før søvn",
+            "why": "Fordøjelse holder dig vågen",
+            "application": "Let snack OK hvis sulten",
+            "what_works": "Banan, yoghurt, lidt nødder"
+          },
+          {
+            "rule": "Motion - men ikke sent",
+            "why": "Træning forbedrer søvn - men giver energi først",
+            "application": "Motion minimum 3 timer før sengetid",
+            "exception": "Gentle yoga/stræk er OK tæt på sengetid"
+          },
+          {
+            "rule": "Begræns alkohol",
+            "why": "Alkohol = dårlig søvnkvalitet (selv om du falder hurtigere i søvn)",
+            "reality": "Du falder i søvn - men REM-søvn ødelægges"
+          },
+          {
+            "rule": "Håndter bekymringer FØR sengetid",
+            "why": "Tankemylder = søvnblokerer",
+            "application": "Worry time 1 time før sengetid - skriv det ud",
+            "technique": "Brain dump - alle tanker på papir"
+          },
+          {
+            "rule": "Soleksponering om morgenen",
+            "why": "Circadian rhythm reset",
+            "application": "15-30 min dagslys inden kl. 10",
+            "benefit": "Hjælper både med at vågne OM og sove OM AFTENEN"
+          }
+        ]
+      },
+
+      "sleep_environment": {
+        "title": "Optimer dit soveværelse",
+        "factors": [
+          {
+            "element": "Temperatur",
+            "ideal": "16-19°C",
+            "adjust": "Kølig luft, varm seng (tæpper)"
+          },
+          {
+            "element": "Lys",
+            "ideal": "Så mørkt som muligt",
+            "tools": "Blackout gardiner, tape over LED lys, øjemaske"
+          },
+          {
+            "element": "Lyd",
+            "ideal": "Stille eller konstant white noise",
+            "tools": "Ørepropper, white noise machine, fan"
+          },
+          {
+            "element": "Sengemadras & pude",
+            "ideal": "Komfortabel for DIG",
+            "note": "Invest i god madras - du bruger den 1/3 af dit liv"
+          },
+          {
+            "element": "Duft",
+            "optional": "Lavendel kan hjælpe (hvis sensory OK)",
+            "autism_note": "Kun hvis du finder det beroligende - ellers skip"
+          }
+        ]
+      }
+    },
+
     {
       "id": "evening_ritual",
-      "type": "routine",
-      "title": "Aftenritual – 10 minutter før sengetid",
-      "steps": [
-        "Sluk skærmen og dæmp lyset.",
-        "Lav en kop te eller tag et glas vand.",
-        "Træk vejret dybt tre gange og mærk skuldrene falde.",
-        "Skriv én ting, du er taknemmelig for i dag.",
-        "Sig stille til dig selv: 'Jeg må gerne give slip nu.'"
-      ]
+      "title": "Aftenritual - træn hjerne til søvn",
+      "description": "Samme rutine hver aften = signal til hjerne",
+
+      "60_min_before_bed": {
+        "title": "1 time før sengetid",
+        "steps": [
+          {
+            "time": "60 min før",
+            "action": "Stop skærmtid",
+            "alternative": "Læs fysisk bog, lyt til musik/podcast (ikke skærm)"
+          },
+          {
+            "time": "45 min før",
+            "action": "Dæmp alle lys i hjem",
+            "why": "Signalerer til hjerne: Det er aften nu"
+          },
+          {
+            "time": "30 min før",
+            "action": "Brain dump",
+            "how": "Skriv alle bekymringer/to-dos ned på papir"
+          },
+          {
+            "time": "20 min før",
+            "action": "Aftenrutine - bad/shower, tænder, tøj",
+            "sensory": "Varmt bad kan hjælpe - temperatur drop efter = sleep signal"
+          },
+          {
+            "time": "10 min før",
+            "action": "Vejrtrækning eller meditation",
+            "simple": "Bare 5 dybe vejrtrækninger tæller"
+          },
+          {
+            "time": "0 min",
+            "action": "I sengen, lys slukket",
+            "rule": "Hvis ikke i søvn efter 20 min - rejs dig"
+          }
+        ]
+      },
+
+      "simple_evening_ritual": {
+        "title": "Minimal aftenritual (hvis energi mangler)",
+        "steps": [
+          "Sluk skærmen og dæmp lyset",
+          "Lav en kop te eller tag et glas vand",
+          "Træk vejret dybt tre gange og mærk skuldrene falde",
+          "Skriv én ting, du er taknemmelig for i dag",
+          "Sig stille til dig selv: 'Jeg må gerne give slip nu'"
+        ],
+        "duration": "10 minutter total"
+      },
+
+      "consistency_critical": {
+        "title": "Samme rutine = søvn kommer hurtigere",
+        "science": "Pavlovian conditioning - rutine = cue for søvn",
+        "build_habit": "4-6 uger for at etablere - vær tålmodig"
+      }
     },
+
     {
-      "id": "breathing_exercise",
-      "type": "exercise",
-      "title": "Vejrtrækning for ro",
-      "text": "Prøv denne lille øvelse:\n• Træk vejret ind gennem næsen i 4 sekunder\n• Hold vejret i 4 sekunder\n• Pust langsomt ud i 6 sekunder\n• Gentag 5 gange\n\nDet hjælper nervesystemet til at falde til ro 🌙"
+      "id": "relaxation_techniques",
+      "title": "Afspændingsteknikker",
+      "description": "Konkrete metoder til at sænke arousal",
+
+      "breathing_exercises": {
+        "title": "Vejrtrækning for ro",
+        "techniques": [
+          {
+            "name": "4-4-6 breathing",
+            "how": "Ind gennem næse 4 sek → Hold 4 sek → Ud gennem mund 6 sek",
+            "reps": "5-10 gange",
+            "why": "Længere udånding = vagus nerve aktivering"
+          },
+          {
+            "name": "4-7-8 breathing",
+            "how": "Ind 4 sek → Hold 7 sek → Ud 8 sek",
+            "reps": "4 cykler",
+            "effect": "Meget beroligende - kan gøre dig søvnig hurtigt"
+          },
+          {
+            "name": "Box breathing",
+            "how": "Ind 4 → Hold 4 → Ud 4 → Hold 4",
+            "benefit": "Nemt at huske, meget effektivt"
+          }
+        ],
+        "general": "Fokus på LANG udånding - det aktiverer parasympatisk nervesystem"
+      },
+
+      "progressive_muscle_relaxation": {
+        "title": "Progressiv muskelafspænding (PMR)",
+        "how": "Spænd muskelgruppe 5 sek → Slip helt 10 sek → Næste gruppe",
+        "sequence": [
+          "Hænder/underarme (lav knytnæve)",
+          "Overarme (bøj arme)",
+          "Skuldre (træk op mod ører)",
+          "Ansigt (rynk pande, klem øjne)",
+          "Kæbe (bid sammen)",
+          "Nakke (pres hoved mod pude)",
+          "Bryst (dyb indånding, hold)",
+          "Mave (spænd)",
+          "Rumpe/lår (spænd)",
+          "Lægge/fødder (point tæer)"
+        ],
+        "benefit": "Lærer forskel på spændt vs afslappet"
+      },
+
+      "body_scan_meditation": {
+        "title": "Kropsscanning",
+        "script": "Luk øjnene. Start fra toppen af hovedet og bevæg dig ned gennem kroppen. Mærk panden, kæben, nakken… skuldrene, armene, hænderne. Giv slip på spænding, sted for sted. Til sidst: mærk tyngden i kroppen, og at sengen holder dig.",
+        "duration": "5-15 minutter",
+        "if_mind_wanders": "Normalt - bring bare awareness tilbage til kroppen"
+      },
+
+      "visualization": {
+        "title": "Guided imagery",
+        "examples": [
+          "Forestil dig strand - lyde af bølger, varme sol, blid vind",
+          "Skov - fuglelyde, træer, frisk luft",
+          "Dit tryggeste sted - hvor som helst du føler ro"
+        ],
+        "engage_senses": "Hvad ser, hører, lugter, føler du der?"
+      }
     },
+
     {
-      "id": "body_scan",
-      "type": "guided",
-      "title": "Kropsscanning",
-      "text": "Luk øjnene. Start fra toppen af hovedet og bevæg dig ned gennem kroppen.\nMærk panden, kæben, nakken… skuldrene, armene, hænderne.\nGiv slip på spænding, sted for sted.\nTil sidst: mærk tyngden i kroppen, og at sengen holder dig."
+      "id": "insomnia_strategies",
+      "title": "Når du ikke kan sove",
+      "description": "Praktisk håndtering af søvnløshed",
+
+      "20_minute_rule": {
+        "title": "20-minutter reglen",
+        "rule": "Hvis ikke i søvn efter 20 min → Rejs dig",
+        "why": "Ligger og prøver = hjerne associerer seng med frustration",
+        "what_to_do": [
+          "Gå til anden rum (hvis muligt)",
+          "Dæmpet lys",
+          "Rolig aktivitet (læs kedelig bog, strik, whatever)",
+          "IKKE skærm",
+          "Gå tilbage når søvnig"
+        ],
+        "repeat": "Hvis stadig vågen efter 20 min - gentag"
+      },
+
+      "midnight_awake": {
+        "title": "Når du vågner midt om natten",
+        "dont_panic": "Natlige opvågninger er normale - selv god sleepers vågner 4-6 gange",
+        "what_to_do": "Læg dig roligt og sig til dig selv: 'Jeg hviler, og det er også godt.' Søvnen vender tilbage, når kroppen er klar.",
+        "dont_look_at_clock": "Tjek ikke tid - det skaber performance anxiety",
+        "if_mind_racing": "Brain dump på papir ved sengen → tilbage i seng"
+      },
+
+      "anxiety_about_not_sleeping": {
+        "title": "Angst om ikke at sove = største søvnblokerer",
+        "vicious_cycle": "Bekymring om søvn → arousal øges → kan ikke sove → mere bekymring",
+        "reframe": [
+          "'Jeg SKAL sove' → 'Jeg tillader mig at hvile'",
+          "'Hvis jeg ikke sover bliver i morgen forfærdeligt' → 'Jeg har klaret dage før på lidt søvn'",
+          "'Jeg ligger bare her' → 'Hvile giver også restitution'"
+        ],
+        "acceptance": "Jo mere du accepterer vågenhed - jo hurtigere kommer søvn"
+      },
+
+      "sleep_restriction_therapy": {
+        "title": "Søvnrestriktion (for kronisk insomnia)",
+        "warning": "Kun hvis insomnia >3 måneder - ikke casual dårlig søvn",
+        "concept": "Reducer tid i seng = build sleep pressure → konsoliderer søvn",
+        "how": [
+          "Track faktisk søvntid 1 uge",
+          "Sæt 'tid i seng' = faktisk søvntid + 30 min",
+          "Samme opvågningstid HVER dag",
+          "Når søvn efficiency >85% → tilføj 15 min sengetid",
+          "Gentag indtil optimal søvnlængde"
+        ],
+        "tough": "De første uger sucker - men det virker",
+        "supervision": "Ideelt med terapeut - kan være farligt hvis bipolar/epilepsi"
+      }
     },
+
     {
-      "id": "midnight_awake",
-      "type": "message",
-      "title": "Når du vågner midt om natten",
-      "text": "Hvis du vågner, så prøv ikke at tvinge søvnen tilbage. Læg dig roligt og sig til dig selv: 'Jeg hviler, og det er også godt.'\nSøvnen vender tilbage, når kroppen er klar."
+      "id": "diagnosis_specific_sleep",
+      "title": "Diagnose-specifik søvnstøtte",
+      "description": "Forskellige hjerner, forskellige udfordringer",
+
+      "adhd_sleep": {
+        "title": "ADHD & søvn",
+        "challenges": [
+          "Delayed sleep phase - naturligt sent circadian rhythm",
+          "Mind racing når stille",
+          "Kan ikke stoppe stimulation (doom scrolling)",
+          "Glemmer aftenrutine",
+          "Impulskontrol svækket aften = dårlige valg"
+        ],
+        "strategies": {
+          "medication_timing": "Hvis på stimulant medicin - tag tidligt (senest 14-16)",
+          "external_structure": "Alarmer for HVER del af aftenrutine",
+          "transition_buffer": "30 min mellem stop aktivitet → sengetid",
+          "boring_better": "Vælg bevidst KEDELIG aktivitet sidst - bog du ikke gider, whatever",
+          "white_noise": "Konstant lyd kan hjælpe racing thoughts",
+          "melatonin": "Kan hjælpe (tal med læge) - 0.5-3mg 1 time før sengetid"
+        }
+      },
+
+      "autism_sleep": {
+        "title": "Autism & søvn",
+        "challenges": [
+          "Sensory overstimulation ikke processed",
+          "Rigid om rutine - disruption = no sleep",
+          "Melatonin dysregulation (common)",
+          "Anxiety om søvn selv",
+          "Interoception issues - svært at mærke træthed"
+        ],
+        "strategies": {
+          "sensory_safe": "Optimize sensory environment (weighted blanket, soft sheets, quiet)",
+          "routine_rigid": "Samme rutine PRÆCIST - variation = stress",
+          "predictability": "Vis rutine visuelt (checklist)",
+          "melatonin_support": "Ofte hjælper (tal med læge)",
+          "preparation": "Warn om næste dag hvis noget nyt",
+          "white_noise": "Mask uforudsigelige lyde"
+        }
+      },
+
+      "anxiety_sleep": {
+        "title": "Anxiety & søvn",
+        "challenges": [
+          "Mind racing - catastrophizing om morgendagen",
+          "Hypervigilance - kan ikke slappe af",
+          "Fear of losing control (søvn = sårbar)",
+          "Panic attacks ved sengetid",
+          "Anticipatory anxiety om dårlig søvn"
+        ],
+        "strategies": {
+          "worry_time": "30 min før sengetid - skriv ALT ned → lukket",
+          "safety_cues": "Lås døre, tjek ting - gør det før rutine starter",
+          "breathing_critical": "Vagus nerve activation = må",
+          "challenge_thoughts": "Hvad er FAKTISK risiko ved at sove?",
+          "acceptance": "Accepter vågenhed reducer angst om det",
+          "medication": "Hvis svær - tal med læge om sleep aid"
+        }
+      },
+
+      "depression_sleep": {
+        "title": "Depression & søvn",
+        "challenges": [
+          "Enten insomnia eller hypersomnia",
+          "Circadian rhythm total disrupted",
+          "No energy for sleep hygiene",
+          "Sleep escape - undslipper depressive thoughts",
+          "Morning worse - kan ikke forlade seng"
+        ],
+        "strategies": {
+          "consistent_wake": "Samme opvågningstid KRITISK - selv weekends",
+          "light_exposure": "Morgenlys er medicin - force dig udenfor",
+          "no_naps": "Hvis insomnia - ingen naps (bygger sleep pressure)",
+          "minimum_routine": "Bare ÉN ting før seng tæller",
+          "medication": "Antidepressants påvirker søvn - tal med læge",
+          "behavioral_activation": "Gå i seng selv uden fatigue - træn circadian"
+        }
+      }
     },
+
     {
-      "id": "gentle_reflection",
-      "type": "reflection",
-      "title": "Slip dagen blidt",
-      "text": "Tænk på én ting, du gerne vil lade ligge i dag. Noget du ikke skal bære videre i nat.\nSig det stille for dig selv – og forestil dig, at du lægger det i en lille æske på natbordet.\nDu kan altid tage det frem i morgen, hvis du har brug for det 🌙"
+      "id": "sleep_myths",
+      "title": "Søvnmyter & realiteter",
+      "description": "Hvad der faktisk er sandt",
+
+      "common_myths": {
+        "title": "Myter knust",
+        "myths": [
+          {
+            "myth": "Alle behøver 8 timer",
+            "reality": "7-9 timer for de fleste - men individuelt. Nogle behøver 6, andre 10."
+          },
+          {
+            "myth": "Du kan indhente søvn i weekenden",
+            "reality": "Delvist sandt - men bedre: Konsistent søvnmønster."
+          },
+          {
+            "myth": "Alkohol hjælper søvn",
+            "reality": "Du falder hurtigere i søvn - men søvnkvalitet destrueres."
+          },
+          {
+            "myth": "Ligge stille = næsten lige så godt som søvn",
+            "reality": "Hvile hjælper - men intet erstatter actual søvn."
+          },
+          {
+            "myth": "Ældre behøver mindre søvn",
+            "reality": "Behov ændrer sig ikke - men søvn bliver lettere (wakes mere)."
+          },
+          {
+            "myth": "Kan træne sig til at fungere på lidt søvn",
+            "reality": "Nej. Du acclimatizer til fatigue - men kognitiv funktion lider stadig."
+          }
+        ]
+      }
     },
+
     {
       "id": "sleep_affirmations",
-      "type": "list",
       "title": "Sætninger til ro og tryghed",
-      "items": [
-        "Jeg må gerne være træt.",
-        "Jeg behøver ikke løse alt i nat.",
-        "Min krop ved, hvordan man hviler.",
-        "Jeg er tryg her, hvor jeg ligger.",
-        "Jeg må godt give slip nu."
+      "description": "Gentagelser der berolig er",
+
+      "affirmations": [
+        "Jeg må gerne være træt",
+        "Jeg behøver ikke løse alt i nat",
+        "Min krop ved, hvordan man hviler",
+        "Jeg er tryg her, hvor jeg ligger",
+        "Jeg må godt give slip nu",
+        "Søvn kommer når den er klar",
+        "Hvile tæller også",
+        "Jeg har overlevet dårlige nætter før",
+        "I morgen er en ny dag",
+        "Jeg tillader mig at slappe af"
+      ],
+      "how_to_use": "Gentag stille i hovedet - som mantra",
+      "effect": "Reducer performance anxiety om søvn"
+    },
+
+    {
+      "id": "morning_after_bad_night",
+      "title": "Dagen efter dårlig søvn",
+      "description": "Survival guide",
+
+      "morning_reset": {
+        "title": "Når du vågner træt",
+        "message": "Selv hvis du ikke har sovet godt, kan du starte dagen blidt. Rejs dig langsomt, drik vand, træk vejret dybt – og husk: Du kan altid tage en ny pause senere 💙",
+        "strategies": [
+          "Sollys ASAP - reset circadian",
+          "Kold vand i ansigtet - wakeup call",
+          "Kaffe OK - men ikke efter 14",
+          "Lav intensitet i dag - pas på dig",
+          "Ingen vigtige beslutninger hvis muligt",
+          "Power nap OK - men MAX 20 min og før kl. 15"
+        ]
+      },
+
+      "nap_rules": {
+        "title": "Hvis du SKAL nap",
+        "timing": "Før kl. 15 (ellers påvirker natte-søvn)",
+        "duration": "10-20 min (mere = sleep inertia)",
+        "set_alarm": "Seriøst - sæt alarm",
+        "not_replacement": "Naps erstatter ikke natte-søvn"
+      },
+
+      "one_bad_night_ok": {
+        "title": "Én dårlig nat ≠ katastrofe",
+        "perspective": "Alle har dårlige nætter. Kroppen recupererer.",
+        "avoid": "Panik om det → mere søvnproblemer",
+        "tonight": "I aften gør du din rutine normalt - sandsynligvis sover du bedre"
+      }
+    },
+
+    {
+      "id": "sleep_tools",
+      "title": "Værktøjer & apps",
+      "description": "Tech der faktisk hjælper",
+
+      "helpful_tools": [
+        {
+          "tool": "Sleep tracking apps",
+          "examples": "Sleep Cycle, Fitbit",
+          "benefit": "Se mønstre",
+          "warning": "Kan skabe anxiety - brug med forsigtighed"
+        },
+        {
+          "tool": "White noise apps",
+          "examples": "Noisli, myNoise",
+          "benefit": "Mask forstyrrende lyde"
+        },
+        {
+          "tool": "Meditation apps",
+          "examples": "Headspace, Calm, Insight Timer",
+          "benefit": "Guided søvnmeditationer"
+        },
+        {
+          "tool": "Blue light filters",
+          "examples": "f.lux, Night Shift",
+          "benefit": "Reducer blåt lys fra skærme",
+          "reality": "Hjælper lidt - men bedre at stoppe skærm"
+        },
+        {
+          "tool": "Smart lights",
+          "examples": "Philips Hue",
+          "benefit": "Gradual dimming i aften, gradual brightening morgen"
+        }
       ]
     },
+
     {
-      "id": "sleep_tips",
-      "type": "tips",
-      "title": "5 små søvnråd fra SleepLab",
-      "items": [
-        "Hold samme sengetid – også i weekenden.",
-        "Undgå store måltider og skærme 30 min før sengetid.",
-        "Gør soveværelset køligt og mørkt.",
-        "Lyt til stille musik eller naturlyde, hvis tankerne larmer.",
-        "Husk: Søvn kommer af ro, ikke af anstrengelse."
-      ]
-    },
-    {
-      "id": "morning_reset",
-      "type": "message",
-      "title": "Når du vågner træt",
-      "text": "Selv hvis du ikke har sovet godt, kan du starte dagen blidt.\nRejs dig langsomt, drik vand, træk vejret dybt – og husk: Du kan altid tage en ny pause senere 💙"
+      "id": "when_to_get_help",
+      "title": "Hvornår søge professionel hjælp",
+      "description": "Red flags for søvnforstyrrelser",
+
+      "see_doctor_if": {
+        "title": "Kontakt læge hvis:",
+        "signs": [
+          "Insomnia >3 måneder",
+          "Snorker meget + daytime fatigue (sleep apnea?)",
+          "Restless legs forhindrer søvn",
+          "Narcolepsy symptomer (pludselig søvn)",
+          "Parasomnia (sleepwalking, night terrors)",
+          "Medicin påvirker søvn negativt",
+          "Depression/anxiety primært søvn-relateret"
+        ]
+      },
+
+      "sleep_studies": {
+        "title": "Søvnundersøgelser",
+        "when": "Hvis læge mistænker sleep apnea eller andet",
+        "what": "Overnight monitoring af respiration, brain waves, movement",
+        "worth_it": "Hvis chronisk problem - absolut"
+      }
     }
   ],
+
+  "critical_reminders": {
+    "cant_force_sleep": "Jo mere du prøver - jo sværere bliver det",
+    "consistency_trumps_all": "Samme sengetid > perfekt rutine",
+    "rest_counts": "Selv uden søvn - hvile giver restitution",
+    "20_min_rule": "Ikke i søvn efter 20 min? Rejs dig.",
+    "anxiety_blocks": "Bekymring om søvn = største blocker",
+    "screen_critical": "Blåt lys er REEL - drop skærm før sengetid",
+    "diagnosis_aware": "ADHD/autism/anxiety/depression påvirker søvn forskelligt",
+    "sleep_debt_real": "Manglende søvn akkumulerer - prioriter det"
+  },
+
   "integration_notes": {
-    "combine_with": [
-      "CalmSpace",
-      "HealthLab",
-      "Hjemmeterapi",
-      "ToneEngine",
-      "EmotionSense"
+    "connects_to": [
+      "CalmSpace (afspænding før søvn)",
+      "HealthLab (søvn påvirker alt)",
+      "Emotions (emotional regulation kræver søvn)",
+      "LifeFlow (schedule consistent sengetid)",
+      "MoveLab (motion forbedrer søvn)",
+      "AdaptCore (personalisering)"
     ],
     "signal_usage": [
-      "hvis signal = stress → aktiver CalmSpace før søvn",
-      "hvis signal = uro → brug vejrtrækningsøvelse fra SleepLab",
-      "hvis signal = håbløshed → brug empatisk tone + kropsscanning"
-    ],
-    "purpose": "At skabe et trygt rum for hvile og genopladning. SleepLab hjælper brugeren med at finde rytme og ro gennem små vaner, nærvær og omsorg."
+      "Stress → CalmSpace før søvn",
+      "Uro → vejrtrækningsøvelse",
+      "Håbløshed → empati + ro",
+      "Racing thoughts → brain dump"
+    ]
   }
 }
