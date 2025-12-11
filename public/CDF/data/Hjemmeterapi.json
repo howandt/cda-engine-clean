@@ -1,31 +1,807 @@
 {
-  "id": "Hjemmeterapi",
-  "title": "Hjemmeterapi",
-  "description": "Støttende øvelser og ritualer du kan lave hjemme – når livet føles uroligt, og du har brug for ro og styrke indefra.",
-  "therapies": [
-    {
-      "name": "Spejlterapi",
-      "type": "selvværd",
-      "description": "En øvelse til at styrke din indre kontakt og møde dig selv med varme.",
-      "instruction": "Stil dig foran et spejl. Kig dig selv i øjnene og sig stille: 'Jeg ser dig. Jeg er her for dig. Du gør det godt.' Gentag det, der føles rigtigt. Du skal ikke overbevise dig selv – bare være til stede."
+  "module_info": {
+    "id": "Hjemmeterapi",
+    "title": "Hjemmeterapi - Terapeutiske øvelser & ritualer",
+    "version": "2.0 - Comprehensive Therapeutic Toolkit",
+    "author": "Hans - CD AI Systems",
+    "description": "Hjemmeterapi er Sarah's bibliotek af evidence-based terapeutiske øvelser du kan lave selv. Fra DBT skills til mindfulness, fra selvværdsarbejde til kriseværktøjer. Alt tilpasset neurodivergente behov. Dette er ikke erstatning for terapi - men supplement og daglige værktøjer.",
+    "philosophy": "Terapi er ikke kun i terapeutens kontor. Små daglige praksisser skaber stor forandring over tid. Alle øvelser er tilgængelige, evidence-based, og kan tilpasses dit niveau."
+  },
+
+  "how_to_use": {
+    "principles": [
+      "Start småt - 2 minutter er nok",
+      "Consistency over intensity - daglig praksis vigtigere end perfekt udførelse",
+      "No judgment - nogle dage virker det, andre dage ikke",
+      "Find what works for YOU - ikke alle øvelser passer alle",
+      "Build gradually - tilføj nye practices når klar"
+    ],
+    "sarah_helps": [
+      "Foreslår relevant øvelse baseret på dit state",
+      "Guider gennem øvelsen step-by-step",
+      "Tjekker ind efter: 'Hvordan var det?'",
+      "Tracker hvad der virker for dig over tid"
+    ]
+  },
+
+  "daily_rituals": {
+    "description": "Daglige praksisser for struktur og velvære",
+
+    "morning_practices": {
+      "purpose": "Start dagen grounded, intentional",
+      "exercises": [
+        {
+          "name": "Morgen Check-in",
+          "duration": "2 minutter",
+          "steps": [
+            "Før du tjekker telefon - læg hånd på hjerte",
+            "Spørg dig selv: Hvordan har jeg det lige nu? (1-10 scale)",
+            "Hvad har jeg brug for i dag?",
+            "Én intention for dagen: 'I dag vil jeg...'"
+          ],
+          "diagnosis_tips": {
+            "ADHD": "Gør det INDEN telefon - ellers glemt",
+            "anxiety": "Ikke perfekt plan - bare én ting",
+            "depression": "Even 'I dag overlever jeg' er nok"
+          }
+        },
+        {
+          "name": "Grounding i nutid",
+          "duration": "3 minutter",
+          "steps": [
+            "Sid på sengekant",
+            "Føl fødder i gulv - press ned",
+            "5 ting du kan se",
+            "4 ting du kan høre",
+            "3 dybe vejrtrækninger",
+            "Start dagen"
+          ],
+          "when": "Når vågen men overveldet af kommende dag"
+        },
+        {
+          "name": "Intentionel kaffe/te ritual",
+          "duration": "5 minutter",
+          "steps": [
+            "Lav morgen-drik mindfully",
+            "Mærk varmen i kop",
+            "Smag VIRKELIG første slurk",
+            "3 minutter uden skærm - bare drik og vær"
+          ],
+          "benefit": "Ankerpunkt - samme hver dag"
+        }
+      ]
     },
-    {
-      "name": "Mikro-dagbog",
-      "type": "refleksion",
-      "description": "Skriv én sætning om dagen om, hvad der påvirkede dig følelsesmæssigt.",
-      "instruction": "Sæt dig kort hver aften og skriv: 'Hvad rørte mig mest i dag?' Det kan være noget der gjorde dig ked af det, vred, glad eller bare satte tanker i gang. Notér det uden at dømme."
+
+    "midday_resets": {
+      "purpose": "Genoplade når energi/fokus daler",
+      "exercises": [
+        {
+          "name": "2-minutter pause",
+          "when": "Midt i travl dag, føler overwhelm",
+          "steps": [
+            "Find stille sted (toilet OK)",
+            "Luk øjne",
+            "6 dybe vejrtrækninger (ind 4, ud 6)",
+            "Rul skuldre",
+            "Tilbage til dag"
+          ]
+        },
+        {
+          "name": "Movement break",
+          "when": "Siddet for længe, rastløs",
+          "steps": [
+            "Rejs dig op",
+            "Stræk arme over hoved",
+            "10 jumping jacks ELLER walk up/down stairs",
+            "Drik vand"
+          ],
+          "adhd_note": "Movement = dopamine = bedre fokus efter"
+        },
+        {
+          "name": "Sensory reset",
+          "when": "Overstimuleret, irritabel",
+          "steps": [
+            "Find roligt sted",
+            "Lukket øjne eller dæmpet lys",
+            "Noise-cancelling headphones hvis muligt",
+            "3 min stilhed ELLER calm music"
+          ],
+          "autism_essential": "Sensory breaks forebygger meltdown"
+        }
+      ]
     },
-    {
-      "name": "Godnat dag – aftenritual",
-      "type": "afslutning",
-      "description": "Afslut dagen med accept og ro – så du kan give slip og lade morgendagen være ny.",
-      "instruction": "Læg skærmen væk 15 minutter før sengetid. Træk vejret roligt og tænk over dagen. Sig for dig selv: 'Godnat dag. Tak for det, jeg lærte. I morgen er en ny begyndelse.'"
-    },
-    {
-      "name": "Mindfulness vejrtrækning",
-      "type": "grounding",
-      "description": "Find ro i kroppen med simpel vejrtrækning – selv i uro.",
-      "instruction": "Sæt dig stille. Træk vejret ind gennem næsen (4 sekunder), hold kort (2 sekunder), og pust ud gennem munden (6 sekunder). Gentag 3-5 gange. Mærk kroppen, uden at holde fast i tanker."
+
+    "evening_wind_down": {
+      "purpose": "Transition fra dag til nat, signaler til krop at slappe af",
+      "exercises": [
+        {
+          "name": "Godnat dag - aftenritual",
+          "duration": "10 minutter",
+          "steps": [
+            "Læg skærmen væk 30 min før sengetid",
+            "Dim lyset",
+            "Træk vejret roligt",
+            "Tænk over dagen - både godt og svært",
+            "Sig (højt eller stille): 'Godnat dag. Tak for det jeg lærte. I morgen er ny begyndelse.'",
+            "Notér evt. ét højdepunkt + én ting du er taknemmelig for"
+          ],
+          "why_powerful": "Giver closure til dag - hjælper med at give slip"
+        },
+        {
+          "name": "Body scan for søvn",
+          "duration": "10-15 minutter",
+          "when": "Ligger vågen, kroppen spændt",
+          "steps": [
+            "Lig på ryg",
+            "Start ved tæer - mærk dem, slap af",
+            "Langsomt op gennem krop: fødder, ben, mave, bryst, arme, hals, ansigt",
+            "Ved hver kropsdel: Spænd kort (5 sek), slip helt",
+            "Når ved toppen - hele kroppen tung og rolig"
+          ],
+          "link": "calmspace.json progressive muscle relaxation"
+        },
+        {
+          "name": "Bekymrings-tid (worry time)",
+          "when": "Tanker racer ved sengetid",
+          "steps": [
+            "30 min før sengetid: Sid med notesbog",
+            "Skriv ALLE bekymringer ned (10 min max)",
+            "Sig til dig selv: 'Disse bekymringer får jeg tage fat på i morgen kl 10'",
+            "Luk notesbog - symbolsk give slip",
+            "Nu må tanker ikke komme - de er nedskrevet"
+          ],
+          "adhd_anxiety_combo": "Eksternaliserer tanker så de ikke køre loop i hovedet"
+        }
+      ]
     }
-  ]
+  },
+
+  "self_worth_practices": {
+    "description": "Øvelser til at bygge selvværd og selvaccept",
+
+    "mirror_work": {
+      "name": "Spejlterapi",
+      "evidence": "Udviklet af Louise Hay - powerful for selvaccept",
+      "description": "Øvelse til at møde dig selv med varme og accept",
+      "progression": {
+        "week_1": {
+          "level": "Basic presence",
+          "instruction": "Kig dig selv i øjnene i spejl 30 sekunder. Bare kig. Ingen ord endnu.",
+          "common_reaction": "Ubehageligt, weird, want to look away",
+          "normalize": "Mange har aldrig kigget sig DYBT i øjnene - det er OK det føles mærkeligt"
+        },
+        "week_2_3": {
+          "level": "Simple affirmation",
+          "instruction": "Kig i øjnene, sig: 'Jeg ser dig. Jeg er her for dig.'",
+          "repeat": "Gentag indtil det føles lidt mindre weird",
+          "duration": "2 minutter dagligt"
+        },
+        "week_4_plus": {
+          "level": "Deeper work",
+          "instruction": "Kig i øjnene, sig: 'Jeg ser dig. Jeg er her for dig. Du gør dit bedste. Du er nok.'",
+          "personalize": "Tilføj hvad DU har brug for at høre",
+          "examples": [
+            "'Du fortjener kærlighed'",
+            "'Du må være ufuldkommen'",
+            "'Du er mere end din diagnose'"
+          ]
+        }
+      },
+      "tips": {
+        "if_too_hard": "Start med hånd - kig på hånden, sig venlige ord til hånden først",
+        "if_tears": "Tears are OK - means you're touching something real",
+        "consistency": "Daily even 1 minute > weekly 10 minutes"
+      }
+    },
+
+    "self_compassion_practice": {
+      "name": "Selvmedfølelse pause",
+      "based_on": "Kristin Neff's Self-Compassion Break",
+      "when": "Du er hård ved dig selv, self-criticism kører",
+      "steps": [
+        {
+          "step": "1. Mindfulness",
+          "say": "'Dette er et øjeblik af lidelse' eller 'Det gør ondt lige nu'",
+          "why": "Acknowledge smerten uden at overdrive eller underdrive"
+        },
+        {
+          "step": "2. Common Humanity",
+          "say": "'Lidelse er en del af at være menneske' eller 'Jeg er ikke alene i dette'",
+          "why": "Counter isolation - andre har det også svært"
+        },
+        {
+          "step": "3. Self-Kindness",
+          "say": "'Må jeg være venlig mod mig selv' eller 'Må jeg give mig selv det jeg har brug for'",
+          "action": "Læg hånd på hjerte mens du siger det",
+          "why": "Physical gesture aktiverer omsorg-system"
+        }
+      ],
+      "short_version": "Hånd på hjerte, dybt åndedrag, 'Dette er hårdt, men jeg kan være her for mig selv'"
+    },
+
+    "gratitude_practice": {
+      "name": "3 gode ting",
+      "duration": "3 minutter dagligt",
+      "when": "Aften, før sengetid",
+      "instruction": [
+        "Skriv 3 ting der var gode/OK i dag",
+        "Kan være MEGET små: 'Solen skinnede', 'Kaffen smagte godt', 'Hunden var sød'",
+        "Hvorfor var det godt? (1 sætning)"
+      ],
+      "evidence": "Dokumenteret at øge velvære over 6+ uger",
+      "adhd_tip": "Samme tid hver dag - byg vane",
+      "depression_adaptation": "På rigtig dårlige dage: '3 ting jeg overlevede' er OK"
+    }
+  },
+
+  "journaling_practices": {
+    "description": "Skriveøvelser til refleksion og processing",
+
+    "micro_journaling": {
+      "name": "Mikro-dagbog",
+      "commitment": "Én sætning per dag - that's it",
+      "prompt": "'Hvad rørte mig mest i dag?'",
+      "instruction": "Skriv første tanke - ingen redigering, ingen perfektion",
+      "why_powerful": "Lav barriere = faktisk gør det. Tracker følelsesmæssig rejse over tid.",
+      "expansion": "Når det føles let - tilføj én sætning mere: 'Hvad lærte jeg?'"
+    },
+
+    "emotion_journaling": {
+      "name": "Følelsesdagbog",
+      "when": "Intense følelser, confusion, overwhelm",
+      "prompts": [
+        "Hvilken følelse mærker jeg? (name it)",
+        "Hvor i kroppen mærker jeg det?",
+        "Hvad triggerede det?",
+        "Hvad har følelsen brug for?",
+        "Hvad kan jeg gøre for at hjælpe mig selv?"
+      ],
+      "alexithymia_support": "Brug emotions.json emotion wheel hvis svært at navngive"
+    },
+
+    "stream_of_consciousness": {
+      "name": "Tankespild",
+      "duration": "10 minutter",
+      "instruction": "Skriv ALT der kommer i hovedet - ingen filter, ingen grammatik, ingen mening nødvendig",
+      "rules": [
+        "Pen må ikke stoppe - bare skriv",
+        "Ingen censur",
+        "Ingen re-read (kan rives itu efter hvis vil)"
+      ],
+      "when": "Tanker køre loop, rumination, kan ikke stoppe thinking",
+      "why_works": "Eksternaliserer tanker = de fylder mindre i hovedet"
+    },
+
+    "letter_to_younger_self": {
+      "name": "Brev til yngre dig",
+      "powerful_for": "Healing, perspective, selvaccept",
+      "instruction": [
+        "Vælg alder (ofte omkring svær periode)",
+        "Skriv brev til dig på den alder",
+        "Hvad ville du gerne have hørt dengang?",
+        "Hvad ved du nu, du ville ønske du vidste dengang?"
+      ],
+      "example_opening": "'Kære 14-årige mig...'",
+      "healing": "Gives compassion to past self = self-compassion now"
+    },
+
+    "unsent_letter": {
+      "name": "Brev du aldrig sender",
+      "when": "Vrede, hurt, unfinished business med person",
+      "instruction": [
+        "Skriv brev til person",
+        "Sig ALT du vil sige - uncensored",
+        "Inkluder følelser, anger, hurt, questions",
+        "SEND IKKE",
+        "Gem eller riv itu - dit valg"
+      ],
+      "why_works": "Expression uden consequence. Cathartisk. Giver closure."
+    }
+  },
+
+  "mindfulness_meditation": {
+    "description": "Mindfulness praksisser for presence og calm",
+
+    "breath_awareness": {
+      "name": "Åndedrætsbevidsthed",
+      "duration": "3-10 minutter",
+      "instruction": [
+        "Sid komfortabelt",
+        "Luk øjne eller blød gaze",
+        "Fokus på åndedrættet - ind og ud",
+        "Når tanker kommer (de gør!) - notice, let go, tilbage til åndedræt",
+        "Ingen 'forkert' - bare øvelse i at komme tilbage"
+      ],
+      "adhd_adaptation": "Start med 2 minutter - ADHD hjerne vil wander, det er OK"
+    },
+
+    "body_scan_meditation": {
+      "name": "Bodyscan",
+      "duration": "10-20 minutter",
+      "full_instructions": "See calmspace.json",
+      "quick_version": [
+        "Lig ned",
+        "Fokus på fødder - mærk dem",
+        "Langsomt op gennem hele kroppen",
+        "Notice sensationer uden at ændre dem",
+        "Gentle awareness"
+      ],
+      "when": "Disconnect fra krop, tension, før søvn"
+    },
+
+    "mindful_walking": {
+      "name": "Mindful gå-tur",
+      "duration": "10-30 minutter",
+      "instruction": [
+        "Gå langsomt",
+        "Mærk hver del af skridt: hæl, fodsål, tæer",
+        "Notice omgivelser med alle sanser",
+        "Når tanker kommer - tilbage til fødderne på jorden"
+      ],
+      "benefit": "Movement + mindfulness = good for ADHD/restlessness"
+    },
+
+    "mindful_eating": {
+      "name": "Mindful eating øvelse",
+      "classic": "Raisin meditation",
+      "instruction": [
+        "Tag ét stykke mad (raisin, chokolade, whatever)",
+        "Kig på det - virkelig se det",
+        "Lugt det",
+        "Læg i mund - ikke tyg endnu, bare mærk",
+        "Langsomt tyg - mærk smag, texture",
+        "Slug mindfully"
+      ],
+      "duration": "One bite = 2 minutter",
+      "benefit": "Breaks automatic eating, increases enjoyment, slows down"
+    },
+
+    "loving_kindness_meditation": {
+      "name": "Metta / Loving-kindness",
+      "duration": "5-15 minutter",
+      "instruction": [
+        "Start med dig selv: 'Må jeg være glad. Må jeg være sund. Må jeg være i fred.'",
+        "Derefter kær person: 'Må du være glad...'",
+        "Neutral person: 'Må du være glad...'",
+        "Difficult person (hvis klar): 'Må du være glad...'",
+        "Alle væsener: 'Må alle være glade...'"
+      ],
+      "when": "Self-criticism, anger, difficulty with compassion",
+      "adaptation": "Change phrases to what feels right for you"
+    }
+  },
+
+  "dbt_skills": {
+    "description": "Dialectical Behavior Therapy færdigheder - evidence-based for emotion regulation",
+
+    "distress_tolerance": {
+      "purpose": "Survive crisis uden at gøre det værre",
+      "TIP_skills": {
+        "name": "TIP - Akut kriseværktøj",
+        "T_temperature": {
+          "what": "Temperature - change body temp to change emotion",
+          "how": [
+            "Splash cold water on face",
+            "Hold ice cube",
+            "Cold shower",
+            "Ice pack on neck"
+          ],
+          "why": "Activates dive reflex - calms autonomic nervous system"
+        },
+        "I_intense_exercise": {
+          "what": "Intense kort exercise",
+          "how": [
+            "Run up/down stairs",
+            "50 jumping jacks",
+            "Sprint outside",
+            "Intense dancing"
+          ],
+          "duration": "5-15 minutter",
+          "why": "Burns off adrenaline, releases endorphins"
+        },
+        "P_paced_breathing": {
+          "what": "Paced breathing + paired muscle relaxation",
+          "how": "Breathe slow (5-6 breaths/min), tense and release muscles",
+          "why": "Activates parasympathetic = calm"
+        }
+      },
+      "ACCEPTS": {
+        "name": "ACCEPTS - Distraction techniques",
+        "A_activities": "Do something engrossing",
+        "C_contributing": "Help someone else",
+        "C_comparisons": "Compare to worse time (carefully)",
+        "E_emotions": "Create opposite emotion (comedy when sad)",
+        "P_pushing_away": "Mental shelf - deal with later",
+        "T_thoughts": "Puzzles, counting, games",
+        "S_sensations": "Strong sensory input (cold, hot, taste)"
+      },
+      "self_soothe": {
+        "name": "Self-Soothe with 5 senses",
+        "vision": "Beautiful images, nature, art",
+        "hearing": "Favorite music, nature sounds",
+        "smell": "Essential oils, favorite scent",
+        "taste": "Favorite food/drink slowly",
+        "touch": "Soft blanket, pet, warm bath"
+      }
+    },
+
+    "emotion_regulation": {
+      "purpose": "Understand and manage emotions skillfully",
+      "opposite_action": {
+        "name": "Opposite Action",
+        "concept": "When emotion doesn't fit facts - do opposite of urge",
+        "examples": [
+          {
+            "emotion": "Depression",
+            "urge": "Isolate, stay in bed",
+            "opposite_action": "Get up, shower, reach out to friend"
+          },
+          {
+            "emotion": "Anxiety",
+            "urge": "Avoid",
+            "opposite_action": "Approach gradually (exposure)"
+          },
+          {
+            "emotion": "Anger",
+            "urge": "Attack, lash out",
+            "opposite_action": "Gentle, kind actions"
+          },
+          {
+            "emotion": "Shame",
+            "urge": "Hide",
+            "opposite_action": "Share vulnerability (safe person)"
+          }
+        ],
+        "when_to_use": "Emotion is based on inaccurate interpretation OR emotion intensity too high"
+      },
+      "check_the_facts": {
+        "name": "Check the Facts",
+        "purpose": "Reality-test emotional reaction",
+        "questions": [
+          "What's the ACTUAL situation? (facts only)",
+          "What assumptions am I making?",
+          "What's the evidence for/against my interpretation?",
+          "Is there another way to see this?",
+          "What would friend say?"
+        ],
+        "example": "Feel rejected → Check facts → They didn't respond → Maybe busy, not rejection"
+      },
+      "ABC_PLEASE": {
+        "name": "ABC PLEASE - Build emotional resilience",
+        "accumulate_positive": "Do pleasant things daily",
+        "build_mastery": "Do things that make you feel competent",
+        "cope_ahead": "Plan for difficult situations",
+        "PhysicaL_illness": "Treat physical illness",
+        "balance_Eating": "Regular, balanced meals",
+        "avoid_mood_altering_drugs": "Minimize alcohol/drugs",
+        "balance_Sleep": "Regular sleep schedule",
+        "Exercise": "Regular movement"
+      }
+    },
+
+    "interpersonal_effectiveness": {
+      "purpose": "Get needs met while maintaining relationships",
+      "DEAR_MAN": {
+        "name": "DEAR MAN - Ask effectively",
+        "Describe": "Describe situation objectively",
+        "Express": "Express feelings/opinions",
+        "Assert": "Ask for what you want clearly",
+        "Reinforce": "Explain benefit/consequence",
+        "Mindful": "Stay focused on goal",
+        "Appear_confident": "Tone, posture confident",
+        "Negotiate": "Be willing to compromise"
+      },
+      "GIVE": {
+        "name": "GIVE - Maintain relationship",
+        "Gentle": "Be kind, no attacks",
+        "Interested": "Listen, validate",
+        "Validate": "Acknowledge their feelings",
+        "Easy_manner": "Smile, be light"
+      },
+      "FAST": {
+        "name": "FAST - Keep self-respect",
+        "Fair": "Be fair to yourself AND others",
+        "Apologies": "No unnecessary apologizing",
+        "Stick_to_values": "Act according to your values",
+        "Truthful": "Don't lie or exaggerate"
+      }
+    },
+
+    "mindfulness_dbt": {
+      "what_skills": {
+        "observe": "Notice without words",
+        "describe": "Put words to experience",
+        "participate": "Fully engage"
+      },
+      "how_skills": {
+        "non_judgmentally": "No good/bad labels",
+        "one_mindfully": "One thing at a time",
+        "effectively": "Do what works"
+      }
+    }
+  },
+
+  "cbt_techniques": {
+    "description": "Cognitive Behavioral Therapy værktøjer",
+
+    "thought_challenging": {
+      "name": "Tanke-udfordring",
+      "purpose": "Identify and challenge unhelpful thoughts",
+      "steps": [
+        {
+          "step": "1. Identificer automatisk tanke",
+          "question": "Hvad tænkte jeg lige præcis da følelsen kom?"
+        },
+        {
+          "step": "2. Identificer følelse",
+          "question": "Hvad følte jeg? (navn og intensitet 0-100)"
+        },
+        {
+          "step": "3. Find evidens FOR tanke",
+          "question": "Hvad understøtter denne tanke?"
+        },
+        {
+          "step": "4. Find evidens IMOD tanke",
+          "question": "Hvad taler imod denne tanke?"
+        },
+        {
+          "step": "5. Alternativ tanke",
+          "question": "Hvad er mere balanced/realistisk måde at se dette?"
+        },
+        {
+          "step": "6. Re-rate følelse",
+          "question": "Hvor intens er følelsen nu? (0-100)"
+        }
+      ],
+      "common_distortions": [
+        "All-or-nothing thinking",
+        "Catastrophizing",
+        "Mind reading",
+        "Fortune telling",
+        "Emotional reasoning",
+        "Should statements",
+        "Labeling",
+        "Personalization"
+      ]
+    },
+
+    "behavioral_activation": {
+      "name": "Adfærdsaktivering",
+      "purpose": "Counter depression through action",
+      "concept": "Don't wait for motivation - action creates motivation",
+      "steps": [
+        "1. List activities that used to give pleasure/accomplishment",
+        "2. Rate difficulty (1-10)",
+        "3. Start with easiest (difficulty 2-3)",
+        "4. Schedule specific time",
+        "5. Do it regardless of mood",
+        "6. Notice any mood shift after (even tiny)",
+        "7. Gradually add more activities"
+      ],
+      "adhd_adaptation": "Build in accountability - tell someone you'll do it",
+      "depression_reality": "Will feel hard - do anyway. Small steps."
+    },
+
+    "exposure_hierarchy": {
+      "name": "Eksponerings-stige",
+      "purpose": "Face fears gradually (for anxiety)",
+      "steps": [
+        "1. Identify fear/avoidance",
+        "2. Break into steps (0 = no anxiety → 100 = panic)",
+        "3. Start with step rated 20-30",
+        "4. Stay in situation until anxiety reduces 50% (habituation)",
+        "5. Repeat same step until easy",
+        "6. Move up ladder"
+      ],
+      "example_social_anxiety": [
+        "10: Say hi to cashier",
+        "25: Ask store employee for help",
+        "40: Call friend",
+        "60: Coffee with one friend",
+        "80: Small group gathering",
+        "100: Party with strangers"
+      ],
+      "critical": "Must stay long enough to habituate - leaving during peak anxiety reinforces fear"
+    }
+  },
+
+  "somatic_practices": {
+    "description": "Body-based practices - trauma-informed",
+
+    "grounding_techniques": {
+      "purpose": "Come back to present, body-based",
+      "link": "calmspace.json for full library",
+      "quick_reference": [
+        "5-4-3-2-1 sensory",
+        "Feet on floor",
+        "Cold water",
+        "Squeeze fists",
+        "Name objects in room"
+      ]
+    },
+
+    "pendulation": {
+      "name": "Pendulation (Somatic Experiencing)",
+      "purpose": "Build tolerance for activation by oscillating between comfort and discomfort",
+      "instruction": [
+        "Find sensation of comfort/safety in body (maybe chest warm, belly soft)",
+        "Stay there, notice details",
+        "Then briefly touch uncomfortable sensation (maybe tightness, tension)",
+        "Back to comfort",
+        "Repeat - building capacity to be with discomfort"
+      ],
+      "why": "Builds resilience - learn system can handle and return to calm"
+    },
+
+    "resourcing": {
+      "name": "Resourcing",
+      "purpose": "Strengthen felt sense of safety",
+      "instructions": [
+        "Think of place/person/memory where you felt safe/happy",
+        "Drop into body - where do you feel good feelings?",
+        "Notice sensations (warm, soft, open, etc)",
+        "Amplify - can you feel it more?",
+        "Anchor it - hand gesture or word to recall"
+      ],
+      "use": "Before difficult work, during overwhelm, building capacity"
+    },
+
+    "tracking_sensations": {
+      "name": "Body Sensation Tracking",
+      "purpose": "Build interoception, notice before overwhelm",
+      "practice": [
+        "Throughout day, pause and scan body",
+        "Notice sensations without judgment",
+        "Name them: 'tight', 'warm', 'fluttery', 'heavy'",
+        "Track patterns: 'When I'm anxious, my chest tightens'"
+      ],
+      "benefit": "Early warning system + increased body awareness"
+    }
+  },
+
+  "crisis_self_help": {
+    "description": "Self-help when in crisis - bridges to carelab.json and crisishelper.json",
+
+    "urge_to_self_harm": {
+      "immediate": "See crisishelper.json self-harm protocol",
+      "alternatives_quick": [
+        "Ice cube in hand (intense sensation)",
+        "Red marker where would cut (visual)",
+        "Rip paper aggressively",
+        "Scream into pillow",
+        "Elastic band snap (gentler pain)"
+      ],
+      "delay_tactics": "Wait 15 minutes - urge often passes"
+    },
+
+    "suicidal_ideation": {
+      "immediate": "See crisishelper.json suicidal protocol",
+      "safety": [
+        "Call crisis line: Livslinien 70 201 201",
+        "Text friend 'I'm not OK'",
+        "Go to ER if immediate danger"
+      ],
+      "coping": [
+        "Stay with someone",
+        "Remove means",
+        "Safety plan: See carelab.json"
+      ]
+    },
+
+    "panic_attack": {
+      "immediate": "See crisishelper.json panic protocol",
+      "remember": "Panic attacks PEAK at 10 min, end within 30 min. Not dangerous.",
+      "ride_the_wave": [
+        "Ground: Feet, floor, pressure",
+        "Breathe: 4-7-8",
+        "Don't fight: 'This is panic, it will pass'",
+        "Stay: Don't run - face it"
+      ]
+    },
+
+    "dissociation": {
+      "immediate": "See crisishelper.json dissociation protocol",
+      "grounding_intensive": [
+        "Ice on skin",
+        "Name: 'I am [name], today is [date], I am in [place]'",
+        "Strong sensory: Smell, taste, texture",
+        "Movement: Stamp feet, clap hands"
+      ]
+    }
+  },
+
+  "diagnosis_specific_adaptations": {
+    "ADHD": {
+      "modifications": [
+        "Shorter practices (2-5 min better than 20 min)",
+        "Movement-based preferred (walking meditation over sitting)",
+        "Visual timers",
+        "Gamification (streak tracking, rewards)",
+        "Accountability (tell someone)",
+        "Variety (rotate exercises, not same every day)"
+      ],
+      "best_practices": [
+        "Behavioral activation",
+        "Physical grounding",
+        "Micro-journaling",
+        "Movement breaks"
+      ]
+    },
+
+    "Autism": {
+      "modifications": [
+        "Very concrete instructions",
+        "Predictable routine (same time, place)",
+        "Sensory-aware (dim lights, quiet space)",
+        "Clear start/end",
+        "No metaphorical language unless comfortable"
+      ],
+      "best_practices": [
+        "Routine-based rituals",
+        "Body scan",
+        "Grounding",
+        "Special interest incorporation"
+      ]
+    },
+
+    "Anxiety": {
+      "modifications": [
+        "Start very gentle (no pressure)",
+        "Grounding before challenging practices",
+        "Reassurance balanced (not endless)",
+        "Gradual exposure, not flooding"
+      ],
+      "best_practices": [
+        "All grounding techniques",
+        "Breath work",
+        "Progressive exposure",
+        "Thought challenging"
+      ]
+    },
+
+    "Depression": {
+      "modifications": [
+        "VERY small steps",
+        "Motivation comes after action (not before)",
+        "Celebrate everything",
+        "External structure helpful"
+      ],
+      "best_practices": [
+        "Behavioral activation",
+        "3 good things",
+        "Movement (even small)",
+        "Self-compassion"
+      ]
+    }
+  },
+
+  "integration_notes": {
+    "combines_with": {
+      "carelab": "Crisis protocols detailed there",
+      "crisishelper": "Acute crisis support",
+      "calmspace": "Grounding and sensory tools",
+      "emotions": "Emotion identification and understanding",
+      "healthlab": "Physical health supports mental practices",
+      "adaptcore": "Personalization of which practices suggested"
+    },
+
+    "sarah_integration": [
+      "Sarah suggests relevant practice based on user's current state",
+      "Guides through practice step-by-step if wanted",
+      "Checks in after: 'How did that feel?'",
+      "Learns which practices work best for this user",
+      "Builds practice library over time",
+      "Celebrates consistency"
+    ]
+  },
+
+  "critical_reminders": {
+    "not_replacement": "These practices supplement, not replace, professional therapy",
+    "consistency_over_perfection": "Daily imperfect practice > weekly perfect practice",
+    "find_your_fit": "Not all practices for all people - explore and keep what works",
+    "be_patient": "Change through practice takes time - weeks to months",
+    "self_compassion_essential": "When practice 'doesn't work' - be kind to yourself",
+    "professional_help": "If practices not enough - therapy is not failure, it's next step",
+    "safety_first": "In crisis - professional help, not just self-help"
+  }
 }
