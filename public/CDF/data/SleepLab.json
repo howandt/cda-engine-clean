@@ -248,6 +248,35 @@
         "title": "Samme rutine = søvn kommer hurtigere",
         "science": "Pavlovian conditioning - rutine = cue for søvn",
         "build_habit": "4-6 uger for at etablere - vær tålmodig"
+      },
+
+      "goodnight_day_ritual": {
+        "title": "Godnat Dag - Closure Technique (fra Biofeedback Klinikken)",
+        "origin": "Udviklet af Terapeut Hans-Ole Wandt, Biofeedback Klinikken, Danmark. Dokumenteret effekt hos klienter med søvnproblemer.",
+        "concept": "Psykologisk closure - dagen er LUKKET. Kapitlet er færdigt. Hjerne får signal: 'Vi er done. Vi kan slippe nu.'",
+        "how_to": [
+          "1 time før sengetid: Sluk alle skærme",
+          "Find din dagbog og et stille sted",
+          "Skriv én linje om dagen: 'God dag', 'Dårlig dag', eller hvad du vil",
+          "Skriv kort hvad du tænker på til i morgen (overskrift: 'Tanker og handlinger til i morgen')",
+          "SIDSTE handling: Skriv 'Godnat dag' - intet efter dette"
+        ],
+        "why_it_works": {
+          "psychological_closure": "Dagen får en konkret afslutning - ikke bare 'fader ud'",
+          "brain_signal": "Hjerne får eksplicit besked: Dagens kapitel er lukket",
+          "worry_dump": "Bekymringer er skrevet ned → behøver ikke rumstere i hovedet",
+          "tomorrow_separation": "Morgendagens bekymringer = morgendagens problem (ikke nattens)",
+          "ritual_power": "Samme afslutning hver nat = Pavlovian cue for søvn"
+        },
+        "example_entry": {
+          "date": "10. december",
+          "entry": "God dag. Havde lidt problemer ved frokosten - ville have røget. Klarede det ved at gå en tur. Ellers rolig dag.",
+          "tomorrow": "Tanker og handlinger til i morgen: Husk møde kl. 10, ring til mor",
+          "closure": "Godnat dag"
+        },
+        "critical": "Dette er SIDSTE handling før seng. Ingenting efter 'Godnat dag'. Det er punktummet.",
+        "duration": "5-10 minutter total",
+        "effect": "Tømmer sindet → lettere at falde i søvn. Dagen er officielt slut."
       }
     },
 
