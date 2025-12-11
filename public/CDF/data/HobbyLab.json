@@ -1,49 +1,1444 @@
 {
   "id": "HobbyLab",
+  "version": "3.0",
   "title": "Hobbyer & kreative pauser",
-  "intro": "Hobbyer er ikke bare fritid – det er små fristeder i hverdagen, hvor du glemmer tiden, mærker dig selv og får ro. Her hjælper jeg dig med at finde eller genopdage noget, der gør dig godt 💙",
+  "description": "Din personlige hobby-guide med diagnose-specifik tilgang, executive dysfunction support, og praktiske starter-kits",
+  "philosophy": "Hobbyer er ikke præstation - de er fristeder hvor du glemmer tiden, mærker dig selv og får ro. Her møder vi dig hvor du er, med den energi du har.",
+  
+  "core_principles": {
+    "no_pressure": "Du behøver ikke være god til det - bare nyde det",
+    "energy_aware": "Vi matcher hobbyer til din faktiske energi, ikke idealerne",
+    "executive_friendly": "Minimal setup, maksimal glæde",
+    "neurodivergent_safe": "Respekt for hyperfokus, sensory needs og special interests",
+    "rotation_ok": "Det er OK at skifte mellem hobbyer - din hjerne er ikke defekt",
+    "restart_friendly": "Genopdag gamle interesser uden skam eller 'skulle have'",
+    "micro_counts": "5 minutter tæller. Det behøver ikke være timer."
+  },
+
+  "intro": {
+    "welcome": "Hobbyer er ikke bare fritid – det er små fristeder i hverdagen, hvor du glemmer tiden, mærker dig selv og får ro. Her hjælper jeg dig med at finde eller genopdage noget, der gør dig godt 💙",
+    "what_we_do": [
+      "Finder hobbyer der passer til DIN hjerne (ADHD, autism, anxiety, depression)",
+      "Matcher aktiviteter til din faktiske energi - ikke idealer",
+      "Giver konkrete starter-kits så du kan begynde NU",
+      "Støtter hyperfokus, special interests og rotation mellem interesser",
+      "Hjælper med at genopdage gamle hobbyer uden pres",
+      "Respekterer at nogle dage er 'bare overlev' dage"
+    ],
+    "promise": "Ingen præstation. Ingen 'burde'. Bare finde noget der gør dig godt."
+  },
+
   "sections": [
     {
-      "id": "find_hobby",
-      "type": "message",
-      "title": "Find en hobby, der passer til dig",
-      "text": "Har du lyst til at prøve noget – men ved ikke hvad? Jeg kan hjælpe dig med at finde en hobby, der passer til dit tempo, din energi og dit humør."
+      "id": "hobby_matcher",
+      "title": "Find din hobby - smart matching",
+      "description": "Lad mig hjælpe dig med at finde en hobby der passer til lige præcis dig",
+      "matcher_system": {
+        "description": "Jeg stiller dig et par simple spørgsmål og foreslår hobbyer der matcher",
+        "factors": [
+          {
+            "factor": "energy_level",
+            "question": "Hvor meget energi har du typisk til en hobby?",
+            "options": {
+              "minimal": "Kan næsten ikke røre mig - skal være super simpelt",
+              "low": "Lav energi - vil gerne sidde/ligge mest",
+              "moderate": "Medium energi - kan gøre lidt",
+              "high": "God energi - kan være aktiv",
+              "variable": "Det skifter meget - har brug for flere optioner"
+            }
+          },
+          {
+            "factor": "sensory_preference",
+            "question": "Hvad med sanser - hvad trækker dig?",
+            "options": {
+              "visual": "Farver, mønstre, billeder",
+              "tactile": "Røre ved ting, teksturer, bygge",
+              "auditory": "Lyde, musik, rytmer",
+              "movement": "Bevægelse, dans, gå",
+              "minimal": "Helst roligt og stille",
+              "mixed": "Jeg kan lide variation"
+            }
+          },
+          {
+            "factor": "social_preference",
+            "question": "Social eller solo?",
+            "options": {
+              "solo_only": "Bare mig - ingen andre",
+              "solo_preferred": "Mest alene, men kan tåle lidt social",
+              "flexible": "Begge dele er fine",
+              "social_preferred": "Helst sammen med andre",
+              "parallel": "Sammen men ikke samarbejde (side om side)"
+            }
+          },
+          {
+            "factor": "structure_need",
+            "question": "Struktur eller fri leg?",
+            "options": {
+              "high_structure": "Klare regler og rammer - jeg vil vide hvad jeg skal",
+              "moderate": "Nogen struktur men også frihed",
+              "low_structure": "Bare lege frit uden regler",
+              "variable": "Kommer an på dagen"
+            }
+          },
+          {
+            "factor": "time_commitment",
+            "question": "Hvor meget tid vil/kan du bruge?",
+            "options": {
+              "micro": "5-10 minutter ad gangen",
+              "short": "15-30 minutter",
+              "medium": "30-60 minutter",
+              "long": "1-2 timer",
+              "hyperfocus": "Når jeg starter kan jeg fortsætte i timer"
+            }
+          },
+          {
+            "factor": "budget",
+            "question": "Hvad kan du bruge økonomisk?",
+            "options": {
+              "zero": "Intet - skal være gratis",
+              "minimal": "Meget lidt - max 50-100 kr",
+              "moderate": "Nogen - op til 500 kr",
+              "flexible": "Penge er ikke problemet"
+            }
+          },
+          {
+            "factor": "setup_tolerance",
+            "question": "Hvor meget setup kan du klare?",
+            "options": {
+              "zero": "Skal kunne starte med det samme - zero setup",
+              "minimal": "Lidt forberedelse er OK",
+              "moderate": "Kan godt bruge tid på at forberede",
+              "project": "Jeg nyder faktisk forberedelsen"
+            }
+          }
+        ],
+        "matching_algorithm": "Baseret på dine svar foreslår jeg 3-5 konkrete hobbyer med starter-kits"
+      }
     },
+
     {
-      "id": "hobby_no_pressure",
-      "type": "message",
-      "title": "Det handler ikke om at være god",
-      "text": "Du må gerne bare nyde det. Du behøver ikke blive dygtig. En hobby er for dig – ikke for præstation. Den skal føles rar, ikke rigtig."
+      "id": "diagnosis_specific",
+      "title": "Diagnose-specifik hobby-tilgang",
+      "description": "Hvordan forskellige hjerner oplever og har gavn af hobbyer",
+      
+      "adhd_approach": {
+        "title": "ADHD & hobbyer",
+        "characteristics": [
+          "Hyperfokus-potentiale - når det rammer rigtigt kan du fordybe dig i timer",
+          "Dopamin-søgende - hobbyen skal give nok stimulation",
+          "Rotation mellem interesser - det er NORMALT at skifte",
+          "Impulskøb af hobbyudstyr - så meget gear, så lidt brug",
+          "Svært at starte selvom du har lyst",
+          "Glemmer at du har hobbyen når den ikke er synlig"
+        ],
+        "strategies": {
+          "dopamine_menu": {
+            "description": "Lav en menu af hobbyer med forskellig dopamin-levels",
+            "high_dopamine": [
+              "Gaming (hurtig feedback)",
+              "Tegne/male (instant kreativitet)",
+              "Musik (rytme og flow)",
+              "Bygge/skabe (håndgribeligt resultat)",
+              "Sport/bevægelse (endorfiner)"
+            ],
+            "medium_dopamine": [
+              "Læse (hvis det fænger)",
+              "Puslespil/sudoku",
+              "Fotografere",
+              "Lave mad/bage",
+              "Samle ting"
+            ],
+            "low_dopamine": [
+              "Strikke/hækle (roligt repetitivt)",
+              "Sortere ting",
+              "Lytte til podcast",
+              "Gå ture"
+            ]
+          },
+          "rotation_system": {
+            "description": "Accepter at du roterer mellem interesser - det er ikke fiasko",
+            "approach": "Hav 3-5 aktive hobbyer du kan skifte mellem",
+            "storage": "Opbevar grej synligt så du husker det",
+            "no_shame": "Det er OK at vende tilbage til en hobby efter måneder/år"
+          },
+          "hyperfocus_friendly": {
+            "description": "Hobbyer der tillader deep-dive når hyperfokus rammer",
+            "examples": [
+              "Research deep-dives (Wikipedia rabbit holes)",
+              "Gaming",
+              "Bygge projekter (LEGO, modelbygning)",
+              "Kode/programmere",
+              "Skrive/worldbuilding",
+              "Tegne/male store projekter"
+            ],
+            "support": "Jeg kan give dig reminders om basale behov når du hyperfokuserer"
+          },
+          "executive_dysfunction_rescue": {
+            "zero_setup_hobbies": [
+              "Doodle på papir du har liggende",
+              "Tage billeder med din telefon",
+              "Lytte til musik",
+              "Skrive tanker i notes-app",
+              "Lege med ting du har i lommen (fidget)"
+            ],
+            "visual_cues": "Læg hobby-grej synligt frem - 'out of sight, out of mind' er real",
+            "start_ritual": "Minimal start-sekvens: Sæt timer 10 min → bare begynd → fortsæt hvis det føles godt"
+          }
+        }
+      },
+
+      "autism_approach": {
+        "title": "Autism & hobbyer",
+        "characteristics": [
+          "Special interests - dyb, intens fokus på specifikke emner",
+          "Strukturbehov - klare rammer er trygge",
+          "Sensory considerations - nogle ting er OK, andre overvældende",
+          "Systematisk tilgang - jeg vil lære det RIGTIGT",
+          "Solo ofte foretrukket - social energi er dyr",
+          "Loyalitet til interesser - kan fastholde samme hobby i årtier"
+        ],
+        "strategies": {
+          "special_interest_support": {
+            "description": "Dine special interests er ikke 'for meget' - de er dine superkræfter",
+            "deep_dive": "Jeg støtter dig i at gå SÅ dybt som du vil",
+            "no_judgment": "Andre synes det er 'for meget'? Deres problem, ikke dit",
+            "connection": "Special interests kan blive karriere, fællesskab, livsglæde",
+            "evolution": "Det er OK hvis special interests skifter over tid"
+          },
+          "structure_friendly_hobbies": {
+            "high_structure": [
+              "Samle ting (systematisk katalogisering)",
+              "Bygge efter instruktioner (LEGO, modeller)",
+              "Musik (læse noder, følge struktur)",
+              "Programmering (logisk, systematisk)",
+              "Organisere/kategorisere",
+              "Spil med klare regler"
+            ],
+            "benefits": "Struktur giver tryghed og overskuelighed"
+          },
+          "sensory_safe_creativity": {
+            "description": "Find kreative udtryk der respekterer dine sensory needs",
+            "visual_arts": {
+              "safe": ["Digital tegning (ingen lugt/rod)", "Blyant (kontrolleret)", "Perler/puslespil"],
+              "challenging": ["Maling (lugt, tekstur)", "Ler (vådt, rodet)"],
+              "adaptations": "Brug handsker, arbejd udendørs, vælg lugfrie materialer"
+            },
+            "music": {
+              "safe": ["Hovedtelefoner", "Digital musik", "Solo øvning"],
+              "challenging": ["Høje lydniveauer", "Uforudsigelige lyde"],
+              "adaptations": "Lydreducerende høreværn, kontrolleret miljø"
+            },
+            "crafts": {
+              "safe": ["Strikke/hækle (forudsigeligt)", "Origami (rent, præcist)"],
+              "challenging": ["Sy (maskinstøj)", "Lime (lugt)"],
+              "adaptations": "Vælg materialer omhyggeligt"
+            }
+          },
+          "solo_sanctuary": {
+            "description": "Det er 100% OK at hobbyen er din private ting",
+            "no_sharing_needed": "Du behøver ikke vise det til nogen",
+            "parallel_option": "Nogle gange er 'sammen men hver for sig' rart (makerspace, gaming discord)",
+            "social_recovery": "Hobbyen kan være din måde at få energi tilbage efter social tid"
+          }
+        }
+      },
+
+      "anxiety_approach": {
+        "title": "Anxiety & hobbyer",
+        "characteristics": [
+          "Overvældelse ved valg - 'hvad hvis jeg vælger forkert?'",
+          "Præstationsangst - 'jeg skal være god til det'",
+          "Perfektionisme blokerer start",
+          "Bekymring om andres dom",
+          "Svært at slippe kontrol og bare lege",
+          "Hobbyen bliver til endnu et 'skal'"
+        ],
+        "strategies": {
+          "low_pressure_zone": {
+            "description": "Hobbyen er dit angst-frie rum - ingen præstation, ingen dom",
+            "mantras": [
+              "Det er OK at være dårlig til det",
+              "Ingen ser hvad du laver",
+              "Det behøver ikke blive til noget",
+              "Du må ødelægge det",
+              "Der er ingen forkerte valg"
+            ]
+          },
+          "grounding_hobbies": {
+            "description": "Hobbyer der bringer dig tilbage til nuet og ud af bekymringer",
+            "tactile_grounding": [
+              "Ler/modellervoks (hands-on)",
+              "Strikke/hækle (rytmisk, gentagende)",
+              "Tegne/farvelægge (fokus på papir)",
+              "Have/planter (jord, vand, vækst)"
+            ],
+            "rhythmic_grounding": [
+              "Gå/løbe (skridt efter skridt)",
+              "Musik (rytme)",
+              "Puslespil (ét brik ad gangen)",
+              "Perler/origami (gentag, gentag)"
+            ],
+            "creative_grounding": [
+              "Journaling (tanker på papir)",
+              "Tegne følelser",
+              "Lave kolloager",
+              "Fotografere (fokus gennem linse)"
+            ]
+          },
+          "permission_to_quit": {
+            "description": "Du må stoppe hvis det ikke føles godt",
+            "no_commitment": "Du forpligter dig til INGENTING - bare prøv",
+            "switch_ok": "Skift hobby så meget du vil",
+            "rest_is_valid": "Nogle dage er 'ingen hobby' det rigtige valg"
+          },
+          "anxiety_reduction_tracking": {
+            "description": "Mærk hvordan hobbyen faktisk hjælper dig",
+            "before_after": "Noter angst-niveau før og efter hobby-tid",
+            "patterns": "Se hvilke aktiviteter faktisk giver ro",
+            "evidence": "Beviser for at hobbyen GØR godt - det er ikke spild af tid"
+          }
+        }
+      },
+
+      "depression_approach": {
+        "title": "Depression & hobbyer",
+        "characteristics": [
+          "Intet føles sjovt længere - anhedonia",
+          "Ingen energi til at starte",
+          "Skyld over 'spild af tid'",
+          "Kan ikke huske hvad du plejede at kunne lide",
+          "Alt føles meningsløst",
+          "Isolation forstærker sig selv"
+        ],
+        "strategies": {
+          "micro_hobbies": {
+            "description": "Når energien er nul: 5 minutters hobbyer tæller",
+            "examples": [
+              "Se 1 youtube video om noget interessant",
+              "Tegne 1 streg",
+              "Lytte til 1 sang",
+              "Tage 1 billede",
+              "Læse 1 side",
+              "Holde 1 plante",
+              "Rulle 1 ler-kugle"
+            ],
+            "principle": "Noget er altid bedre end intet"
+          },
+          "behavioral_activation": {
+            "description": "Hobbyer som medicin - gør det SELV når det ikke føles sjovt",
+            "science": "Aktivitet kommer før motivation, ikke omvendt",
+            "approach": "Start med 5 minutter selvom det føles meningsløst",
+            "trust_process": "Dit følelsessystem er offline - stol på at det hjælper alligevel"
+          },
+          "already_have_hobbies": {
+            "description": "Ting du kan gøre UDEN at købe noget eller gå nogen steder",
+            "phone_based": [
+              "Tage billeder af ting i dit hjem",
+              "Lave playlister",
+              "Skrive noter/tanker",
+              "Tegne i drawing app",
+              "Lære via youtube"
+            ],
+            "paper_based": [
+              "Doodle",
+              "Skrive lister",
+              "Tegne/male",
+              "Folde papir (origami)",
+              "Rive magasiner (kollage)"
+            ],
+            "body_based": [
+              "Stræk",
+              "Dans til 1 sang",
+              "Gå til vinduet",
+              "Røre forskellige teksturer"
+            ]
+          },
+          "restart_old_joys": {
+            "description": "Hvad kunne du lide før depressionen?",
+            "memory_prompts": [
+              "Hvad gjorde du som barn?",
+              "Hvad gabte tid før?",
+              "Hvad har du samlet på?",
+              "Hvad drømte du om at lære?",
+              "Hvad har ligget ubrugt?"
+            ],
+            "gentle_return": "Start med 5 minutter - ingen forventninger om at det føles som før"
+          },
+          "social_connection_option": {
+            "description": "Nogle gange hjælper det at dele hobbyen (selv bare lidt)",
+            "low_pressure": [
+              "Dele billede i online gruppe (ingen svar nødvendigt)",
+              "Parallel hobby med 1 ven (sammen men hver sin ting)",
+              "Twitch/youtube creatives (se andre skabe)",
+              "Discord communities (lurke eller dele)"
+            ],
+            "why_it_helps": "Mindreens dig om at du ikke er alene - andre skaber også"
+          }
+        }
+      },
+
+      "comorbidity_notes": {
+        "adhd_autism": "Hyperfokus MED sensory needs - find strukturerede special interests med klare mål",
+        "adhd_anxiety": "Dopamin-søgen MED perfektionisme - find hobbyer hvor 'fejl' er del af processen",
+        "adhd_depression": "Ingen motivation MED executive dysfunction - microhobbies med zero setup",
+        "autism_anxiety": "Special interests MED bekymring for dom - find sikre nicher hvor det er OK at være obsessed",
+        "autism_depression": "Struktur MED anhedonia - fasthold rutiner selv når glæden mangler",
+        "anxiety_depression": "Overvældelse MED ingen energi - gentagne simple aktiviteter med guidet start"
+      }
     },
+
     {
-      "id": "creative_flow",
-      "type": "message",
-      "title": "Når du glemmer tiden",
-      "text": "Tegne, male, bygge, skrive... Flow opstår, når du glemmer klokken. Jeg kan give dig små ideer og påmindelser, hvis du vil i gang."
+      "id": "energy_categories",
+      "title": "Hobbyer efter energiniveau",
+      "description": "Match din hobby til den energi du faktisk har - ikke den du ønsker du havde",
+
+      "minimal_energy": {
+        "title": "Minimal energi - 'kan næsten ikke'",
+        "description": "Til de dage hvor alt er tungt",
+        "hobbies": [
+          {
+            "name": "Lytte til musik",
+            "setup": "Hovedtelefoner på, tryk play",
+            "time": "5-60 minutter",
+            "benefit": "Følelsesregulering uden energi"
+          },
+          {
+            "name": "Se billeder/videoer",
+            "setup": "Scroll gennem gamle billeder eller gem nye",
+            "time": "5-30 minutter",
+            "benefit": "Visuel stimulation, nostalgi"
+          },
+          {
+            "name": "Farvelægge (voksen malebøger)",
+            "setup": "Bog og farver ved sengen",
+            "time": "10-30 minutter",
+            "benefit": "Rolig fokus, ingen beslutninger"
+          },
+          {
+            "name": "Audiobooks/podcasts",
+            "setup": "Luk øjne, tryk play",
+            "time": "15-60+ minutter",
+            "benefit": "Mental stimulation, underholdning"
+          },
+          {
+            "name": "Ligge og se skyer/loft",
+            "setup": "Ingenting",
+            "time": "5-20 minutter",
+            "benefit": "Mindfulness, hvile"
+          }
+        ]
+      },
+
+      "low_energy": {
+        "title": "Lav energi - 'kan sidde/ligge og lave lidt'",
+        "description": "Rolige aktiviteter du kan gøre fra sofaen",
+        "hobbies": [
+          {
+            "name": "Tegne/doodle",
+            "setup": "Papir og blyant",
+            "time": "10-60 minutter",
+            "benefit": "Kreativ uden pres, meditativt"
+          },
+          {
+            "name": "Strikke/hækle",
+            "setup": "Garn og pinde ved sofaen",
+            "time": "15-90 minutter",
+            "benefit": "Rytmisk, produktivt, roligt"
+          },
+          {
+            "name": "Puslespil",
+            "setup": "Puslespil på bord",
+            "time": "20-120 minutter",
+            "benefit": "Fokus, små sejre, overskueligt"
+          },
+          {
+            "name": "Læse (letlæste bøger/manga)",
+            "setup": "Bog eller e-reader",
+            "time": "15-60 minutter",
+            "benefit": "Eskapisme, mental stimulation"
+          },
+          {
+            "name": "Mobile games (rolige)",
+            "setup": "Telefon i hånden",
+            "time": "10-60 minutter",
+            "benefit": "Let underholdning, små mål"
+          },
+          {
+            "name": "Journaling/skrive",
+            "setup": "Notesbog eller app",
+            "time": "10-30 minutter",
+            "benefit": "Processer tanker, kreativ"
+          }
+        ]
+      },
+
+      "moderate_energy": {
+        "title": "Moderat energi - 'kan gøre lidt mere'",
+        "description": "Aktiviteter der kræver lidt bevægelse eller koncentration",
+        "hobbies": [
+          {
+            "name": "Lave mad/bage",
+            "setup": "Ingredienser og køkken",
+            "time": "30-120 minutter",
+            "benefit": "Kreativt, konkret resultat, kan spises"
+          },
+          {
+            "name": "Have/planter",
+            "setup": "Planter, potter, jord",
+            "time": "20-90 minutter",
+            "benefit": "Roligt, vækst, natur"
+          },
+          {
+            "name": "Fotografere (gå tur med kamera)",
+            "setup": "Telefon eller kamera, gå udenfor",
+            "time": "30-90 minutter",
+            "benefit": "Kreativt, bevægelse, awareness"
+          },
+          {
+            "name": "Bygge (LEGO, modeller)",
+            "setup": "Byggesæt og arbejdsflade",
+            "time": "30-180 minutter",
+            "benefit": "Fokus, skabe, konkret resultat"
+          },
+          {
+            "name": "Male/tegne (større projekter)",
+            "setup": "Lærred, maling, pensler",
+            "time": "30-120 minutter",
+            "benefit": "Kreativ flow, udtryk, proces"
+          },
+          {
+            "name": "Spille instrument",
+            "setup": "Instrument og plads",
+            "time": "20-60 minutter",
+            "benefit": "Kreativt, flow, kunnen"
+          }
+        ]
+      },
+
+      "high_energy": {
+        "title": "Høj energi - 'kan være aktiv'",
+        "description": "Fysiske eller intensive aktiviteter",
+        "hobbies": [
+          {
+            "name": "Sport (løb, cykling, svømning)",
+            "setup": "Tøj og sted",
+            "time": "30-120 minutter",
+            "benefit": "Endorfiner, sundhed, præstation"
+          },
+          {
+            "name": "Dans",
+            "setup": "Musik og plads",
+            "time": "20-90 minutter",
+            "benefit": "Bevægelse, udtryk, frihed"
+          },
+          {
+            "name": "Klatre",
+            "setup": "Klatrecenter eller outdoor",
+            "time": "60-180 minutter",
+            "benefit": "Problem-solving, styrke, fokus"
+          },
+          {
+            "name": "Martial arts",
+            "setup": "Dojo/træningssted",
+            "time": "60-120 minutter",
+            "benefit": "Disciplin, fysisk, mental styrke"
+          },
+          {
+            "name": "Bygge store projekter (træarbejde, renovering)",
+            "setup": "Værktøj og materialer",
+            "time": "120-480 minutter",
+            "benefit": "Skabe stort, fysisk, praktisk"
+          }
+        ]
+      },
+
+      "variable_energy": {
+        "title": "Variabel energi - mix-and-match",
+        "description": "Hav flere hobbyer på hylden så du kan vælge efter dagens energi",
+        "strategy": "Lav en 'hobby menu' med optioner for hver energi-kategori",
+        "rotation": "Det er OK at rotere mellem hobbyer baseret på energi",
+        "no_guilt": "Du er ikke 'dårlig' til at holde fast i én hobby - din energi bestemmer"
+      }
     },
+
     {
-      "id": "restart_old",
-      "type": "message",
-      "title": "Genopdag en gammel interesse",
-      "text": "Har du haft en hobby før, som du savner? Måske kan vi vække den til live igen – i dit eget tempo. Du behøver ikke starte forfra – bare tage små skridt."
+      "id": "starter_kits",
+      "title": "Starter-kits: Kom i gang NU",
+      "description": "Konkrete guides til at starte forskellige hobbyer - ingen teoretisk snak",
+
+      "drawing_kit": {
+        "name": "Tegning/Drawing",
+        "why": "Kreativ, fleksibel, billig, kan gøres overalt",
+        "absolute_minimum": [
+          "1 blyant",
+          "Noget papir (eller bagsiden af regninger)"
+        ],
+        "beginner_kit": [
+          "Skitseblok A4",
+          "Sæt blyanter (2H, HB, 2B, 4B)",
+          "Viskelæder"
+        ],
+        "budget": "50-150 kr",
+        "first_exercises": [
+          "Doodle: Bare tegn kruseduller i 5 minutter",
+          "Blind contour: Tegn noget uden at se på papir",
+          "Daglige sketches: 1 lille tegning om dagen"
+        ],
+        "progression": "YouTube: 'beginner drawing exercises'",
+        "adhd_note": "Doodling er OGSÅ tegning - det behøver ikke være 'kunst'",
+        "autism_note": "Præcise linjier og struktur er fint - det behøver ikke være 'løst'",
+        "anxiety_note": "Der er ingen forkert måde at tegne på",
+        "depression_note": "1 streg tæller som tegning"
+      },
+
+      "writing_kit": {
+        "name": "Skrivning/Writing",
+        "why": "Gratis, privat, processer tanker, kreativt",
+        "absolute_minimum": [
+          "Notes app på telefon"
+        ],
+        "beginner_kit": [
+          "Notesbog du kan lide at se på",
+          "Pen der glider rart",
+          "ELLER: Notion/Obsidian/Google Docs"
+        ],
+        "budget": "0-100 kr",
+        "first_exercises": [
+          "Morning pages: Skriv 3 sider stream-of-consciousness hver morgen",
+          "Prompt-based: 'En dag hvor alt gik galt'",
+          "Bullet journal: Bare noter dagens events"
+        ],
+        "progression": "NaNoWriMo (November), r/writing communities",
+        "adhd_note": "Hyperfokus-venligt når ideen rammer - skriv alt ned",
+        "autism_note": "Worldbuilding og systematisk karakterudvikling",
+        "anxiety_note": "Ingen læser det - skriv hvad som helst",
+        "depression_note": "Tanker på papir er mindre overvældende end i hovedet"
+      },
+
+      "music_listening_kit": {
+        "name": "Musik (lytning som hobby)",
+        "why": "Følelsesregulering, ingen energi krævet, overalt",
+        "absolute_minimum": [
+          "Hovedtelefoner eller højtaler",
+          "Spotify/YouTube/whatever"
+        ],
+        "beginner_kit": [
+          "Ordentlige hovedtelefoner (over-ear for autism sensory)",
+          "Musik-app med playlister"
+        ],
+        "budget": "0 kr (streaming) - 500 kr (gode hovedtelefoner)",
+        "first_exercises": [
+          "Lav playlister efter stemning (energi, ro, fokus, sorg)",
+          "Udforsk en ny genre om ugen",
+          "Deep-dive i en kunstner (lyt til alt)",
+          "Lydlandskaber/ambient for fokus"
+        ],
+        "progression": "Gå dybere i musikteori, lær instrument, lav musik",
+        "adhd_note": "Musik som fokusværktøj - lo-fi, ambient, binaurals",
+        "autism_note": "Headphones = sensory shield, genlytte samme album 100 gange er fint",
+        "anxiety_note": "Playlister til forskellige anxiety-levels",
+        "depression_note": "Musik når ord ikke rækker"
+      },
+
+      "gaming_kit": {
+        "name": "Gaming",
+        "why": "Flow, dopamin, præstation, eskapisme, social (hvis du vil)",
+        "absolute_minimum": [
+          "Telefon med gratis games"
+        ],
+        "beginner_kit": [
+          "Nintendo Switch (casual-friendly)",
+          "ELLER: Gaming PC/laptop",
+          "ELLER: PlayStation/Xbox"
+        ],
+        "budget": "0 kr (mobile) - 3000+ kr (konsol/PC)",
+        "game_types": {
+          "high_dopamine_adhd": ["Action games", "Roguelikes", "Fast-paced"],
+          "structured_autism": ["Strategy games", "Puzzle games", "Simulation"],
+          "low_anxiety": ["Cozy games (Stardew, Animal Crossing)", "No-death games"],
+          "depression_friendly": ["Low-commitment games", "No punishment for leaving"]
+        },
+        "first_games": [
+          "Stardew Valley (farming sim, cozy)",
+          "Hades (action roguelike)",
+          "Minecraft (creative sandbox)",
+          "Celeste (platformer med mental health themes)"
+        ],
+        "progression": "Join gaming communities, speedrunning, game dev",
+        "social_option": "Discord servers, multiplayer, streaming"
+      },
+
+      "gardening_kit": {
+        "name": "Have/Gardening",
+        "why": "Ro, vækst, natur, konkret resultat, grounding",
+        "absolute_minimum": [
+          "1 plante i vindueskarmen",
+          "Vand det 1 gang om ugen"
+        ],
+        "beginner_kit": [
+          "3-5 nemme planter (pothos, spider plant, succulents)",
+          "Potter med dræn",
+          "Pottemuld",
+          "Lille vandkande"
+        ],
+        "budget": "50-300 kr",
+        "first_steps": [
+          "Start med 1 plante - ikke 10",
+          "Lær dens behov (sol, vand, jord)",
+          "Observer den vokse",
+          "Udvid når du er klar"
+        ],
+        "progression": "Større planter, outdoor have, grøntsager, stiklinger",
+        "adhd_note": "Apps med plant care reminders (Planta app)",
+        "autism_note": "Systematisk katalogisering af planter, optimale growing conditions",
+        "anxiety_note": "Planterne dør ikke hvis du glemmer dem 1 dag",
+        "depression_note": "Vanding = mikroudfordring, vækst = håb"
+      },
+
+      "cooking_kit": {
+        "name": "Madlavning/Cooking",
+        "why": "Kreativt, konkret resultat du kan spise, imponerer ingen krævet",
+        "absolute_minimum": [
+          "Ingredienser du har i køleskabet",
+          "Opskrift fra nettet (eller improviser)"
+        ],
+        "beginner_kit": [
+          "Basal knive, pander, skærebræt",
+          "Salt, peber, olie",
+          "5 basis-opskrifter du kan lave uden at tænke"
+        ],
+        "budget": "Variabel",
+        "first_recipes": [
+          "Pasta med sauce (kan ikke fejle)",
+          "Stegt ris (brug rester)",
+          "Omelet (hurtig, fleksibel)",
+          "One-pot meals (minimalt oprydning)"
+        ],
+        "progression": "Følg kokke på YouTube, eksperimenter, lav mere komplekst",
+        "adhd_note": "Improviser! AI-kok mode: 'Jeg har X, Y, Z - hvad kan jeg lave?'",
+        "autism_note": "Følg opskrifter præcist, systematisk meal-prep",
+        "anxiety_note": "Det er OK at brænde maden - prøv igen",
+        "depression_note": "Se FoodLab for executive dysfunction rescue"
+      },
+
+      "photography_kit": {
+        "name": "Fotografering",
+        "why": "Awareness, kreativt, dokumentere, kan gøres overalt",
+        "absolute_minimum": [
+          "Din telefon"
+        ],
+        "beginner_kit": [
+          "Telefon med god kamera",
+          "ELLER: Begynder-kamera (500-2000 kr brugt)",
+          "Editing app (gratis: Snapseed, VSCO)"
+        ],
+        "budget": "0 kr (telefon) - 5000+ kr (kamera)",
+        "first_exercises": [
+          "365 project: 1 foto om dagen i et år",
+          "Tema-walks: Gå tur og fotografer én ting (døre, skygger, farve rød)",
+          "Golden hour: Fotografer solopgang/solnedgang",
+          "Macro: Tæt på små detaljer"
+        ],
+        "progression": "Lær komposition, lys, editing, print dine billeder",
+        "adhd_note": "Hyperfokus-venligt, instant dopamin fra godt billede",
+        "autism_note": "Systematisk udforsk settings, katalogiser billeder",
+        "anxiety_note": "Fotografering = mindfulness, fokus gennem linse",
+        "depression_note": "Find skønhed i det hverdagslige - et foto ad gangen"
+      }
     },
+
     {
-      "id": "energy_hobby",
-      "type": "message",
-      "title": "Hobbyer med lav energi",
-      "text": "Der findes også hobbyer til de stille dage. At lytte til musik. Sortere billeder. Læse i korte bidder. Jeg kan hjælpe dig med at finde én, der passer til dig."
+      "id": "executive_dysfunction_rescue",
+      "title": "Executive dysfunction rescue",
+      "description": "Når ADHD/autism/depression gør det umuligt at starte",
+
+      "zero_setup_activities": {
+        "title": "Ingen forberedelse nødvendig - START NU",
+        "phone_activities": [
+          "Tag et billede af noget lige ved dig",
+          "Tegn i notes/drawing app",
+          "Skriv 5 ord om hvordan du har det",
+          "Lyt til 1 sang",
+          "Se 1 kort YouTube video om en hobby"
+        ],
+        "paper_activities": [
+          "Doodle på et stykke papir",
+          "Fold noget (origami basics)",
+          "Skriv dit navn 10 gange med forskellige skrifttyper",
+          "Riv papir i sjove former"
+        ],
+        "body_activities": [
+          "Strække dig på gulvet",
+          "Dans til 1 sang",
+          "Jonglere med 2 bolde (eller skrukkede papirboldter)",
+          "Gå til vinduet og se ud i 5 minutter"
+        ]
+      },
+
+      "already_have_it_hobbies": {
+        "title": "Ting du allerede ejer",
+        "description": "Intet nyt skal købes - brug hvad du har",
+        "categories": [
+          {
+            "item": "Telefon",
+            "hobbies": ["Fotografere", "Musik", "Gaming", "Skrive", "Tegne (app)", "Lære (YouTube)"]
+          },
+          {
+            "item": "Papir + blyant",
+            "hobbies": ["Tegne", "Skrive", "Origami", "Doodle", "Sudoku"]
+          },
+          {
+            "item": "Garn/tråd (hvis du har)",
+            "hobbies": ["Strikke", "Hækle", "Makramé", "Brodere"]
+          },
+          {
+            "item": "Mad i køleskabet",
+            "hobbies": ["Lave mad", "Eksperimentere", "Fotografere mad"]
+          },
+          {
+            "item": "Sten/pinde udenfor",
+            "hobbies": ["Male sten", "Bygge små ting", "Naturkunst"]
+          }
+        ]
+      },
+
+      "minimal_decision_hobbies": {
+        "title": "Ingen beslutninger nødvendigt",
+        "description": "Når du er paralyseret af valg - hobbyer hvor der kun er én vej",
+        "examples": [
+          "Farvelægge (følg linjerne)",
+          "Bygge LEGO efter manual",
+          "Følge opskrift præcist",
+          "Perler efter mønster",
+          "Paint-by-numbers"
+        ],
+        "benefit": "Nul kognitiv load på 'hvad skal jeg gøre' - bare følg"
+      },
+
+      "visible_hobby_setup": {
+        "title": "Gør hobbyen synlig",
+        "description": "Out of sight = out of mind for ADHD/executive dysfunction",
+        "strategies": [
+          "Læg tegneblok og blyanter på dit bord ALTID",
+          "Hav strik-projekt i en kurv ved sofaen",
+          "Sæt instrument op på stander (ikke i etui)",
+          "Planter synligt placeret (kan ikke glemmes)",
+          "Have hobby-grej på hylder ikke i skabe"
+        ],
+        "principle": "Hvis du ikke ser det, eksisterer det ikke"
+      },
+
+      "body_doubling_option": {
+        "title": "Body doubling for hobbyer",
+        "description": "Nemmere at gøre ting når andre også gør",
+        "digital_body_doubling": [
+          "Twitch/YouTube: Se andre lave din hobby live",
+          "Discord: Voice channels mens du arbejder",
+          "FocusMate: Book session mens du laver hobby"
+        ],
+        "physical_body_doubling": [
+          "Mød en ven og lav hver jeres hobby side om side",
+          "Gå til makerspace/bibliotek",
+          "Join hobby-klub bare for at sidde sammen"
+        ]
+      }
     },
+
     {
-      "id": "hobby_structure",
-      "type": "message",
-      "title": "Skab plads i din uge",
-      "text": "Hvis din hobby skal blive en vane, kan jeg hjælpe dig med at lægge en lille fast tid ind i din uge. Så den ikke drukner i hverdag."
+      "id": "rotation_management",
+      "title": "Rotation & hyperfokus management",
+      "description": "For ADHD-hjerner: Det er NORMALT at skifte mellem hobbyer",
+
+      "rotation_is_valid": {
+        "title": "Du er ikke 'dårlig' til at holde fast",
+        "description": "Din hjerne søger novelty og dopamin - det er et feature, ikke en bug",
+        "reframe": [
+          "'Jeg kan ikke holde fast' → 'Jeg har mange interesser'",
+          "'Jeg gider det ikke mere' → 'Min hjerne er klar til nyt'",
+          "'Jeg spilder penge på hobbyer' → 'Jeg udsforsker livet bredt'"
+        ]
+      },
+
+      "rotation_system": {
+        "title": "Lav et rotation-system",
+        "description": "Hav 3-5 aktive hobbyer du kan skifte mellem",
+        "structure": {
+          "high_dopamine_hobby": "Til energi-dage (gaming, sport, bygge)",
+          "medium_dopamine_hobby": "Til normal-dage (tegne, læse, musik)",
+          "low_dopamine_hobby": "Til trætte-dage (strikke, lytte, se)",
+          "special_interest_hobby": "Din deep-dive passion (kan rotere ind/ud)",
+          "social_hobby": "Hvis social energi er der (optional)"
+        },
+        "flexibility": "Skift mellem dem som du vil - ingen regler"
+      },
+
+      "hyperfocus_support": {
+        "title": "Når hyperfokus rammer",
+        "description": "Respektér det - men husk basale behov",
+        "strategies": [
+          "Sæt timer for toilet/vand/mad pauser",
+          "Jeg kan minde dig om pauser mens du arbejder",
+          "Accepter at du kan hyperfokusere i 6 timer - det er OK",
+          "Meal prep/snacks klar så det ikke stopper dig"
+        ],
+        "after_hyperfocus": {
+          "title": "Efter hyperfokus-crash",
+          "description": "Du er mentalt drænet - det er normalt",
+          "recovery": [
+            "Lav-dopamin aktiviteter næste dag",
+            "Ingen skyld over 'spildt' tid",
+            "Hyperfokus producerer ofte noget fantastisk"
+          ]
+        }
+      },
+
+      "hobby_graveyard_ok": {
+        "title": "Din hobby-kirkegård er OK",
+        "description": "Alle de hobbyer du har prøvet og droppet",
+        "reframe": [
+          "Du har udforsket meget",
+          "Du har lært små ting fra hver hobby",
+          "Du kan altid vende tilbage",
+          "Ingen hobbyer er spildt - det er oplevelser"
+        ],
+        "permission": "Det er OK at have prøvet 20 hobbyer og kun holde fast i 2"
+      },
+
+      "impulse_buy_protection": {
+        "title": "Beskyt dig mod impulskøb af hobby-gear",
+        "description": "ADHD + ny hobby = 'jeg skal have ALT grejert'",
+        "rules": [
+          "Start med absolut minimum - læn/lån først",
+          "Vent 2 uger før du køber 'det perfekte' udstyr",
+          "Brug bibliotek/lån hvis muligt",
+          "Køb brugt først (Facebook marketplace, Genbrug)"
+        ],
+        "why": "Du ved ikke om du stadig er interesseret om 2 måneder - det er OK"
+      }
     },
+
     {
-      "id": "creative_writing",
-      "type": "message",
-      "title": "Skriv, tænk, opfind",
-      "text": "At skrive idéer ned, opfinde små verdener eller bare lave lister og tanker – det er også kreativitet. Jeg kan hjælpe dig i gang med skrivning og ideudvikling, uden at det skal føre til noget stort."
+      "id": "special_interest_support",
+      "title": "Special interests (autism)",
+      "description": "Dine intense interesser er superkræfter - ikke problemer",
+
+      "embrace_special_interests": {
+        "title": "Special interests er IKKE 'for meget'",
+        "description": "Din evne til dyb fokus og detaljeret viden er unik",
+        "reframe": [
+          "Andre: 'Du er besat' → Dig: 'Jeg er passioneret'",
+          "Andre: 'Det er for nørdet' → Dig: 'Jeg ved meget'",
+          "Andre: 'Tal om noget andet' → Dig: 'Det er min ting'"
+        ],
+        "validation": "Special interests kan blive karriere, livslang passion, fællesskab"
+      },
+
+      "deep_dive_support": {
+        "title": "Gå SÅ dybt som du vil",
+        "description": "Jeg støtter dig i at lære alt om dit special interest",
+        "approaches": [
+          "Systematisk research: Jeg kan hjælpe dig finde kilder",
+          "Katalogisering: Organiser din viden",
+          "Connections: Find andre med samme interesse",
+          "Creation: Lav content om det (blog, videos, art)"
+        ]
+      },
+
+      "special_interest_rotation": {
+        "title": "Special interests kan skifte",
+        "description": "Det er OK hvis et special interest falder fra og nyt kommer til",
+        "lifecycle": [
+          "Intense phase: Total fordybelse i måneder/år",
+          "Plateau: Stadig interesseret men mindre intenst",
+          "Background: Det er der, men ikke primært fokus",
+          "Return: Måske kommer du tilbage senere"
+        ],
+        "no_guilt": "Du forrådte ikke dit gamle special interest - du udviklede dig"
+      },
+
+      "special_interest_as_comfort": {
+        "title": "Special interests som tryghed",
+        "description": "Din ting er hvor du hviler når verden er overvældende",
+        "uses": [
+          "Meltdown prevention: Fokusér på special interest",
+          "Shutdown recovery: Nørd over din ting",
+          "Social battery depleted: Genoplad med din passion",
+          "Sensory overload: Tænk på dit special interest i stedet"
+        ]
+      },
+
+      "finding_community": {
+        "title": "Find andre special interest nerds",
+        "description": "Online communities hvor 'for meget' ikke eksisterer",
+        "platforms": [
+          "Reddit: r/[ditspecialinterest]",
+          "Discord servers: Find niche servers",
+          "Forums: Special interest forums",
+          "YouTube/Twitch: Follow creators",
+          "Conventions: IRL meetups (når energi tillader)"
+        ],
+        "benefit": "Endelig kan du tale frit uden at blive bedt om at stoppe"
+      }
+    },
+
+    {
+      "id": "social_vs_solo",
+      "title": "Social vs solo hobbyer",
+      "description": "Vælg dit sociale comfort level",
+
+      "solo_hobbies": {
+        "title": "100% solo hobbyer",
+        "description": "Ingen social energi krævet",
+        "examples": [
+          "Tegne/male",
+          "Skrive",
+          "Gaming (singleplayer)",
+          "Læse",
+          "Fotografere",
+          "Have/planter",
+          "Strikke/hækle",
+          "Musik (lytte eller spille alene)",
+          "Bygge (LEGO, modeller)"
+        ],
+        "benefit": "Dit rum, dit tempo, din energi"
+      },
+
+      "parallel_activities": {
+        "title": "Parallel hobbyer - sammen men hver for sig",
+        "description": "Social nærvær uden samarbejde",
+        "examples": [
+          "Coworking spaces (alle laver deres ting)",
+          "Makerspace (sidde ved siden af)",
+          "Discord voice channels (bare være sammen)",
+          "Bibliotek/café arbejde",
+          "Strik-café (alle strikker, minimal chat)"
+        ],
+        "benefit": "Social men ikke demanding - det bedste af begge verdener"
+      },
+
+      "low_social_hobbies": {
+        "title": "Lav social interaktion",
+        "description": "Lidt social men ikke overvældende",
+        "examples": [
+          "Gaming (co-op med 1-2 venner)",
+          "Gå-ture med 1 person",
+          "Online communities (lurk eller deltag som du vil)",
+          "Lave mad sammen (fokus på mad, ikke small talk)",
+          "Fotografere sammen (fokus på billeder)"
+        ]
+      },
+
+      "group_hobbies": {
+        "title": "Gruppe hobbyer",
+        "description": "Til når social energi er til stede",
+        "examples": [
+          "Team sports",
+          "Spil-aftener",
+          "Korps/kor",
+          "Teater/improv",
+          "Danse-klasser"
+        ],
+        "energy_note": "Disse tager social energi - plan recovery efter"
+      },
+
+      "flexible_option": {
+        "title": "Hobbyer der kan være både/og",
+        "description": "Samme hobby, vælg social level efter behov",
+        "examples": [
+          "Gaming: Solo, co-op, eller multiplayer",
+          "Løb: Alene eller med gruppe",
+          "Musik: Øve solo eller spille i band",
+          "Have: Din egen eller fælleshave",
+          "Skrive: Solo eller writers group"
+        ],
+        "benefit": "Tilpas efter dagens energi"
+      }
+    },
+
+    {
+      "id": "budget_options",
+      "title": "Budget-venlige hobbyer",
+      "description": "Hobbyer for alle økonomiske situationer",
+
+      "zero_cost": {
+        "title": "Helt gratis",
+        "hobbies": [
+          "Gå ture",
+          "Fotografere med telefon",
+          "Skrive (notes app)",
+          "Tegne (papir + blyant du har)",
+          "Lytte til musik (Spotify free, YouTube)",
+          "Lære (YouTube, Khan Academy, Coursera)",
+          "Gaming (gratis mobile/PC games)",
+          "Body-weight træning"
+        ]
+      },
+
+      "minimal_cost": {
+        "title": "Under 200 kr",
+        "hobbies": [
+          "Tegne (skitsebook + blyanter: 50 kr)",
+          "Strikke basics (garn + pinde: 100 kr)",
+          "Origami (fancy papir: 50 kr)",
+          "Journaling (notesbog + pen: 100 kr)",
+          "Planter (1-2 nemme planter: 50-150 kr)",
+          "Puslespil (brugt: 50-100 kr)"
+        ]
+      },
+
+      "moderate_cost": {
+        "title": "200-1000 kr",
+        "hobbies": [
+          "Male (basis maling + lærred: 300-500 kr)",
+          "Strikke/hækle ordentligt (kvalitetsgarn: 500 kr)",
+          "Fotografere (brugt begynder-kamera: 500-1000 kr)",
+          "Gaming (Nintendo Switch Lite: 1500 kr)",
+          "Instrumenter (ukulele: 400 kr, keyboard: 800 kr)"
+        ]
+      },
+
+      "higher_investment": {
+        "title": "Over 1000 kr",
+        "hobbies": [
+          "Gaming (konsol/PC: 3000-10000 kr)",
+          "Fotografere (godt kamera: 2000-10000+ kr)",
+          "Musik (kvalitetsinstrument: 2000-20000+ kr)",
+          "Træarbejde (værktøj: 2000-10000+ kr)",
+          "Sport equipment (cykel, klatre-gear: 2000-10000+ kr)"
+        ],
+        "note": "Køb brugt, lån først, eller opbyg over tid"
+      },
+
+      "free_resources": {
+        "title": "Gratis ressourcer",
+        "libraries": "Biblioteker har bøger, film, musik, magasiner, events",
+        "youtube": "YouTube har tutorials for ALT",
+        "communities": "Online communities har guides og support",
+        "borrow": "Lån fra venner/familie før du køber"
+      }
+    },
+
+    {
+      "id": "therapeutic_benefits",
+      "title": "Terapeutiske fordele af forskellige hobbyer",
+      "description": "Hvilken hobby hjælper hvad",
+
+      "anxiety_reduction": {
+        "condition": "Angst",
+        "best_hobbies": [
+          "Strikke/hækle (rytmisk, repetitivt)",
+          "Have (grounding, natur)",
+          "Tegne/male (udtryk uden ord)",
+          "Gå ture (bevægelse, frisk luft)",
+          "Musik (følelsesregulering)"
+        ],
+        "mechanism": "Fokuserer opmærksomhed væk fra bekymringer, grounding i nuet"
+      },
+
+      "depression_support": {
+        "condition": "Depression",
+        "best_hobbies": [
+          "Gå ture (bevægelse + lys)",
+          "Have (se vækst, pleje noget)",
+          "Lave mad (konkret resultat)",
+          "Gaming (eskapisme, små sejre)",
+          "Musik (følelsesvalidering)"
+        ],
+        "mechanism": "Behavioral activation, konkrete resultater, små dopamin hits"
+      },
+
+      "adhd_support": {
+        "condition": "ADHD",
+        "best_hobbies": [
+          "Gaming (instant feedback)",
+          "Sport (endorfiner + udladning)",
+          "Bygge (hands-on, konkret)",
+          "Musik (rytme, flow)",
+          "Tegne (dopamin, kreativ)"
+        ],
+        "mechanism": "Dopamin, novelty, hyperfokus-mulighed, fysisk udladning"
+      },
+
+      "autism_support": {
+        "condition": "Autism",
+        "best_hobbies": [
+          "Special interest deep-dives (hvad som helst du er besat af)",
+          "Samle/organisere (systematisk)",
+          "Programmering (logisk, struktureret)",
+          "Musik (struktur, mønster)",
+          "Bygge efter manual (forudsigeligt)"
+        ],
+        "mechanism": "Struktur, special interests, sensory-safe muligheder"
+      },
+
+      "stress_reduction": {
+        "condition": "Stress",
+        "best_hobbies": [
+          "Yoga/stræk",
+          "Have",
+          "Male/tegne",
+          "Strikke",
+          "Lytte til musik"
+        ],
+        "mechanism": "Aktiverer parasympatiske nervesystem, sænker cortisol"
+      },
+
+      "social_connection": {
+        "need": "Social forbindelse",
+        "best_hobbies": [
+          "Team sports",
+          "Spil-aftener",
+          "Makerspaces",
+          "Online gaming communities",
+          "Hobby-klubber"
+        ],
+        "mechanism": "Delt interesse skaber forbindelse uden krav om small talk"
+      },
+
+      "self_esteem": {
+        "need": "Selvværd",
+        "best_hobbies": [
+          "Bygge ting (konkret resultat)",
+          "Lære nyt (mestringsfølelse)",
+          "Sport (præstationsfremgang)",
+          "Kreative hobbyer (skabe noget unikt)"
+        ],
+        "mechanism": "Kompetenceoplevelse, synligt fremskridt, mestringsfølelse"
+      }
+    },
+
+    {
+      "id": "restart_old_hobbies",
+      "title": "Genopdag gamle hobbyer",
+      "description": "Vend tilbage til noget du plejede at elske",
+
+      "memory_prompts": {
+        "title": "Hvad kunne du lide før?",
+        "questions": [
+          "Hvad lavede du som barn/teenager?",
+          "Hvad gabte tiden før?",
+          "Hvad drømte du om at blive god til?",
+          "Hvad har du brugt penge på men ikke brugt?",
+          "Hvad savner du?"
+        ]
+      },
+
+      "why_we_stop": {
+        "title": "Hvorfor stoppede du?",
+        "common_reasons": [
+          "Ingen tid (livet blev travlt)",
+          "Blev 'for alvorligt' og mistede glæden",
+          "Andre sagde det var barnligt/dumt",
+          "Depression/sygdom stoppede dig",
+          "Flyttede og mistede adgang",
+          "Blev for dyrt"
+        ],
+        "reframe": "De fleste grunde til at stoppe er eksterne - ikke fordi du mistede interessen"
+      },
+
+      "gentle_return": {
+        "title": "Vend tilbage blidt",
+        "approach": [
+          "Start med 5-10 minutter - ingen forventninger",
+          "Det behøver ikke føles som 'før'",
+          "Du er en anden person nu - hobbyen kan være anderledes",
+          "Ingen præstation nødvendig",
+          "Bare mærk om det stadig giver noget"
+        ],
+        "permission": "Det er OK hvis det ikke føles magisk med det samme"
+      },
+
+      "adaptation": {
+        "title": "Tilpas hobbyen til nuværende dig",
+        "examples": [
+          "Før: Konkurrence-løb → Nu: Rolige morgen-jogture",
+          "Før: Kompleks musik → Nu: Spille simple melodier",
+          "Før: Store malerier → Nu: Små sketches",
+          "Før: Timetimer i haven → Nu: 3 potter på altanen"
+        ],
+        "principle": "Samme hobby, nyt tempo - det er stadig gyldigt"
+      },
+
+      "nostalgia_is_ok": {
+        "title": "Nostalgi er OK",
+        "description": "At genopdage en gammel hobby kan bringe tilbage gode minder",
+        "benefit": "Forbindelse til tidligere udgave af dig selv - kontinuitet"
+      }
+    },
+
+    {
+      "id": "creative_flow_states",
+      "title": "Kreative flow-tilstande",
+      "description": "Når du glemmer tiden og bare ER i processen",
+
+      "what_is_flow": {
+        "title": "Hvad er flow?",
+        "description": "Tilstand hvor du er helt opslugt, tiden forsvinder, du er ét med aktiviteten",
+        "characteristics": [
+          "Glemmer tid",
+          "Ingen selvbevidsthed",
+          "Alt andet forsvinder",
+          "Handling og bevidsthed smelter sammen",
+          "Næsten meditativt"
+        ]
+      },
+
+      "flow_triggers": {
+        "title": "Hvordan få flow",
+        "conditions": [
+          "Klare mål (du ved hvad du skal)",
+          "Instant feedback (du ser hvad der sker)",
+          "Balance mellem udfordring og kunnen (ikke for let, ikke for svært)",
+          "Minimal distraktioner",
+          "Autotelic aktivitet (gøre det for sin egen skyld)"
+        ]
+      },
+
+      "flow_friendly_hobbies": {
+        "high_flow_potential": [
+          "Tegne/male (især når du er varm)",
+          "Spille instrument",
+          "Gaming (når det matcher dit niveau)",
+          "Bygge ting",
+          "Skrive (når det flyder)",
+          "Klatre (problem-solving i bevægelse)",
+          "Dans"
+        ]
+      },
+
+      "protecting_flow": {
+        "title": "Beskyt din flow",
+        "strategies": [
+          "Sluk notifikationer",
+          "Luk døren",
+          "Headphones på (selv uden musik)",
+          "Sæt 'do not disturb'",
+          "Meal prep så du ikke skal stoppe",
+          "Toilet først"
+        ]
+      },
+
+      "after_flow": {
+        "title": "Efter flow-tilstand",
+        "description": "Du kan føle dig drænet men tilfreds",
+        "recovery": [
+          "Accepter at du er træt",
+          "Lav-stimulation aktiviteter resten af dagen",
+          "Hydrér og spis",
+          "Værdsat hvad du lavede - ikke kritiser"
+        ]
+      }
+    },
+
+    {
+      "id": "sensory_considerations",
+      "title": "Sensory overvejelser",
+      "description": "Find hobbyer der respekterer dine sensory needs",
+
+      "sensory_seeking": {
+        "title": "Sensory-seeking hobbyer",
+        "description": "Hvis du søger mere sensorisk input",
+        "hobbies": [
+          "Ler/modellervoks (taktilt)",
+          "Musik høj (auditory)",
+          "Dans/bevægelse (proprioceptive)",
+          "Male med hænder (taktilt + visuelt)",
+          "Sport (movement + feedback)"
+        ]
+      },
+
+      "sensory_sensitive": {
+        "title": "Sensory-sensitive venlige hobbyer",
+        "description": "Hvis du er overfølsom",
+        "hobbies": [
+          "Tegne (stille, roligt)",
+          "Læse (kontrolleret)",
+          "Digital kunst (ingen lugt/rod)",
+          "Strikke (forudsigeligt taktilt)",
+          "Fotografere (fokuseret, kan bruge hovedtelefoner)"
+        ]
+      },
+
+      "sensory_adaptation": {
+        "title": "Tilpas hobbyer til sensory needs",
+        "strategies": {
+          "visual": "Dæmp lys, brug solbriller, vælg matte farver",
+          "auditory": "Brug noise-cancelling, vælg stille aktiviteter, musik til at maske",
+          "tactile": "Vælg materialer omhyggeligt, brug handsker, test teksturer først",
+          "olfactory": "Undgå lugtende materialer, arbejd udendørs, vælg lugfrit",
+          "proprioceptive": "Inkluder tunge ting, trykke, fysisk modstand"
+        }
+      }
+    },
+
+    {
+      "id": "time_integration",
+      "title": "Hobbyer i din ugestruktur",
+      "description": "Få hobbyen til at passe ind i din hverdag",
+
+      "scheduled_hobby_time": {
+        "title": "Fast hobby-tid",
+        "description": "Book tid til din hobby som du ville til andet",
+        "approach": [
+          "Vælg fast tid (fx søndag 14-16)",
+          "Sæt reminder",
+          "Forbered grej dagen før",
+          "Beskyt tiden - det er DIN tid"
+        ],
+        "benefit": "Hobbyen drukner ikke i hverdagspres"
+      },
+
+      "micro_hobby_moments": {
+        "title": "Micro-hobby momenter",
+        "description": "Små lommer af hobby-tid i hverdagen",
+        "examples": [
+          "5 min tegning mens kaffe brygges",
+          "15 min læsning i bus/tog",
+          "10 min musik mens du folder tøj",
+          "20 min gaming før sengetid"
+        ]
+      },
+
+      "hobby_as_recovery": {
+        "title": "Hobbyer som recovery-strategi",
+        "description": "Planlæg hobby efter energi-krævende events",
+        "example": "Efter social event → solo hobby-tid",
+        "benefit": "Genoplad gennem det du elsker"
+      },
+
+      "integration_with_other_modules": {
+        "title": "Integration med andre Sarah-funktioner",
+        "connections": [
+          "LifeFlow: Planlæg hobby-tid i din uge",
+          "CalmSpace: Brug hobbyer som sensory regulation",
+          "SocialLab: Find social vs solo balance",
+          "HealthLab: Nogle hobbyer er også bevægelse/sundhed",
+          "MoveLabTime: Kombiner bevægelse med hobby"
+        ]
+      }
     }
-  ]
+  ],
+
+  "critical_reminders": {
+    "no_perfection": "Hobbyer er ikke præstation - bare glæde",
+    "energy_awareness": "Match hobby til faktisk energi, ikke idealer",
+    "rotation_valid": "Det er OK at skifte mellem hobbyer",
+    "start_small": "5 minutter tæller - det behøver ikke være timer",
+    "no_shame": "Din hobby-gravgård er ikke fiasko - det er udforskning",
+    "neurodivergent_friendly": "Din hjerne laver hobbyer anderledes - det er OK",
+    "executive_dysfunction_aware": "Minimal setup, maksimal glæde",
+    "sensory_respect": "Respekter dine sensory needs i valg af hobby"
+  },
+
+  "integration_notes": {
+    "connects_to": [
+      "CalmSpace (sensory tools)",
+      "HealthLab (therapeutic benefits)",
+      "LifeFlow (scheduling)",
+      "SocialLab (social vs solo)",
+      "MoveLabTime (active hobbies)",
+      "Emotions (creative expression)",
+      "AdaptCore (personalization)"
+    ]
+  }
 }
