@@ -1,425 +1,576 @@
 {
-  "superfoods": [
-    {
-      "id": 1,
-      "navn": "Blåbær",
-      "organer": ["Hjerne", "Hjerte"],
-      "vitaminer_mineraler": ["C-vitamin", "K-vitamin", "Fibre", "Antioxidanter"],
-      "egenskaber": ["Antiinflammatorisk", "Forbedrer hukommelse", "Beskytter mod hjertesygdomme"]
-    },
-    {
-      "id": 2,
-      "navn": "Avocado",
-      "organer": ["Hjerte", "Hjerne", "Hud"],
-      "vitaminer_mineraler": ["Kalium", "E-vitamin", "B6-vitamin", "Folat"],
-      "egenskaber": ["Sænker kolesterol", "Fremmer sund hud", "Understøtter hjernens funktion"]
-    },
-    {
-      "id": 3,
-      "navn": "Spinat",
-      "organer": ["Lever", "Øjne", "Hjerte"],
-      "vitaminer_mineraler": ["Jern", "C-vitamin", "K-vitamin", "Folat", "Magnesium"],
-      "egenskaber": ["Fremmer jernoptagelse", "Styrker knogler", "Beskytter synet"]
-    },
-    {
-      "id": 4,
-      "navn": "Chiafrø",
-      "organer": ["Hjerte", "Fordøjelse"],
-      "vitaminer_mineraler": ["Omega-3", "Calcium", "Jern", "Magnesium"],
-      "egenskaber": ["Regulerer blodsukker", "Understøtter hjertet", "Fremmer fordøjelsen"]
-    },
-    {
-      "id": 5,
-      "navn": "Laks",
-      "organer": ["Hjerte", "Hjerne", "Led"],
-      "vitaminer_mineraler": ["Omega-3", "D-vitamin", "B12", "Selen"],
-      "egenskaber": ["Antiinflammatorisk", "Fremmer hjernens funktion", "Beskytter hjertet"]
-    },
-    {
-      "id": 6,
-      "navn": "Nødder (Valnødder, Mandler)",
-      "organer": ["Hjerte", "Hjerne"],
-      "vitaminer_mineraler": ["E-vitamin", "Magnesium", "Omega-3", "Protein"],
-      "egenskaber": ["Sænker kolesterol", "Beskytter mod inflammation", "Giver energi"]
-    },
-    {
-      "id": 7,
-      "navn": "Broccoli",
-      "organer": ["Hjerte", "Lever", "Fordøjelse"],
-      "vitaminer_mineraler": ["C-vitamin", "K-vitamin", "Folat", "Fibre"],
-      "egenskaber": ["Antioxidant", "Styrker immunforsvaret", "Beskytter mod kræft"]
-    },
-    {
-      "id": 8,
-      "navn": "Græskarkerner",
-      "organer": ["Hjerte", "Blære", "Hud"],
-      "vitaminer_mineraler": ["Zink", "Magnesium", "Jern"],
-      "egenskaber": ["Fremmer blæresundhed", "Understøtter immunforsvaret", "Sænker inflammation"]
-    },
-    {
-      "id": 9,
-      "navn": "Ingefær",
-      "organer": ["Mave", "Led", "Hjerte"],
-      "vitaminer_mineraler": ["Kalium", "Magnesium", "C-vitamin"],
-      "egenskaber": ["Antiinflammatorisk", "Lindrer kvalme", "Fremmer blodcirkulation"]
-    },
-    {
-      "id": 10,
-      "navn": "Søde Kartofler",
-      "organer": ["Hjerte", "Hud", "Øjne"],
-      "vitaminer_mineraler": ["A-vitamin", "C-vitamin", "Fibre"],
-      "egenskaber": ["Fremmer sund hud", "Giver energi", "Understøtter synet"]
-    },
-    {
-      "id": 11,
-      "navn": "Gurkemeje",
-      "organer": ["Led", "Lever", "Hjerte"],
-      "vitaminer_mineraler": ["Jern", "C-vitamin"],
-      "egenskaber": ["Antiinflammatorisk", "Understøtter leverfunktion", "Reducerer smerte"]
-    },
-    {
-      "id": 12,
-      "navn": "Quinoa",
-      "organer": ["Muskler", "Hjerte"],
-      "vitaminer_mineraler": ["Magnesium", "Jern", "Protein", "B-vitamin"],
-      "egenskaber": ["Komplet protein", "Energigivende", "Understøtter muskelopbygning"]
-    }
-  ],
-  "frugt_groentsager_noedder": [
-    {
-      "id": 1,
-      "navn": "Bananer",
-      "kategori": "Frugt",
-      "organer": ["Muskler", "Hjerte"],
-      "vitaminer_mineraler": ["Kalium", "B6-vitamin", "C-vitamin"],
-      "egenskaber": ["Fremmer muskelopbygning", "Giver hurtig energi", "Understøtter hjertesundhed"]
-    },
-    {
-      "id": 2,
-      "navn": "Æbler",
-      "kategori": "Frugt",
-      "organer": ["Hjerte", "Lunger", "Tarm"],
-      "vitaminer_mineraler": ["C-vitamin", "Fibre", "Kalium"],
-      "egenskaber": ["Fremmer fordøjelsen", "Styrker immunforsvaret", "Beskytter mod hjertesygdomme"]
-    },
-    {
-      "id": 3,
-      "navn": "Gulerødder",
-      "kategori": "Grøntsag",
-      "organer": ["Øjne", "Hud", "Lever"],
-      "vitaminer_mineraler": ["A-vitamin", "K-vitamin", "Fibre"],
-      "egenskaber": ["Forbedrer synet", "Fremmer sund hud", "Understøtter immunforsvaret"]
-    },
-    {
-      "id": 4,
-      "navn": "Mandler",
-      "kategori": "Nødder",
-      "organer": ["Hjerte", "Hud"],
-      "vitaminer_mineraler": ["E-vitamin", "Magnesium", "Protein"],
-      "egenskaber": ["Sænker kolesterol", "Beskytter huden", "Giver energi"]
-    },
-    {
-      "id": 5,
-      "navn": "Jordbær",
-      "kategori": "Frugt",
-      "organer": ["Hud", "Hjerte", "Immunsystem"],
-      "vitaminer_mineraler": ["C-vitamin", "Antioxidanter", "Mangan"],
-      "egenskaber": ["Styrker immunforsvaret", "Beskytter huden", "Reducerer inflammation"]
-    },
-    {
-      "id": 6,
-      "navn": "Spidskål",
-      "kategori": "Grøntsag",
-      "organer": ["Tarm", "Hjerte", "Lever"],
-      "vitaminer_mineraler": ["C-vitamin", "K-vitamin", "Fibre"],
-      "egenskaber": ["Fremmer fordøjelsen", "Beskytter mod hjerte-kar-sygdomme", "Styrker immunforsvaret"]
-    },
-    {
-      "id": 7,
-      "navn": "Rødbede",
-      "kategori": "Grøntsag",
-      "organer": ["Hjerte", "Lever", "Blodkar"],
-      "vitaminer_mineraler": ["Jern", "C-vitamin", "Folat"],
-      "egenskaber": ["Forbedrer blodcirkulation", "Understøtter leverfunktion", "Giver energi"]
-    },
-    {
-      "id": 8,
-      "navn": "Grønkål",
-      "kategori": "Grøntsag",
-      "organer": ["Hjerte", "Knogler", "Hud"],
-      "vitaminer_mineraler": ["A-vitamin", "K-vitamin", "Calcium"],
-      "egenskaber": ["Antioxidant", "Understøtter knoglesundhed", "Styrker immunforsvaret"]
-    },
-    {
-      "id": 9,
-      "navn": "Valnødder",
-      "kategori": "Nødder",
-      "organer": ["Hjerne", "Hjerte"],
-      "vitaminer_mineraler": ["Omega-3", "E-vitamin", "Magnesium"],
-      "egenskaber": ["Forbedrer hjernens funktion", "Sænker inflammation", "Beskytter hjertet"]
-    },
-    {
-      "id": 10,
-      "navn": "Appelsiner",
-      "kategori": "Frugt",
-      "organer": ["Immunsystem", "Hud", "Hjerte"],
-      "vitaminer_mineraler": ["C-vitamin", "Calcium", "Kalium"],
-      "egenskaber": ["Styrker immunforsvaret", "Beskytter huden", "Understøtter hjertesundhed"]
-    },
-    {
-      "id": 11,
-      "navn": "Broccoli",
-      "kategori": "Grøntsag",
-      "organer": ["Hjerte", "Tarm", "Immunsystem"],
-      "vitaminer_mineraler": ["C-vitamin", "K-vitamin", "Fibre"],
-      "egenskaber": ["Antioxidant", "Reducerer inflammation", "Styrker immunforsvaret"]
-    },
-    {
-      "id": 12,
-      "navn": "Cashewnødder",
-      "kategori": "Nødder",
-      "organer": ["Muskler", "Hjerte", "Hud"],
-      "vitaminer_mineraler": ["Magnesium", "Jern", "Zink"],
-      "egenskaber": ["Fremmer muskelopbygning", "Sænker kolesterol", "Beskytter huden"]
-    },
-    {
-      "id": 13,
-      "navn": "Peberfrugt",
-      "kategori": "Grøntsag",
-      "organer": ["Øjne", "Hud", "Immunsystem"],
-      "vitaminer_mineraler": ["C-vitamin", "A-vitamin", "Antioxidanter"],
-      "egenskaber": ["Fremmer sundt syn", "Beskytter huden", "Styrker immunforsvaret"]
-    },
-    {
-      "id": 14,
-      "navn": "Mango",
-      "kategori": "Frugt",
-      "organer": ["Hud", "Øjne", "Immunsystem"],
-      "vitaminer_mineraler": ["A-vitamin", "C-vitamin", "Fibre"],
-      "egenskaber": ["Forbedrer synet", "Beskytter huden", "Styrker immunforsvaret"]
-    }
-  ],
-  "olier_vaesker": [
-    {
-      "id": 1,
-      "navn": "Olivenolie (Ekstra Jomfru)",
-      "type": "Olie",
-      "organer": ["Hjerte", "Hjerne", "Hud"],
-      "vitaminer_mineraler": ["E-vitamin", "Antioxidanter"],
-      "egenskaber": ["Sænker inflammation", "Beskytter hjertet", "Fremmer sund hud"],
-      "anvendelse": ["Salater", "Stegning ved lav varme", "Dressing"]
-    },
-    {
-      "id": 2,
-      "navn": "Kokosolie",
-      "type": "Olie",
-      "organer": ["Hud", "Hjerne", "Immunforsvar"],
-      "vitaminer_mineraler": ["Laurinsyre", "Mellemkædede fedtsyrer"],
-      "egenskaber": ["Antibakteriel", "Giver energi", "Understøtter hjernens funktion"],
-      "anvendelse": ["Bagning", "Stegning", "Fugtighedscreme"]
-    },
-    {
-      "id": 3,
-      "navn": "Rapsolie",
-      "type": "Olie",
-      "organer": ["Hjerte", "Blodkar"],
-      "vitaminer_mineraler": ["Omega-3", "E-vitamin"],
-      "egenskaber": ["Sænker kolesterol", "Understøtter hjerte-kar-sundhed"],
-      "anvendelse": ["Stegning", "Bagning", "Marinader"]
-    },
-    {
-      "id": 4,
-      "navn": "Avocadoolie",
-      "type": "Olie",
-      "organer": ["Hud", "Hjerte", "Led"],
-      "vitaminer_mineraler": ["E-vitamin", "Omega-9"],
-      "egenskaber": ["Antiinflammatorisk", "Fremmer sund hud", "Sænker blodtryk"],
-      "anvendelse": ["Salater", "Stegning ved høj varme"]
-    },
-    {
-      "id": 5,
-      "navn": "Hørfrøolie",
-      "type": "Olie",
-      "organer": ["Hjerne", "Hjerte", "Led"],
-      "vitaminer_mineraler": ["Omega-3", "Lignaner"],
-      "egenskaber": ["Sænker inflammation", "Fremmer hjernefunktion", "Understøtter hjertet"],
-      "anvendelse": ["Dressing", "Smoothies (ikke til stegning)"]
-    },
-    {
-      "id": 6,
-      "navn": "Mandelolie",
-      "type": "Olie",
-      "organer": ["Hud", "Hår"],
-      "vitaminer_mineraler": ["E-vitamin", "Magnesium"],
-      "egenskaber": ["Fugtgivende", "Reducerer inflammation", "Styrker hudens elasticitet"],
-      "anvendelse": ["Salater", "Hudpleje", "Massageolie"]
-    },
-    {
-      "id": 7,
-      "navn": "Sesamolie",
-      "type": "Olie",
-      "organer": ["Hud", "Hjerte", "Led"],
-      "vitaminer_mineraler": ["Zink", "Magnesium", "Antioxidanter"],
-      "egenskaber": ["Antibakteriel", "Styrker immunforsvaret", "Reducerer inflammation"],
-      "anvendelse": ["Asiatiske retter", "Wok", "Marinader"]
-    },
-    {
-      "id": 8,
-      "navn": "Grøn Te",
-      "type": "Væske",
-      "organer": ["Hjerte", "Hjerne", "Lever"],
-      "vitaminer_mineraler": ["Antioxidanter", "Flavonoider"],
-      "egenskaber": ["Antiinflammatorisk", "Fremmer fedtforbrænding", "Beskytter mod kræft"],
-      "anvendelse": ["Drik varm eller kold"]
-    },
-    {
-      "id": 9,
-      "navn": "Koldpresset Juice (Appelsin, Gulerod, Rødbede)",
-      "type": "Væske",
-      "organer": ["Immunforsvar", "Hud", "Tarm"],
-      "vitaminer_mineraler": ["C-vitamin", "Beta-caroten", "Antioxidanter"],
-      "egenskaber": ["Fremmer hudens sundhed", "Understøtter immunforsvaret"],
-      "anvendelse": ["Morgenmad", "Snacks", "Energiboost"]
-    },
-    {
-      "id": 10,
-      "navn": "Mandel- og Havremælk",
-      "type": "Væske",
-      "organer": ["Knogler", "Hjerte"],
-      "vitaminer_mineraler": ["Calcium (tilsat)", "D-vitamin"],
-      "egenskaber": ["Alternativ til komælk", "Laktosefri", "Understøtter knoglesundhed"],
-      "anvendelse": ["Kaffe", "Smoothies", "Bagning"]
-    }
-  ],
-  "superkorn_baelgfrugter_froe": [
-    {
-      "id": 1,
-      "navn": "Quinoa",
-      "type": "Superkorn",
-      "organer": ["Muskler", "Hjerte"],
-      "vitaminer_mineraler": ["Magnesium", "Jern", "B-vitamin", "Protein"],
-      "egenskaber": ["Komplet protein", "Energigivende", "Understøtter muskelopbygning"],
-      "anvendelse": ["Salater", "Som tilbehør", "Wraps"]
-    },
-    {
-      "id": 2,
-      "navn": "Linser",
-      "type": "Bælgfrugt",
-      "organer": ["Hjerte", "Tarm", "Muskler"],
-      "vitaminer_mineraler": ["Jern", "Folat", "Fibre", "Protein"],
-      "egenskaber": ["Fremmer mæthed", "Sænker kolesterol", "Understøtter fordøjelsen"],
-      "anvendelse": ["Supper", "Gryderetter", "Salater"]
-    },
-    {
-      "id": 3,
-      "navn": "Kikærter",
-      "type": "Bælgfrugt",
-      "organer": ["Hjerte", "Tarm", "Muskler"],
-      "vitaminer_mineraler": ["Jern", "Zink", "B6-vitamin", "Magnesium"],
-      "egenskaber": ["Plantebaseret protein", "Understøtter blodsukkerbalance", "Mættende"],
-      "anvendelse": ["Hummus", "Salater", "Snacks"]
-    },
-    {
-      "id": 4,
-      "navn": "Hirse",
-      "type": "Superkorn",
-      "organer": ["Hjerte", "Muskler"],
-      "vitaminer_mineraler": ["Magnesium", "Fosfor", "B-vitamin"],
-      "egenskaber": ["Let fordøjeligt", "Glutenfrit", "Understøtter knoglesundhed"],
-      "anvendelse": ["Grød", "Salater", "Brød"]
-    },
-    {
-      "id": 5,
-      "navn": "Chiafrø",
-      "type": "Frø",
-      "organer": ["Hjerte", "Tarm", "Hjerne"],
-      "vitaminer_mineraler": ["Omega-3", "Calcium", "Fibre", "Jern"],
-      "egenskaber": ["Fremmer fordøjelsen", "Sænker inflammation", "Stabiliserer blodsukker"],
-      "anvendelse": ["Smoothies", "Grød", "Bagværk"]
-    },
-    {
-      "id": 6,
-      "navn": "Hæmpfrø (Hampfrø)",
-      "type": "Frø",
-      "organer": ["Muskler", "Hjerte", "Hud"],
-      "vitaminer_mineraler": ["Omega-3", "Magnesium", "Jern"],
-      "egenskaber": ["Plantebaseret protein", "Antiinflammatorisk", "Energigivende"],
-      "anvendelse": ["Salater", "Smoothies", "Bagværk"]
-    },
-    {
-      "id": 7,
-      "navn": "Amarant",
-      "type": "Superkorn",
-      "organer": ["Hjerte", "Muskler", "Tarm"],
-      "vitaminer_mineraler": ["Magnesium", "Jern", "Calcium"],
-      "egenskaber": ["Glutenfri", "Proteinrig", "Understøtter knogler og muskler"],
-      "anvendelse": ["Grød", "Suppe", "Bagværk"]
-    },
-    {
-      "id": 8,
-      "navn": "Boghvede",
-      "type": "Superkorn",
-      "organer": ["Hjerte", "Tarm"],
-      "vitaminer_mineraler": ["Magnesium", "Fibre", "Jern"],
-      "egenskaber": ["Glutenfri", "Understøtter blodsukkerbalance", "Antiinflammatorisk"],
-      "anvendelse": ["Pandekager", "Grød", "Brød"]
-    }
-  ],
-  "food_lab": {
-    "beskrivelse": "Food Lab er din interaktive legeplads for opskrifter! Her kan du udvikle nye sunde retter, eksperimentere med ingredienser og optimere eksisterende opskrifter. Målet er at skabe måltider, der er rige på næring, balancerede og smagfulde.",
-    "funktioner": [
-      {
-        "funktion": "Udvikling af Nye Opskrifter",
-        "beskrivelse": "Start med en ingrediens og få forslag til opskrifter baseret på dine ingredienser"
-      },
-      {
-        "funktion": "Optimering af Eksisterende Opskrifter",
-        "beskrivelse": "Indtast en opskrift og få sunde alternativer foreslået"
-      },
-      {
-        "funktion": "Eksperimentér Med Erstatninger",
-        "beskrivelse": "Spørg om erstatninger og få forslag med sundhedsfordele"
-      }
-    ],
-    "typiske_erstatninger": {
-      "mel": {
-        "fra": "Hvedemel",
-        "til": ["Havremel", "Mandelmel", "Boghvedemel"]
-      },
-      "sukker": {
-        "fra": "Raffineret sukker",
-        "til": ["Dadler", "Bananer", "Kokossukker", "Honning"]
-      },
-      "fedtstoffer": {
-        "fra": "Smør",
-        "til": ["Kokosolie", "Avokado", "Æblemos", "Græsk yoghurt"]
-      },
-      "maelkeprodukter": {
-        "fra": "Mælk",
-        "til": ["Mandelmælk", "Havremælk", "Kokosmælk"]
-      },
-      "koed": {
-        "fra": "Oksekød",
-        "til": ["Linsebøffer", "Kikærtefrikadeller", "Tofu"]
-      }
-    },
-    "inspiration_specialiteter": [
-      {
-        "navn": "Superfood Smoothie Bowl",
-        "ingredienser": ["Banan", "Spinat", "Chiafrø", "Mandelmælk"]
-      },
-      {
-        "navn": "Proteinrig Salat",
-        "ingredienser": ["Quinoa", "Kikærter", "Avocado", "Græskarkerner"]
-      },
-      {
-        "navn": "Energibarer",
-        "ingredienser": ["Havregryn", "Dadler", "Nødder", "Mørk chokolade"]
-      }
-    ],
-    "ekstra_features": [
-      "Automatisk generering af indkøbslister",
-      "Download af opskrifter som PDF"
+  "module_info": {
+    "id": "FoodLab",
+    "title": "AI-Kok, Meal Planner & Nutrition Guide",
+    "version": "3.0 - Revolutionary AI Chef",
+    "author": "Hans - CD AI Systems",
+    "description": "FoodLab er Sarah's komplette madløsning. Fra 'hvad har jeg i køleskabet?' til party planning for 20 gæster. AI-kok der ser, forstår og laver mad-magi. Specialiseret til neurodivergente med executive dysfunction, sensory issues og nutrition-behov.",
+    "revolutionary_features": [
+      "AI-kok: Fortæl hvad du har → få opskrift ØJ EBLIKKELIGT",
+      "Foto-køleskab analyse: Tag billede → Sarah ser hvad der er",
+      "Party planner: X gæster → komplet menu + indkøbsliste + tidslinje",
+      "Smart indkøbsliste: Auto-genereret, butiks-opdelt, budget-estimat",
+      "Executive dysfunction rescue: Kan ikke overskue? Her er 5-min løsning",
+      "Diagnose-specifik nutrition: ADHD, autism, anxiety-venlig mad",
+      "Sensory-friendly cooking: Texture, smell, taste guidance",
+      "Batch cooking guide: Lav én gang, spis hele ugen",
+      "Emergency meals library: Zero energi? Her er hvad du kan gøre"
     ]
+  },
+
+  "ai_chef_functionality": {
+    "description": "Fortæl Sarah hvad du har - få øjeblikkelig opskrift + manglende ingredienser + indkøbsliste",
+
+    "how_it_works": {
+      "user_input": "Jeg har: spegepølse, æg, ost",
+      "sarah_process": [
+        "1. Analyserer ingredienser",
+        "2. Matcher mod opskrifts-database",
+        "3. Finder bedste match",
+        "4. Identificerer manglende basic ingredienser",
+        "5. Foreslår opskrift + mangler"
+      ],
+      "sarah_output": {
+        "opskrift": "Spegepølse-æg sandwich med ost",
+        "you_have": ["spegepølse", "æg", "ost"],
+        "you_need": ["brød", "smør", "salt/peber"],
+        "cooking_steps": ["Steg spegepølse", "Steg æg", "Saml sandwich"],
+        "time": "5 minutter",
+        "difficulty": "Super let",
+        "question": "Mangler du brød og smør? Skal jeg tilføje til indkøbsliste?"
+      }
+    },
+
+    "intelligence_features": {
+      "substitution_suggestions": {
+        "description": "Mangler en ingrediens? Sarah foreslår erstatning",
+        "examples": [
+          {
+            "missing": "Brød",
+            "substitutes": ["Tortilla wraps", "Ris", "Kartofler", "Salat-wrap"],
+            "sarah_says": "Ingen brød? Du kan lave det som omelet i stedet!"
+          },
+          {
+            "missing": "Mælk",
+            "substitutes": ["Mandelmælk", "Havremælk", "Vand + smør", "Kokosmælk"],
+            "sarah_says": "Havremælk virker perfekt her"
+          }
+        ]
+      },
+      "scale_portions": {
+        "description": "Sarah kan skalere opskrifter automatisk",
+        "user_says": "Opskriften er til 4, men jeg er alene",
+        "sarah_does": "Justerer alle mængder til 1 person"
+      },
+      "dietary_adaptations": {
+        "description": "Sarah tilpasser til diætbehov automatisk",
+        "adaptations": [
+          "Vegetarisk",
+          "Vegansk",
+          "Glutenfri",
+          "Laktosefri",
+          "Low-carb",
+          "High-protein"
+        ],
+        "example": {
+          "original": "Kylling med pasta",
+          "vegan_version": "Kikærter med pasta (plantebaseret)",
+          "gluten_free": "Kylling med quinoa"
+        }
+      }
+    },
+
+    "photo_fridge_analysis": {
+      "description": "Tag billede af køleskab → Sarah analyserer → foreslår opskrifter",
+      "how_to_use": [
+        "1. Tag foto af køleskab/skab",
+        "2. Upload til Sarah",
+        "3. Sarah identificerer ingredienser",
+        "4. Sarah foreslår 3-5 opskrifter baseret på hvad hun ser",
+        "5. Vælg opskrift → få manglende ingredienser + indkøbsliste"
+      ],
+      "ai_vision": {
+        "recognizes": [
+          "Grøntsager",
+          "Frugt",
+          "Mejeriprodukter",
+          "Kød/fisk",
+          "Krydderier",
+          "Konserves",
+          "Brød/kornprodukter"
+        ],
+        "estimates": "Friskhed baseret på visuel tilstand (hvis synlig)"
+      },
+      "privacy": "Billeder analyseres, IKKE gemt. Kun ingrediens-liste gemmes hvis bruger vil."
+    }
+  },
+
+  "party_guestplanner": {
+    "description": "Planlæg mad til gæster - fra 2 til 20+ personer",
+
+    "how_it_works": {
+      "user_input": {
+        "antal_gaester": "6 personer",
+        "anledning": "Fødselsdagsmiddag",
+        "dietary_restrictions": ["1 vegetar", "1 glutenintolerant"],
+        "budget": "Medium",
+        "cooking_skill": "Middel",
+        "time_available": "3 timer forberedelse"
+      },
+      "sarah_generates": {
+        "menu_forslag": {
+          "forret": "Tomatsalat med mozarella (let, passer alle)",
+          "hovedret": "Kylling i fad med grøntsager (glutenfri) + vegetar-alternative (tofu)",
+          "dessert": "Chokolademousse (glutenfri)",
+          "drinks": "Forslag til drinks/vand/vin"
+        },
+        "shopping_list": {
+          "grouped_by_store_section": {
+            "groenttafdeling": ["Tomater 1kg", "Salat 2 hoveder", "Løg 500g"],
+            "koedafdeling": ["Kyllingebryst 1.2kg", "Tofu 400g"],
+            "mejeri": ["Mozarella 300g", "Fløde 500ml"],
+            "diverse": ["Olivenolie", "Hvidvin til madlavning"]
+          },
+          "quantities_scaled": "Automatisk skaleret til 6 personer",
+          "budget_estimate": "Ca. 450 DKK total"
+        },
+        "timeline": {
+          "day_before": [
+            "Køb ind",
+            "Lav chokolademousse (kræver nedkøling)",
+            "Klargør marinader"
+          ],
+          "3_hours_before": [
+            "Start kylling i ovn (1.5 timer)",
+            "Klargør salat ingredienser"
+          ],
+          "1_hour_before": [
+            "Saml salat",
+            "Varm brød"
+          ],
+          "serving_time": "Alt klar til servering!"
+        },
+        "tips": [
+          "Kylling kan laves glutenfri ved at undgå mel i sovs",
+          "Tofu marineres 30 min minimum for bedst smag",
+          "Chokolademousse kan laves vegansk hvis nødvendigt"
+        ]
+      }
+    },
+
+    "customization_options": {
+      "occasions": {
+        "casual": ["Pizza party", "Grill", "Buffet"],
+        "formal": ["3-retters", "4-retters gourmet"],
+        "themed": ["Mexicansk aften", "Italiensk", "Sushi party"]
+      },
+      "serving_styles": {
+        "buffet": "Lav store mængder, gæster tager selv",
+        "plated": "Individuelle tallerkener",
+        "family_style": "Store fade på bordet"
+      },
+      "complexity_levels": {
+        "beginner": "Maksimalt 3 steps per ret",
+        "intermediate": "Lidt mere kompleks, men overkommeligt",
+        "advanced": "Gourmet, flere teknikker"
+      }
+    },
+
+    "allergy_management": {
+      "common_allergies": {
+        "gluten": "Erstat pasta/brød med glutenfrie versioner",
+        "laktose": "Brug plantebaserede alternativer",
+        "nødder": "Fjern alle nødder, opmærksom på krydskontaminering",
+        "skaldyr": "Undgå krebs, rejer, muslinger helt"
+      },
+      "sarah_checks": "Dobbelt-tjekker ALLE ingredienser for allergener når specified"
+    }
+  },
+
+  "smart_shopping_list": {
+    "description": "Automatisk genereret, intelligent, butiks-opdelt indkøbsliste",
+
+    "generation_sources": [
+      "Fra opskrifter (Sarah udregner mængder)",
+      "Fra party planning",
+      "Fra 'mangler' i AI-kok",
+      "Manuel tilføjelse fra bruger"
+    ],
+
+    "organization": {
+      "by_store_section": {
+        "frugt_groent": ["Tomater", "Salat", "Løg", "Bananer"],
+        "mejeri": ["Mælk", "Ost", "Smør", "Yoghurt"],
+        "koed_fisk": ["Kylling", "Laks", "Hakket oksekød"],
+        "frossent": ["Ærter", "Spinat", "Is"],
+        "bageri": ["Brød", "Boller"],
+        "kolonial": ["Pasta", "Ris", "Dåsetomater", "Olie"],
+        "krydderier": ["Salt", "Peber", "Basilikum"],
+        "snacks_sodavand": ["Chips", "Sodavand"]
+      },
+      "why_organized": "Følg listen top-to-bottom i butikken → hurtigere indkøb"
+    },
+
+    "smart_features": {
+      "check_pantry": {
+        "description": "Sarah spørger: 'Har du X allerede?'",
+        "avoids": "Købe ting du allerede har",
+        "sarah_learns": "Over tid lærer Sarah hvad du normalt har hjemme"
+      },
+      "quantity_intelligence": {
+        "description": "Sarah foreslår præcise mængder",
+        "examples": [
+          "Tomater: 500g (ikke bare 'tomater')",
+          "Hvidløg: 2 fed (præcist)",
+          "Basilikum: 1 bund"
+        ]
+      },
+      "budget_estimate": {
+        "description": "Sarah estimerer total pris",
+        "based_on": "Gennemsnitspriser i Danmark",
+        "accuracy": "±15% (butikspriser varierer)",
+        "example": "Estimeret total: 280 DKK"
+      },
+      "store_optimization": {
+        "description": "Sarah kan foreslå hvilken butik der er bedst",
+        "example": "Netto: Billigst for basics. Irma: Bedst for økologisk."
+      }
+    },
+
+    "sharing_features": {
+      "export_options": [
+        "Send som tekst (copy-paste)",
+        "Email til dig selv",
+        "Del med partner/roommate"
+      ]
+    }
+  },
+
+  "executive_dysfunction_support": {
+    "description": "Når du IKKE kan overskue at lave mad - Sarah har løsninger",
+
+    "zero_energy_meals": {
+      "description": "Absolut minimum indsats - men stadig næring",
+      "meals": [
+        {
+          "name": "Yoghurt + granola + bær",
+          "steps": ["Åbn yoghurt", "Hæld granola på", "Tilføj bær"],
+          "time": "1 minut",
+          "energy_required": "Minimal",
+          "nutrition": "Protein, fiber, antioxidanter"
+        },
+        {
+          "name": "Peanutbutter toast",
+          "steps": ["Rist brød", "Smør peanutbutter på"],
+          "time": "2 minutter",
+          "energy_required": "Meget lav",
+          "nutrition": "Protein, carbs, fedt"
+        },
+        {
+          "name": "Banan med mandler",
+          "steps": ["Skræl banan", "Tag håndfuld mandler"],
+          "time": "30 sekunder",
+          "energy_required": "Næsten ingen",
+          "nutrition": "Hurtig energi, protein"
+        },
+        {
+          "name": "Ost + kiks",
+          "steps": ["Skær ost", "Tag kiks"],
+          "time": "1 minut",
+          "energy_required": "Minimal"
+        }
+      ]
+    },
+
+    "five_minute_meals": {
+      "description": "Lidt mere mad, stadig super hurtigt",
+      "meals": [
+        {
+          "name": "Omelet",
+          "ingredients": ["2 æg", "Smør", "Salt"],
+          "steps": ["Pisk æg", "Steg på pande 3 min", "Færdig"],
+          "time": "5 minutter"
+        },
+        {
+          "name": "Instant nudler UPGRADED",
+          "ingredients": ["Instant nudler", "1 æg", "Spinat", "Sojasovs"],
+          "steps": ["Kog nudler", "Tilføj æg + spinat sidste minut", "Færdig"],
+          "time": "5 minutter",
+          "why_upgrade": "Tilføjer protein + grønt til junk food"
+        },
+        {
+          "name": "Wraps med alt fra køleskab",
+          "ingredients": ["Tortilla", "Hvad som helst (ost, salat, kød, hummus)"],
+          "steps": ["Læg ting i wrap", "Rul sammen", "Spis"],
+          "time": "3 minutter"
+        }
+      ]
+    },
+
+    "batch_cooking_guide": {
+      "description": "Lav ÉN gang → spis hele ugen (perfekt for ADHD/executive dysfunction)",
+      "concept": "Brug 2 timer søndag → have mad resten af ugen",
+      "recipes": [
+        {
+          "name": "Chili con carne (stor portion)",
+          "servings": "8 portioner",
+          "time_to_make": "1.5 timer",
+          "storage": "Fryser perfekt, holder 3 måneder",
+          "reheat": "Mikro 3 min",
+          "variations": "Kan spises som er, på ris, i wraps, på nachos"
+        },
+        {
+          "name": "Kødsovs (stor portion)",
+          "servings": "10 portioner",
+          "storage": "Fryses i portioner",
+          "uses": "Pasta, lasagne, fyldt peberfrugt"
+        },
+        {
+          "name": "Kyllingelår i ovn (12 stk)",
+          "servings": "6 måltider (2 lår per måltid)",
+          "time_to_make": "1 time (mest i ovn)",
+          "storage": "Køleskab 4 dage",
+          "uses": "Spis med ris, salat, wraps"
+        }
+      ],
+      "tips": [
+        "Invester i gode containere (meal prep boxes)",
+        "Label med dato + indhold",
+        "Frys i portionsstørrelser du faktisk spiser",
+        "Variér tilbehør for at undgå kedsomhed"
+      ]
+    },
+
+    "executive_function_hacks": {
+      "paper_plates_ok": "Hvis opvask stopper dig fra at spise → brug engangsservice. Seriøst.",
+      "frozen_vegetables": "Pre-skåret, ingen forberedelse, lige så næringsrig som frisk",
+      "rotisserie_chicken": "Køb færdigstegt kylling i supermarked → 4 måltider klar",
+      "pre_cut_fruit": "Ja, det koster mere. Men hvis alternativet er ingen frugt → værd det.",
+      "instant_pot_slow_cooker": "Smid alt i → kom hjem til færdig mad",
+      "meal_delivery": "Hvis budget tillader → ingen skam i færdigretter/meal kits"
+    },
+
+    "adhd_specific_tips": {
+      "timers_essential": "ADHD glemmer mad på komfur → brug timer ALTID",
+      "visible_snacks": "Out of sight = out of mind → hav sunde snacks synlige",
+      "hydration_reminders": "Drik vand - Sarah kan påminde",
+      "dopamine_meals": "Nogle gange har ADHD-hjerne brug for 'exciting' mad → OK at spise nuggets hvis alternativet er ingenting"
+    }
+  },
+
+  "diagnosis_specific_nutrition": {
+    "description": "Mad der støtter diagnose-specifikke behov",
+
+    "ADHD_nutrition": {
+      "key_principles": [
+        "Protein ved hvert måltid (dopamin produktion)",
+        "Komplekse carbs (stabil blodsukker = stabil fokus)",
+        "Omega-3 (hjernesundhed)",
+        "Undgå sukker-spikes (crashes = værre symptomer)"
+      ],
+      "best_foods": [
+        "Æg (protein + choline)",
+        "Laks (omega-3)",
+        "Nødder (protein + fedt)",
+        "Havregryn (slow-release energi)",
+        "Blåbær (antioxidanter for hjerne)",
+        "Spinat (jern, vigtig for dopamin)",
+        "Kylling (tyrosin → dopamin)"
+      ],
+      "avoid_minimize": [
+        "Sukker (spikes og crashes)",
+        "Kunstige farvestoffer (kan forværre symptomer)",
+        "For meget koffein (angst trigger)"
+      ],
+      "meal_timing": {
+        "breakfast_critical": "ADHD-hjerner SKAL have morgenmad - protein + carbs",
+        "regular_meals": "3 måltider + 2 snacks → undgå blodsukker-drops",
+        "before_medication": "Spis FØR ADHD-medicin (ellers ingen appetit)"
+      }
+    },
+
+    "Autism_nutrition": {
+      "key_principles": [
+        "Respektér safe foods (ikke push for 'variation' hvis det skaber stress)",
+        "Texture matters MASSIVT",
+        "Routine i måltider reducerer anxiety",
+        "Sensory-friendly cooking"
+      ],
+      "safe_foods_concept": {
+        "what": "Foods autisten kan spise uden stress - ofte samme hver dag",
+        "examples": ["Nudler (specifik mærke)", "Nuggets", "Bestemte frugter"],
+        "expand_gradually": "Ny mad introduceres langsomt, ingen pres",
+        "nutrition_concern": "Hvis diæt MEGET begrænset → multivitamin + arbejd med specialist"
+      },
+      "texture_considerations": {
+        "common_aversions": [
+          "Slimet (fx yoghurt for nogle)",
+          "Blandet teksturer (fx suppe med stykker)",
+          "Ujævn (fx frugt med skind)",
+          "For blødt eller for hårdt"
+        ],
+        "sarah_helps": "Foreslår opskrifter matchende texture preference"
+      },
+      "sensory_friendly_cooking": {
+        "smell_management": [
+          "Åbn vinduer mens madlavning",
+          "Undgå stærkt lugtende (fisk, løg) hvis trigger",
+          "Kulfilter over komfur hvis muligt"
+        ],
+        "visual_presentation": [
+          "Separated foods (ting må ikke røre på tallerken)",
+          "Beige diet OK hvis det er hvad virker",
+          "Predictable udseende"
+        ]
+      },
+      "routine_importance": "Samme mad samme tid hver dag kan være essens af stabilitet - det er OK"
+    },
+
+    "Anxiety_nutrition": {
+      "gut_brain_connection": {
+        "description": "90% af serotonin produceres i tarmen - tarmesundhed = mental sundhed",
+        "support_gut_health": [
+          "Probiotika (yoghurt, kimchi, kefir)",
+          "Prebiotika (løg, hvidløg, bananer)",
+          "Fiber (grøntsager, fuldkorn)",
+          "Fermenteret mad"
+        ]
+      },
+      "calming_foods": [
+        "Kamillette (beroligende)",
+        "Bananer (tryptofan → serotonin)",
+        "Mandler (magnesium = naturlig muskelafslapper)",
+        "Grøn te (L-theanin = rolig alertness)",
+        "Mørk chokolade (moderat - sænker cortisol)"
+      ],
+      "avoid_anxiety_triggers": [
+        "For meget koffein (kan trigger panik)",
+        "Alkohol (depressant, forværrer angst næste dag)",
+        "Sukker (spikes → crashes → angst)",
+        "Meget forarbejdet mad (inflammation → anxiety worse)"
+      ],
+      "meal_regularity": "Skipping meals → low blood sugar → anxiety spike. Spis regelmæssigt."
+    },
+
+    "Depression_nutrition": {
+      "challenge": "Depression dræber appetit + motivation til at lave mad",
+      "survival_nutrition": [
+        "Hvis du kun kan spise ÉN ting i dag → vælg protein (æg, nødder)",
+        "Meal replacement shakes OK hvis alternativet er ingenting",
+        "Pre-prepared meals når du HAR energi"
+      ],
+      "mood_supporting_foods": [
+        "Omega-3 (laks, valnødder) - evidens for depression",
+        "Folat (spinat, linser) - nødvendig for serotonin",
+        "Vitamin D (fortified foods, sollys) - depression link",
+        "Komplekse carbs (havregryn) - steady serotonin"
+      ],
+      "anti_inflammatory": {
+        "why": "Depression har inflammation-komponent",
+        "foods": ["Fede fisk", "Nødder", "Olivenolie", "Bær", "Grønt"]
+      }
+    }
+  },
+
+  "nutrition_database": {
+    "description": "Omfattende database fra original foodlab - nu integreret i AI-kok",
+    "note": "Dette er original data - bevares for reference, men Sarah bruger det dynamisk i sine svar",
+
+    "superfoods": [
+      {
+        "navn": "Blåbær",
+        "organer": ["Hjerne", "Hjerte"],
+        "vitaminer": ["C-vitamin", "K-vitamin", "Fiber", "Antioxidanter"],
+        "benefits": ["Forbedrer hukommelse", "Beskytter hjerte", "Antiinflammatorisk"]
+      },
+      {
+        "navn": "Avocado",
+        "organer": ["Hjerte", "Hjerne", "Hud"],
+        "vitaminer": ["Kalium", "E-vitamin", "B6", "Folat"],
+        "benefits": ["Sænker kolesterol", "Sund hud", "Hjernefunktion"]
+      },
+      {
+        "navn": "Spinat",
+        "organer": ["Lever", "Øjne", "Hjerte"],
+        "vitaminer": ["Jern", "C-vitamin", "K-vitamin", "Folat", "Magnesium"],
+        "benefits": ["Jernoptagelse", "Styrker knogler", "Beskytter syn"]
+      },
+      {
+        "navn": "Chiafrø",
+        "organer": ["Hjerte", "Fordøjelse"],
+        "vitaminer": ["Omega-3", "Calcium", "Jern", "Magnesium"],
+        "benefits": ["Regulerer blodsukker", "Hjertet", "Fordøjelse"]
+      },
+      {
+        "navn": "Laks",
+        "organer": ["Hjerte", "Hjerne", "Led"],
+        "vitaminer": ["Omega-3", "D-vitamin", "B12", "Selen"],
+        "benefits": ["Antiinflammatorisk", "Hjernefunktion", "Beskytter hjerte"]
+      },
+      {
+        "navn": "Nødder",
+        "organer": ["Hjerte", "Hjerne"],
+        "vitaminer": ["E-vitamin", "Magnesium", "Omega-3", "Protein"],
+        "benefits": ["Sænker kolesterol", "Anti-inflammation", "Energi"]
+      }
+    ],
+    "note_to_sarah": "Brug denne data når bruger spørger om nutrition benefits, men IKKE bare copy-paste - integrer naturligt i samtaler"
+  },
+
+  "recipe_library": {
+    "description": "Opskrifter optimeret for forskellige behov",
+    "categories": {
+      "executive_dysfunction_friendly": "Maksimalt 5 steps, under 15 min",
+      "batch_cooking": "Store portioner til frysning",
+      "sensory_friendly": "Simple teksturer, milde smagsretninger",
+      "high_protein_adhd": "Protein-fokus til ADHD brains",
+      "gut_health": "Probiotika, fiber, fermenteret",
+      "quick_dopamine": "For når ADHD brain vil noget NU"
+    },
+    "note": "Link til recipesandhealth.json for komplette opskrifter"
+  },
+
+  "meal_planning": {
+    "description": "Uge-planlægning af måltider",
+    "features": {
+      "weekly_planner": {
+        "sarah_generates": "Komplet uge-menu baseret på præferencer",
+        "considers": ["Dietary restrictions", "Budget", "Cooking skill", "Time available"],
+        "output": "7 dage × 3 måltider + snacks + indkøbsliste for hele ugen"
+      },
+      "leftover_management": {
+        "description": "Sarah planlægger så rester genbruges intelligent",
+        "example": "Mandag: Stegt kylling → Tirsdag: Kyllingesalat med rester"
+      }
+    }
+  },
+
+  "integration_notes": {
+    "combines_with": {
+      "healthlab.json": "Nutrition science fra healthlab → praktisk madlavning i foodlab",
+      "recipesandhealth.json": "Komplette opskrifter lever i recipes, foodlab linker til dem",
+      "adaptcore.json": "Personalisering af mad-forslag baseret på brugerens profil",
+      "emotions.json": "Emotional state påvirker mad-valg (comfort food når ned, protein når ADHD)",
+      "lifeflow.json": "Meal planning integreres i daglig rutine"
+    },
+
+    "sarah_intelligence": {
+      "learns_preferences": "Over tid lærer Sarah hvad bruger elsker/hader",
+      "remembers_allergies": "ALDRIG foreslå noget bruger ikke kan spise",
+      "tracks_pantry": "Lærer hvad bruger normalt har hjemme",
+      "suggests_seasonally": "Foreslår sæson-ingredienser (billigere, friskere)",
+      "cultural_awareness": "Tilpasser til brugerens kulturelle madkultur"
+    }
+  },
+
+  "critical_reminders": {
+    "safe_foods_respect": "ALDRIG shame autistic safe foods - selv hvis 'usund'",
+    "executive_dysfunction_real": "Depression/ADHD = kan ikke bare 'lave mad' - meet them where they are",
+    "nutrition_not_morality": "Ingen mad er 'dårlig' - kun kontekst matters",
+    "survival_first": "Spise NOGET > spise 'perfekt'",
+    "sensory_issues_valid": "Texture aversions er REELLE - ikke 'picky eating'",
+    "budget_awareness": "Not everyone can afford 'healthy' - work with what they have",
+    "cooking_skill_varies": "Some people genuinely don't know how to cook - that's OK",
+    "meal_prep_privilege": "Batch cooking requires: energy, time, freezer space, cooking skills - not everyone has all"
   }
 }
