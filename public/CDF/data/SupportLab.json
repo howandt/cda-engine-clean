@@ -1,61 +1,631 @@
 {
   "id": "SupportLab",
-  "title": "Diagnoser & støtteplaner",
-  "intro": "Det kan være svært at forstå sin diagnose – og endnu sværere at forklare den for andre. Her hjælper jeg dig med guides, støtteplaner og ærlig støtte – også når det hele føles tungt 💙",
+  "version": "3.0",
+  "title": "Forstå & kommuniker din diagnose",
+  "description": "Din guide til at forstå din diagnose, forklare den til andre, bygge støtteplan og navigere i systemet. Diagnose forklarer - ikke undskylder.",
+  "philosophy": "Du er ikke din diagnose - men du har ret til at forstå den. En diagnose er nøgle til støtte, ikke begrænsning på din identitet. Dit liv, dine ord, din måde.",
+  
+  "core_principles": {
+    "not_your_identity": "Du er ikke 'en ADHDer' - du er menneske med ADHD",
+    "explains_not_excuses": "Diagnose forklarer - ikke undskylder (accountability med compassion)",
+    "tool_not_label": "Diagnose = værktøj til forståelse, ikke identitet",
+    "your_choice": "Du bestemmer hvem du fortæller og hvad du deler",
+    "dignity_always": "Aldrig pathologiserende - altid humaniserende",
+    "support_not_pity": "Du har brug for støtte - ikke medlidenhed"
+  },
+
+  "intro": {
+    "welcome": "Det kan være svært at forstå sin diagnose – og endnu sværere at forklare den for andre. Her hjælper jeg dig med konkrete værktøjer til at forstå, kommunikere og få den støtte du fortjener 💙",
+    "what_we_do": [
+      "Forstår hvad diagnosen betyder for DIG (ikke bare klinik-definition)",
+      "Lærer at forklare dig selv til familie, venner, skole, job",
+      "Bygger personlig støtteplan til svære perioder",
+      "Navigerer i systemet (sundhed, uddannelse, økonomi)",
+      "Reality check på komorbiditet (flere diagnoser = normal)",
+      "Sætter grænser om hvad du deler"
+    ],
+    "not_this": [
+      "Jeg diagnosticerer ikke (jeg er ikke læge)",
+      "Jeg giver ikke legal rådgivning (få professionel hjælp)",
+      "Jeg undskylder ikke adfærd (diagnose forklarer, ikke undskylder)",
+      "Jeg løser ikke systemet for dig (men jeg guider)"
+    ]
+  },
+
   "sections": [
     {
-      "id": "diagnose_guides",
-      "type": "message",
-      "title": "Hvad betyder din diagnose egentlig?",
-      "text": "Du er ikke din diagnose – men du har ret til at forstå den. Jeg kan hjælpe dig med at finde ro i, hvad det betyder for dig – og hvordan du forklarer det for andre på en måde, der føles tryg og ægte. Ingen smarte forklaringer. Kun det der føles rigtigt."
+      "id": "understanding_your_diagnosis",
+      "title": "Forstå din diagnose - hvad betyder det for DIG?",
+      "description": "Clinical definition hjælper ikke - praktisk forståelse gør",
+
+      "approach": {
+        "question": "Ikke 'Hvad ER ADHD?' men 'Hvordan påvirker ADHD MIT liv?'",
+        "focus": "Daglig impact > abstrakt forklaring",
+        "tone": "Klar og ærlig - ikke sukkercoated men ikke skræmmende"
+      },
+
+      "adhd_deep_dive": {
+        "title": "ADHD - hvad det betyder",
+        "simple_truth": "Din hjerne fungerer anderledes - især med fokus, impulskontrol og energistyring. Det betyder IKKE du er doven eller dum. Det betyder du skal finde dine egne måder at arbejde på.",
+        
+        "daily_reality": {
+          "executive_function": [
+            "Kan ikke starte opgaver - selvom du VIRKELIG vil",
+            "Glemmer ting - ikke fordi de ikke betyder noget",
+            "Tidsfornemmelse = HVAD ER DET? (alt er 'om 5 minutter')",
+            "Impulskontrol svag - siger/gør/køber før du tænker",
+            "Prioritering umulig - alt føles lige vigtigt (eller lige ligegyldigt)"
+          ],
+          "emotional": [
+            "Emotionel dysregulering - 0 til 100 på sekunder",
+            "Rejection Sensitive Dysphoria (RSD) - hver kritik = knivstik",
+            "Kedelighed = fysisk smerte",
+            "Hyperfokus på interesser - timer forsvinder",
+            "Understimulering triggers restlessness"
+          ],
+          "physical": [
+            "Konstant uro i kroppen",
+            "Søvn kaotisk (kan ikke falde i, kan ikke vågne)",
+            "Energi kommer i bølger - ikke steady",
+            "Dopamine-seeking behavior (snacks, scrolling, impuls-køb)"
+          ]
+        },
+
+        "strengths_real_talk": {
+          "not_bullshit": "Ja, der ER styrker - men lad os være ærlige:",
+          "actual_strengths": [
+            "Hyperfokus - når noget fænger, du er USTOPPELIG",
+            "Kreativitet - ser løsninger andre ikke ser",
+            "Krise-mode excellence - thrives under pres",
+            "Entusiasme - smittende energi når engageret",
+            "Thinking outside box - standard approach keder dig"
+          ],
+          "reality_check": "Styrker hjælper ikke altid med hverdagens krav. Det er OK at anerkende det."
+        },
+
+        "explain_to_others": {
+          "family": "'Det er ikke fordi jeg ikke gider - min hjerne starter opgaver anderledes. Jeg har brug for struktur udefra fordi min indre struktur svigter.'",
+          "friends": "'Når jeg glemmer at svare eller kommer for sent, er det ikke fordi I ikke betyder noget. Min hjerne har svært ved at holde styr på tid.'",
+          "school": "'Jeg lærer bedst med pauser, bevægelse og korte opgaver. Lange forelæsninger uden struktur = hjerne på standby.'",
+          "employer": "'Jeg arbejder bedst med klare deadlines, checklister og opgaver jeg kan dykke ned i. Åbne opgaver uden struktur er min kryptonite.'"
+        }
+      },
+
+      "autism_deep_dive": {
+        "title": "Autisme - hvad det betyder",
+        "simple_truth": "Din hjerne behandler information anderledes - især sociale signaler, sanseindtryk og forandringer. Det betyder IKKE du mangler følelser. Det betyder du gør det på din måde.",
+        
+        "daily_reality": {
+          "social": [
+            "Sociale situationer = energitappere (selv gode oplevelser)",
+            "Svært at læse mellem linjerne og uudtalte regler",
+            "Masking = udmattende at late normality",
+            "Small talk føles meningsløst",
+            "Direkte kommunikation > social niceties",
+            "Reciprocitet ikke intuitiv (glemmer at spørge tilbage)"
+          ],
+          "sensory": [
+            "Lyde overvældende (baggrundsstøj = tortur)",
+            "Lys for skarpt/blinker irriterende",
+            "Teksturer på tøj/mad = deal breakers",
+            "Lugte intense (parfume = nope)",
+            "Overstimulation = meltdown eller shutdown"
+          ],
+          "routine_change": [
+            "Forandringer føles STORE - selv 'små' ting",
+            "Behov for forudsigelighed og rutiner",
+            "Transitions svære (opgave til opgave, sted til sted)",
+            "Særinteresser giver ro og mening"
+          ]
+        },
+
+        "strengths_real_talk": {
+          "not_bullshit": "Ja, der ER styrker:",
+          "actual_strengths": [
+            "Detaljeret opmærksomhed - ser ting andre overser",
+            "Ærlighed - du siger hvad du mener",
+            "Dyb viden om interesser",
+            "Systematisk tænkning - mønstre er dit sprog",
+            "Loyalitet - når du er ven, er du VENNER for real"
+          ]
+        },
+
+        "explain_to_others": {
+          "family": "'Jeg har brug for forudsigelighed ikke fordi jeg er rigid, men fordi forandringer bruger energi. Når jeg trækker mig, er det genopladning - ikke afvisning.'",
+          "friends": "'Jeg er ikke god til small talk, men jeg er loyal og ærlig. Hvis noget er vigtigt, sig det direkte - jeg læser ikke hints.'",
+          "school": "'Gruppearbejde og åbne opgaver er hårde. Jeg arbejder bedst med struktur, klare forventninger og tid til at tænke.'",
+          "employer": "'Jeg er struktureret, grundig og loyal. Men jeg har brug for klare instruktioner og forudsigelighed i arbejdsdagen.'"
+        }
+      },
+
+      "anxiety_deep_dive": {
+        "title": "Anxiety - hvad det betyder",
+        "simple_truth": "Din hjerne er i konstant alarmberedskab - ser farer der ikke altid er der. Det betyder IKKE du er svag eller hysterisk. Det betyder dit nervesystem reagerer stærkere.",
+        
+        "daily_reality": {
+          "cognitive": [
+            "Konstant bekymring - kan ikke slukke tankerne",
+            "Katastrofetænkning - værste scenarie = standard",
+            "Rumination - gennemgår samtaler/situationer igen og igen",
+            "Decision paralysis - frygter at vælge forkert",
+            "Perfektionisme - frygt for fejl"
+          ],
+          "physical": [
+            "Hjertebanken, svimmelhed, kvalme",
+            "Anspændthed i kroppen (særligt nakke/skuldre)",
+            "Sveden, ryster",
+            "Søvnproblemer - hjerne vil ikke slukke",
+            "Træthed fra konstant hypervigilance"
+          ],
+          "behavioral": [
+            "Undgår situationer der trigger angst",
+            "Overforberedelse - kontrolbehov",
+            "Reassurance-seeking - spørger 'er det OK?' konstant",
+            "Safety behaviors (altid flugtplan, altid hjælp nearby)"
+          ]
+        },
+
+        "strengths_real_talk": {
+          "not_bullshit": "Angst HAR skills:",
+          "actual_strengths": [
+            "Forberedt - tænker fremad",
+            "Opmærksom på detaljer",
+            "Empatisk - mærker stemninger",
+            "Ansvarlig - tager ting seriøst"
+          ]
+        },
+
+        "explain_to_others": {
+          "family": "'Når jeg undgår ting, er det ikke dovenskab - det er angst. Jeg har brug for støtte til at udfordre mig selv, ikke pres om 'bare at gøre det'.'",
+          "friends": "'Hvis jeg aflyser eller bliver stille, er det ikke fordi jeg keder mig. Min angst overtager nogle gange.'",
+          "school": "'Præsentationer og gruppearbejde trigger angst. Det betyder ikke jeg ikke kan - men jeg kan have brug for tilpasninger.'",
+          "employer": "'Jeg arbejder bedst med struktur og feedback. Uklarhed trigger min angst.'"
+        }
+      },
+
+      "depression_deep_dive": {
+        "title": "Depression - hvad det betyder",
+        "simple_truth": "Depression er ikke tristhed - det er sygdom der tapper energi, glæde og håb. Det betyder IKKE du skal 'tage dig sammen'. Det betyder din hjernekemi er ude af balance.",
+        
+        "daily_reality": {
+          "emotional": [
+            "Følelsesmæssig numbness - intet føles ægte",
+            "Anhedoni - ting der plejede at give glæde gør ikke mere",
+            "Håbløshed - kan ikke se fremad",
+            "Konstant selvkritik - negativ indre stemme",
+            "Worthlessness - føler du er byrde"
+          ],
+          "cognitive": [
+            "Hjernetåge - kan ikke tænke klart",
+            "Koncentrationsbesvær",
+            "Hukommelse svækket",
+            "Decision fatigue - alt føles for stort"
+          ],
+          "physical": [
+            "Energitab - alt føles tungt",
+            "Søvnproblemer (insomnia eller hypersomnia)",
+            "Appetit ændret (for meget eller for lidt)",
+            "Smerter i kroppen uden årsag"
+          ],
+          "behavioral": [
+            "Isolation - trækker sig fra alle",
+            "Kan ikke tage sig af basale behov (bad, mad, tøjvask)",
+            "Prokrastinering på alt",
+            "Selvmordstanker kan opstå"
+          ]
+        },
+
+        "strengths_real_talk": {
+          "honest": "Depression HAR ikke mange 'styrker' - det er sygdom. Men:",
+          "survival": [
+            "Du kæmper hver dag - selv når ingen ser det",
+            "Du forstår mørke og kan møde andre der",
+            "Når du mærker igen, mærker du dybt",
+            "Din styrke = at du stadig er her"
+          ]
+        },
+
+        "explain_to_others": {
+          "family": "'Når jeg trækker mig eller ikke orker at møde op, er det ikke fordi I ikke betyder noget. Depression gør alting tungt - selv kærlighed.'",
+          "friends": "'Jeg kan ikke 'bare tage mig sammen'. Men I kan hjælpe ved at blive - selv når jeg ikke virker glad.'",
+          "school": "'Jeg kæmper bare for at møde op. Jeg vil gerne lære, men energi rækker ikke altid.'",
+          "employer": "'Depression påvirker energi og koncentration. Jeg har brug for fleksibilitet mens jeg får behandling.'"
+        }
+      },
+
+      "comorbidity_reality": {
+        "title": "Komorbiditet - når du har FLERE diagnoser",
+        "truth": "Mange har flere diagnoser samtidig. Det er IKKE fordi du er ekstra ødelagt. Det er fordi hjernens systemer hænger sammen.",
+        
+        "common_combinations": [
+          {
+            "combo": "ADHD + Angst",
+            "why": "ADHD gør livet kaotisk → kaos skaber angst for fejl og fiasko",
+            "impact": "Hyperfokus på bekymringer, svært at skille angst-tanker fra ADHD-impulser",
+            "what_helps": "Struktur reducerer begge (mindre kaos = mindre angst)"
+          },
+          {
+            "combo": "Autisme + Angst",
+            "why": "Verden er uforudsigelig → trigger konstant usikkerhed",
+            "impact": "Social angst forstærkes, sensory overload trigger panik",
+            "what_helps": "Forudsigelighed, sensory-safe spaces, permission to mask less"
+          },
+          {
+            "combo": "ADHD + Depression",
+            "why": "Årelang kritik, fiasko og udbrændthed → tab af håb",
+            "impact": "Ingen energi til at kompensere for ADHD, selvværd knust",
+            "what_helps": "Behandling for depression først (ellers ingen energi til ADHD-strategier)"
+          },
+          {
+            "combo": "Autisme + Depression",
+            "why": "Masking udmatter, social isolation tærer",
+            "impact": "Mister særinteresser (eneste glæde), ekstra hjernetåge",
+            "what_helps": "Permission to unmask, reconnect med særinteresser"
+          }
+        ],
+        
+        "key_insight": "Flere diagnoser = brug for support på flere fronter. Det tager tid at finde balance. Det er OK."
+      },
+
+      "you_are_not_your_diagnosis": {
+        "message": "Din diagnose forklarer nogle udfordringer. Men den definerer IKKE din værdi, identitet eller potentiale.",
+        "remember": [
+          "Du er ikke 'en ADHDer' - du er menneske med ADHD",
+          "Diagnose = værktøj til forståelse, ikke identitet",
+          "Du vælger hvem du fortæller",
+          "Diagnose er del af din historie - ikke hele historien",
+          "Du kan hade diagnosen OG bruge den samtidig"
+        ]
+      }
     },
-    {
-      "id": "understand_diagnosis",
-      "type": "message",
-      "title": "Forstå din diagnose",
-      "text": "En diagnose fortæller ikke hele din historie — men den kan hjælpe dig (og andre) med at forstå, hvad du kæmper med. Vi kan sammen finde måder at forklare det på, så det ikke føles som en undskyldning, men som en nøgle til støtte og forståelse 💙"
-    },
+
     {
       "id": "personal_support_plan",
-      "type": "message",
       "title": "Din personlige støtteplan",
-      "text": "Sammen kan vi lave en enkel plan for dine svære dage: Hvad hjælper dig? Hvem kan støtte dig? Hvad skal du huske, når det hele larmer? Det bliver en lille hånd i ryggen – ikke en løsning, men et sted at stå fast."
+      "description": "Konkret plan til svære perioder",
+
+      "philosophy": "En støtteplan er ikke garanti for det går væk. Men det er en hånd at holde når det bliver for meget.",
+
+      "plan_structure": {
+        "warning_signals": {
+          "purpose": "Genkend når du er på vej mod krise",
+          "prompt": "Hvad er DINE tidlige advarselssignaler? Hvad sker FØR det bliver rigtig slemt?",
+          
+          "diagnosis_specific": {
+            "adhd": [
+              "Glemmer FLERE ting end normalt",
+              "Kan ikke starte NOGEN opgaver",
+              "Impulskontrol væk - køber/siger/gør uden at tænke",
+              "Søvn bliver kaotisk",
+              "Dopamine-seeking eskalerer"
+            ],
+            "autism": [
+              "Kan ikke håndtere NOGEN sanseindtryk",
+              "Trækker mig fra alle sociale kontakter",
+              "Kan ikke bryde rutiner - bliver rigid",
+              "Meltdowns/shutdowns hyppigere",
+              "Masking impossible - kan ikke fake det"
+            ],
+            "anxiety": [
+              "Konstant katastrofetanker",
+              "Undgår mere og mere",
+              "Fysiske symptomer intensiveres",
+              "Kan ikke slappe af overhovedet",
+              "Safety behaviors eskalerer"
+            ],
+            "depression": [
+              "Anhedoni - intet giver glæde",
+              "Isolerer fuldstændigt",
+              "Søvn/appetit ændres drastisk",
+              "Selvmordstanker begynder eller intensiveres",
+              "Kan ikke tage mig af basale behov (bad, mad) i dage"
+            ]
+          },
+          
+          "your_signals": "Skriv DINE advarselssignaler (vær ærlig - selv 'små' ting tæller)"
+        },
+
+        "emergency_contacts": {
+          "purpose": "Hvem ringer du til FØR du har brug for dem",
+          "categories": [
+            {
+              "type": "Professionel hjælp",
+              "prompt": "Hvem kan du ringe hvis du har brug for hjælp NU?",
+              "examples": [
+                "Psykolog/psykiater (navn + nummer)",
+                "Læge (navn + nummer)",
+                "Psykiatrisk skadestue (find din lokale via 1813)",
+                "Livslinien 70 201 201 (24/7, anonym, gratis)"
+              ]
+            },
+            {
+              "type": "Personlig støtte",
+              "prompt": "Hvem kan du ringe kl. 3 om natten hvis det brænder på?",
+              "note": "Navn + nummer. Gem i telefon NU."
+            },
+            {
+              "type": "Praktisk hjælp",
+              "prompt": "Hvem kan hjælpe med praktiske ting når du ikke selv kan?",
+              "examples": ["Køre dig til læge", "Handle ind", "Bare være der"]
+            }
+          ],
+          "critical": "Skriv navne OG numre. I krise kan du ikke huske."
+        },
+
+        "coping_strategies": {
+          "purpose": "Hvad har faktisk hjulpet DIG før?",
+          
+          "levels": [
+            {
+              "level": "Mild stress/overload",
+              "prompt": "Hvad kan du gøre SELV?",
+              "diagnosis_specific": {
+                "adhd": ["Bevægelse - spring, gå, vug", "Fidget toys", "ÉN tiny task (ikke hele opgaven)", "Timer med pauser (25 work/5 break)"],
+                "autism": ["Reducér sanseindtryk (stille, dæmpet lys)", "Samme rutine", "Særinteresser", "Stims der føles godt"],
+                "anxiety": ["5-4-3-2-1 grounding", "Box breathing", "Skriv bekymringer ned", "Kort gåtur"],
+                "depression": ["ÉN lille ting (ikke hel dag)", "10 min sollys", "Kontakt ÉN person", "Bad (selv 5 min tæller)"]
+              }
+            },
+            {
+              "level": "Moderate crisis",
+              "prompt": "Hvad kan du gøre med LIDT hjælp?",
+              "examples": ["Ring til ven - bare for at høre stemme", "Gå til læge SAMME DAG", "Tag pause fra job/skole", "Brug CareLab teknikker"]
+            },
+            {
+              "level": "Severe crisis",
+              "prompt": "Hvad er din nødplan?",
+              "actions": [
+                "Ring Livslinien 70 201 201",
+                "Kontakt psykiatrisk skadestue",
+                "Få nogen til at være hos dig",
+                "Hvis selvmordstanker akutte: Skadestue eller 112"
+              ]
+            }
+          ]
+        },
+
+        "red_flags": {
+          "title": "Røde flag - søg hjælp NU",
+          "critical": "Hvis du oplever dette, er det IKKE tid til at vente:",
+          "flags": [
+            "Selvmordstanker bliver konkrete (plan, metode, tidspunkt)",
+            "Selvskade eskalerer eller starter",
+            "Kan ikke tage dig af basale behov (mad, søvn, hygiejne) i flere dage",
+            "Fuldstændig isolation - svarer ingen",
+            "Psykose-symptomer (ser/hører ting, paranoia, virkeligheden slides)",
+            "Misbrug eskalerer",
+            "Ekstrem impulsivitet med farlige konsekvenser"
+          ],
+          "action": "Ring professionel hjælp NU. Det er ikke overdrivelse - det er ansvar for dig selv.",
+          "denmark_numbers": {
+            "emergency": "112 - hvis du er i akut fare",
+            "livslinien": "70 201 201 (24/7, anonym, gratis)",
+            "psychiatric_er": "Find din via 1813",
+            "child_hotline": "116 111 (hvis under 18)"
+          }
+        }
+      },
+
+      "review_update": {
+        "frequency": "Review hver 3. måned - eller når noget ændrer sig",
+        "questions": [
+          "Hvad har virket? Hvad bliver på planen?",
+          "Hvad har IKKE virket? Hvad skal væk?",
+          "Nye kontakter eller strategier?",
+          "Er dine advarselssignaler stadig de samme?"
+        ],
+        "reminder": "Støtteplan er levende - den vokser med dig"
+      }
     },
+
     {
-      "id": "support_plan",
-      "type": "message",
-      "title": "Din personlige handleplan",
-      "text": "Hvad gør du, når det hele bliver for meget? Hvem kan du kontakte?\nOg hvad hjælper dig bedst, når du skal tilbage på sporet?\nJeg kan hjælpe dig med at lave en tryg, lille handleplan – en slags vejviser for både krise og hverdag. Du bestemmer farten, men vi sætter retning sammen."
-    },
-    {
-      "id": "paaroerende_dialog",
-      "type": "message",
-      "title": "Tal med dine nærmeste",
-      "text": "Det kan være svært at finde ordene, når du skal forklare dig selv. Jeg kan hjælpe dig med at skrive en besked eller starte en samtale – så dine nærmeste bedre forstår dig og kan støtte dig.\nSkal vi prøve sammen?"
-    },
-    {
-      "id": "talk_with_others",
-      "type": "message",
+      "id": "talking_with_loved_ones",
       "title": "Samtaler med dine nærmeste",
-      "text": "Det kan være svært at forklare sin diagnose – især til familie, venner eller skole/job.\nMen du behøver ikke gøre det alene.\nJeg kan hjælpe dig med ord, eksempler og ro – så du føler dig stærkere, når du skal tale med dem, der betyder noget 💙"
+      "description": "Find ordene når ord er svære",
+
+      "philosophy": "Du skylder ikke nogen en forklaring. Men hvis du VIL dele, fortjener du støtte til at gøre det trygt.",
+
+      "preparing": {
+        "before_you_start": [
+          "Hvorfor vil du fortælle dem? (støtte, forståelse, praktisk hjælp?)",
+          "Hvor meget vil du dele? (diagnose only, details, daily impact?)",
+          "Hvad håber du de forstår?",
+          "Hvad er du bange for de vil tænke? (vær ærlig)"
+        ],
+
+        "choosing_time": {
+          "good": ["Begge har tid og ro", "Begge nøgterne og OK humør", "Ingen andre stressorer", "Du føler dig relativt stabil"],
+          "bad": ["Midt i skænderi", "En af jer træt/stresset", "Over tekst (medmindre du SKAL have afstand)", "Midt i nedtur/meltdown"]
+        }
+      },
+
+      "explaining_templates": {
+        "adhd": {
+          "simple": "'Jeg har ADHD. Det betyder min hjerne har svært ved at starte opgaver og regulere fokus. Jeg er ikke doven - min hjerne fungerer anderledes.'",
+          "with_impact": "'Jeg har ADHD. Jeg glemmer ting selvom de betyder noget, og kan ikke starte ting selvom jeg vil. Det er ikke fordi jeg ikke gider - min hjerne starter anderledes.'",
+          "with_help": "'Jeg har ADHD. Jeg har brug for struktur udefra - reminders, checklister. Min hjerne har brug for det. Kan du hjælpe?'"
+        },
+        "autism": {
+          "simple": "'Jeg har autisme. Sociale situationer og sanseindtryk kræver energi. Det er ikke fordi jeg ikke vil - det er anderledes for mig.'",
+          "with_impact": "'Jeg har autisme. Jeg har brug for at trække mig efter sociale ting - ikke fordi jeg ikke havde det sjovt, men fordi det tapper energi. Og jeg forstår ikke hints.'",
+          "with_help": "'Jeg har autisme. Vær direkte og sig hvad du mener. Hvis jeg trækker mig, er det ikke dig - det er genopladning.'"
+        },
+        "anxiety": {
+          "simple": "'Jeg har angst. Mit nervesystem er i alarmberedskab. Det er ikke dramatisk - min hjerne opfatter farer der ikke er der.'",
+          "with_impact": "'Jeg har angst. Jeg undgår ting eller aflyser. Det er ikke fordi jeg ikke vil være med dig - min angst overtager.'",
+          "with_help": "'Jeg har angst. Vær tålmodig når jeg gør ting langsomt. Spørg 'hvad har du brug for?' i stedet for 'bare slap af'.'"
+        },
+        "depression": {
+          "simple": "'Jeg har depression. Det er ikke tristhed - det er sygdom. Min hjerne mangler noget. Det er ikke svaghed.'",
+          "with_impact": "'Jeg har depression. Jeg orker ikke at møde op nogle gange selvom jeg vil. Det er ikke fordi du ikke betyder noget - alt føles tungt.'",
+          "with_help": "'Jeg har depression. Bliv, også når jeg ikke virker glad. 'Tag dig sammen' virker ikke - jeg har brug for professionel hjælp.'"
+        }
+      },
+
+      "common_reactions": {
+        "supportive": {
+          "signs": ["Lytter uden afbrydelse", "Spørger hvad du har brug for", "Takker for at du delte"],
+          "response": "Det er god reaktion. Værdsæt den."
+        },
+        "confused": {
+          "signs": ["'Men du virker normal?'", "'Er du sikker?'", "'Har alle ikke lidt af det?'"],
+          "response": "De forstår ikke - endnu. Forsøg at uddybe eller giv materiale at læse."
+        },
+        "dismissive": {
+          "signs": ["'Det er bare undskyldning'", "'Tag dig sammen'", "'Det er moderne pjat'"],
+          "response": "Det gør ondt. Deres uvidenhed er ikke din skyld. Du kan uddanne dem - eller distancere dig."
+        },
+        "overprotective": {
+          "signs": ["Behandler dig som skrøbelig", "Vil løse alt", "Over-bekymret"],
+          "response": "De mener det godt men det hjælper ikke. Sæt boundary: 'Jeg har brug for støtte, ikke at du overtager.'"
+        }
+      },
+
+      "boundaries_about_sharing": {
+        "you_dont_have_to": [
+          "Dele alle detaljer",
+          "Fortælle om medicin/behandling",
+          "Dele alle triggers",
+          "Ting de vil bruge mod dig"
+        ],
+        "you_can_choose": [
+          "Fortælle nogle, ikke andre",
+          "Dele lidt nu, mere senere",
+          "Ændre mening om hvad du deler",
+          "Bede dem ikke dele videre"
+        ]
+      },
+
+      "when_it_goes_wrong": {
+        "accept": "Nogle gange går det ikke godt. Det er ikke din skyld.",
+        "options": [
+          "Prøv igen senere",
+          "Send artikler/videoer - nogle forstår bedre gennem andre",
+          "Acceptér de aldrig forstår - beskyt dig selv",
+          "Find støtte andre steder"
+        ]
+      }
     },
+
     {
-      "id": "write_your_own",
-      "type": "input",
-      "title": "Sæt dine egne ord på",
-      "text": "Vil du prøve at skrive et par sætninger, der forklarer dig selv – på din måde?\nDu behøver ikke finde de perfekte ord. Bare det at skrive lidt, kan give ro og klarhed 💙"
-    },
-    {
-      "id": "system_support",
-      "type": "message",
-      "title": "Støtte i systemet",
-      "text": "Det kan være forvirrende at finde rundt i systemet: §’er, muligheder og rettigheder.\nJeg kan ikke love alt – men jeg kan give dig overblik og hjælpe dig med at stille de rigtige spørgsmål 💙"
-    },
-    {
-      "id": "crisis_help",
-      "type": "message",
-      "title": "Når du har brug for hjælp nu",
-      "text": "Hvis det hele bliver for meget, er du ikke alene.\nSkriv ned hvem du kan ringe til, og hvor du kan få hjælp – så du har det klar, når du har allermest brug for det.\nDet virker måske som en lille ting – men det kan gøre en stor forskel."
+      "id": "system_navigation",
+      "title": "Navigation i systemet",
+      "description": "Basis orientering - ikke legal guide",
+
+      "disclaimer": "Jeg er ikke socialrådgiver eller jurist. Jeg giver overblik og hjælper dig stille rigtige spørgsmål - men du skal have professionel hjælp til det konkrete.",
+
+      "key_areas": {
+        "healthcare": {
+          "access": [
+            "Læge = første kontakt - bed om henvisning",
+            "Gratis psykolog via henvisning (men venteliste)",
+            "Privat hurtigere - du betaler (del-refusion mulig)",
+            "Psykiatrisk skadestue ved akut - ingen henvisning"
+          ],
+          "medication": [
+            "Kun psykiater ordinerer psykiatrisk medicin",
+            "Medicin er ikke svaghed - det er behandling",
+            "Tager tid at finde rigtig medicin/dosis",
+            "Bivirkninger = fortæl læge"
+          ]
+        },
+
+        "education": {
+          "rights": [
+            "Ret til specialpædagogisk støtte hvis diagnosticeret",
+            "Kontakt PPR (Pædagogisk Psykologisk Rådgivning)",
+            "Ekstra tid til eksamen, praktisk hjælp, IT kan søges",
+            "Flexibel fremmøde ved dokumenteret behov"
+          ],
+          "how": [
+            "Tal med studievejleder/SSP",
+            "Fremsend lægeerklæring",
+            "Skriv SPECIFIKT hvad du har brug for",
+            "Følg op hvis intet sker"
+          ]
+        },
+
+        "employment": {
+          "disclosure": [
+            "Du bestemmer om du fortæller arbejdsgiver",
+            "Hvis du søger tilpasninger, skal du dokumentere",
+            "Arbejdsgiver må ikke diskriminere",
+            "Men de kan stille krav om du kan varetage job (med tilpasninger)"
+          ],
+          "support": [
+            "Jobcentret kan bevilge jobcoach",
+            "Flexjob hvis varigt nedsat arbejdsevne",
+            "Specialisterne hjælper neurodivergente i job"
+          ]
+        },
+
+        "financial": {
+          "options": [
+            "SU forlænges ved dokumenteret langsom start",
+            "Kontanthjælp hvis du ikke kan arbejde/studere",
+            "Førtidspension hvis varigt nedsat (høj bevisbyrde)",
+            "Ressourceforløb hvis midlertidig nedsat"
+          ],
+          "process": [
+            "Du skal have lægelig dokumentation",
+            "Kommune vurderer behov",
+            "Hvis afvist: Anke til Ankestyrelsen",
+            "Få hjælp fra socialrådgiver/bisidder"
+          ]
+        }
+      },
+
+      "practical_steps": {
+        "flowchart": [
+          "Behov for behandling → Læge → Henvisning",
+          "Behov for støtte i skole → Studievejleder → Lægeerklæring",
+          "Kan ikke arbejde → Sygemelding → Jobcenter",
+          "Akut krise → Psykiatrisk skadestue / Livslinien / 112"
+        ]
+      },
+
+      "advocacy": {
+        "skills": [
+          "Dokumentér ALT - diagnoser, aftaler, afslag",
+          "Skriv ned hvad du har brug for - SPECIFIKT",
+          "Bed om skriftlig begrundelse hvis afvist",
+          "Kend dine rettigheder",
+          "Få bisidder hvis systemet overvælder"
+        ],
+        "organizations": [
+          "ADHD-foreningen",
+          "Autismeforeningen",
+          "Angstforeningen",
+          "Din kommunes Handicapråd"
+        ]
+      }
     }
-  ]
+  ],
+
+  "critical_reminders": {
+    "never_diagnose": "Sarah diagnosticerer ALDRIG - kun støtter forståelse af eksisterende diagnose",
+    "direct_to_professionals": "Legal advice, medicin, official documentation = professionel hjælp",
+    "support_plan_is_guide": "Ikke behandling - guide",
+    "diagnosis_explains": "Forklarer, ikke undskylder - accountability med compassion",
+    "comorbidity_normal": "Flere diagnoser = normal, ikke 'ekstra broken'",
+    "you_choose_sharing": "Du bestemmer hvem du fortæller",
+    "system_is_frustrating": "Men navigerbart - du er ikke alene"
+  },
+
+  "integration_notes": {
+    "connects_to": [
+      "SpecialistSupport (deep questions → specialist)",
+      "SocialLab (boundary-setting + communication)",
+      "GentlePush (diagnose forklarer ikke undskylder)",
+      "PurposeLab (life chapters reframe)",
+      "CareLab (crisis situations)",
+      "AdaptCore (personalisering)"
+    ],
+    "signal_usage": [
+      "Confusion about diagnosis → guide to understanding",
+      "Need to explain → conversation templates",
+      "Crisis → support plan activation",
+      "System overwhelm → practical steps + SpecialistSupport"
+    ]
+  }
 }
