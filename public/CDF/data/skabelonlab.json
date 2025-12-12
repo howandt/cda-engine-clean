@@ -1,0 +1,596 @@
+{
+  "module_info": {
+    "id": "SkabelonLab",
+    "title": "Sarah's Skabelon & Dokument Generator",
+    "version": "1.0",
+    "author": "Hans - CD AI Systems",
+    "description": "Livspraktiske skabeloner og dokumenter for unge voksne og voksne. Sarah hjælper med alt fra budget til forsikringer til svindel-beskyttelse. Kan generere personaliserede PDF, DOCX og XLSX dokumenter.",
+    "philosophy": "Voksenlivet er kompleks - men med de rigtige værktøjer og skabeloner bliver det håndterbart. Sarah guider dig igennem det praktiske, så du kan fokusere på at leve."
+  },
+
+  "target_audience": {
+    "ung_voksen": "18-25 år - flytter hjemmefra, første job, uddannelse, selvstændighed",
+    "voksen": "25-40+ år - etableret, bolig, familie, økonomi",
+    "alle": "Beskyttelse mod svindel, økonomisk sikkerhed, myndigheder"
+  },
+
+  "core_principles": {
+    "practical": "Konkrete værktøjer - ikke bare teori",
+    "protective": "Sarah's brugere er sårbare - beskyt mod svindel",
+    "personalized": "Skabeloner tilpasses brugerens situation",
+    "generator_enabled": "Sarah kan generere faktiske dokumenter (PDF/DOCX/XLSX)",
+    "remember_context": "Sarah husker hvad brugeren har fortalt om økonomi, bolig, osv."
+  },
+
+  "categories": {
+    
+    "1_flyttehjemmefra": {
+      "title": "💼 Flyttehjemmefra-pakken",
+      "target": "18-25 år - første selvstændighed",
+      "description": "Alt du skal vide når du flytter hjemmefra første gang",
+      
+      "skabeloner": {
+        "flyttetjekliste": {
+          "title": "Komplet flyttetjekliste",
+          "type": "PDF checklist",
+          "generator": true,
+          "content": [
+            "BOLIG: Lejlighed fundet, lejekontrakt læst, depositum betalt",
+            "FORSIKRING: Indbo-forsikring tegnet (se Forsikringer-sektionen)",
+            "ADRESSE: Folkeregister ændret (borger.dk), Post videresendt",
+            "SUNDHED: Læge skiftet til ny bopæl, Tandlæge fundet",
+            "BANK: NemKonto oprettet, Budgetkonto overvejet",
+            "INTERNET & MOBIL: Bredbånd bestilt, Mobil-abonnement",
+            "STRØM: Elleverandør valgt og tilmeldt",
+            "MØBLER: Basismøbler (seng, bord, stol), Køkkenudstyr",
+            "RENGØRING: Indkøb cleaning supplies",
+            "TRANSPORT: Veje til arbejde/studie tjekket"
+          ],
+          "sarah_generates": "Personaliseret PDF med brugerens situation"
+        },
+
+        "budget_ung_voksen": {
+          "title": "Budget-skabelon (Ung voksen)",
+          "type": "XLSX spreadsheet",
+          "generator": true,
+          "sections": {
+            "indtaegter": ["SU (ca. 6.500 kr)", "Studiejob", "Andet"],
+            "faste_udgifter": [
+              "Husleje (inkl. forbrug?)",
+              "Transport (kort/benzin)",
+              "Forsikringer (indbo, evt. bil)",
+              "Telefon/internet",
+              "Kontingenter (fitness, foreninger)"
+            ],
+            "variable_udgifter": [
+              "Mad (2.000-3.000 kr)",
+              "Tøj",
+              "Socialt (cafe, bar, bio)",
+              "Hygiejne/sundhed"
+            ],
+            "opsparing": [
+              "Nødopsparing (mål: 3 måneders udgifter)",
+              "Specific mål (ferie, ny computer)"
+            ]
+          },
+          "sarah_generates": "Excel med formler - auto-beregner rest efter udgifter",
+          "sarah_advice": "Hvis rest er negativ → find hvor du kan spare eller øge indtægt"
+        },
+
+        "su_guide": {
+          "title": "SU-ansøgning step-by-step",
+          "type": "Guide (text/PDF)",
+          "steps": [
+            "1. Gå til su.dk → Log ind med MitID",
+            "2. Vælg 'Søg SU'",
+            "3. Udfyld: Uddannelse, bopæl, forældrenes indtægt (hvis under 20)",
+            "4. Vælg: Udeboende eller hjemmeboende",
+            "5. Angiv NemKonto",
+            "6. Indsend ansøgning",
+            "7. SU udbetales fra næste måned (ca. 6.500 kr udeboende, 3.000 kr hjemme)"
+          ],
+          "reality_check": "SU dækker IKKE alt - du skal sandsynligvis også arbejde"
+        },
+
+        "boligstoette_guide": {
+          "title": "Boligstøtte - Hvad er det og skal jeg søge?",
+          "type": "Guide + ansøgningsskabelon",
+          "what": "Boligstøtte = Penge fra staten til at betale husleje hvis du har lav indkomst",
+          "who_can": "Studerende, lavtlønnede, førtidspensionister",
+          "how_much": "Op til 2.500 kr/måned - afhænger af husleje og indkomst",
+          "how_to_apply": [
+            "Gå til borger.dk → Boligstøtte",
+            "Log ind med MitID",
+            "Udfyld: Indkomst, husleje, husstand",
+            "Indsend dokumentation: Lejekontrakt, indtægtsopgørelse",
+            "Svar kommer inden 4 uger"
+          ],
+          "sarah_generates": "Personaliseret ansøgning baseret på brugerens tal"
+        }
+      }
+    },
+
+    "2_oekonomi_opsparing": {
+      "title": "💰 Økonomi & Opsparing",
+      "description": "Budget, opsparing, investering - økonomisk sikkerhed",
+      
+      "skabeloner": {
+        "basis_budget": {
+          "title": "Basis Budget (Voksne)",
+          "type": "XLSX spreadsheet",
+          "generator": true,
+          "sections": {
+            "indtaegter": ["Løn efter skat", "Partner løn", "Børnepenge", "Andet"],
+            "faste_udgifter": [
+              "Husleje/afdrag",
+              "Forsikringer (hus/bil/liv/indbo)",
+              "Strøm/varme/vand",
+              "Internet/mobil/streaming",
+              "Transport (bil, kort)",
+              "Lån (billån, forbrugslån)",
+              "Fagforening/A-kasse"
+            ],
+            "variable_udgifter": ["Mad", "Tøj", "Fritid", "Gaver", "Uforudsete"],
+            "opsparing": ["Nødopsparing", "Pension", "Ferie", "Børns opsparing"]
+          },
+          "sarah_generates": "Excel med graf - viser hvor pengene går",
+          "sarah_advice": "Hvis tight → kig på abonnementer, mobilselskab, forsikringer (skift kan spare 1.000+ kr/måned)"
+        },
+
+        "opsparings_plan": {
+          "title": "Opsparingsplan - Trin-for-trin",
+          "type": "PDF guide",
+          "steps": [
+            "TRIN 1: Nødopsparing FØRST (mål: 3 måneders faste udgifter)",
+            "TRIN 2: Betal dyr gæld (forbrugslån, kreditkort)",
+            "TRIN 3: Pensionstilskud (udnyt arbejdsgiver-match)",
+            "TRIN 4: Langsigtede mål (bolig, bil, ferie)",
+            "TRIN 5: Investering (aktier/fonde - kun overskud)"
+          ],
+          "where_to_save": {
+            "noed_opsparing": "Højrentekonto (let tilgængelig)",
+            "pension": "Pensionsselskab via arbejdsgiver",
+            "langsigtede_maal": "Målopsparing i bank",
+            "investering": "Aktiedepot (Nordnet, Saxo) - KUN hvis du kan tåle tab"
+          }
+        },
+
+        "investering_basis": {
+          "title": "Investering for begyndere",
+          "type": "Guide (text)",
+          "philosophy": "Invester KUN overskud - aldrig nødopsparing eller penge du skal bruge om 1-2 år",
+          "basics": {
+            "aktier": "Ejerandel i virksomhed - kan stige/falde",
+            "fonde": "Kurv af mange aktier - spredt risiko",
+            "etf": "Billige index-fonde (fx følger S&P 500)",
+            "risiko": "Højere potentiale = højere risiko for tab"
+          },
+          "how_to_start": [
+            "1. Åbn aktiedepot (Nordnet/Saxo)",
+            "2. Start lille (500-1000 kr/måned)",
+            "3. Køb bred index-fond (fx MSCI World ETF)",
+            "4. Glem det i 10+ år (langsigtet!)",
+            "5. Lær undervejs - læs, følg finans-blogs"
+          ],
+          "reality_check": "Du kan tabe penge. Hvis du panikker når det falder 20% → lad være med at investere endnu."
+        }
+      }
+    },
+
+    "3_forsikringer": {
+      "title": "🛡️ Forsikringer Forklaret",
+      "description": "Hvilke forsikringer skal du have - og hvilke kan du springe over?",
+      
+      "skabeloner": {
+        "forsikring_tjekliste": {
+          "title": "Forsikringstjekliste - Hvad har du brug for?",
+          "type": "PDF checklist",
+          "generator": true,
+          "categories": {
+            "nødvendige": [
+              "☐ Indbo-forsikring (dækker dine ting ved indbrud/brand/vandskade)",
+              "☐ Ansvarsforsikring (dækker hvis du beskadiger andres ting)",
+              "☐ Bilforsikring: Ansvar (LOVKRAV hvis du har bil)"
+            ],
+            "anbefalede": [
+              "☐ Privat ulykkesforsikring (invaliditet ved ulykke)",
+              "☐ Rejseforsikring (hvis du rejser)",
+              "☐ Sundhedsforsikring (hurtigere adgang til behandling)",
+              "☐ Bilforsikring: Kasko (dækker din egen bil)"
+            ],
+            "overvejet": [
+              "☐ Livsforsikring (hvis du har børn/partner)",
+              "☐ Kritisk sygdom (hvis du har hus/stor gæld)",
+              "☐ Husforsikring (hvis du ejer bolig)"
+            ],
+            "spring_over": [
+              "☐ Elektronik-forsikring (ofte dyrere end reparation)",
+              "☐ Mobil-forsikring (es du pas på mobilen)",
+              "☐ Tand-forsikring (oftest ikke pengene værd)"
+            ]
+          },
+          "sarah_help": "Fortæl Sarah din situation → hun anbefaler hvilke forsikringer DU har brug for"
+        },
+
+        "indbo_guide": {
+          "title": "Indbo-forsikring - Hvad dækker den?",
+          "type": "Guide",
+          "covers": [
+            "Indbrud/tyveri",
+            "Brand",
+            "Vandskade (fra rør, ikke oversvømmelse)",
+            "Hærværk",
+            "Lyn/stormskade"
+          ],
+          "covers_NOT": [
+            "Skader du selv laver (tabte mobil, spildte kaffe)",
+            "Slitage (gammel sofa bryder sammen)",
+            "Kæledyrsskader (kat ridser sofa)"
+          ],
+          "price": "150-300 kr/måned - afhænger af værdi af dine ting",
+          "sarah_advice": "Lav liste over dine ting - hvis samlet værdi over 50.000 kr → HELT SIKKERT få indbo"
+        },
+
+        "privat_ulykke": {
+          "title": "Privat ulykkesforsikring - Er det pengene værd?",
+          "type": "Guide",
+          "what": "Dækker hvis du bliver invalid pga. ulykke (ikke sygdom)",
+          "pays_out": [
+            "Engangsbeløb ved invaliditet (50.000 - 500.000+ kr afhængig af grad)",
+            "Evt. månedlig ydelse"
+          ],
+          "price": "100-200 kr/måned",
+          "who_needs": [
+            "Fysisk arbejde (tømrer, mekaniker)",
+            "Aktiv sport (fodbold, cykling, klatring)",
+            "Ung voksen uden opsparing (kan ikke tåle at miste indkomst)"
+          ],
+          "who_can_skip": [
+            "Skrivebordsjob + forsigtig livsstil",
+            "Stor opsparing der kan dække tab af indkomst"
+          ],
+          "reality_check": "Det er sjældent man bliver invalid af ulykke - men HVIS det sker, kan det ødelægge økonomi. Vær ærlig om din risiko."
+        },
+
+        "bil_forsikring": {
+          "title": "Bilforsikring - Ansvar vs. Kasko",
+          "type": "Guide",
+          "ansvar": {
+            "what": "Dækker skader du laver på ANDRES biler/ting",
+            "lovkrav": "JA - kan ikke køre bil uden",
+            "price": "3.000-8.000 kr/år (afhænger af alder, bil, record)"
+          },
+          "kasko": {
+            "what": "Dækker skader på DIN bil (også ved din fejl)",
+            "lovkrav": "NEJ - frivilligt",
+            "price": "+2.000-10.000 kr/år",
+            "delkasko": "Dækker brand, tyveri, hærværk - IKKE kollision",
+            "helkasko": "Dækker ALT - også hvis du kører galt selv"
+          },
+          "decision_guide": {
+            "gammel_bil": "(under 30.000 kr værdi) → Spring kasko over - ved totalskade får du ikke meget",
+            "ny_bil": "(over 100.000 kr) → Helkasko anbefalet - stor økonomisk tab ved skade",
+            "mellem": "(30-100k) → Delkasko OK kompromis"
+          }
+        }
+      }
+    },
+
+    "4_skat_myndigheder": {
+      "title": "📋 Skat & Myndigheder",
+      "description": "Forskudsskat, årsopgørelse, kommune-kontakt",
+      
+      "skabeloner": {
+        "forskudsskat_guide": {
+          "title": "Forskudsskat - Hvad er det?",
+          "type": "Guide",
+          "what": "Skat du betaler INDEN du ved præcis hvor meget du skylder (gæt på din indkomst)",
+          "why": "Så du ikke får kæmpe regning når årsopgørelse kommer",
+          "how": [
+            "Skat.dk → Forskudsopgørelse",
+            "Angiv forventet indkomst næste år",
+            "Skat beregner hvor meget der trækkes hver måned",
+            "Arbejdsgiver trækker automatisk i løn"
+          ],
+          "when_to_adjust": [
+            "Nyt job (højere/lavere løn)",
+            "Ekstra indkomst (freelance, aktiegevinst)",
+            "Fradrag ændret (kørsel, fagforening)",
+            "Børn født (større fradrag)"
+          ],
+          "reality_check": "Sæt forskudsskat lidt HØJERE end du tror → få penge tilbage (dejligt!) i stedet for kæmpe regning"
+        },
+
+        "aarsopgoerelse_guide": {
+          "title": "Årsopgørelse - Læs dette først!",
+          "type": "PDF guide + checklist",
+          "when": "Kommer i marts (foregående års skat)",
+          "what_to_check": [
+            "☐ Er din indkomst korrekt? (check lønsedler)",
+            "☐ Er dit fradrag med? (A-kasse, fagforening, kørsel)",
+            "☐ Ejer du aktier? Er gevinst/tab rapporteret?",
+            "☐ Restskat eller overskydende? (skal du betale eller få penge?)"
+          ],
+          "if_wrong": [
+            "Log ind på Skat.dk → Ret årsopgørelse",
+            "Tilføj manglende fradrag",
+            "Hvis stor fejl → ring til Skat (tlf: 72 22 28 92)"
+          ],
+          "restskat": {
+            "what": "Du skylder mere skat (din forskudsskat var for lav)",
+            "payment": "Skal betales over 3 rater + renter",
+            "avoid_next_year": "Hæv din forskudsskat"
+          },
+          "overskydende": {
+            "what": "Du får penge tilbage (din forskudsskat var for høj)",
+            "payment": "Udbetales automatisk til NemKonto"
+          }
+        },
+
+        "kommune_kontakt_skabelon": {
+          "title": "Kontakt til kommune - Skabelon",
+          "type": "DOCX template",
+          "generator": true,
+          "use_cases": [
+            "Ansøgning om børnepasning",
+            "Klage over renovation",
+            "Spørgsmål om byggegodkendelse",
+            "Ansøgning om boligstøtte (supplerer borger.dk)"
+          ],
+          "template_structure": {
+            "header": "[Brugerens navn og adresse]\n[Dato]",
+            "to": "[Kommune] - [Relevant afdeling]",
+            "subject": "Vedr.: [Emne]",
+            "body": "Jeg henvender mig vedrørende [specifik sag].\n\n[Situationsbeskrivelse]\n\n[Hvad søger/spørger du om]\n\n[Dokumentation vedlagt]",
+            "footer": "Med venlig hilsen,\n[Navn]\n[Kontaktinfo]"
+          },
+          "sarah_generates": "Personaliseret brev baseret på brugerens sag"
+        }
+      }
+    },
+
+    "5_svindel_sikkerhed": {
+      "title": "⚠️ Svindel & Sikkerhed",
+      "description": "KRITISK: Sarah's brugere er sårbare - beskyt dem mod bedrageri",
+      
+      "skabeloner": {
+        "mobilsvindel_guide": {
+          "title": "ADVARSEL: Mobilsvindel - Spot det!",
+          "type": "PDF guide (VIGTIG!)",
+          "common_scams": {
+            "falsk_sms": {
+              "example": "'Din pakke venter - klik her for at betale told'",
+              "red_flags": [
+                "Link i SMS (ALDRIG klik!)",
+                "Beder om betaling/login",
+                "Dårlig dansk/stavefejl",
+                "Skaber panik ('handling nødvendig NU')"
+              ],
+              "what_to_do": "SLET beskeden. Ring ALDRIG tilbage. Hvis det var vigtigt, kontakter de dig igen."
+            },
+            "falsk_opkald": {
+              "example": "'Vi ringer fra din bank - sikkerhedsproblem med dit kort'",
+              "red_flags": [
+                "Beder om pinkode/NemID",
+                "Presser dig til at handle NU",
+                "Lyder professionel men skaber stress"
+              ],
+              "what_to_do": "Læg på. Ring SELV til din bank på nummer fra deres hjemmeside."
+            },
+            "mobilepay_svindel": {
+              "example": "'Køber' sender dig penge, men beder dig sende dem tilbage (fordi 'forkert beløb')",
+              "trick": "De sender fra stjålet konto - når det opdages, trækkes DIN betaling tilbage",
+              "what_to_do": "ALDRIG send penge tilbage via MobilePay. Bed dem kontakte MobilePay support."
+            }
+          },
+          "golden_rule": "Hvis det føles forkert - det ER forkert. Bed om tid til at tænke. Svindlere presser dig."
+        },
+
+        "kontrakt_tjekliste": {
+          "title": "Før du skriver under - Tjek dette!",
+          "type": "PDF checklist",
+          "applies_to": ["Lejekontrakt", "Lån", "Abonnement", "Køb/salg"],
+          "checklist": [
+            "☐ Er prisen klar? (månedlig ydelse, samlet beløb, renter)",
+            "☐ Er der binding? (hvor længe kan du ikke opsige?)",
+            "☐ Hvad koster det at komme ud? (opsigelse, gebyr)",
+            "☐ Hvad sker ved misligholdelse? (hvis du ikke kan betale)",
+            "☐ Er der skjulte gebyrer? (oprettelse, administration)",
+            "☐ Forstår du ALLE ord i kontrakten? (hvis NEJ → få hjælp!)",
+            "☐ Har du læst HELE kontrakten? (også det små med småt)",
+            "☐ Har du talt med uafhængig person? (ven, familie, rådgiver)"
+          ],
+          "red_flags": [
+            "🚩 'Du skal beslutte dig NU' → NEJ - seriøse firmaer giver dig tid",
+            "🚩 'Denne tilbud er kun i dag' → Klassisk sales-trick",
+            "🚩 Kan ikke forklare simpelt → De gemmer noget",
+            "🚩 Presser dig til at skrive under uden at læse → Gå din vej"
+          ]
+        },
+
+        "koeb_salg_sikkerhed": {
+          "title": "Køb/salg online - Beskyt dig selv",
+          "type": "Guide",
+          "platforms": "DBA, Facebook Marketplace, Trendsales, osv.",
+          "safe_practices": [
+            "MØD OFFENTLIGT (aldrig privat adresse første gang)",
+            "Tag ven med (sikkerhed i antal)",
+            "Brug MobilePay KUN ved møde (aldrig før du ser varen)",
+            "Tjek varen INDEN du betaler",
+            "Få kvittering/dokumentation (screenshot af aftale)",
+            "Trust your gut (føles det forkert → gå)"
+          ],
+          "scams_to_avoid": [
+            "Betaling før møde ('send 500 kr nu, så mødes vi i morgen') → NEJ",
+            "Forsendelse uden tracking ('bare overfør, så sender jeg') → NEJ",
+            "'Køber' beder dig klikke link → Phishing",
+            "Pris for god til at være sand → Det ER det"
+          ]
+        }
+      }
+    },
+
+    "6_bolig_advokat": {
+      "title": "🏡 Bolig & Advokatbistand",
+      "description": "Boligkøb, lejekontrakt, hvornår du har brug for advokat",
+      
+      "skabeloner": {
+        "lejekontrakttjekliste": {
+          "title": "Lejekontrakt - Læs dette først!",
+          "type": "PDF checklist",
+          "before_signing": [
+            "☐ Husleje: Hvad er inkluderet? (vand, varme, el?)",
+            "☐ Depositum: Hvor meget? Hvornår får du det tilbage?",
+            "☐ Opsigelse: Hvor lang varsel? (3 måneder typisk)",
+            "☐ Vedligehold: Hvem betaler hvad? (maling, smårepara)",
+            "☐ Fremleje: Må du fremleje hvis du rejser?",
+            "☐ Kæledyr: Er de tilladt?",
+            "☐ Besigtigelse: Lav indflytningsrapport MED billeder!"
+          ],
+          "red_flags": [
+            "🚩 Ingen skriftlig kontrakt → ALDRIG lej uden",
+            "🚩 Depositum over 3 måneders husleje → Ulovligt",
+            "🚩 'Sort' husleje → Problemer ved uenighed",
+            "🚩 Udlejer nægter besigtigelse → Du risikerer at betale for skader du ikke lavede"
+          ]
+        },
+
+        "boligkoeb_guide": {
+          "title": "Boligkøb - Hvad skal du vide?",
+          "type": "Guide (multi-page)",
+          "steps": [
+            "1. ØKONOMI: Få banken til at godkende lån (hvor meget kan du låne?)",
+            "2. FIND BOLIG: Ejendomsmægler, Boligsiden.dk, Boliga.dk",
+            "3. BESIGTIGELSE: Tag EN ANDEN med (ven der kan bygge/bo)",
+            "4. TILSTANDSRAPPORT: Læs den! (hvad er i stykker?)",
+            "5. BYD: Sæt vilkår (fx 'hvis lån godkendes')",
+            "6. ADVOKAT: FÅ ADVOKAT! (de tjekker kontrakt - vital)",
+            "7. KØBSAFTALE: Underskriv KUN efter advokat har OK'et",
+            "8. LÅN: Finalisér med bank",
+            "9. SKØDE: Advokat sørger for det",
+            "10. NØGLER: Du ejer nu! Forsikring + folkeregister"
+          ],
+          "costs_expect": {
+            "kontantindskud": "5-20% af pris (resten er lån)",
+            "advokat": "10.000-20.000 kr",
+            "tinglysning": "1.660 kr + stempelafgift (0.6% af pris)",
+            "boligadvokat": "Advokat tjekker købekontrakt"
+          }
+        },
+
+        "hvornaar_advokat": {
+          "title": "Hvornår har du brug for advokat?",
+          "type": "Guide",
+          "always": [
+            "Boligkøb (hus/lejlighed) → ALTID advokat",
+            "Skilsmisse med børn/ejendom → ALTID advokat",
+            "Arvesag med uenighed → ALTID advokat",
+            "Fyring fra job (kontroversiel) → Overvej advokat"
+          ],
+          "maybe": [
+            "Kontrakttvist (hvis beløb over 50.000 kr)",
+            "Nabo-konflikt (byggetilladelse, hegn)",
+            "Forsikringssag (hvis afvist og stort beløb)"
+          ],
+          "probably_not": [
+            "Simpel lejekontrakt → Læs selv + spørg LLO/Lejernes Landsorganisation",
+            "Mindre forbrugersag → Forbrugerombudsmanden"
+          ],
+          "how_to_find": [
+            "Advokatsamfundet.dk (find advokat efter speciale)",
+            "Retshjælpen (gratis hvis lav indkomst)",
+            "Fagforening (inkluderet i nogle)"
+          ],
+          "cost": "1.500-3.000 kr/time - ofte fast pris for simple sager"
+        }
+      }
+    },
+
+    "7_revisor_skat_avanceret": {
+      "title": "🧾 Revisor & Avanceret Skat",
+      "description": "Hvornår har du brug for revisor? Selvstændig, virksomhed",
+      
+      "skabeloner": {
+        "hvornaar_revisor": {
+          "title": "Har du brug for revisor?",
+          "type": "Guide",
+          "who_needs": [
+            "Selvstændig/virksomhed → JA (hjælper med regnskab, moms, skat)",
+            "Kompliceret økonomi (ejendomme, aktier, udenlandsk indkomst) → Ja",
+            "Høj indkomst (over 1 mio/år) → Overvej (optimering)",
+            "Stifter ApS/A/S → JA (påkrævet for revisor-erklæring)"
+          ],
+          "who_doesnt": [
+            "Almindelig lønmodtager → NEJ (skat.dk kan du selv)",
+            "Studerende med SU + studiejob → NEJ"
+          ],
+          "what_revisor_does": [
+            "Regnskab (bogføring, årsregnskab)",
+            "Momsafregning",
+            "Selvangivelse (især kompliceret)",
+            "Rådgivning (skatte-optimering, fradrag)",
+            "Virksomheds-struktur (skal du have ApS?)"
+          ],
+          "cost": "5.000-30.000+ kr/år afhængig af kompleksitet"
+        },
+
+        "selvstaendig_basis": {
+          "title": "Selvstændig - Hvad skal du vide om skat?",
+          "type": "Guide",
+          "basics": {
+            "moms": "Skal du registreres? (JA hvis omsætning over 50.000 kr/år)",
+            "b_skat": "Du betaler SELV skat (ikke trukket automatisk)",
+            "forskudsskat": "Sæt det op på Skat.dk - ellers KÆMPE regning",
+            "fradrag": "Hjemmekontor, udstyr, kørsel, telefon - GEM KVITTERINGER"
+          },
+          "common_mistakes": [
+            "Glemmer at sætte penge til side til skat → Økonomisk krise",
+            "Blander privat + erhverv økonomi → Kaos ved regnskab",
+            "Glemmer momsafregning → Bøde",
+            "Ingen kvitteringer → Kan ikke trække fra"
+          ],
+          "sarah_advice": "Find revisor FØR du starter - de sparer dig for ENORME hovedpiner"
+        }
+      }
+    }
+  },
+
+  "generator_functionality": {
+    "description": "Sarah kan generere faktiske dokumenter baseret på brugerens input",
+    
+    "supported_formats": {
+      "PDF": "Checklister, guides, print-venlige dokumenter",
+      "DOCX": "Skabeloner brugeren skal udfylde (ansøgninger, breve)",
+      "XLSX": "Budgetter, regneark med formler"
+    },
+
+    "workflow": {
+      "user_request": "Bruger siger: 'Jeg har brug for budget-skabelon'",
+      "sarah_asks": "Sarah spørger: Hvad er din situation? (Studerende/arbejde/familie)",
+      "sarah_generates": "Sarah laver personaliseret XLSX budget med brugerens tal",
+      "sarah_delivers": "Download-link + forklaring af hvordan den bruges"
+    },
+
+    "personalization": {
+      "remembers": "Sarah husker tidligere samtaler om økonomi, job, bolig",
+      "adapts": "Skabeloner tilpasses diagnose (ADHD → mere struktur, Angst → step-by-step)",
+      "guides": "Sarah forklarer ikke bare - hun hjælper med at UDFYLDE"
+    }
+  },
+
+  "sarah_role": {
+    "guide": "Sarah forklarer komplekse ting simpelt",
+    "protector": "Sarah advarer mod svindel og dårlige beslutninger",
+    "generator": "Sarah laver faktiske dokumenter - ikke bare teori",
+    "rememberer": "Sarah husker hvad brugeren har fortalt",
+    "friend": "Sarah er ærlig men støttende - 'lad os finde ud af det sammen'"
+  },
+
+  "critical_reminders": {
+    "vulnerability": "Sarah's brugere er SÅRBARE - især for svindel. Vær ekstra beskyttende.",
+    "simplicity": "Forklar som til en der aldrig har hørt om det før",
+    "patience": "Neurodivergente kan have brug for gentagelse - det er OK",
+    "empowerment": "Målet er at gøre brugeren SELVSTÆNDIG - ikke afhængig",
+    "honesty": "Vær ærlig om omkostninger, risici, tid - ingen overraskelser"
+  }
+}
