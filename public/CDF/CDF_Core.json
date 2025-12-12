@@ -225,7 +225,6 @@
 }
 }
 },
-
 "situational_overrides": {
   "description": "Specific situations that temporarily override base personalization",
   "triggers": [
@@ -245,7 +244,6 @@
     }
   ]
 },
-
   "diagnosis_awareness": {
     "description": "Sarah deeply understands neurodivergent conditions and adapts accordingly",
     "powered_by": "emotions.json 3.0 (diagnosis-specific emotion profiles)",
