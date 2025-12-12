@@ -1,0 +1,229 @@
+{
+  "module_info": {
+    "id": "BrugerProfil",
+    "title": "Bruger Profil & Personlige Data",
+    "version": "1.0",
+    "description": "Indeholder brugerens personlige information, familie, venner og præferencer. Sarah loader denne ved opstart for at kende brugeren bedre."
+  },
+
+  "bruger": {
+    "navn": "Emma",
+    "alder": 24,
+    "fødselsdato": "1999-03-15",
+    "køn": "Kvinde",
+    "bopæl": "København, Nørrebro",
+    
+    "diagnoser": [
+      {
+        "diagnose": "ADHD",
+        "diagnosticeret": "2018",
+        "type": "Combined type (inattentive + hyperactive)"
+      },
+      {
+        "diagnose": "Angst",
+        "diagnosticeret": "2020",
+        "type": "Generaliseret angst + social angst"
+      }
+    ],
+    
+    "medicin": [
+      {
+        "navn": "Ritalin",
+        "dosis": "20mg morgen, 10mg middag",
+        "formål": "ADHD - fokus og impulskontrol"
+      },
+      {
+        "navn": "Escitalopram",
+        "dosis": "10mg dagligt",
+        "formål": "Angst"
+      }
+    ],
+    
+    "triggers": [
+      "Pludselige planændringer",
+      "Højlydte stemmer/skænderier",
+      "Sociale events med mange ukendte",
+      "Kritik (RSD trigger)"
+    ],
+    
+    "styrker": [
+      "Kreativ - elsker at tegne og skrive",
+      "Empatisk - god til at forstå andres følelser",
+      "Hyperfokus når interesseret"
+    ],
+    
+    "udfordringer": [
+      "Hukommelse - glemmer aftaler og opgaver",
+      "Prokrastinering ved 'kedelige' opgaver",
+      "Social udmattelse efter events",
+      "Svært ved at sige nej"
+    ]
+  },
+
+  "ai_navn": "Sarah",
+  
+  "ai_præferencer": {
+    "tone": "balanced",
+    "tone_note": "Direkte når nødvendigt, men generelt varm og støttende",
+    "sprog": "dansk",
+    "emoji_brug": "moderat",
+    "response_længde": "medium",
+    "push_level": 7,
+    "push_note": "Emma har brug for gentle push - hun undgår ting pga. angst, men responderer godt på støttende udfordring"
+  },
+
+  "daglig_rutine": {
+    "morgen": {
+      "opvågning": "08:00 (svært - bruger alarm + lys)",
+      "medicin": "Ritalin + Escitalopram med morgenmad",
+      "morgenmad": "Havregryn eller toast (selektiv spiser)",
+      "rutine_note": "Morgen er hård - needs structure + gentle start"
+    },
+    "arbejde_studie": {
+      "type": "Deltidsjob - grafisk designer + studie (Digital Design)",
+      "arbejdstider": "Mandag-onsdag 10-15, studie torsdag-fredag",
+      "transport": "Cykel 20 min",
+      "udfordringer": "Svært at komme afsted hvis angst høj"
+    },
+    "aften": {
+      "aftensmad": "18:00-19:00 (ofte takeaway hvis træt)",
+      "fritid": "Tegne, Netflix, gaming",
+      "sengetid": "23:00 (men ligger vågen til 01:00 often)",
+      "rutine_note": "Svært at slappe af - hjerne kører stadig"
+    }
+  },
+
+  "familie": {
+    "partner": {
+      "navn": "Lucas",
+      "alder": 26,
+      "relation": "Kæreste i 2 år",
+      "bor_sammen": true,
+      "noter": "Støttende, neurotypisk, forstår ikke altid ADHD/angst men prøver. Kan blive frustreret når Emma glemmer ting."
+    },
+    
+    "forældre": {
+      "mor": {
+        "navn": "Hanne",
+        "alder": 52,
+        "relation": "God - taler sammen ugentligt",
+        "noter": "Bekymret for Emma's angst, kan være lidt overbeskyttende"
+      },
+      "far": {
+        "navn": "Peter",
+        "alder": 55,
+        "relation": "Okay - ikke så tæt",
+        "noter": "Forstår ikke psykiske udfordringer - 'bare tag dig sammen' type"
+      }
+    },
+    
+    "søskende": [
+      {
+        "navn": "Sofie",
+        "alder": 19,
+        "relation": "Lillesøster - meget tæt",
+        "noter": "Også ADHD - de forstår hinanden godt"
+      }
+    ],
+    
+    "børn": []
+  },
+
+  "venner_netværk": [
+    {
+      "navn": "Mia",
+      "alder": 25,
+      "relation": "Bedste ven siden gymnasiet",
+      "kontakt_frekvens": "Ugentligt - text dagligt",
+      "noter": "Også neurodivergent (autisme) - forstår hinanden perfekt"
+    },
+    {
+      "navn": "Oliver",
+      "alder": 24,
+      "relation": "Studiekammerat",
+      "kontakt_frekvens": "2-3 gange om ugen",
+      "noter": "Studiegruppe - god til at holde Emma accountable"
+    }
+  ],
+
+  "økonomi": {
+    "indtægt_kilde": "Deltidsjob (8.000 kr/md) + SU (6.500 kr/md)",
+    "total_månedlig": "14.500 kr",
+    "faste_udgifter": "11.000 kr (husleje 6.500, transport 500, forsikring 300, medicin 200, abonnementer 500, mad 3.000)",
+    "rest_til_opsparing": "3.500 kr",
+    "økonomisk_status": "Tight men OK - lille opsparing (15.000 kr)",
+    "bekymringer": "Angst for at miste job - økonomisk sårbar"
+  },
+
+  "sundhed": {
+    "læge": {
+      "navn": "Dr. Hansen",
+      "kontakt": "Ved nærmeste sundhedscenter"
+    },
+    "psykolog": {
+      "navn": "Anne",
+      "frekvens": "Hver 2. uge",
+      "type": "KBT for angst"
+    },
+    "tandlæge": {
+      "sidste_besøg": "2024-06",
+      "næste": "2025-06"
+    },
+    "motion": "Yoga 1x/uge (hjælper angst), cykling dagligt",
+    "kost": "Selektiv spisning - safe foods: pasta, pizza, havregryn, frugt. Undgår: fisk, de fleste grøntsager",
+    "søvn": "Svært at falde i søvn - ligger vågen med tanker. 5-6 timers søvn typisk."
+  },
+
+  "sarah_kontekst": {
+    "description": "Denne information hjælper Sarah med at forstå Emma og give bedre støtte",
+    
+    "vigtige_pointer": [
+      "Emma masker meget - siger ofte 'jeg har det fint' selvom hun kæmper",
+      "RSD trigger ved selv mild kritik - vær forsigtig men ærlig",
+      "Prokrastinerer pga. angst (ikke dovenskab) - hjælp med at bryde opgaver ned",
+      "Glemmer ting konstant - gentle reminders hjælper",
+      "Social udmattelse reel - respektér når hun siger nej til events",
+      "Lucas forstår ikke altid - kan være kilde til stress",
+      "Sofie (søster) er safe person - reference hende når Emma føler sig alene"
+    ],
+    
+    "mål": [
+      "Bedre søvnrutine (før 23:30 i seng)",
+      "Sige nej til ting uden skyldfølelse",
+      "Øge selvværd (ikke internalisere fejl som 'jeg er dårlig')",
+      "Færdiggøre studie (1 år tilbage)",
+      "Spare op til rejse med Lucas (mål: 20.000 kr)"
+    ],
+    
+    "hvad_virker": [
+      "Små skridt - micro-tasks",
+      "Body doubling (arbejde sammen med nogen - selv virtuelt)",
+      "Struktur men med fleksibilitet",
+      "Validation af følelser før problem-solving",
+      "Gentle accountability (ikke judgmental)"
+    ],
+    
+    "hvad_virker_IKKE": [
+      "'Bare gør det' - øger angst",
+      "Sammenligning med andre",
+      "For mange ting på én gang",
+      "Skam-baseret motivation"
+    ]
+  },
+
+  "special_dates": {
+    "fødselsdag": "15. marts",
+    "anniversaries": [
+      {
+        "hvad": "Sammen med Lucas",
+        "dato": "14. februar 2023"
+      }
+    ],
+    "vigtige_deadlines": [
+      {
+        "hvad": "Eksamensperiode",
+        "hvornår": "Maj-juni årligt"
+      }
+    ]
+  }
+}
