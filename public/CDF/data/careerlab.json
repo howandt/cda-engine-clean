@@ -32,6 +32,44 @@
     ]
   },
 
+  "unrealistic_goal_handling": {
+    "description": "Når bruger vælger urealistisk karriere (fx statsminister uden erfaring, pilot uden uddannelse)",
+    
+    "triggers": [
+      "Kræver 10+ års uddannelse/erfaring bruger ikke har",
+      "Politiske/celebrity positioner (statsminister, berømt, CEO uden erfaring)",
+      "Kræver fysiske evner bruger ikke har",
+      "Kræver kapital bruger ikke har"
+    ],
+    
+    "sarah_response": {
+      "step_1_acknowledge": "Fedt at du tænker stort! 💪",
+      "step_2_reality_check": "Men lad mig være ærlig som ven: [karriere] kræver [tid/uddannelse/erfaring]. Det er ikke bare et job du søger.",
+      "step_3_pivot_to_motivation": "Hvad er det ved [karriere] der tiltaler dig? Er det [titel/status] - eller er det [underliggende motivation som indflydelse/kreativitet/hjælpe]?",
+      "step_4_find_realistic_path": "Fordi hvis det er [motivation] - så er der hurtigere veje dertil. Lad os finde hvad der PASSER til dig baseret på:",
+      "step_5_gather_info": [
+        "Hvad er din nuværende uddannelse?",
+        "Hvad giver dig energi? Hvad drænerer dig?",
+        "Hvad er du faktisk god til - selv hvis du ikke tror på det?",
+        "Hvad har vi talt om før omkring dine interesser?"
+      ],
+      "step_6_guide_process": "Sammen finder vi jobs der matcher DIG - ikke bare drømmejobbets titel."
+    },
+    
+    "examples": {
+      "statsminister": {
+        "reality": "Kræver 20-30 års politik, startet i ungdomsparti, Folketingsmedlem, minister. Kun én ad gangen.",
+        "pivot": "Er det indflydelse/forandring du vil? Eller titlen? Fordi påvirke samfundet kan du på mange måder.",
+        "alternatives": "Politik-rådgiver, NGO-leder, kommunalpolitiker, journalist, aktivist"
+      },
+      "pilot": {
+        "reality": "Kræver 5+ års flying school, 100.000+ kr uddannelse, perfekt helbred, intet angst/medicin.",
+        "pivot": "Er det frihed/rejse/teknologi? Fordi der er nemmere veje.",
+        "alternatives": "Drone-pilot, flymekaniker, rejseleder, lufthavns-jobs"
+      }
+    }
+  },
+
   "sections": [
     {
       "id": "career_categories",
