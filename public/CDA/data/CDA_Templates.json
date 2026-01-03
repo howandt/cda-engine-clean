@@ -2,9 +2,9 @@
   "template_database": {
     "metadata": {
       "system": "CDA/CDT",
-      "version": "2025.2",
-      "total_templates": 12,
-      "last_updated": "2025-11-02",
+      "version": "2025.3",
+      "total_templates": 16,
+      "last_updated": "2026-01-03",
       "creator": "Howandt - 72 år, 65 år med ADHD/Aspergers, 9000+ timer udvikling",
       "philosophy": "Børn skal ikke passe til skolen, skolen skal passe til børnene"
     },
@@ -326,6 +326,330 @@
         "specialist_ideal_solution": "CDA-panelet anbefaler en kombineret indsats: Psykologen fokuserer på angst- og kontrolstrategier, ergoterapeuten på sensorisk ro og faste rutiner, socialrådgiveren på koordinering med hjemmet og kommunen. Sammen skaber de en helhedsplan med fokus på gradvis eksponering og tryghedsskabende miljø.",
         "cda_synthesis": "Barnet viser skolevægring som udtryk for overbelastning og mistet forudsigelighed. Den bedste indsats er ikke pres, men struktureret genopbygning af tillid. Samarbejdet skal være dagligt, konkret og uden skyld. Fokus: relation, gentagelse og langsom fremgang.",
         "learning_reflection": "Denne case viser, at skolevægring sjældent løses gennem krav eller regler, men gennem relationel tryghed og stabile voksne. Systemet har lært, at indsatsen skal prioriteres før fraværsregistrering — og at små succeser gentaget mange gange er nøglen til varig tilbagevenden."
+      },
+      {
+    "id": "konflikt_kulturel_bro",
+    "title": "Konflikt-Mediator: Kulturel Bro-Bygger",
+    "category": "konflikt_mediator",
+    "subcategory": "kulturel_forstaelse",
+    "tags": [
+      "konflikt",
+      "kulturel",
+      "skole-hjem",
+      "forståelse",
+      "integration",
+      "kommunikation"
+    ],
+    "age_range": [3, 18],
+    "diagnoses": ["alle diagnoser"],
+    "complexity": "intermediate",
+    "usage_frequency": "as_needed",
+    "urgency": "moderate",
+    "ai_specialists": [
+      {
+        "name": "AI-kulturel mediator Fatima Hassan",
+        "expertise": "tværkulturel kommunikation og integration",
+        "specialties": [
+          "kulturel forståelse",
+          "skole-hjem bro",
+          "oversættelse af forventninger"
+        ]
+      },
+      {
+        "name": "AI-socialrådgiver Maja Holm",
+        "expertise": "systemisk arbejde og kommunikation",
+        "specialties": [
+          "konfliktløsning",
+          "samarbejdsfacilitering"
+        ]
+      }
+    ],
+    "content": {
+      "purpose": "Bygger forståelsesbro mellem dansk skolesystem og familier med anden kulturel baggrund",
+      "description": "Mediator der forklarer dansk skolepraksis og kulturelle forventninger på en respektfuld måde",
+      "use_cases": [
+        "Familie forstår ikke dansk skoles krav til forældreansvar",
+        "Kulturelle misforståelser om kønsroller eller autoritet",
+        "Sprogbarrierer der skaber konflikt",
+        "Forskellige forventninger til opdragelse"
+      ],
+      "components": [
+        "Forklaring af dansk skolepraksis",
+        "Kulturel kontekst til lærer",
+        "Brobygning mellem perspektiver",
+        "Praktisk handlingsplan"
+      ],
+      "benefits": [
+        "Reducerer misforståelser",
+        "Skaber gensidig respekt",
+        "Forbedrer samarbejde",
+        "Forebygger eskalering"
+      ],
+      "teacher_experience": "fh: 'Kulturel mediator hjalp tyrkisk familie forstå at dansk skole ser opdragelse som partnerskab - ikke kritik'"
+    },
+    "search_keywords": [
+      "kulturel konflikt",
+      "integration",
+      "forældre forstår ikke",
+      "anden baggrund",
+      "muslim",
+      "tyrkisk",
+      "arabisk",
+      "sprogbarriere",
+      "kulturforskelle"
+    ],
+    "related_templates": [
+      "kommunikationslog",
+      "konflikt_lov_praksis"
+    ],
+    "command_triggers": [
+      "Kulturel konflikt",
+      "Kulturel mediator",
+      "Integration skole"
+    ],
+    "variables": {
+      "required": ["child_name", "family_background"],
+      "optional": ["specific_concern", "language_barrier"]
+    },
+    "template_markdown": "# 🌍 Kulturel Bro-Bygger\n\n**Barn:** {child_name}\n**Familiens baggrund:** {family_background}\n**Sprog:** {language_barrier ? Tolk-funktion aktiveret i {language_barrier} : Dansk}\n\n---\n\n## 🤝 TIL FORÆLDRE: Sådan fungerer dansk skole\n\n### Skole-hjem partnerskab i Danmark\n\nI Danmark ser vi opdragelse som et **samarbejde** mellem skole og hjem:\n\n**Skolens ansvar:**\n- Undervisning i fag\n- Sociale færdigheder\n- Trivsel i skoletiden\n\n**Forældres ansvar:**\n- Støtte læring hjemme\n- Sikre fremmøde\n- Kommunikere med skolen\n- Følge op på lektier\n\n{specific_concern ? ### Specifikt om: {specific_concern} : }\n\nDette er IKKE kritik af jeres kultur eller opdragelse.\nDet er sådan det danske skolesystem er bygget op.\n\n---\n\n## 👨‍🏫 TIL LÆRER: Kulturel kontekst\n\n**Familiens baggrund:** {family_background}\n\n### Typiske forskelle at være opmærksom på:\n\n**I {family_background} kultur:**\n- Skolen har ofte ALT ansvar for uddannelse\n- Forældre viser respekt ved IKKE at blande sig\n- Autoritetsfigurer (lærere) stilles ikke spørgsmål til\n- Far træffer ofte beslutninger, men mor kender barnet bedst\n\n**I dansk kultur:**\n- Forældre forventes aktivt at støtte læring\n- Dialog mellem skole og hjem er essentiel\n- Spørgsmål til lærer ses som engagement, ikke disrespekt\n\n### Hvad kan du gøre?\n\n1. **Forklar HVORFOR** (ikke bare HVAD)\n2. **Vær konkret**\n3. **Anerkend forskelle**\n\n---\n\n## 🔄 FÆLLES VEJ FREM\n\n**1. Fælles mål:** Vi vil alle at {child_name} trives og lærer\n\n**2. Forventningsafstemning:**\n- Skolen forventer: [konkret]\n- Forældrene har brug for: [konkret]\n\n**3. Praktisk aftale:**\n- Hvem gør hvad\n- Hvornår\n- Opfølgning om 1 måned\n\n---\n\n💡 **Mediator-erfaring (fh):** *\"Kulturel mediator hjalp tyrkisk familie forstå at dansk skole ser opdragelse som partnerskab - ikke kritik\"*"
+  },
+  {
+    "id": "konflikt_pbl_valg",
+    "title": "Konflikt-Mediator: PBL Valg-Guide",
+    "category": "konflikt_mediator",
+    "subcategory": "metode_uenighed",
+    "tags": [
+      "konflikt",
+      "PBL",
+      "praktisk læring",
+      "metode",
+      "adhd",
+      "motivation"
+    ],
+    "age_range": [6, 16],
+    "diagnoses": ["adhd", "autisme", "dcd", "uro"],
+    "complexity": "intermediate",
+    "usage_frequency": "as_needed",
+    "urgency": "moderate",
+    "ai_specialists": [
+      {
+        "name": "AI-PBL specialist Daniel Ayers",
+        "expertise": "projektbaseret læring og praktisk tilgang",
+        "specialties": [
+          "PBL-design",
+          "hands-on læring",
+          "motivation gennem praksis"
+        ]
+      },
+      {
+        "name": "AI-neuropsykolog Felix Møller",
+        "expertise": "ADHD og læringsstile",
+        "specialties": [
+          "neuropsykologisk forståelse",
+          "tilpasset undervisning"
+        ]
+      }
+    ],
+    "content": {
+      "purpose": "Løser konflikter om undervisningsmetode når forælder ønsker PBL men lærer er skeptisk",
+      "description": "Mediator der forklarer hvorfor praktisk læring fungerer og guider mod testforløb",
+      "use_cases": [
+        "Forælder vil have PBL-projekt, lærer afviser",
+        "Barn forstyrrer i klassen, forælder foreslår praktisk læring",
+        "Uenighed om barnet 'kan' vs 'vil ikke'",
+        "Barn elsker noget hjemme men lærer ser ikke relevans"
+      ],
+      "components": [
+        "Neuropsykologisk forklaring",
+        "3-lektioners testforløb",
+        "Barnets valg (30%)",
+        "Lærer observation (55%)",
+        "Forælder input (15%)"
+      ],
+      "benefits": [
+        "Forklarer HVORFOR praktisk læring virker",
+        "Lav-risiko test i stedet for diskussion",
+        "Barnet får medbestemmelse",
+        "Data-drevet beslutning"
+      ],
+      "teacher_experience": "da: 'PBL test-forløb viste at dreng der aldrig kunne sidde stille arbejdede fokuseret i 45 min på go-kart projekt'"
+    },
+    "search_keywords": [
+      "PBL konflikt",
+      "praktisk læring",
+      "lærer vil ikke",
+      "uroligt barn",
+      "kan ikke sidde stille",
+      "forælder lærer uenige"
+    ],
+    "related_templates": [
+      "konflikt_kulturel_bro",
+      "ugeplan_maal"
+    ],
+    "command_triggers": [
+      "PBL konflikt",
+      "Praktisk læring konflikt",
+      "Metode uenighed"
+    ],
+    "variables": {
+      "required": ["child_name", "child_age", "parent_suggestion", "teacher_concern"],
+      "optional": ["child_interest"]
+    },
+    "template_markdown": "# ⚙️ PBL Valg-Guide\n\n**Barn:** {child_name}, {child_age} år\n**Forældres forslag:** {parent_suggestion}\n**Lærers bekymring:** {teacher_concern}\n\n---\n\n## 🧠 TIL LÆRER: Hvorfor praktisk læring virker\n\nNår {child_name} løber rundt eller forstyrrer, er det IKKE \"ikke gider\".\n\n**Det er neurobiologi:**\n- ADHD-hjernen mangler dopamin til abstrakte opgaver\n- Praktisk læring giver bevægelse + konkrete resultater\n- Uro ≠ kan ikke lære\n- Uro = undervisning matcher ikke neurologisk profil\n\n---\n\n## 🧪 TEST-FORLØB (3 lektioner)\n\n### TRIN 1: Barnets Valg (30%)\n\n{child_name}, vælg ÉT projekt:\n☐ 🚜 Landmand\n☐ 🚲 Cykelværksted\n☐ 🏎️ Go-kart\n☐ 🌬️ Vindmølle\n\n### TRIN 2: Lærer Observerer (55%)\n\nObserver i 3 lektioner:\n- Fokus (1-5)\n- Uro (1-5)\n- Engagement (1-5)\n\n### TRIN 3: Forælder Input (15%)\n\n- Taler barnet positivt om det?\n- Viser stolthed?\n\n### TRIN 4: Beslutning\n\nBaseret på DATA, ikke meninger:\n- Hvis det virkede → Fortsæt\n- Hvis ikke → Prøv andet projekt\n\n---\n\n💡 **PBL-specialist (da):** *\"Test-forløb viste at dreng der aldrig kunne sidde stille arbejdede fokuseret i 45 min\"*"
+  },
+  {
+    "id": "konflikt_lov_praksis",
+    "title": "Konflikt-Mediator: Lov & Praksis Forklarer",
+    "category": "konflikt_mediator",
+    "subcategory": "lovgivning",
+    "tags": [
+      "konflikt",
+      "lov",
+      "regler",
+      "ikke-forhandlingsbart",
+      "dansk lovgivning"
+    ],
+    "age_range": [3, 18],
+    "diagnoses": ["alle diagnoser"],
+    "complexity": "beginner",
+    "usage_frequency": "as_needed",
+    "urgency": "high",
+    "ai_specialists": [
+      {
+        "name": "AI-juridisk vejleder Lars Nielsen",
+        "expertise": "dansk skolelovgivning og børnerettigheder",
+        "specialties": [
+          "lovfortolkning",
+          "forældrerettigheder",
+          "børns rettigheder"
+        ]
+      }
+    ],
+    "content": {
+      "purpose": "Forklarer dansk lovgivning og skolepraksis klart og respektfuldt",
+      "description": "Håndterer situationer hvor forældre ønsker noget der strider mod dansk lov",
+      "use_cases": [
+        "Forældre vil bruge fysisk afstraffelse",
+        "Kønsadskillelse (kun mandlig lærer)",
+        "Afvisning af obligatorisk undervisning",
+        "Skolepligt-problemer"
+      ],
+      "components": [
+        "Fast lov (ikke-forhandlingsbar)",
+        "Lokal praksis (kan variere)",
+        "Respektfuld forklaring",
+        "Henvisning ved behov"
+      ],
+      "benefits": [
+        "Undgår eskalering",
+        "Klar kommunikation",
+        "Respekterer kultur men fastholder lov",
+        "Forebygger juridiske problemer"
+      ],
+      "teacher_experience": "ln: 'Klar forklaring af revselseslov hjalp familie forstå at dette var dansk lov for alle - ikke kritik'"
+    },
+    "search_keywords": [
+      "lov konflikt",
+      "revselsesret",
+      "fysisk afstraffelse",
+      "kønsroller",
+      "skolepligt",
+      "ikke tilladt"
+    ],
+    "related_templates": [
+      "konflikt_kulturel_bro"
+    ],
+    "command_triggers": [
+      "Lov konflikt",
+      "Lovgivning skole",
+      "Ikke tilladt"
+    ],
+    "variables": {
+      "required": ["issue_type"],
+      "optional": ["family_background"]
+    },
+    "template_markdown": "# ⚖️ Lov & Praksis Forklarer\n\n**Emne:** {issue_type}\n\n---\n\n## 🔴 FAST LAW (Ikke til forhandling)\n\n### 1️⃣ Revselsesret afskaffet\n\n**Dansk straffelov § 244:**\n- ❌ Fysisk afstraffelse er ulovligt\n- ❌ Gælder ALLE forældre i Danmark\n- ✅ Skolen er forpligtet til at reagere\n\n**Dette er IKKE:**\n- Kritik af jeres kultur\n\n**Dette ER:**\n- Dansk lov der beskytter alle børn\n\n**Alternative metoder:**\n- Konsekvenser (fjerne privilegier)\n- Time-out\n- Tydelig kommunikation\n\n---\n\n### 2️⃣ Ligestilling mellem køn\n\n**Ligestillingsloven:**\n- ✅ Drenge og piger behandles ens\n- ✅ Kvindelige og mandlige lærere har samme autoritet\n- ❌ Kan IKKE fravælge lærer baseret på køn\n\n---\n\n### 3️⃣ Skolepligt\n\n**Folkeskoleloven § 34:**\n- ✅ Alle børn skal modtage undervisning i 9 år\n- ⚠️ Udokumenteret fravær kan føre til bøde\n\n---\n\n## 🟡 LOCAL PRACTICE (Kan variere)\n\n### Svømning og omklædning\n→ Tal med skolens ledelse om specifik praksis\n\n### Religiøse fridage\n→ De fleste skoler accepterer med forudgående besked\n\n---\n\n## 🟢 ÅBEN FOR DIALOG\n\n- Undervisningsmetoder\n- Ressourcer (AKT, specialundervisning)\n- Kommunikation (tolk, mødetider)\n\n---\n\n💡 **Juridisk vejleder (ln):** *\"Klar forklaring hjalp familie forstå at dette var lov for alle - ikke kritik\"*"
+  },
+  {
+    "id": "konflikt_tillid_genopbyg",
+    "title": "Konflikt-Mediator: Tillids-Genopbygger",
+    "category": "konflikt_mediator",
+    "subcategory": "tillid_samarbejde",
+    "tags": [
+      "konflikt",
+      "tillid",
+      "samarbejde brudt",
+      "genopbygning",
+      "historik"
+    ],
+    "age_range": [3, 18],
+    "diagnoses": ["alle diagnoser"],
+    "complexity": "advanced",
+    "usage_frequency": "as_needed",
+    "urgency": "high",
+    "ai_specialists": [
+      {
+        "name": "AI-socialrådgiver Maja Holm",
+        "expertise": "systemisk arbejde og tillidsgenopbygning",
+        "specialties": [
+          "konfliktløsning",
+          "familiedynamik",
+          "systemisk støtte"
+        ]
+      },
+      {
+        "name": "AI-koordinator Emma Korsgaard",
+        "expertise": "tværfagligt samarbejde",
+        "specialties": [
+          "koordination",
+          "netværksarbejde"
+        ]
+      }
+    ],
+    "content": {
+      "purpose": "Genopbygger tillid mellem skole og hjem når samarbejdet er brudt",
+      "description": "Viser objektiv historik og faciliterer vej tilbage til konstruktivt samarbejde",
+      "use_cases": [
+        "Forældre: 'De gør ingenting for mit barn'",
+        "Lærer: 'Forælderen samarbejder ikke'",
+        "Gentagne løfter ikke holdt",
+        "Lang konflikthistorik"
+      ],
+      "components": [
+        "Objektiv historik (3 måneder)",
+        "Hvad blev aftalt vs hvad skete",
+        "Mønstre synliggjort",
+        "Neutral genopbygningsplan"
+      ],
+      "benefits": [
+        "Data i stedet for beskyldninger",
+        "Begge parter ser hele billedet",
+        "Konkret dokumentation til PPR",
+        "Vej tilbage til samarbejde"
+      ],
+      "teacher_experience": "mh: 'Objektiv historik stoppede skyldsfordeling - begge så hvor samarbejdet brød sammen'"
+    },
+    "search_keywords": [
+      "tillid brudt",
+      "samarbejde ødelagt",
+      "de lyver",
+      "gør ingenting",
+      "stoler ikke på skolen",
+      "historik konflikt"
+    ],
+    "related_templates": [
+      "kommunikationslog"
+    ],
+    "command_triggers": [
+      "Tillid brudt",
+      "Genopbyg samarbejde",
+      "Konflikt historik"
+    ],
+    "variables": {
+      "required": ["child_name", "conflict_duration"],
+      "optional": ["key_incidents"]
+    },
+    "template_markdown": "# 🔄 Tillids-Genopbygger\n\n**Barn:** {child_name}\n**Konfliktvarighed:** {conflict_duration}\n\n---\n\n## 📊 OBJEKTIV HISTORIK (3 måneder)\n\n### Hvad blev aftalt?\n\n| Dato | Aftale | Hvem skulle gøre | Deadline |\n|------|--------|------------------|----------|\n| {key_incidents ? {key_incidents} : } | | | |\n\n### Hvad skete faktisk?\n\n| Dato | Handling | Resultat | Status |\n|------|----------|----------|--------|\n| | | | ✅ / ❌ |\n\n---\n\n## 🔍 MØNSTRE\n\n**Systemet viser:**\n- Hvor gik det godt?\n- Hvor brød det sammen?\n- Hvad var fælles for succeserne?\n- Hvad var fælles for fiaskoerne?\n\n---\n\n## 🤝 VEJ TILBAGE TIL TILLID\n\n### Trin 1: Anerkend virkeligheden\n\n**Skole:**\n\"Vi lovede [X] men det skete ikke fordi [årsag].\"\n\n**Forældre:**\n\"Vi skulle [Y] men det skete ikke fordi [årsag].\"\n\n### Trin 2: Små, målbare aftaler\n\nIKKE: \"Vi bliver bedre til at samarbejde\"\nJA: \"Lærer sender besked hver fredag. Forælder svarer inden mandag.\"\n\n### Trin 3: Ugentlig check-in\n\n- 5 min telefonsamtale hver fredag\n- \"Hvad gik godt? Hvad skal vi justere?\"\n\n### Trin 4: Neutral dokumentation\n\n- Brug Kommunikationslog\n- Begge parter logger\n- Gennemsigtighed for begge\n\n---\n\n## 🎯 MÅL\n\nIkke \"blive venner\".\nMen \"samarbejde professionelt om {child_name}s trivsel\".\n\n---\n\n💡 **Socialrådgiver (mh):** *\"Objektiv historik stoppede skyldsfordeling - begge så hvor samarbejdet brød sammen\"*"
       },
       {
         "id": "hvis_jeg_foeler",
@@ -1089,7 +1413,7 @@
           "templates": [
             "tal_til_ro"
           ],
-          "description": "Støtte til bedre søvn og afslappning"
+          "description": "Støtte til bedre søvn og afslappelse"
         },
         "social": {
           "templates": [
@@ -1103,6 +1427,15 @@
             "toilettraening_hygiejne"
           ],
           "description": "Praktisk støtte til daglige aktiviteter"
+        },
+        "konflikt_mediator": {
+          "templates": [
+            "konflikt_kulturel_bro",
+            "konflikt_pbl_valg",
+            "konflikt_lov_praksis",
+            "konflikt_tillid_genopbyg"
+          ],
+          "description": "Løsning af konflikter mellem skole og hjem"
         }
       },
       "diagnoses": {
@@ -1117,7 +1450,8 @@
             "sociale_relationer",
             "spisning_maltider",
             "motivation_belonning",
-            "toilettraening_hygiejne"
+            "toilettraening_hygiejne",
+            "konflikt_pbl_valg"
           ],
           "specialist_focus": "Struktur, fokus og impulskontrol"
         },
@@ -1133,7 +1467,9 @@
             "sociale_relationer",
             "spisning_maltider",
             "motivation_belonning",
-            "toilettraening_hygiejne"
+            "toilettraening_hygiejne",
+            "konflikt_kulturel_bro",
+            "konflikt_pbl_valg"
           ],
           "specialist_focus": "Forudsigelig struktur og sensoriske behov"
         },
@@ -1145,7 +1481,8 @@
             "skolevagring_plan",
             "tal_til_ro",
             "spisning_maltider",
-            "motivation_belonning"
+            "motivation_belonning",
+            "konflikt_tillid_genopbyg"
           ],
           "specialist_focus": "Tryghed, forudsigelige og gradvis eksponering"
         },
@@ -1210,7 +1547,10 @@
             "tal_til_ro",
             "sociale_relationer",
             "spisning_maltider",
-            "motivation_belonning"
+            "motivation_belonning",
+            "konflikt_kulturel_bro",
+            "konflikt_pbl_valg",
+            "konflikt_lov_praksis"
           ],
           "focus": "Skoleintegration og sociale færdigheder"
         },
@@ -1227,7 +1567,8 @@
             "ugeplan_maal",
             "skolevagring_plan",
             "sociale_relationer",
-            "motivation_belonning"
+            "motivation_belonning",
+            "konflikt_tillid_genopbyg"
           ],
           "focus": "Selvstændighed og identitetsudvikling"
         }
@@ -1248,14 +1589,18 @@
         "moderate": {
           "templates": [
             "sociale_relationer",
-            "spisning_maltider"
+            "spisning_maltider",
+            "konflikt_kulturel_bro",
+            "konflikt_pbl_valg"
           ],
           "description": "Udfordringer der kræver opmærksomhed"
         },
         "high": {
           "templates": [
             "hvis_jeg_foeler",
-            "skolevagring_plan"
+            "skolevagring_plan",
+            "konflikt_lov_praksis",
+            "konflikt_tillid_genopbyg"
           ],
           "description": "Akutte situationer der kræver hurtig handling"
         },
@@ -1273,7 +1618,8 @@
             "visuel_dagsplan",
             "kommunikationslog",
             "tal_til_ro",
-            "toilettraening_hygiejne"
+            "toilettraening_hygiejne",
+            "konflikt_lov_praksis"
           ],
           "description": "Simple værktøjer der er lette at implementere"
         },
@@ -1285,13 +1631,16 @@
             "ugeplan_maal",
             "sociale_relationer",
             "spisning_maltider",
-            "motivation_belonning"
+            "motivation_belonning",
+            "konflikt_kulturel_bro",
+            "konflikt_pbl_valg"
           ],
           "description": "Værktøjer der kræver lidt træning og tilpasning"
         },
         "advanced": {
           "templates": [
-            "skolevagring_plan"
+            "skolevagring_plan",
+            "konflikt_tillid_genopbyg"
           ],
           "description": "Komplekse interventioner der ofte kræver professionel støtte"
         }
@@ -1378,12 +1727,95 @@
         ],
         "related_templates": [
           "kommunikationslog",
-          "sociale_relationer"
+          "sociale_relationer",
+          "konflikt_kulturel_bro",
+          "konflikt_tillid_genopbyg"
         ],
         "expertise_areas": [
           "Familiedynamik",
           "Systemisk støtte",
           "Netværksarbejde"
+        ]
+      },
+      "fatima_hassan": {
+        "name": "AI-kulturel mediator Fatima Hassan",
+        "specialties": [
+          "tværkulturel kommunikation",
+          "integration",
+          "kulturel forståelse"
+        ],
+        "related_templates": [
+          "konflikt_kulturel_bro",
+          "konflikt_lov_praksis"
+        ],
+        "expertise_areas": [
+          "Kulturel brobygning",
+          "Sprogbarrierer",
+          "Integration"
+        ]
+      },
+      "daniel_ayers": {
+        "name": "AI-PBL specialist Daniel Ayers",
+        "specialties": [
+          "projektbaseret læring",
+          "praktisk tilgang",
+          "hands-on læring"
+        ],
+        "related_templates": [
+          "konflikt_pbl_valg"
+        ],
+        "expertise_areas": [
+          "PBL-design",
+          "Praktisk læring",
+          "Motivation gennem praksis"
+        ]
+      },
+      "felix_moeller": {
+        "name": "AI-neuropsykolog Felix Møller",
+        "specialties": [
+          "ADHD",
+          "neuropsykologisk forståelse",
+          "læringsstile"
+        ],
+        "related_templates": [
+          "konflikt_pbl_valg"
+        ],
+        "expertise_areas": [
+          "Neuropsykologi",
+          "ADHD og læring",
+          "Tilpasset undervisning"
+        ]
+      },
+      "lars_nielsen": {
+        "name": "AI-juridisk vejleder Lars Nielsen",
+        "specialties": [
+          "dansk skolelovgivning",
+          "børnerettigheder",
+          "forældrerettigheder"
+        ],
+        "related_templates": [
+          "konflikt_lov_praksis"
+        ],
+        "expertise_areas": [
+          "Lovfortolkning",
+          "Skolelovgivning",
+          "Rettigheder"
+        ]
+      },
+      "emma_korsgaard": {
+        "name": "AI-koordinator Emma Korsgaard",
+        "specialties": [
+          "tværfagligt samarbejde",
+          "koordination",
+          "systemisk arbejde"
+        ],
+        "related_templates": [
+          "konflikt_tillid_genopbyg"
+        ],
+        "expertise_areas": [
+          "Koordination",
+          "Netværksarbejde",
+          "Systemisk tilgang"
         ]
       }
     },
@@ -1416,7 +1848,8 @@
             "Sociale relationer",
             "Søvn",
             "Spisning",
-            "Kommunikation"
+            "Kommunikation",
+            "Konflikt skole-hjem"
           ],
           "weight": 4
         },
@@ -1460,7 +1893,14 @@
       "beginner_friendly": [
         "visuel_dagsplan",
         "kommunikationslog",
-        "tal_til_ro"
+        "tal_til_ro",
+        "konflikt_lov_praksis"
+      ],
+      "conflict_resolution": [
+        "konflikt_kulturel_bro",
+        "konflikt_pbl_valg",
+        "konflikt_lov_praksis",
+        "konflikt_tillid_genopbyg"
       ]
     },
     "integration_commands": {
@@ -1468,13 +1908,15 @@
         "Skabelonbibliotek": "Vis alle tilgængelige skabeloner kategoriseret",
         "Skabelonvælger": "Start intelligent skabelonvælger med 5 spørgsmål",
         "Akut hjælp": "Vis crisis templates (hvis_jeg_foeler, skolevagring_plan)",
-        "Daglig støtte": "Vis routine templates (visuel_dagsplan, kommunikationslog, tal_til_ro)"
+        "Daglig støtte": "Vis routine templates (visuel_dagsplan, kommunikationslog, tal_til_ro)",
+        "Konflikt mediator": "Vis konflikt-løsnings templates (kulturel_bro, pbl_valg, lov_praksis, tillid_genopbyg)"
       },
       "specific_triggers": {
         "Skabelon [navn]": "Hent specifik skabelon",
         "Specialist [navn]": "Vis AI-specialist og relaterede skabeloner",
         "Diagnose [navn]": "Vis alle skabeloner relevante for specifik diagnose",
-        "Alder [tal]": "Vis skabeloner passende for specifik alder"
+        "Alder [tal]": "Vis skabeloner passende for specifik alder",
+        "Konflikt [type]": "Aktiver konflikt-mediator for specifik konflikttype"
       }
     }
   }
