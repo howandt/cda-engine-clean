@@ -69,8 +69,14 @@ export default async function handler(req, res) {
       const templateData = cache.templates.data;
       
       // Ekstrahér templates array fra nested struktur
-      const templates = templateData.template_database?.templates || [];
+      let templates = templateData.template_database?.templates || [];
       const metadata = templateData.template_database?.metadata || {};
+      
+      // 🆕 Filtrer på type hvis angivet
+      if (type) {
+        templates = templates.filter(t => t.id === type || t.category === type);
+        console.log(`[FILTER] Type="${type}" - fandt ${templates.length} templates`);
+      }
       
       return res.status(200).json({
         success: true,
@@ -87,8 +93,14 @@ export default async function handler(req, res) {
     cache.templates = { data, timestamp: Date.now() };
 
     // Ekstrahér templates array fra nested struktur
-    const templates = data.template_database?.templates || [];
+    let templates = data.template_database?.templates || [];
     const metadata = data.template_database?.metadata || {};
+
+    // 🆕 Filtrer på type hvis angivet
+    if (type) {
+      templates = templates.filter(t => t.id === type || t.category === type);
+      console.log(`[FILTER] Type="${type}" - fandt ${templates.length} templates`);
+    }
 
     return res.status(200).json({
       success: true,
